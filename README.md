@@ -4,8 +4,8 @@ Fully automated pipeline that generates and uploads one YouTube Short per day ab
 
 ## What it does
 
-1. Gemini generates an English script (strict JSON)
-2. edge-tts creates Spanish voiceover + English subtitles
+1. Gemini genera un guion en español (JSON estricto)
+2. edge-tts crea voz en español + subtítulos en español
 3. Pexels provides vertical background clips per line
 4. FFmpeg composes a 1080x1920 Short with burned-in subtitles
 5. YouTube Data API uploads the video (unlisted by default)

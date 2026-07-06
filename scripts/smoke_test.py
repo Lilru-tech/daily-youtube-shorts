@@ -21,21 +21,21 @@ from main import (  # noqa: E402
 )
 
 SAMPLE_SCRIPT = VideoScript(
-    video_title="Smoke Test Short",
-    description="Local pipeline validation #test",
-    tags="test,smoke,pipeline",
+    video_title="Prueba de pipeline Short",
+    description="Validación local del pipeline #test",
+    tags="test,prueba,pipeline",
     lines=[
         ScriptLine(
-            text="Your brain can rewire itself throughout your entire life.",
-            search_keywords="brain neurons",
+            text="Tu cerebro puede reorganizarse durante toda tu vida.",
+            search_keywords="cerebro neuronas",
         ),
         ScriptLine(
-            text="This is called neuroplasticity, and it powers every new skill you learn.",
-            search_keywords="learning focus",
+            text="A esto se le llama neuroplasticidad, y es la base de cada habilidad nueva.",
+            search_keywords="aprendizaje enfoque",
         ),
         ScriptLine(
-            text="Even small daily habits can reshape how you think and feel.",
-            search_keywords="meditation calm",
+            text="Incluso pequeños hábitos diarios pueden cambiar cómo piensas y sientes.",
+            search_keywords="meditacion calma",
         ),
     ],
 )

@@ -54,7 +54,7 @@ FALLBACK_GEMINI_MODELS = [
 DEFAULT_EDGE_VOICE = "es-ES-AlvaroNeural"
 DEFAULT_PRIVACY_STATUS = "unlisted"
 YOUTUBE_CATEGORY_ID = "27"
-FALLBACK_KEYWORDS = ["nature landscape", "abstract motion", "city night lights"]
+FALLBACK_KEYWORDS = ["paisaje naturaleza", "cerebro pensando", "ciudad noche"]
 FFMPEG_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
 FFPROBE_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffprobe")
 
@@ -239,28 +239,28 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
 
 def build_script_prompt() -> str:
     return """
-You are a viral YouTube Shorts scriptwriter focused on "Amazing Facts and Psychological Insights".
+Eres un guionista viral de YouTube Shorts especializado en "Datos Asombrosos e Insights Psicológicos".
 
-Write an engaging English script for a 40-50 second vertical Short.
-Use 6-8 short spoken lines. Each line should be one punchy sentence.
-Every line must include search_keywords for stock footage (2-5 words).
+Escribe un guion en español (España, neutro y natural) para un Short vertical de 40-50 segundos.
+Usa 6-8 líneas cortas habladas. Cada línea debe ser una frase impactante.
+Cada línea debe incluir search_keywords para buscar metraje en Pexels (2-5 palabras, en español o inglés).
 
-Return ONLY valid JSON with this exact schema:
+Devuelve SOLO JSON válido con este esquema exacto:
 {
-  "video_title": "Catchy title under 90 characters",
-  "description": "2-3 sentence description with 2-3 relevant hashtags",
-  "tags": "comma,separated,tags,without,spaces_after_commas",
+  "video_title": "Título llamativo de menos de 90 caracteres",
+  "description": "Descripción de 2-3 frases con 2-3 hashtags relevantes",
+  "tags": "etiquetas,separadas,por,comas,sin,espacios,despues,de,comas",
   "lines": [
-    {"text": "Spoken line one.", "search_keywords": "brain neurons"},
-    {"text": "Spoken line two.", "search_keywords": "galaxy stars"}
+    {"text": "Primera línea hablada.", "search_keywords": "cerebro neuronas"},
+    {"text": "Segunda línea hablada.", "search_keywords": "galaxia estrellas"}
   ]
 }
 
-Rules:
-- English only.
-- No markdown, no commentary, no extra keys.
-- Facts must be plausible and psychologically interesting.
-- Keep total spoken text between 400 and 900 characters.
+Reglas:
+- Todo el contenido en español (título, descripción, tags y líneas).
+- Sin markdown, sin comentarios, sin claves extra.
+- Los datos deben ser creíbles e interesantes desde la psicología.
+- El texto hablado total debe tener entre 300 y 900 caracteres.
 """.strip()
 
 
@@ -717,6 +717,8 @@ def upload_to_youtube(script: VideoScript) -> str:
             "description": script.description,
             "tags": parse_tags(script.tags),
             "categoryId": YOUTUBE_CATEGORY_ID,
+            "defaultLanguage": "es",
+            "defaultAudioLanguage": "es",
         },
         "status": {
             "privacyStatus": privacy_status,
