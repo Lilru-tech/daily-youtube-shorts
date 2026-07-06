@@ -50,6 +50,36 @@ DEFAULT_EDGE_VOICE = "es-ES-AlvaroNeural"
 DEFAULT_PRIVACY_STATUS = "unlisted"
 YOUTUBE_CATEGORY_ID = "27"
 FALLBACK_KEYWORDS = ["nature landscape", "abstract motion", "city night lights"]
+FFMPEG_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
+FFPROBE_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffprobe")
+
+
+def resolve_ffmpeg() -> str:
+    if FFMPEG_FULL_PATH.exists():
+        return str(FFMPEG_FULL_PATH)
+    binary = shutil.which("ffmpeg")
+    if binary:
+        return binary
+    raise PipelineError("ffmpeg not found in PATH")
+
+
+def resolve_ffprobe() -> str:
+    if FFPROBE_FULL_PATH.exists():
+        return str(FFPROBE_FULL_PATH)
+    binary = shutil.which("ffprobe")
+    if binary:
+        return binary
+    raise PipelineError("ffprobe not found in PATH")
+
+
+def with_media_binary(command: list[str]) -> list[str]:
+    if not command:
+        return command
+    if command[0] == "ffmpeg":
+        return [resolve_ffmpeg(), *command[1:]]
+    if command[0] == "ffprobe":
+        return [resolve_ffprobe(), *command[1:]]
+    return command
 
 
 @dataclass
@@ -114,6 +144,7 @@ def retry(
 
 
 def run_command(command: list[str], description: str) -> None:
+    command = with_media_binary(command)
     logger.info("Running FFmpeg: %s", " ".join(command))
     result = subprocess.run(
         command,
@@ -129,16 +160,18 @@ def run_command(command: list[str], description: str) -> None:
 
 
 def probe_duration(path: Path) -> float:
-    command = [
-        "ffprobe",
-        "-v",
-        "error",
-        "-show_entries",
-        "format=duration",
-        "-of",
-        "default=noprint_wrappers=1:nokey=1",
-        str(path),
-    ]
+    command = with_media_binary(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-show_entries",
+            "format=duration",
+            "-of",
+            "default=noprint_wrappers=1:nokey=1",
+            str(path),
+        ]
+    )
     result = subprocess.run(command, capture_output=True, text=True, check=True)
     duration = float(result.stdout.strip())
     if duration <= 0:
@@ -553,22 +586,41 @@ def resolve_subtitle_font() -> str:
     return "DejaVu Sans"
 
 
-def compose_final_video() -> None:
-    resolve_subtitle_font()
-    escaped_srt = str(CAPTIONS_PATH.resolve()).replace("\\", "/").replace(":", "\\:")
-    subtitle_style = (
-        "FontName=DejaVu Sans Bold,"
-        "FontSize=18,"
+def ensure_ffmpeg_subtitles_filter() -> None:
+    result = subprocess.run(
+        [resolve_ffmpeg(), "-h", "filter=subtitles"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    output = f"{result.stdout}\n{result.stderr}"
+    if "Unknown filter 'subtitles'" in output:
+        raise PipelineError(
+            "FFmpeg subtitles filter is unavailable. "
+            "On Ubuntu use apt-get install ffmpeg. "
+            "On macOS use brew install ffmpeg-full."
+        )
+
+
+def build_subtitle_filter(srt_path: Path) -> str:
+    srt_ref = srt_path.as_posix()
+    style = (
+        "FontSize=22,"
         "PrimaryColour=&H00FFFF&,"
         "OutlineColour=&H000000&,"
-        "BackColour=&H80000000&,"
         "BorderStyle=1,"
         "Outline=3,"
-        "Shadow=1,"
+        "Shadow=0,"
         "Alignment=2,"
         "MarginV=90"
     )
-    video_filter = f"subtitles={escaped_srt}:fontsdir=/usr/share/fonts/truetype/dejavu:force_style='{subtitle_style}'"
+    font_path = Path(resolve_subtitle_font())
+    fonts_dir = font_path.parent.as_posix().replace(":", r"\:")
+    return f"subtitles={srt_ref}:fontsdir={fonts_dir}:force_style='{style}'"
+
+
+def compose_final_video() -> None:
+    video_filter = build_subtitle_filter(CAPTIONS_PATH)
 
     run_command(
         [
@@ -700,6 +752,7 @@ def upload_to_youtube(script: VideoScript) -> str:
 
 
 async def run_pipeline(skip_upload: bool = False) -> None:
+    ensure_ffmpeg_subtitles_filter()
     reset_work_dir()
     script = generate_script()
     segments, _ = await generate_voiceover(script)

@@ -79,3 +79,4 @@ python scripts/get_youtube_refresh_token.py
 - Unverified YouTube API projects may force uploads to **private** even when requesting `unlisted`
 - The pipeline sets `containsSyntheticMedia: true` on every upload
 - Failed runs upload `work/` artifacts for debugging (3-day retention)
+- On macOS, subtitle burn-in requires FFmpeg with libass: `brew install ffmpeg-full`
