@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "0 15 * * *"
   workflow_dispatch:
+    inputs:
+      skip_upload:
+        description: "Generate video only (skip YouTube upload)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
 
 jobs:
   generate-and-upload:
@@ -42,6 +51,7 @@ jobs:
           YT_PRIVACY_STATUS: ${{ secrets.YT_PRIVACY_STATUS }}
           EDGE_TTS_VOICE: ${{ secrets.EDGE_TTS_VOICE }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          SKIP_YOUTUBE_UPLOAD: ${{ github.event.inputs.skip_upload || 'false' }}
         run: python main.py
 
       - name: Upload build artifacts on failure
