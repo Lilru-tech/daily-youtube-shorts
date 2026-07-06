@@ -42,10 +42,15 @@ AUDIO_FRAGMENTS_DIR = WORK_DIR / "audio_fragments"
 TARGET_WIDTH = 1080
 TARGET_HEIGHT = 1920
 TARGET_FPS = 30
-MIN_SCRIPT_CHARS = 400
+MIN_SCRIPT_CHARS = 300
 MAX_SCRIPT_CHARS = 900
 PEXELS_SEARCH_URL = "https://api.pexels.com/videos/search"
 DEFAULT_GEMINI_MODEL = "gemini-2.0-flash"
+FALLBACK_GEMINI_MODELS = [
+    "gemini-2.0-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-1.5-flash",
+]
 DEFAULT_EDGE_VOICE = "es-ES-AlvaroNeural"
 DEFAULT_PRIVACY_STATUS = "unlisted"
 YOUTUBE_CATEGORY_ID = "27"
@@ -261,27 +266,52 @@ Rules:
 
 def generate_script() -> VideoScript:
     api_key = require_env("GEMINI_API_KEY")
-    model = os.environ.get("GEMINI_MODEL", DEFAULT_GEMINI_MODEL).strip() or DEFAULT_GEMINI_MODEL
+    configured_model = os.environ.get("GEMINI_MODEL", "").strip()
+    models: list[str] = []
+    if configured_model:
+        models.append(configured_model)
+    for model in FALLBACK_GEMINI_MODELS:
+        if model not in models:
+            models.append(model)
+
     client = genai.Client(api_key=api_key)
+    last_error: Exception | None = None
 
-    def _call_gemini() -> VideoScript:
-        response = client.models.generate_content(
-            model=model,
-            contents=build_script_prompt(),
-            config=types.GenerateContentConfig(
-                temperature=0.9,
-                response_mime_type="application/json",
-            ),
-        )
-        raw_text = (response.text or "").strip()
-        if not raw_text:
-            raise PipelineError("Gemini returned an empty response")
-        payload = extract_json_payload(raw_text)
-        return validate_script_payload(payload)
+    for model in models:
+        def _call_gemini(current_model: str = model) -> VideoScript:
+            response = client.models.generate_content(
+                model=current_model,
+                contents=build_script_prompt(),
+                config=types.GenerateContentConfig(
+                    temperature=0.9,
+                    response_mime_type="application/json",
+                ),
+            )
+            raw_text = (response.text or "").strip()
+            if not raw_text:
+                raise PipelineError("Gemini returned an empty response")
+            payload = extract_json_payload(raw_text)
+            return validate_script_payload(payload)
 
-    script = retry(_call_gemini, "Gemini script generation")
-    logger.info("Generated script: %s (%s lines)", script.video_title, len(script.lines))
-    return script
+        try:
+            script = retry(
+                _call_gemini,
+                f"Gemini script generation ({model})",
+                max_attempts=4,
+                base_delay=20.0,
+            )
+            logger.info(
+                "Generated script with %s: %s (%s lines)",
+                model,
+                script.video_title,
+                len(script.lines),
+            )
+            return script
+        except PipelineError as exc:
+            last_error = exc
+            logger.warning("Model %s unavailable, trying next fallback: %s", model, exc)
+
+    raise PipelineError(f"All Gemini models failed. Last error: {last_error}")
 
 
 def parse_srt_timestamp(timestamp: str) -> float:
