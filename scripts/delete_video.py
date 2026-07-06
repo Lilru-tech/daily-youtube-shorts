@@ -10,7 +10,7 @@ from googleapiclient.errors import HttpError
 
 from main import require_env
 
-VIDEO_ID = "utPwgUgTqPI"
+VIDEO_ID = "hG6zPOINoX0"
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.force-ssl",

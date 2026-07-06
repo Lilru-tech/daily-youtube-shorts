@@ -229,9 +229,18 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
             f"({MIN_SCRIPT_CHARS}-{MAX_SCRIPT_CHARS})"
         )
 
+    title = str(payload["video_title"]).strip()[:95]
+    description = str(payload["description"]).strip()[:4500]
+    if looks_english(title) or looks_english(description):
+        raise PipelineError("Gemini returned English metadata; Spanish content required")
+
+    for index, line in enumerate(lines):
+        if looks_english(line.text):
+            raise PipelineError(f"Line {index} is not in Spanish")
+
     return VideoScript(
-        video_title=str(payload["video_title"]).strip()[:95],
-        description=str(payload["description"]).strip()[:4500],
+        video_title=title,
+        description=description,
         tags=str(payload["tags"]).strip(),
         lines=lines,
     )
@@ -257,11 +266,30 @@ Devuelve SOLO JSON válido con este esquema exacto:
 }
 
 Reglas:
-- Todo el contenido en español (título, descripción, tags y líneas).
+- Todo el contenido en español (título, descripción, tags y líneas). Prohibido usar inglés.
 - Sin markdown, sin comentarios, sin claves extra.
 - Los datos deben ser creíbles e interesantes desde la psicología.
 - El texto hablado total debe tener entre 300 y 900 caracteres.
 """.strip()
+
+
+def looks_english(text: str) -> bool:
+    lowered = f" {text.lower()} "
+    english_markers = (
+        " the ",
+        " your ",
+        " brain",
+        " unlock",
+        " secret",
+        " you ",
+        " and ",
+        " with ",
+        " this ",
+        " that ",
+        " what ",
+        " how ",
+    )
+    return any(marker in lowered for marker in english_markers)
 
 
 def generate_script() -> VideoScript:
