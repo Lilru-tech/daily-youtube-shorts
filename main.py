@@ -52,7 +52,8 @@ FALLBACK_GEMINI_MODELS = [
     "gemini-1.5-flash",
 ]
 DEFAULT_EDGE_VOICE = "es-ES-AlvaroNeural"
-DEFAULT_PRIVACY_STATUS = "unlisted"
+DEFAULT_PRIVACY_STATUS = "public"
+TARGET_CHANNEL_ID = os.environ.get("YT_TARGET_CHANNEL_ID", "UCw272LClsZaAXko-DieXKKA").strip()
 YOUTUBE_CATEGORY_ID = "27"
 FALLBACK_KEYWORDS = ["paisaje naturaleza", "cerebro pensando", "ciudad noche"]
 FFMPEG_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
