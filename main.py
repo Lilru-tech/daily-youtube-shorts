@@ -749,17 +749,8 @@ def upload_to_youtube(script: VideoScript) -> str:
         raise PipelineError(f"YouTube upload failed: {exc}") from exc
 
     video_id = upload_response["id"]
-    verify_response = (
-        youtube.videos()
-        .list(part="snippet,status", id=video_id)
-        .execute()
-    )
-    items = verify_response.get("items", [])
-    if not items:
-        raise PipelineError(f"Uploaded video {video_id} could not be verified")
-
-    status = items[0].get("status", {})
-    actual_privacy = status.get("privacyStatus", "unknown")
+    status = upload_response.get("status", {})
+    actual_privacy = status.get("privacyStatus", privacy_status)
     synthetic_flag = status.get("containsSyntheticMedia")
     logger.info(
         "Upload complete: https://www.youtube.com/watch?v=%s | privacy=%s | containsSyntheticMedia=%s",
