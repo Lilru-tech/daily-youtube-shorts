@@ -35,7 +35,12 @@ from channel_profiles import (
     resolve_profile_name,
 )
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
-from video_assets import AssetBootstrapError, ensure_assets
+from video_assets import (
+    AssetBootstrapError,
+    ensure_assets,
+    has_background_music,
+    has_minecraft_assets,
+)
 from video_audio import mix_voiceover_with_music, select_background_music
 from video_background import BackgroundMode, build_background
 from video_subtitles import WordEvent, build_ass_captions
@@ -411,6 +416,9 @@ def pick_content_type() -> ContentType:
 
 
 def pick_background_mode() -> BackgroundMode:
+    if not has_minecraft_assets():
+        logger.info("No Minecraft assets available; using Pexels background.")
+        return "pexels"
     return "pexels" if random.random() < 0.50 else "minecraft"
 
 
@@ -1003,14 +1011,19 @@ async def run_pipeline(skip_upload: bool = False) -> None:
         subtitle_style=profile.subtitle_style,
     )
 
-    music_path = select_background_music()
-    mix_voiceover_with_music(
-        AUDIO_PATH,
-        music_path,
-        MIXED_AUDIO_PATH,
-        total_duration,
-        run_command,
-    )
+    final_audio_path = AUDIO_PATH
+    if has_background_music():
+        music_path = select_background_music()
+        mix_voiceover_with_music(
+            AUDIO_PATH,
+            music_path,
+            MIXED_AUDIO_PATH,
+            total_duration,
+            run_command,
+        )
+        final_audio_path = MIXED_AUDIO_PATH
+    else:
+        logger.warning("No background music available; using raw voiceover without ducking.")
 
     build_background(
         total_duration,
@@ -1027,7 +1040,7 @@ async def run_pipeline(skip_upload: bool = False) -> None:
         retry=retry,
         pipeline_error=PipelineError,
     )
-    compose_final_video(script, audio_path=MIXED_AUDIO_PATH)
+    compose_final_video(script, audio_path=final_audio_path)
     if skip_upload:
         logger.info(
             "Skipping YouTube upload. Final video ready at %s (%.2fs)",
