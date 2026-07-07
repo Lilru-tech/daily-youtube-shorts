@@ -111,10 +111,10 @@ If you have an existing `YT_REFRESH_TOKEN` for the Spanish channel, rename it to
 
 ## GitHub workflows
 
-- **Daily YouTube Short — Datos ES** (`auto_shorts_datos_es.yml`): ~10:17, 14:17, 18:17 Europe/Madrid (UTC crons: 08:17, 12:17, 16:17)
-- **Daily YouTube Short — WhatIfVibe** (`auto_shorts_whatifvibe.yml`): ~10:23, 14:23, 18:23 US Eastern / EDT (UTC crons: 14:23, 18:23, 22:23)
+- **Daily YouTube Short — Datos ES** (`auto_shorts_datos_es.yml`): ~10:17, 14:17, 18:17 Europe/Madrid (first UTC attempt per slot: 08:17, 12:17, 16:17)
+- **Daily YouTube Short — WhatIfVibe** (`auto_shorts_whatifvibe.yml`): ~10:23, 14:23, 18:23 US Eastern / EDT (first UTC attempt per slot: 14:23, 18:23, 22:23)
 
-Scheduled runs map each cron expression directly to an upload slot, so GitHub Actions delays do not skip uploads. Crons are offset off the top of the hour to reduce GitHub's scheduled-run delays. If you change a cron minute, update `CRON_SLOT_MAP` in `scripts/should_run.py` to match.
+Scheduled runs map each cron expression directly to an upload slot, so GitHub Actions delays do not skip uploads. Because GitHub frequently delays or silently drops scheduled events (worse on private/low-activity repos), each slot has several redundant cron attempts spaced ~20 min apart; `should_run.py` dedupes by slot/day so at most one upload happens per slot. If you change any cron, update `CRON_SLOT_MAP` in `scripts/should_run.py` so every cron string still maps to a slot.
 
 Trigger either workflow manually from **Actions** in GitHub.
 

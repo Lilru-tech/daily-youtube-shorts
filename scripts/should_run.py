@@ -19,13 +19,31 @@ SLOT_TO_HOUR = {slot: hour for hour, slot in HOUR_TO_SLOT.items()}
 CRON_SLOT_MAP: dict[str, dict[str, str]] = {
     "datos_es": {
         "17 8 * * *": "morning",
+        "37 8 * * *": "morning",
+        "57 8 * * *": "morning",
+        "17 9 * * *": "morning",
         "17 12 * * *": "afternoon",
+        "37 12 * * *": "afternoon",
+        "57 12 * * *": "afternoon",
+        "17 13 * * *": "afternoon",
         "17 16 * * *": "evening",
+        "37 16 * * *": "evening",
+        "57 16 * * *": "evening",
+        "17 17 * * *": "evening",
     },
     "whatifvibe": {
         "23 14 * * *": "morning",
+        "43 14 * * *": "morning",
+        "3 15 * * *": "morning",
+        "23 15 * * *": "morning",
         "23 18 * * *": "afternoon",
+        "43 18 * * *": "afternoon",
+        "3 19 * * *": "afternoon",
+        "23 19 * * *": "afternoon",
         "23 22 * * *": "evening",
+        "43 22 * * *": "evening",
+        "3 23 * * *": "evening",
+        "23 23 * * *": "evening",
     },
 }
 

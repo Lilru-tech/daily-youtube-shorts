@@ -2,9 +2,21 @@ name: Daily YouTube Short — WhatIfVibe
 
 on:
   schedule:
+    # Redundant attempts per slot: GitHub frequently drops/delays scheduled
+    # events, so each slot is retried a few times. should_run.py dedupes by
+    # slot/day, so at most one upload happens per slot.
     - cron: "23 14 * * *"
+    - cron: "43 14 * * *"
+    - cron: "3 15 * * *"
+    - cron: "23 15 * * *"
     - cron: "23 18 * * *"
+    - cron: "43 18 * * *"
+    - cron: "3 19 * * *"
+    - cron: "23 19 * * *"
     - cron: "23 22 * * *"
+    - cron: "43 22 * * *"
+    - cron: "3 23 * * *"
+    - cron: "23 23 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:
@@ -41,14 +53,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Cache media assets
-        uses: actions/cache@v4
-        with:
-          path: |
-            background_music/
-            minecraft_gameplay/
-          key: media-assets-v1-${{ runner.os }}
-
       - name: Decide if this schedule window should run
         id: gate
         env:
@@ -63,6 +67,15 @@ jobs:
           else
             echo "should_run=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Cache media assets
+        if: steps.gate.outputs.should_run == 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            background_music/
+            minecraft_gameplay/
+          key: media-assets-v1-${{ runner.os }}
 
       - name: Set up Python
         if: steps.gate.outputs.should_run == 'true'
