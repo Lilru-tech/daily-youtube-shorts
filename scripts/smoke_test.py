@@ -21,9 +21,10 @@ from main import (  # noqa: E402
 )
 
 SAMPLE_SCRIPT = VideoScript(
-    video_title="Prueba de pipeline Short",
-    description="Validación local del pipeline #test",
-    tags="test,prueba,pipeline",
+    video_title="🧠 Tu cerebro puede cambiar",
+    hook_text="TU CEREBRO CAMBIA",
+    description="Validacion local del pipeline #test #psicologia",
+    tags="test,prueba,pipeline,psicologia",
     lines=[
         ScriptLine(
             text="Tu cerebro puede reorganizarse durante toda tu vida.",
@@ -57,7 +58,7 @@ async def run_smoke_test() -> None:
     print(f"Downloaded {len(raw_clips)} clips into {CLIPS_DIR}")
 
     build_background_video(raw_clips, segments)
-    compose_final_video()
+    compose_final_video(SAMPLE_SCRIPT)
     final_duration = probe_duration(FINAL_PATH)
     print(f"Final video: {FINAL_PATH} ({final_duration:.2f}s)")
     print("Smoke test passed.")

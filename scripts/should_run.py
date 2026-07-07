@@ -1,0 +1,92 @@
+import json
+import os
+import sys
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parents[1]
+RECENT_TOPICS_PATH = ROOT / "data" / "recent_topics.json"
+GITHUB_ENV_PATH = os.environ.get("GITHUB_ENV")
+
+HOUR_TO_SLOT = {
+    10: "morning",
+    14: "afternoon",
+    18: "evening",
+}
+
+
+def load_recent_topics() -> list[dict]:
+    if not RECENT_TOPICS_PATH.exists():
+        return []
+    try:
+        payload = json.loads(RECENT_TOPICS_PATH.read_text(encoding="utf-8"))
+        if isinstance(payload, list):
+            return [item for item in payload if isinstance(item, dict)]
+    except json.JSONDecodeError:
+        return []
+    return []
+
+
+def slot_already_ran_today(slot: str, today: str) -> bool:
+    return any(
+        entry.get("date") == today and entry.get("slot") == slot
+        for entry in load_recent_topics()
+    )
+
+
+def write_github_env(key: str, value: str) -> None:
+    if not GITHUB_ENV_PATH:
+        return
+    with open(GITHUB_ENV_PATH, "a", encoding="utf-8") as env_file:
+        env_file.write(f"{key}={value}\n")
+
+
+def resolve_slot(timezone_name: str, forced_slot: str) -> tuple[str, int] | None:
+    if forced_slot in {"morning", "afternoon", "evening"}:
+        hour_lookup = {slot: hour for hour, slot in HOUR_TO_SLOT.items()}
+        return forced_slot, hour_lookup[forced_slot]
+
+    now = datetime.now(ZoneInfo(timezone_name))
+    slot = HOUR_TO_SLOT.get(now.hour)
+    if not slot:
+        print(f"Skip: Madrid hour {now.hour} is outside upload windows.")
+        return None
+    return slot, now.hour
+
+
+def main() -> None:
+    timezone_name = os.environ.get("UPLOAD_TIMEZONE", "Europe/Madrid").strip() or "Europe/Madrid"
+    forced_slot = os.environ.get("FORCE_UPLOAD_SLOT", "").strip().lower()
+    event_name = os.environ.get("GITHUB_EVENT_NAME", "").strip()
+
+    if event_name == "workflow_dispatch" and forced_slot:
+        resolved = resolve_slot(timezone_name, forced_slot)
+    else:
+        resolved = resolve_slot(timezone_name, "")
+
+    if not resolved:
+        sys.exit(1)
+
+    slot, hour = resolved
+    today = datetime.now(ZoneInfo(timezone_name)).strftime("%Y-%m-%d")
+
+    if slot_already_ran_today(slot, today) and event_name != "workflow_dispatch":
+        print(f"Skip: slot '{slot}' already completed for {today}.")
+        sys.exit(1)
+
+    work_dir = f"work/{today}_{slot}"
+    print(f"Run approved: slot={slot}, hour={hour}, work_dir={work_dir}")
+    write_github_env("UPLOAD_SLOT", slot)
+    write_github_env("WORK_DIR", work_dir)
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception as exc:
+        print(f"Gate error: {exc}", file=sys.stderr)
+        sys.exit(1)

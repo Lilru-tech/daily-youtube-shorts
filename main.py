@@ -1,5 +1,6 @@
 import argparse
 import asyncio
+import csv
 import json
 import logging
 import os
@@ -10,8 +11,10 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable, TypeVar
+from zoneinfo import ZoneInfo
 
 import edge_tts
 import requests
@@ -21,6 +24,7 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
+from PIL import Image, ImageDraw, ImageFont
 
 logging.basicConfig(
     level=logging.INFO,
@@ -31,11 +35,21 @@ logger = logging.getLogger(__name__)
 
 T = TypeVar("T")
 
-WORK_DIR = Path(os.environ.get("WORK_DIR", "work"))
+ROOT_DIR = Path(__file__).resolve().parent
+DATA_DIR = ROOT_DIR / "data"
+RECENT_TOPICS_PATH = DATA_DIR / "recent_topics.json"
+UPLOADS_LOG_PATH = DATA_DIR / "uploads_log.csv"
+MAX_RECENT_TOPICS = 30
+MAX_TITLE_CHARS = 55
+HOOK_DURATION_SECONDS = 2.5
+UPLOAD_TIMEZONE = os.environ.get("UPLOAD_TIMEZONE", "Europe/Madrid")
+
+WORK_DIR = Path("work")
 AUDIO_PATH = WORK_DIR / "audio.mp3"
 CAPTIONS_PATH = WORK_DIR / "captions.srt"
 BACKGROUND_PATH = WORK_DIR / "background.mp4"
 FINAL_PATH = WORK_DIR / "final.mp4"
+THUMBNAIL_PATH = WORK_DIR / "thumbnail.jpg"
 CLIPS_DIR = WORK_DIR / "clips"
 AUDIO_FRAGMENTS_DIR = WORK_DIR / "audio_fragments"
 
@@ -97,6 +111,7 @@ class ScriptLine:
 @dataclass
 class VideoScript:
     video_title: str
+    hook_text: str
     description: str
     tags: str
     lines: list[ScriptLine]
@@ -109,6 +124,85 @@ class LineSegment:
     search_keywords: str
     audio_path: Path
     duration: float
+
+
+def configure_work_paths() -> None:
+    global WORK_DIR, AUDIO_PATH, CAPTIONS_PATH, BACKGROUND_PATH, FINAL_PATH
+    global THUMBNAIL_PATH, CLIPS_DIR, AUDIO_FRAGMENTS_DIR
+
+    work_dir_value = os.environ.get("WORK_DIR", "work").strip() or "work"
+    WORK_DIR = Path(work_dir_value)
+    AUDIO_PATH = WORK_DIR / "audio.mp3"
+    CAPTIONS_PATH = WORK_DIR / "captions.srt"
+    BACKGROUND_PATH = WORK_DIR / "background.mp4"
+    FINAL_PATH = WORK_DIR / "final.mp4"
+    THUMBNAIL_PATH = WORK_DIR / "thumbnail.jpg"
+    CLIPS_DIR = WORK_DIR / "clips"
+    AUDIO_FRAGMENTS_DIR = WORK_DIR / "audio_fragments"
+
+
+def load_recent_topics() -> list[dict[str, str]]:
+    if not RECENT_TOPICS_PATH.exists():
+        return []
+    try:
+        payload = json.loads(RECENT_TOPICS_PATH.read_text(encoding="utf-8"))
+        if isinstance(payload, list):
+            return [item for item in payload if isinstance(item, dict)]
+    except json.JSONDecodeError:
+        logger.warning("Could not parse %s, starting fresh", RECENT_TOPICS_PATH)
+    return []
+
+
+def save_recent_topic(slot: str, title: str, video_id: str) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    today = datetime.now(ZoneInfo(UPLOAD_TIMEZONE)).strftime("%Y-%m-%d")
+    entries = load_recent_topics()
+    entries.append(
+        {
+            "date": today,
+            "slot": slot,
+            "title": title,
+            "video_id": video_id,
+        }
+    )
+    RECENT_TOPICS_PATH.write_text(
+        json.dumps(entries[-MAX_RECENT_TOPICS:], indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+
+def get_recent_titles_for_prompt(limit: int = 10) -> list[str]:
+    titles: list[str] = []
+    for entry in reversed(load_recent_topics()):
+        title = str(entry.get("title", "")).strip()
+        if title and title not in titles:
+            titles.append(title)
+        if len(titles) >= limit:
+            break
+    return titles
+
+
+def append_upload_log(slot: str, title: str, video_id: str, privacy: str) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    is_new_file = not UPLOADS_LOG_PATH.exists()
+    today = datetime.now(ZoneInfo(UPLOAD_TIMEZONE)).strftime("%Y-%m-%d")
+    with UPLOADS_LOG_PATH.open("a", encoding="utf-8", newline="") as log_file:
+        writer = csv.writer(log_file)
+        if is_new_file:
+            writer.writerow(["date", "slot", "title", "video_id", "privacy", "channel_id"])
+        writer.writerow([today, slot, title, video_id, privacy, TARGET_CHANNEL_ID])
+
+
+def has_emoji(text: str) -> bool:
+    return bool(re.search(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]", text))
+
+
+def escape_drawtext(value: str) -> str:
+    escaped = value.replace("\\", "\\\\")
+    escaped = escaped.replace(":", r"\:")
+    escaped = escaped.replace("'", r"\'")
+    escaped = escaped.replace("%", r"\%")
+    return escaped
 
 
 class PipelineError(Exception):
@@ -202,7 +296,7 @@ def extract_json_payload(raw_text: str) -> dict[str, Any]:
 
 
 def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
-    required_keys = {"video_title", "description", "tags", "lines"}
+    required_keys = {"video_title", "hook_text", "description", "tags", "lines"}
     missing = required_keys - set(payload.keys())
     if missing:
         raise PipelineError(f"Gemini response missing keys: {sorted(missing)}")
@@ -230,8 +324,18 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
             f"({MIN_SCRIPT_CHARS}-{MAX_SCRIPT_CHARS})"
         )
 
-    title = str(payload["video_title"]).strip()[:95]
+    title = str(payload["video_title"]).strip()[:MAX_TITLE_CHARS]
+    hook_text = str(payload["hook_text"]).strip().upper()[:40]
     description = str(payload["description"]).strip()[:4500]
+
+    if len(title) > MAX_TITLE_CHARS:
+        raise PipelineError(f"Title exceeds {MAX_TITLE_CHARS} characters")
+    if not hook_text:
+        raise PipelineError("hook_text is required")
+    if len(hook_text.split()) > 4:
+        raise PipelineError("hook_text must be 1-4 words")
+    if not has_emoji(title):
+        raise PipelineError("video_title must include at least one emoji")
     if looks_english(title) or looks_english(description):
         raise PipelineError("Gemini returned English metadata; Spanish content required")
 
@@ -241,36 +345,57 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
 
     return VideoScript(
         video_title=title,
+        hook_text=hook_text,
         description=description,
         tags=str(payload["tags"]).strip(),
         lines=lines,
     )
 
 
-def build_script_prompt() -> str:
-    return """
-Eres un guionista viral de YouTube Shorts especializado en "Datos Asombrosos e Insights Psicológicos".
+def build_script_prompt(recent_titles: list[str]) -> str:
+    recent_block = ""
+    if recent_titles:
+        joined = "\n".join(f"- {title}" for title in recent_titles)
+        recent_block = f"""
+No repitas estos temas ni titulos recientes:
+{joined}
+"""
 
-Escribe un guion en español (España, neutro y natural) para un Short vertical de 40-50 segundos.
-Usa 6-8 líneas cortas habladas. Cada línea debe ser una frase impactante.
-Cada línea debe incluir search_keywords para buscar metraje en Pexels (2-5 palabras, en español o inglés).
+    return f"""
+Eres un guionista viral de YouTube Shorts especializado en "Datos Asombrosos e Insights Psicologicos".
 
-Devuelve SOLO JSON válido con este esquema exacto:
-{
-  "video_title": "Título llamativo de menos de 90 caracteres",
-  "description": "Descripción de 2-3 frases con 2-3 hashtags relevantes",
-  "tags": "etiquetas,separadas,por,comas,sin,espacios,despues,de,comas",
+Escribe un guion en espanol (Espana, neutro y natural) para un Short vertical de 40-50 segundos.
+Usa 6-8 lineas cortas habladas. Cada linea debe ser una frase impactante.
+La primera linea debe ser el gancho principal en menos de 1 segundo de lectura.
+Rota subtemas: trucos psicologicos, datos del cerebro, sesgos cognitivos, habitos, emociones, percepcion.
+
+Devuelve SOLO JSON valido con este esquema exacto:
+{{
+  "video_title": "🧠 Tu cerebro te engana asi",
+  "hook_text": "TU CEREBRO ENGAÑA",
+  "description": "Descripcion de 2-3 frases con 2-3 hashtags relevantes",
+  "tags": "psicologia,cerebro,datos,curiosos,shorts",
   "lines": [
-    {"text": "Primera línea hablada.", "search_keywords": "cerebro neuronas"},
-    {"text": "Segunda línea hablada.", "search_keywords": "galaxia estrellas"}
+    {{"text": "Primera linea hablada.", "search_keywords": "cerebro neuronas"}},
+    {{"text": "Segunda linea hablada.", "search_keywords": "mente pensando"}}
   ]
-}
+}}
 
-Reglas:
-- Todo el contenido en español (título, descripción, tags y líneas). Prohibido usar inglés.
+Reglas de titulo viral:
+- Maximo 50 caracteres y 5-6 palabras.
+- Empieza con 1 emoji.
+- Usa curiosidad o emocion, no expliques el video.
+- Formulas validas: "Tu cerebro...", "Nadie te dice...", "Esto explica por que...", "La trampa mental...", "Haces esto sin darte cuenta".
+
+Reglas de hook_text:
+- 1-4 palabras en MAYUSCULAS.
+- Debe resumir el gancho visual del primer frame.
+
+Reglas generales:
+- Todo en espanol. Prohibido ingles.
 - Sin markdown, sin comentarios, sin claves extra.
-- Los datos deben ser creíbles e interesantes desde la psicología.
-- El texto hablado total debe tener entre 300 y 900 caracteres.
+- Texto hablado total entre 300 y 900 caracteres.
+{recent_block}
 """.strip()
 
 
@@ -304,13 +429,14 @@ def generate_script() -> VideoScript:
             models.append(model)
 
     client = genai.Client(api_key=api_key)
+    recent_titles = get_recent_titles_for_prompt()
     last_error: Exception | None = None
 
     for model in models:
         def _call_gemini(current_model: str = model) -> VideoScript:
             response = client.models.generate_content(
                 model=current_model,
-                contents=build_script_prompt(),
+                contents=build_script_prompt(recent_titles),
                 config=types.GenerateContentConfig(
                     temperature=0.9,
                     response_mime_type="application/json",
@@ -678,8 +804,61 @@ def build_subtitle_filter(srt_path: Path) -> str:
     return f"subtitles={srt_ref}:fontsdir={fonts_dir}:force_style='{style}'"
 
 
-def compose_final_video() -> None:
-    video_filter = build_subtitle_filter(CAPTIONS_PATH)
+def build_hook_drawtext_filter(hook_text: str) -> str:
+    font_path = Path(resolve_subtitle_font())
+    fontfile = font_path.as_posix().replace(":", r"\:")
+    text = escape_drawtext(hook_text)
+    return (
+        f"drawtext=fontfile={fontfile}:text='{text}':"
+        f"fontsize=84:fontcolor=yellow:borderw=5:bordercolor=black:"
+        f"x=(w-text_w)/2:y=(h-text_h)/2:"
+        f"enable='between(t,0,{HOOK_DURATION_SECONDS})'"
+    )
+
+
+def build_video_filter(script: VideoScript) -> str:
+    hook_filter = build_hook_drawtext_filter(script.hook_text)
+    subtitle_filter = build_subtitle_filter(CAPTIONS_PATH)
+    return f"{hook_filter},{subtitle_filter}"
+
+
+def generate_thumbnail_image(script: VideoScript) -> None:
+    image = Image.new("RGB", (TARGET_WIDTH, TARGET_HEIGHT), color=(24, 16, 64))
+    draw = ImageDraw.Draw(image)
+    for y in range(TARGET_HEIGHT):
+        shade = int(24 + (y / TARGET_HEIGHT) * 70)
+        draw.line([(0, y), (TARGET_WIDTH, y)], fill=(shade, shade // 2, 120))
+
+    font = ImageFont.load_default()
+    title_font = font
+    for candidate in (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    ):
+        if Path(candidate).exists():
+            title_font = ImageFont.truetype(candidate, 72)
+            break
+
+    hook = script.hook_text
+    bbox = draw.multiline_textbbox((0, 0), hook, font=title_font, align="center")
+    text_width = bbox[2] - bbox[0]
+    text_height = bbox[3] - bbox[1]
+    position = ((TARGET_WIDTH - text_width) // 2, (TARGET_HEIGHT - text_height) // 2)
+    draw.multiline_text(
+        position,
+        hook,
+        font=title_font,
+        fill=(255, 230, 0),
+        align="center",
+        stroke_width=4,
+        stroke_fill=(0, 0, 0),
+    )
+    THUMBNAIL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    image.save(THUMBNAIL_PATH, format="JPEG", quality=92)
+
+
+def compose_final_video(script: VideoScript) -> None:
+    video_filter = build_video_filter(script)
 
     run_command(
         [
@@ -712,6 +891,7 @@ def compose_final_video() -> None:
         ],
         "Final video composition",
     )
+    generate_thumbnail_image(script)
     logger.info("Final video created at %s (%.2fs)", FINAL_PATH, probe_duration(FINAL_PATH))
 
 
@@ -726,12 +906,40 @@ def build_youtube_client():
         token_uri="https://oauth2.googleapis.com/token",
         client_id=require_env("YT_CLIENT_ID"),
         client_secret=require_env("YT_CLIENT_SECRET"),
-        scopes=["https://www.googleapis.com/auth/youtube.upload"],
+        scopes=[
+            "https://www.googleapis.com/auth/youtube.upload",
+            "https://www.googleapis.com/auth/youtube.force-ssl",
+        ],
     )
     return build("youtube", "v3", credentials=credentials)
 
 
-def upload_to_youtube(script: VideoScript) -> str:
+def verify_upload_channel(youtube) -> None:
+    if not TARGET_CHANNEL_ID:
+        return
+    response = youtube.channels().list(part="id", mine=True).execute()
+    channel_ids = {item["id"] for item in response.get("items", [])}
+    if TARGET_CHANNEL_ID not in channel_ids:
+        raise PipelineError(
+            f"OAuth token is not authorized for channel {TARGET_CHANNEL_ID}. "
+            "Re-run get_token.py on the correct YouTube channel."
+        )
+
+
+def set_custom_thumbnail(youtube, video_id: str) -> None:
+    if not THUMBNAIL_PATH.exists():
+        return
+    try:
+        youtube.thumbnails().set(
+            videoId=video_id,
+            media_body=MediaFileUpload(str(THUMBNAIL_PATH), mimetype="image/jpeg"),
+        ).execute()
+        logger.info("Custom thumbnail set for %s", video_id)
+    except HttpError as exc:
+        logger.warning("Thumbnail upload skipped for %s: %s", video_id, exc)
+
+
+def upload_to_youtube(script: VideoScript) -> tuple[str, str]:
     privacy_status = (
         os.environ.get("YT_PRIVACY_STATUS", DEFAULT_PRIVACY_STATUS).strip().lower()
         or DEFAULT_PRIVACY_STATUS
@@ -740,6 +948,7 @@ def upload_to_youtube(script: VideoScript) -> str:
         raise PipelineError(f"Invalid YT_PRIVACY_STATUS: {privacy_status}")
 
     youtube = build_youtube_client()
+    verify_upload_channel(youtube)
     body = {
         "snippet": {
             "title": script.video_title,
@@ -800,17 +1009,20 @@ def upload_to_youtube(script: VideoScript) -> str:
         logger.warning(
             "containsSyntheticMedia was not confirmed as true on the uploaded video resource."
         )
-    return video_id
+    set_custom_thumbnail(youtube, video_id)
+    return video_id, actual_privacy
 
 
 async def run_pipeline(skip_upload: bool = False) -> None:
+    configure_work_paths()
     ensure_ffmpeg_subtitles_filter()
     reset_work_dir()
+    upload_slot = os.environ.get("UPLOAD_SLOT", "manual").strip() or "manual"
     script = generate_script()
     segments, _ = await generate_voiceover(script)
     raw_clips = download_background_clips(segments)
     build_background_video(raw_clips, segments)
-    compose_final_video()
+    compose_final_video(script)
     if skip_upload:
         logger.info(
             "Skipping YouTube upload. Final video ready at %s (%.2fs)",
@@ -818,7 +1030,9 @@ async def run_pipeline(skip_upload: bool = False) -> None:
             probe_duration(FINAL_PATH),
         )
         return
-    video_id = upload_to_youtube(script)
+    video_id, privacy = upload_to_youtube(script)
+    save_recent_topic(upload_slot, script.video_title, video_id)
+    append_upload_log(upload_slot, script.video_title, video_id, privacy)
     logger.info("Pipeline finished successfully. Video ID: %s", video_id)
 
 
