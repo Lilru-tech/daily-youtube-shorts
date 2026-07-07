@@ -2,9 +2,9 @@ name: Daily YouTube Short — Datos ES
 
 on:
   schedule:
-    - cron: "0 8-10 * * *"
-    - cron: "0 12-14 * * *"
-    - cron: "0 16-18 * * *"
+    - cron: "0 8 * * *"
+    - cron: "0 12 * * *"
+    - cron: "0 16 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:
@@ -48,6 +48,7 @@ jobs:
           UPLOAD_TIMEZONE: Europe/Madrid
           FORCE_UPLOAD_SLOT: ${{ github.event.inputs.force_slot || '' }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
           if python scripts/should_run.py; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"

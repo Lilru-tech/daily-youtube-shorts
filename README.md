@@ -111,8 +111,10 @@ If you have an existing `YT_REFRESH_TOKEN` for the Spanish channel, rename it to
 
 ## GitHub workflows
 
-- **Daily YouTube Short — Datos ES** (`auto_shorts_datos_es.yml`): 3x daily, Madrid timezone
-- **Daily YouTube Short — WhatIfVibe** (`auto_shorts_whatifvibe.yml`): 3x daily, US Eastern timezone
+- **Daily YouTube Short — Datos ES** (`auto_shorts_datos_es.yml`): 10:00, 14:00, 18:00 Europe/Madrid (UTC crons: 08:00, 12:00, 16:00)
+- **Daily YouTube Short — WhatIfVibe** (`auto_shorts_whatifvibe.yml`): 10:00, 14:00, 18:00 US Eastern / EDT (UTC crons: 14:00, 18:00, 22:00)
+
+Scheduled runs map each cron expression directly to an upload slot, so GitHub Actions delays do not skip uploads.
 
 Trigger either workflow manually from **Actions** in GitHub.
 

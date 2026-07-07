@@ -14,6 +14,21 @@ HOUR_TO_SLOT = {
     18: "evening",
 }
 
+SLOT_TO_HOUR = {slot: hour for hour, slot in HOUR_TO_SLOT.items()}
+
+CRON_SLOT_MAP: dict[str, dict[str, str]] = {
+    "datos_es": {
+        "0 8 * * *": "morning",
+        "0 12 * * *": "afternoon",
+        "0 16 * * *": "evening",
+    },
+    "whatifvibe": {
+        "0 14 * * *": "morning",
+        "0 18 * * *": "afternoon",
+        "0 22 * * *": "evening",
+    },
+}
+
 
 def recent_topics_path() -> Path:
     profile = os.environ.get("CHANNEL_PROFILE", "datos_es").strip() or "datos_es"
@@ -47,10 +62,17 @@ def write_github_env(key: str, value: str) -> None:
         env_file.write(f"{key}={value}\n")
 
 
+def resolve_slot_from_schedule(profile: str, schedule: str) -> tuple[str, int] | None:
+    slot = CRON_SLOT_MAP.get(profile, {}).get(schedule.strip())
+    if not slot:
+        print(f"Skip: unknown schedule cron '{schedule}' for profile '{profile}'.")
+        return None
+    return slot, SLOT_TO_HOUR[slot]
+
+
 def resolve_slot(timezone_name: str, forced_slot: str) -> tuple[str, int] | None:
     if forced_slot in {"morning", "afternoon", "evening"}:
-        hour_lookup = {slot: hour for hour, slot in HOUR_TO_SLOT.items()}
-        return forced_slot, hour_lookup[forced_slot]
+        return forced_slot, SLOT_TO_HOUR[forced_slot]
 
     now = datetime.now(ZoneInfo(timezone_name))
     slot = HOUR_TO_SLOT.get(now.hour)
@@ -66,7 +88,11 @@ def main() -> None:
     forced_slot = os.environ.get("FORCE_UPLOAD_SLOT", "").strip().lower()
     event_name = os.environ.get("GITHUB_EVENT_NAME", "").strip()
 
-    if event_name == "workflow_dispatch" and forced_slot:
+    event_schedule = os.environ.get("GITHUB_EVENT_SCHEDULE", "").strip()
+
+    if event_name == "schedule" and event_schedule:
+        resolved = resolve_slot_from_schedule(profile, event_schedule)
+    elif event_name == "workflow_dispatch" and forced_slot:
         resolved = resolve_slot(timezone_name, forced_slot)
     else:
         resolved = resolve_slot(timezone_name, "")

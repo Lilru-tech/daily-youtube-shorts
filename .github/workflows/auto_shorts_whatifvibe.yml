@@ -2,9 +2,9 @@ name: Daily YouTube Short — WhatIfVibe
 
 on:
   schedule:
-    - cron: "0 13-15 * * *"
-    - cron: "0 17-19 * * *"
-    - cron: "0 21-23 * * *"
+    - cron: "0 14 * * *"
+    - cron: "0 18 * * *"
+    - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:
@@ -48,6 +48,7 @@ jobs:
           UPLOAD_TIMEZONE: America/New_York
           FORCE_UPLOAD_SLOT: ${{ github.event.inputs.force_slot || '' }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
           if python scripts/should_run.py; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
