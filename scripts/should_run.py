@@ -6,7 +6,6 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-RECENT_TOPICS_PATH = ROOT / "data" / "recent_topics.json"
 GITHUB_ENV_PATH = os.environ.get("GITHUB_ENV")
 
 HOUR_TO_SLOT = {
@@ -16,11 +15,17 @@ HOUR_TO_SLOT = {
 }
 
 
+def recent_topics_path() -> Path:
+    profile = os.environ.get("CHANNEL_PROFILE", "datos_es").strip() or "datos_es"
+    return ROOT / "data" / profile / "recent_topics.json"
+
+
 def load_recent_topics() -> list[dict]:
-    if not RECENT_TOPICS_PATH.exists():
+    path = recent_topics_path()
+    if not path.exists():
         return []
     try:
-        payload = json.loads(RECENT_TOPICS_PATH.read_text(encoding="utf-8"))
+        payload = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(payload, list):
             return [item for item in payload if isinstance(item, dict)]
     except json.JSONDecodeError:
@@ -50,12 +55,13 @@ def resolve_slot(timezone_name: str, forced_slot: str) -> tuple[str, int] | None
     now = datetime.now(ZoneInfo(timezone_name))
     slot = HOUR_TO_SLOT.get(now.hour)
     if not slot:
-        print(f"Skip: Madrid hour {now.hour} is outside upload windows.")
+        print(f"Skip: local hour {now.hour} is outside upload windows.")
         return None
     return slot, now.hour
 
 
 def main() -> None:
+    profile = os.environ.get("CHANNEL_PROFILE", "datos_es").strip() or "datos_es"
     timezone_name = os.environ.get("UPLOAD_TIMEZONE", "Europe/Madrid").strip() or "Europe/Madrid"
     forced_slot = os.environ.get("FORCE_UPLOAD_SLOT", "").strip().lower()
     event_name = os.environ.get("GITHUB_EVENT_NAME", "").strip()
@@ -72,11 +78,11 @@ def main() -> None:
     today = datetime.now(ZoneInfo(timezone_name)).strftime("%Y-%m-%d")
 
     if slot_already_ran_today(slot, today) and event_name != "workflow_dispatch":
-        print(f"Skip: slot '{slot}' already completed for {today}.")
+        print(f"Skip: slot '{slot}' already completed for {today} ({profile}).")
         sys.exit(1)
 
-    work_dir = f"work/{today}_{slot}"
-    print(f"Run approved: slot={slot}, hour={hour}, work_dir={work_dir}")
+    work_dir = f"work/{profile}/{today}_{slot}"
+    print(f"Run approved: profile={profile}, slot={slot}, hour={hour}, work_dir={work_dir}")
     write_github_env("UPLOAD_SLOT", slot)
     write_github_env("WORK_DIR", work_dir)
     sys.exit(0)

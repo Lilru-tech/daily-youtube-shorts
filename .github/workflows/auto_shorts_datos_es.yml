@@ -1,4 +1,4 @@
-name: Daily YouTube Short
+name: Daily YouTube Short — Datos ES
 
 on:
   schedule:
@@ -29,7 +29,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: youtube-short-${{ github.workflow }}-${{ github.event.schedule || github.run_id }}
+  group: youtube-short-datos-es-${{ github.workflow }}-${{ github.event.schedule || github.run_id }}
   cancel-in-progress: false
 
 jobs:
@@ -44,7 +44,8 @@ jobs:
       - name: Decide if this schedule window should run
         id: gate
         env:
-          UPLOAD_TIMEZONE: ${{ secrets.UPLOAD_TIMEZONE }}
+          CHANNEL_PROFILE: datos_es
+          UPLOAD_TIMEZONE: Europe/Madrid
           FORCE_UPLOAD_SLOT: ${{ github.event.inputs.force_slot || '' }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: |
@@ -79,31 +80,32 @@ jobs:
       - name: Generate and upload Short
         if: steps.gate.outputs.should_run == 'true'
         env:
+          CHANNEL_PROFILE: datos_es
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          YT_REFRESH_TOKEN_DATOS_ES: ${{ secrets.YT_REFRESH_TOKEN_DATOS_ES }}
+          YT_TARGET_CHANNEL_ID_DATOS_ES: ${{ secrets.YT_TARGET_CHANNEL_ID_DATOS_ES }}
           YT_PRIVACY_STATUS: ${{ secrets.YT_PRIVACY_STATUS }}
-          YT_TARGET_CHANNEL_ID: ${{ secrets.YT_TARGET_CHANNEL_ID }}
-          EDGE_TTS_VOICE: ${{ secrets.EDGE_TTS_VOICE }}
+          EDGE_TTS_VOICE: ${{ secrets.EDGE_TTS_VOICE_DATOS_ES }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
-          UPLOAD_TIMEZONE: ${{ secrets.UPLOAD_TIMEZONE }}
+          UPLOAD_TIMEZONE: Europe/Madrid
           UPLOAD_SLOT: ${{ env.UPLOAD_SLOT }}
           WORK_DIR: ${{ env.WORK_DIR }}
           SKIP_YOUTUBE_UPLOAD: ${{ github.event.inputs.skip_upload || 'false' }}
-        run: python main.py
+        run: python main.py --channel datos_es
 
       - name: Persist upload history
         if: success() && steps.gate.outputs.should_run == 'true' && github.event.inputs.skip_upload != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/recent_topics.json data/uploads_log.csv
+          git add data/datos_es/recent_topics.json data/datos_es/uploads_log.csv
           if git diff --staged --quiet; then
             echo "No history changes to commit."
           else
-            git commit -m "chore: record Short upload for ${UPLOAD_SLOT}"
+            git commit -m "chore: record Datos ES Short upload for ${UPLOAD_SLOT}"
             git push
           fi
 
@@ -111,7 +113,7 @@ jobs:
         if: failure() && steps.gate.outputs.should_run == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: failed-run-artifacts-${{ env.UPLOAD_SLOT || 'unknown' }}
+          name: failed-run-datos-es-${{ env.UPLOAD_SLOT || 'unknown' }}
           path: |
             work/
           if-no-files-found: ignore

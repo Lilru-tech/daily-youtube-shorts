@@ -1,0 +1,120 @@
+name: Daily YouTube Short — WhatIfVibe
+
+on:
+  schedule:
+    - cron: "0 13-15 * * *"
+    - cron: "0 17-19 * * *"
+    - cron: "0 21-23 * * *"
+  workflow_dispatch:
+    inputs:
+      skip_upload:
+        description: "Generate video only (skip YouTube upload)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      force_slot:
+        description: "Force upload slot for manual tests"
+        required: false
+        default: "morning"
+        type: choice
+        options:
+          - "morning"
+          - "afternoon"
+          - "evening"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-short-whatifvibe-${{ github.workflow }}-${{ github.event.schedule || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  generate-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Decide if this schedule window should run
+        id: gate
+        env:
+          CHANNEL_PROFILE: whatifvibe
+          UPLOAD_TIMEZONE: America/New_York
+          FORCE_UPLOAD_SLOT: ${{ github.event.inputs.force_slot || '' }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if python scripts/should_run.py; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.gate.outputs.should_run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install system dependencies
+        if: steps.gate.outputs.should_run == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+
+      - name: Verify FFmpeg subtitle support
+        if: steps.gate.outputs.should_run == 'true'
+        run: |
+          ffmpeg -h filter=subtitles 2>&1 | grep -qv "Unknown filter 'subtitles'"
+
+      - name: Install Python dependencies
+        if: steps.gate.outputs.should_run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Generate and upload Short
+        if: steps.gate.outputs.should_run == 'true'
+        env:
+          CHANNEL_PROFILE: whatifvibe
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_WHATIFVIBE: ${{ secrets.YT_REFRESH_TOKEN_WHATIFVIBE }}
+          YT_TARGET_CHANNEL_ID_WHATIFVIBE: ${{ secrets.YT_TARGET_CHANNEL_ID_WHATIFVIBE }}
+          YT_PRIVACY_STATUS: ${{ secrets.YT_PRIVACY_STATUS }}
+          EDGE_TTS_VOICE: ${{ secrets.EDGE_TTS_VOICE_WHATIFVIBE }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          UPLOAD_TIMEZONE: America/New_York
+          UPLOAD_SLOT: ${{ env.UPLOAD_SLOT }}
+          WORK_DIR: ${{ env.WORK_DIR }}
+          SKIP_YOUTUBE_UPLOAD: ${{ github.event.inputs.skip_upload || 'false' }}
+        run: python main.py --channel whatifvibe
+
+      - name: Persist upload history
+        if: success() && steps.gate.outputs.should_run == 'true' && github.event.inputs.skip_upload != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/whatifvibe/recent_topics.json data/whatifvibe/uploads_log.csv
+          if git diff --staged --quiet; then
+            echo "No history changes to commit."
+          else
+            git commit -m "chore: record WhatIfVibe Short upload for ${UPLOAD_SLOT}"
+            git push
+          fi
+
+      - name: Upload build artifacts on failure
+        if: failure() && steps.gate.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-run-whatifvibe-${{ env.UPLOAD_SLOT || 'unknown' }}
+          path: |
+            work/
+          if-no-files-found: ignore
+          retention-days: 3

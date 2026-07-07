@@ -1,4 +1,6 @@
 work/
+branding/
+youtube_secrets_*.json
 __pycache__/
 *.pyc
 .env

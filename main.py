@@ -24,7 +24,16 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
-from PIL import Image, ImageDraw, ImageFont
+from channel_profiles import (
+    MAX_SCRIPT_CHARS,
+    MAX_TITLE_CHARS,
+    MIN_SCRIPT_CHARS,
+    ChannelProfile,
+    load_channel_profile,
+    resolve_profile_name,
+    subtitle_force_style,
+)
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 logging.basicConfig(
     level=logging.INFO,
@@ -36,13 +45,11 @@ logger = logging.getLogger(__name__)
 T = TypeVar("T")
 
 ROOT_DIR = Path(__file__).resolve().parent
+ACTIVE_PROFILE: ChannelProfile | None = None
 DATA_DIR = ROOT_DIR / "data"
 RECENT_TOPICS_PATH = DATA_DIR / "recent_topics.json"
 UPLOADS_LOG_PATH = DATA_DIR / "uploads_log.csv"
 MAX_RECENT_TOPICS = 30
-MAX_TITLE_CHARS = 55
-HOOK_DURATION_SECONDS = 2.5
-UPLOAD_TIMEZONE = os.environ.get("UPLOAD_TIMEZONE", "Europe/Madrid")
 
 WORK_DIR = Path("work")
 AUDIO_PATH = WORK_DIR / "audio.mp3"
@@ -56,22 +63,52 @@ AUDIO_FRAGMENTS_DIR = WORK_DIR / "audio_fragments"
 TARGET_WIDTH = 1080
 TARGET_HEIGHT = 1920
 TARGET_FPS = 30
-MIN_SCRIPT_CHARS = 300
-MAX_SCRIPT_CHARS = 900
 PEXELS_SEARCH_URL = "https://api.pexels.com/videos/search"
-DEFAULT_GEMINI_MODEL = "gemini-2.0-flash"
-FALLBACK_GEMINI_MODELS = [
-    "gemini-2.0-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-1.5-flash",
-]
-DEFAULT_EDGE_VOICE = "es-ES-AlvaroNeural"
 DEFAULT_PRIVACY_STATUS = "public"
-TARGET_CHANNEL_ID = os.environ.get("YT_TARGET_CHANNEL_ID", "UCw272LClsZaAXko-DieXKKA").strip()
 YOUTUBE_CATEGORY_ID = "27"
-FALLBACK_KEYWORDS = ["paisaje naturaleza", "cerebro pensando", "ciudad noche"]
 FFMPEG_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
 FFPROBE_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffprobe")
+
+
+class PipelineError(Exception):
+    pass
+
+
+def get_active_profile() -> ChannelProfile:
+    if ACTIVE_PROFILE is None:
+        raise PipelineError("Channel profile not initialized")
+    return ACTIVE_PROFILE
+
+
+def init_channel_profile(profile_name: str) -> ChannelProfile:
+    global ACTIVE_PROFILE, DATA_DIR, RECENT_TOPICS_PATH, UPLOADS_LOG_PATH
+
+    profile = load_channel_profile(profile_name)
+    ACTIVE_PROFILE = profile
+    DATA_DIR = profile.data_dir
+    RECENT_TOPICS_PATH = profile.data_dir / "recent_topics.json"
+    UPLOADS_LOG_PATH = profile.data_dir / "uploads_log.csv"
+    logger.info(
+        "Channel profile: %s (%s) | channel_id=%s",
+        profile.display_name,
+        profile.name,
+        profile.channel_id,
+    )
+    return profile
+
+
+def profile_timezone() -> str:
+    return os.environ.get("UPLOAD_TIMEZONE", get_active_profile().timezone).strip() or get_active_profile().timezone
+
+
+def require_refresh_token() -> str:
+    profile = get_active_profile()
+    value = os.environ.get(profile.refresh_token_env, "").strip()
+    if not value and profile.name == "datos_es":
+        value = os.environ.get("YT_REFRESH_TOKEN", "").strip()
+    if not value:
+        raise PipelineError(f"Missing required environment variable: {profile.refresh_token_env}")
+    return value
 
 
 def resolve_ffmpeg() -> str:
@@ -155,7 +192,7 @@ def load_recent_topics() -> list[dict[str, str]]:
 
 def save_recent_topic(slot: str, title: str, video_id: str) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    today = datetime.now(ZoneInfo(UPLOAD_TIMEZONE)).strftime("%Y-%m-%d")
+    today = datetime.now(ZoneInfo(profile_timezone())).strftime("%Y-%m-%d")
     entries = load_recent_topics()
     entries.append(
         {
@@ -185,16 +222,13 @@ def get_recent_titles_for_prompt(limit: int = 10) -> list[str]:
 def append_upload_log(slot: str, title: str, video_id: str, privacy: str) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     is_new_file = not UPLOADS_LOG_PATH.exists()
-    today = datetime.now(ZoneInfo(UPLOAD_TIMEZONE)).strftime("%Y-%m-%d")
+    today = datetime.now(ZoneInfo(profile_timezone())).strftime("%Y-%m-%d")
     with UPLOADS_LOG_PATH.open("a", encoding="utf-8", newline="") as log_file:
         writer = csv.writer(log_file)
         if is_new_file:
             writer.writerow(["date", "slot", "title", "video_id", "privacy", "channel_id"])
-        writer.writerow([today, slot, title, video_id, privacy, TARGET_CHANNEL_ID])
+        writer.writerow([today, slot, title, video_id, privacy, get_active_profile().channel_id])
 
-
-def has_emoji(text: str) -> bool:
-    return bool(re.search(r"[\U0001F300-\U0001FAFF\u2600-\u27BF]", text))
 
 
 def escape_drawtext(value: str) -> str:
@@ -204,9 +238,6 @@ def escape_drawtext(value: str) -> str:
     escaped = escaped.replace("%", r"\%")
     return escaped
 
-
-class PipelineError(Exception):
-    pass
 
 
 def require_env(name: str) -> str:
@@ -296,6 +327,7 @@ def extract_json_payload(raw_text: str) -> dict[str, Any]:
 
 
 def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
+    profile = get_active_profile()
     required_keys = {"video_title", "hook_text", "description", "tags", "lines"}
     missing = required_keys - set(payload.keys())
     if missing:
@@ -327,6 +359,7 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
     title = str(payload["video_title"]).strip()[:MAX_TITLE_CHARS]
     hook_text = str(payload["hook_text"]).strip().upper()[:40]
     description = str(payload["description"]).strip()[:4500]
+    line_texts = [line.text for line in lines]
 
     if len(title) > MAX_TITLE_CHARS:
         raise PipelineError(f"Title exceeds {MAX_TITLE_CHARS} characters")
@@ -334,14 +367,11 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
         raise PipelineError("hook_text is required")
     if len(hook_text.split()) > 4:
         raise PipelineError("hook_text must be 1-4 words")
-    if not has_emoji(title):
-        raise PipelineError("video_title must include at least one emoji")
-    if looks_english(title) or looks_english(description):
-        raise PipelineError("Gemini returned English metadata; Spanish content required")
 
-    for index, line in enumerate(lines):
-        if looks_english(line.text):
-            raise PipelineError(f"Line {index} is not in Spanish")
+    try:
+        profile.validate_metadata(title, description, line_texts)
+    except ValueError as exc:
+        raise PipelineError(str(exc)) from exc
 
     return VideoScript(
         video_title=title,
@@ -352,79 +382,16 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
     )
 
 
-def build_script_prompt(recent_titles: list[str]) -> str:
-    recent_block = ""
-    if recent_titles:
-        joined = "\n".join(f"- {title}" for title in recent_titles)
-        recent_block = f"""
-No repitas estos temas ni titulos recientes:
-{joined}
-"""
-
-    return f"""
-Eres un guionista viral de YouTube Shorts especializado en "Datos Asombrosos e Insights Psicologicos".
-
-Escribe un guion en espanol (Espana, neutro y natural) para un Short vertical de 40-50 segundos.
-Usa 6-8 lineas cortas habladas. Cada linea debe ser una frase impactante.
-La primera linea debe ser el gancho principal en menos de 1 segundo de lectura.
-Rota subtemas: trucos psicologicos, datos del cerebro, sesgos cognitivos, habitos, emociones, percepcion.
-
-Devuelve SOLO JSON valido con este esquema exacto:
-{{
-  "video_title": "🧠 Tu cerebro te engana asi",
-  "hook_text": "TU CEREBRO ENGAÑA",
-  "description": "Descripcion de 2-3 frases con 2-3 hashtags relevantes",
-  "tags": "psicologia,cerebro,datos,curiosos,shorts",
-  "lines": [
-    {{"text": "Primera linea hablada.", "search_keywords": "cerebro neuronas"}},
-    {{"text": "Segunda linea hablada.", "search_keywords": "mente pensando"}}
-  ]
-}}
-
-Reglas de titulo viral:
-- Maximo 50 caracteres y 5-6 palabras.
-- Empieza con 1 emoji.
-- Usa curiosidad o emocion, no expliques el video.
-- Formulas validas: "Tu cerebro...", "Nadie te dice...", "Esto explica por que...", "La trampa mental...", "Haces esto sin darte cuenta".
-
-Reglas de hook_text:
-- 1-4 palabras en MAYUSCULAS.
-- Debe resumir el gancho visual del primer frame.
-
-Reglas generales:
-- Todo en espanol. Prohibido ingles.
-- Sin markdown, sin comentarios, sin claves extra.
-- Texto hablado total entre 300 y 900 caracteres.
-{recent_block}
-""".strip()
-
-
-def looks_english(text: str) -> bool:
-    lowered = f" {text.lower()} "
-    english_markers = (
-        " the ",
-        " your ",
-        " brain",
-        " unlock",
-        " secret",
-        " you ",
-        " and ",
-        " with ",
-        " this ",
-        " that ",
-        " what ",
-        " how ",
-    )
-    return any(marker in lowered for marker in english_markers)
-
-
 def generate_script() -> VideoScript:
+    profile = get_active_profile()
     api_key = require_env("GEMINI_API_KEY")
     configured_model = os.environ.get("GEMINI_MODEL", "").strip()
     models: list[str] = []
     if configured_model:
         models.append(configured_model)
-    for model in FALLBACK_GEMINI_MODELS:
+    if profile.gemini_model not in models:
+        models.append(profile.gemini_model)
+    for model in profile.gemini_fallback_models:
         if model not in models:
             models.append(model)
 
@@ -436,7 +403,7 @@ def generate_script() -> VideoScript:
         def _call_gemini(current_model: str = model) -> VideoScript:
             response = client.models.generate_content(
                 model=current_model,
-                contents=build_script_prompt(recent_titles),
+                contents=profile.build_prompt(recent_titles),
                 config=types.GenerateContentConfig(
                     temperature=0.9,
                     response_mime_type="application/json",
@@ -537,14 +504,39 @@ async def synthesize_line_audio(
 
 
 async def generate_voiceover(script: VideoScript) -> tuple[list[LineSegment], float]:
-    voice = os.environ.get("EDGE_TTS_VOICE", DEFAULT_EDGE_VOICE).strip() or DEFAULT_EDGE_VOICE
+    profile = get_active_profile()
+    primary_voice = os.environ.get("EDGE_TTS_VOICE", profile.voice).strip() or profile.voice
+    voices_to_try = [primary_voice]
+    for fallback_voice in profile.voice_fallbacks:
+        if fallback_voice not in voices_to_try:
+            voices_to_try.append(fallback_voice)
+
     segments: list[LineSegment] = []
     merged_srt_parts: list[str] = []
     cue_index = 1
     timeline_offset = 0.0
 
     for index, line in enumerate(script.lines):
-        audio_path, srt_content, duration = await synthesize_line_audio(index, line.text, voice)
+        last_error: Exception | None = None
+        audio_path: Path | None = None
+        srt_content = ""
+        duration = 0.0
+
+        for voice in voices_to_try:
+            try:
+                audio_path, srt_content, duration = await synthesize_line_audio(
+                    index, line.text, voice
+                )
+                if voice != primary_voice:
+                    logger.warning("Line %s synthesized with fallback voice %s", index, voice)
+                break
+            except (PipelineError, OSError) as exc:
+                last_error = exc
+                logger.warning("Voice %s failed for line %s: %s", voice, index, exc)
+
+        if audio_path is None:
+            raise PipelineError(f"All voices failed for line {index}: {last_error}")
+
         segments.append(
             LineSegment(
                 index=index,
@@ -662,7 +654,7 @@ def download_background_clips(segments: list[LineSegment]) -> list[Path]:
     clip_paths: list[Path] = []
 
     for segment in segments:
-        keywords = [segment.search_keywords, *FALLBACK_KEYWORDS]
+        keywords = [segment.search_keywords, *get_active_profile().fallback_keywords]
         selected_video: dict[str, Any] | None = None
         selected_file: dict[str, Any] | None = None
 
@@ -789,30 +781,22 @@ def ensure_ffmpeg_subtitles_filter() -> None:
 
 def build_subtitle_filter(srt_path: Path) -> str:
     srt_ref = srt_path.as_posix()
-    style = (
-        "FontSize=22,"
-        "PrimaryColour=&H00FFFF&,"
-        "OutlineColour=&H000000&,"
-        "BorderStyle=1,"
-        "Outline=3,"
-        "Shadow=0,"
-        "Alignment=2,"
-        "MarginV=90"
-    )
+    style = subtitle_force_style(get_active_profile().subtitle_style)
     font_path = Path(resolve_subtitle_font())
     fonts_dir = font_path.parent.as_posix().replace(":", r"\:")
     return f"subtitles={srt_ref}:fontsdir={fonts_dir}:force_style='{style}'"
 
 
 def build_hook_drawtext_filter(hook_text: str) -> str:
+    profile = get_active_profile()
     font_path = Path(resolve_subtitle_font())
     fontfile = font_path.as_posix().replace(":", r"\:")
     text = escape_drawtext(hook_text)
     return (
         f"drawtext=fontfile={fontfile}:text='{text}':"
-        f"fontsize=84:fontcolor=yellow:borderw=5:bordercolor=black:"
+        f"fontsize={profile.hook_fontsize}:fontcolor=yellow:borderw={profile.hook_borderw}:bordercolor=black:"
         f"x=(w-text_w)/2:y=(h-text_h)/2:"
-        f"enable='between(t,0,{HOOK_DURATION_SECONDS})'"
+        f"enable='between(t,0,{profile.hook_duration_seconds})'"
     )
 
 
@@ -823,14 +807,49 @@ def build_video_filter(script: VideoScript) -> str:
 
 
 def generate_thumbnail_image(script: VideoScript) -> None:
-    image = Image.new("RGB", (TARGET_WIDTH, TARGET_HEIGHT), color=(24, 16, 64))
+    profile = get_active_profile()
+    if profile.thumbnail_style == "purple_yellow":
+        image = Image.new("RGB", (TARGET_WIDTH, TARGET_HEIGHT), color=(24, 16, 64))
+        draw = ImageDraw.Draw(image)
+        for y in range(TARGET_HEIGHT):
+            shade = int(24 + (y / TARGET_HEIGHT) * 70)
+            draw.line([(0, y), (TARGET_WIDTH, y)], fill=(shade, shade // 2, 120))
+        title_font = ImageFont.load_default()
+        for candidate in (
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+            "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        ):
+            if Path(candidate).exists():
+                title_font = ImageFont.truetype(candidate, 72)
+                break
+        hook = script.hook_text
+        bbox = draw.multiline_textbbox((0, 0), hook, font=title_font, align="center")
+        text_width = bbox[2] - bbox[0]
+        text_height = bbox[3] - bbox[1]
+        position = ((TARGET_WIDTH - text_width) // 2, (TARGET_HEIGHT - text_height) // 2)
+        draw.multiline_text(
+            position,
+            hook,
+            font=title_font,
+            fill=(255, 230, 0),
+            align="center",
+            stroke_width=4,
+            stroke_fill=(0, 0, 0),
+        )
+        THUMBNAIL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        image.save(THUMBNAIL_PATH, format="JPEG", quality=92)
+        return
+
+    image = Image.new("RGB", (TARGET_WIDTH, TARGET_HEIGHT), color=(10, 10, 18))
     draw = ImageDraw.Draw(image)
     for y in range(TARGET_HEIGHT):
-        shade = int(24 + (y / TARGET_HEIGHT) * 70)
-        draw.line([(0, y), (TARGET_WIDTH, y)], fill=(shade, shade // 2, 120))
+        ratio = y / TARGET_HEIGHT
+        r = int(10 + ratio * 30)
+        g = int(10 + ratio * 8)
+        b = int(18 + ratio * 60)
+        draw.line([(0, y), (TARGET_WIDTH, y)], fill=(r, g, b))
 
-    font = ImageFont.load_default()
-    title_font = font
+    title_font = ImageFont.load_default()
     for candidate in (
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
         "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
@@ -844,13 +863,26 @@ def generate_thumbnail_image(script: VideoScript) -> None:
     text_width = bbox[2] - bbox[0]
     text_height = bbox[3] - bbox[1]
     position = ((TARGET_WIDTH - text_width) // 2, (TARGET_HEIGHT - text_height) // 2)
+
+    glow_layer = Image.new("RGBA", (TARGET_WIDTH, TARGET_HEIGHT), (0, 0, 0, 0))
+    glow_draw = ImageDraw.Draw(glow_layer)
+    glow_draw.multiline_text(
+        position,
+        hook,
+        font=title_font,
+        fill=(155, 48, 255, 180),
+        align="center",
+    )
+    glow_layer = glow_layer.filter(ImageFilter.GaussianBlur(radius=12))
+    image.paste(glow_layer, (0, 0), glow_layer)
+
     draw.multiline_text(
         position,
         hook,
         font=title_font,
-        fill=(255, 230, 0),
+        fill=(0, 240, 255),
         align="center",
-        stroke_width=4,
+        stroke_width=5,
         stroke_fill=(0, 0, 0),
     )
     THUMBNAIL_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -902,7 +934,7 @@ def parse_tags(tags_value: str) -> list[str]:
 def build_youtube_client():
     credentials = Credentials(
         None,
-        refresh_token=require_env("YT_REFRESH_TOKEN"),
+        refresh_token=require_refresh_token(),
         token_uri="https://oauth2.googleapis.com/token",
         client_id=require_env("YT_CLIENT_ID"),
         client_secret=require_env("YT_CLIENT_SECRET"),
@@ -915,14 +947,17 @@ def build_youtube_client():
 
 
 def verify_upload_channel(youtube) -> None:
-    if not TARGET_CHANNEL_ID:
-        return
+    channel_id = get_active_profile().channel_id
+    if not channel_id:
+        raise PipelineError(
+            f"{get_active_profile().channel_id_env} is required for uploads."
+        )
     response = youtube.channels().list(part="id", mine=True).execute()
     channel_ids = {item["id"] for item in response.get("items", [])}
-    if TARGET_CHANNEL_ID not in channel_ids:
+    if channel_id not in channel_ids:
         raise PipelineError(
-            f"OAuth token is not authorized for channel {TARGET_CHANNEL_ID}. "
-            "Re-run get_token.py on the correct YouTube channel."
+            f"OAuth token is not authorized for channel {channel_id}. "
+            f"Re-run get_token.py --channel {get_active_profile().name}."
         )
 
 
@@ -949,14 +984,15 @@ def upload_to_youtube(script: VideoScript) -> tuple[str, str]:
 
     youtube = build_youtube_client()
     verify_upload_channel(youtube)
+    profile = get_active_profile()
     body = {
         "snippet": {
             "title": script.video_title,
             "description": script.description,
             "tags": parse_tags(script.tags),
             "categoryId": YOUTUBE_CATEGORY_ID,
-            "defaultLanguage": "es",
-            "defaultAudioLanguage": "es",
+            "defaultLanguage": profile.language,
+            "defaultAudioLanguage": profile.language,
         },
         "status": {
             "privacyStatus": privacy_status,
@@ -1039,6 +1075,12 @@ async def run_pipeline(skip_upload: bool = False) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate and upload a daily YouTube Short.")
     parser.add_argument(
+        "--channel",
+        choices=["datos_es", "whatifvibe"],
+        default=None,
+        help="Channel profile to use (default: CHANNEL_PROFILE env var).",
+    )
+    parser.add_argument(
         "--skip-upload",
         action="store_true",
         help="Generate the video locally without uploading to YouTube.",
@@ -1048,6 +1090,14 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.channel:
+        os.environ["_CLI_CHANNEL_PROFILE"] = args.channel
+    try:
+        profile_name = resolve_profile_name()
+    except ValueError as exc:
+        logger.error("%s", exc)
+        sys.exit(1)
+    init_channel_profile(profile_name)
     skip_upload = args.skip_upload or os.environ.get("SKIP_YOUTUBE_UPLOAD", "").lower() in {
         "1",
         "true",
