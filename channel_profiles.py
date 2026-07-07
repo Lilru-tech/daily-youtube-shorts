@@ -15,6 +15,9 @@ ThumbnailStyle = Literal["purple_yellow", "cyberpunk_cyan"]
 ProfileName = Literal["datos_es", "whatifvibe"]
 
 
+ContentType = Literal["facts", "story"]
+
+
 @dataclass
 class ChannelProfile:
     name: ProfileName
@@ -40,7 +43,7 @@ class ChannelProfile:
     channel_keywords: str
     data_dir: Path
     branding_dir: Path
-    build_prompt: Callable[[list[str]], str]
+    build_prompt: Callable[[list[str], str], str]
     validate_metadata: Callable[[str, str, list[str]], None]
 
 
@@ -89,7 +92,7 @@ def looks_english(text: str) -> bool:
     return any(marker in lowered for marker in english_markers)
 
 
-def build_datos_es_prompt(recent_titles: list[str]) -> str:
+def build_datos_es_prompt(recent_titles: list[str], content_type: str = "facts") -> str:
     recent_block = ""
     if recent_titles:
         joined = "\n".join(f"- {title}" for title in recent_titles)
@@ -98,13 +101,28 @@ No repitas estos temas ni titulos recientes:
 {joined}
 """
 
+    if content_type == "story":
+        content_block = """
+Modo de contenido: HISTORIA CORTA DE SUSPENSO (30%).
+Escribe una micro-historia inmersiva en primera persona sobre un encuentro inquietante o un dilema psicologico.
+Mantén alta tension, ritmo cinematografico y un giro final perturbador.
+"""
+    else:
+        content_block = """
+Modo de contenido: DATOS Y HECHOS PSICOLOGICOS (70%).
+Escribe datos asombrosos e insights psicologicos con escalada, giro y cierre con cliffhanger.
+Rota subtemas: trucos psicologicos, datos del cerebro, sesgos cognitivos, habitos, emociones, percepcion.
+"""
+
     return f"""
-Eres un guionista viral de YouTube Shorts especializado en "Datos Asombrosos e Insights Psicologicos".
+Eres un guionista viral de YouTube Shorts especializado en retencion maxima.
 
 Escribe un guion en espanol (Espana, neutro y natural) para un Short vertical de 40-50 segundos.
 Usa 6-8 lineas cortas habladas. Cada linea debe ser una frase impactante.
-La primera linea debe ser el gancho principal en menos de 1 segundo de lectura.
-Rota subtemas: trucos psicologicos, datos del cerebro, sesgos cognitivos, habitos, emociones, percepcion.
+{content_block}
+REGLA BRUTAL DE GANCHO: La primera linea (lines[0].text) DEBE ser un gancho psicologico agresivo.
+Prohibido saludos, intros conversacionales o relleno tipo "hola", "sabias que", "atencion".
+Debe enganchar en menos de 2 segundos de lectura.
 
 Devuelve SOLO JSON valido con este esquema exacto:
 {{
@@ -146,7 +164,7 @@ def validate_datos_es_metadata(title: str, description: str, line_texts: list[st
             raise ValueError(f"Line {index} is not in Spanish")
 
 
-def build_whatifvibe_prompt(recent_titles: list[str]) -> str:
+def build_whatifvibe_prompt(recent_titles: list[str], content_type: str = "facts") -> str:
     recent_block = ""
     if recent_titles:
         joined = "\n".join(f"- {title}" for title in recent_titles)
@@ -155,14 +173,28 @@ Do not repeat these recent topics or titles:
 {joined}
 """
 
+    if content_type == "story":
+        content_block = """
+Content mode: IMMERSIVE SHORT STORY (30%).
+Write a first-person creepy encounter or psychological dilemma with high suspense.
+Keep cinematic pacing, visceral tension, and a disturbing final turn.
+"""
+    else:
+        content_block = """
+Content mode: WHAT IF FACTS (70%).
+Write mind-bending "What happens if..." science and hypothetical scenarios.
+Rotate sub-niches: human body limits, space/cosmic disasters, physics paradoxes, survival scenarios, psychology tricks, science anomalies.
+"""
+
     return f"""
-You are a viral YouTube Shorts scriptwriter for the US channel "WhatIfVibe" — mind-bending "What happens if..." scenarios.
+You are a viral YouTube Shorts scriptwriter for the US channel "WhatIfVibe".
 
 Write a script in strict American English for a 40-50 second vertical Short.
 Use 6-8 short spoken lines. Each line must hit hard and keep viewers watching.
-Line 1 MUST be a brutal 2-second psychological hook — open with or immediately frame a "What happens if..." question
-(e.g. "What happens if you stopped blinking for 24 hours?").
-Rotate sub-niches: human body limits, space/cosmic disasters, physics paradoxes, survival scenarios, psychology tricks, science anomalies.
+{content_block}
+BRUTAL HOOK RULE: Line 1 (lines[0].text) MUST be an aggressive psychological hook.
+No greetings, no conversational intros, no filler like "hey guys" or "did you know".
+It must grab attention within 2 seconds of reading.
 
 Return ONLY valid JSON with this exact schema:
 {{

@@ -1,5 +1,6 @@
 import argparse
 import asyncio
+import os
 import sys
 from pathlib import Path
 
@@ -12,16 +13,22 @@ from main import (  # noqa: E402
     CAPTIONS_PATH,
     CLIPS_DIR,
     FINAL_PATH,
+    MIXED_AUDIO_PATH,
     ScriptLine,
     VideoScript,
-    build_background_video,
     compose_final_video,
-    download_background_clips,
+    configure_work_paths,
+    ensure_ffmpeg_subtitles_filter,
     generate_voiceover,
     init_channel_profile,
     probe_duration,
     reset_work_dir,
+    resolve_subtitle_font,
 )
+from video_assets import ensure_assets
+from video_audio import mix_voiceover_with_music, select_background_music
+from video_background import build_background
+from video_subtitles import build_ass_captions
 
 SAMPLE_SCRIPTS: dict[str, VideoScript] = {
     "datos_es": VideoScript(
@@ -93,18 +100,63 @@ async def run_smoke_test(channel: str) -> None:
         if shutil.which("ffmpeg") is None:
             raise RuntimeError("FFmpeg is not installed")
 
-    init_channel_profile(channel)
+    configure_work_paths()
+    ensure_ffmpeg_subtitles_filter()
+    if not os.environ.get("SKIP_ASSET_BOOTSTRAP", "").lower() in {"1", "true", "yes"}:
+        ensure_assets()
+
+    profile = init_channel_profile(channel)
     script = SAMPLE_SCRIPTS[channel]
     reset_work_dir()
-    segments, audio_duration = await generate_voiceover(script)
+    segments, audio_duration, word_events = await generate_voiceover(script)
     print(f"Audio: {AUDIO_PATH} ({audio_duration:.2f}s)")
+
+    _, font_name = resolve_subtitle_font()
+    build_ass_captions(
+        word_events,
+        CAPTIONS_PATH,
+        font_name=font_name,
+        subtitle_style=profile.subtitle_style,
+    )
     print(f"Captions: {CAPTIONS_PATH} ({CAPTIONS_PATH.stat().st_size} bytes)")
 
-    raw_clips = download_background_clips(segments)
-    print(f"Downloaded {len(raw_clips)} clips into {CLIPS_DIR}")
+    music_path = select_background_music()
+    mix_voiceover_with_music(
+        AUDIO_PATH,
+        music_path,
+        MIXED_AUDIO_PATH,
+        audio_duration,
+        __import__("main").run_command,
+    )
+    print(f"Mixed audio: {MIXED_AUDIO_PATH}")
 
-    build_background_video(raw_clips, segments)
-    compose_final_video(script)
+    from main import (  # noqa: E402
+        BACKGROUND_PATH,
+        CLIPS_DIR,
+        download_file,
+        require_env,
+        retry,
+        PipelineError,
+    )
+
+    build_background(
+        audio_duration,
+        segments,
+        "pexels",
+        fallback_keywords=profile.fallback_keywords,
+        clips_dir=CLIPS_DIR,
+        background_path=BACKGROUND_PATH,
+        minecraft_state_path=profile.data_dir / "minecraft_state.json",
+        run_command=__import__("main").run_command,
+        download_file=download_file,
+        probe_duration=probe_duration,
+        require_env=require_env,
+        retry=retry,
+        pipeline_error=PipelineError,
+    )
+    print(f"Background video ready in {CLIPS_DIR}")
+
+    compose_final_video(script, audio_path=MIXED_AUDIO_PATH)
     final_duration = probe_duration(FINAL_PATH)
     print(f"Final video: {FINAL_PATH} ({final_duration:.2f}s)")
     print(f"Smoke test passed for {channel}.")
@@ -113,8 +165,6 @@ async def run_smoke_test(channel: str) -> None:
 if __name__ == "__main__":
     args = parse_args()
     if args.channel == "whatifvibe":
-        import os
-
         if not os.environ.get("YT_TARGET_CHANNEL_ID_WHATIFVIBE", "").strip():
             os.environ["YT_TARGET_CHANNEL_ID_WHATIFVIBE"] = "UC_PLACEHOLDER_WHATIFVIBE"
     asyncio.run(run_smoke_test(args.channel))

@@ -30,11 +30,15 @@ from channel_profiles import (
     MAX_TITLE_CHARS,
     MIN_SCRIPT_CHARS,
     ChannelProfile,
+    ContentType,
     load_channel_profile,
     resolve_profile_name,
-    subtitle_force_style,
 )
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from video_assets import AssetBootstrapError, ensure_assets
+from video_audio import mix_voiceover_with_music, select_background_music
+from video_background import BackgroundMode, build_background
+from video_subtitles import WordEvent, build_ass_captions
 
 logging.basicConfig(
     level=logging.INFO,
@@ -54,7 +58,8 @@ MAX_RECENT_TOPICS = 30
 
 WORK_DIR = Path("work")
 AUDIO_PATH = WORK_DIR / "audio.mp3"
-CAPTIONS_PATH = WORK_DIR / "captions.srt"
+MIXED_AUDIO_PATH = WORK_DIR / "mixed_audio.mp3"
+CAPTIONS_PATH = WORK_DIR / "captions.ass"
 BACKGROUND_PATH = WORK_DIR / "background.mp4"
 FINAL_PATH = WORK_DIR / "final.mp4"
 THUMBNAIL_PATH = WORK_DIR / "thumbnail.jpg"
@@ -64,7 +69,6 @@ AUDIO_FRAGMENTS_DIR = WORK_DIR / "audio_fragments"
 TARGET_WIDTH = 1080
 TARGET_HEIGHT = 1920
 TARGET_FPS = 30
-PEXELS_SEARCH_URL = "https://api.pexels.com/videos/search"
 DEFAULT_PRIVACY_STATUS = "public"
 YOUTUBE_CATEGORY_ID = "27"
 FFMPEG_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
@@ -165,13 +169,14 @@ class LineSegment:
 
 
 def configure_work_paths() -> None:
-    global WORK_DIR, AUDIO_PATH, CAPTIONS_PATH, BACKGROUND_PATH, FINAL_PATH
+    global WORK_DIR, AUDIO_PATH, MIXED_AUDIO_PATH, CAPTIONS_PATH, BACKGROUND_PATH, FINAL_PATH
     global THUMBNAIL_PATH, CLIPS_DIR, AUDIO_FRAGMENTS_DIR
 
     work_dir_value = os.environ.get("WORK_DIR", "work").strip() or "work"
     WORK_DIR = Path(work_dir_value)
     AUDIO_PATH = WORK_DIR / "audio.mp3"
-    CAPTIONS_PATH = WORK_DIR / "captions.srt"
+    MIXED_AUDIO_PATH = WORK_DIR / "mixed_audio.mp3"
+    CAPTIONS_PATH = WORK_DIR / "captions.ass"
     BACKGROUND_PATH = WORK_DIR / "background.mp4"
     FINAL_PATH = WORK_DIR / "final.mp4"
     THUMBNAIL_PATH = WORK_DIR / "thumbnail.jpg"
@@ -401,15 +406,24 @@ def gemini_retry_delay(exc: Exception, attempt: int) -> float:
     return min(5.0 * attempt, 20.0)
 
 
+def pick_content_type() -> ContentType:
+    return "facts" if random.random() < 0.70 else "story"
+
+
+def pick_background_mode() -> BackgroundMode:
+    return "pexels" if random.random() < 0.50 else "minecraft"
+
+
 def call_gemini_for_script(
     client: genai.Client,
     profile: ChannelProfile,
     model: str,
     recent_titles: list[str],
+    content_type: ContentType,
 ) -> VideoScript:
     response = client.models.generate_content(
         model=model,
-        contents=profile.build_prompt(recent_titles),
+        contents=profile.build_prompt(recent_titles, content_type),
         config=types.GenerateContentConfig(
             temperature=0.9,
             response_mime_type="application/json",
@@ -422,8 +436,9 @@ def call_gemini_for_script(
     return validate_script_payload(payload)
 
 
-def generate_script() -> VideoScript:
+def generate_script(content_type: ContentType) -> VideoScript:
     profile = get_active_profile()
+    logger.info("Generating script with content_type=%s", content_type)
     api_key = require_env("GEMINI_API_KEY")
     allowed_models = [profile.gemini_model, *profile.gemini_fallback_models]
     configured_model = os.environ.get("GEMINI_MODEL", "").strip()
@@ -447,7 +462,7 @@ def generate_script() -> VideoScript:
         max_attempts = 2
         for attempt in range(1, max_attempts + 1):
             try:
-                script = call_gemini_for_script(client, profile, model, recent_titles)
+                script = call_gemini_for_script(client, profile, model, recent_titles, content_type)
                 logger.info(
                     "Generated script with %s: %s (%s lines)",
                     model,
@@ -514,74 +529,42 @@ def generate_script() -> VideoScript:
     raise PipelineError(f"All Gemini models failed. Last error: {last_error}")
 
 
-def parse_srt_timestamp(timestamp: str) -> float:
-    hours, minutes, rest = timestamp.split(":")
-    seconds, millis = rest.split(",")
-    return int(hours) * 3600 + int(minutes) * 60 + int(seconds) + int(millis) / 1000
-
-
-def format_srt_timestamp(seconds: float) -> str:
-    total_millis = int(round(seconds * 1000))
-    hours = total_millis // 3_600_000
-    total_millis %= 3_600_000
-    minutes = total_millis // 60_000
-    total_millis %= 60_000
-    secs = total_millis // 1000
-    millis = total_millis % 1000
-    return f"{hours:02d}:{minutes:02d}:{secs:02d},{millis:03d}"
-
-
-def shift_srt_content(content: str, offset_seconds: float, start_index: int) -> tuple[str, int]:
-    blocks = re.split(r"\n\s*\n", content.strip())
-    shifted_blocks: list[str] = []
-    cue_index = start_index
-    for block in blocks:
-        lines = block.strip().splitlines()
-        if len(lines) < 2:
-            continue
-        timing_match = re.match(
-            r"(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})",
-            lines[1],
-        )
-        if not timing_match:
-            continue
-        start = parse_srt_timestamp(timing_match.group(1)) + offset_seconds
-        end = parse_srt_timestamp(timing_match.group(2)) + offset_seconds
-        text = "\n".join(lines[2:]).strip()
-        shifted_blocks.append(
-            f"{cue_index}\n"
-            f"{format_srt_timestamp(start)} --> {format_srt_timestamp(end)}\n"
-            f"{text}"
-        )
-        cue_index += 1
-    return "\n\n".join(shifted_blocks), cue_index
-
-
 async def synthesize_line_audio(
     index: int,
     text: str,
     voice: str,
-) -> tuple[Path, str, float]:
+    timeline_offset: float,
+) -> tuple[Path, list[WordEvent], float]:
     audio_path = AUDIO_FRAGMENTS_DIR / f"line_{index:02d}.mp3"
     communicate = edge_tts.Communicate(text, voice)
-    submaker = edge_tts.SubMaker()
+    word_events: list[WordEvent] = []
 
     with audio_path.open("wb") as audio_file:
         async for chunk in communicate.stream():
             if chunk["type"] == "audio":
                 audio_file.write(chunk["data"])
-            elif chunk["type"] in ("WordBoundary", "SentenceBoundary"):
-                submaker.feed(chunk)
+            elif chunk["type"] == "WordBoundary":
+                start = timeline_offset + (chunk["offset"] / 10_000_000)
+                end = start + (chunk["duration"] / 10_000_000)
+                word_text = str(chunk.get("text", "")).strip()
+                if word_text:
+                    word_events.append(WordEvent(text=word_text, start=start, end=end))
 
     if not audio_path.exists() or audio_path.stat().st_size == 0:
         raise PipelineError(f"edge-tts produced empty audio for line {index}")
 
-    srt_content = submaker.get_srt()
     duration = probe_duration(audio_path)
-    return audio_path, srt_content, duration
+    if not word_events:
+        words = [word for word in text.split() if word.strip()]
+        if words:
+            step = duration / len(words)
+            for word_index, word in enumerate(words):
+                start = timeline_offset + (word_index * step)
+                word_events.append(WordEvent(text=word, start=start, end=start + step))
+    return audio_path, word_events, duration
 
 
-async def generate_voiceover(script: VideoScript) -> tuple[list[LineSegment], float]:
+async def generate_voiceover(script: VideoScript) -> tuple[list[LineSegment], float, list[WordEvent]]:
     profile = get_active_profile()
     primary_voice = os.environ.get("EDGE_TTS_VOICE", profile.voice).strip() or profile.voice
     voices_to_try = [primary_voice]
@@ -590,20 +573,19 @@ async def generate_voiceover(script: VideoScript) -> tuple[list[LineSegment], fl
             voices_to_try.append(fallback_voice)
 
     segments: list[LineSegment] = []
-    merged_srt_parts: list[str] = []
-    cue_index = 1
+    all_word_events: list[WordEvent] = []
     timeline_offset = 0.0
 
     for index, line in enumerate(script.lines):
         last_error: Exception | None = None
         audio_path: Path | None = None
-        srt_content = ""
+        line_word_events: list[WordEvent] = []
         duration = 0.0
 
         for voice in voices_to_try:
             try:
-                audio_path, srt_content, duration = await synthesize_line_audio(
-                    index, line.text, voice
+                audio_path, line_word_events, duration = await synthesize_line_audio(
+                    index, line.text, voice, timeline_offset
                 )
                 if voice != primary_voice:
                     logger.warning("Line %s synthesized with fallback voice %s", index, voice)
@@ -624,15 +606,7 @@ async def generate_voiceover(script: VideoScript) -> tuple[list[LineSegment], fl
                 duration=duration,
             )
         )
-        if srt_content.strip():
-            shifted, cue_index = shift_srt_content(srt_content, timeline_offset, cue_index)
-            if shifted:
-                merged_srt_parts.append(shifted)
-        else:
-            start = format_srt_timestamp(timeline_offset)
-            end = format_srt_timestamp(timeline_offset + duration)
-            merged_srt_parts.append(f"{cue_index}\n{start} --> {end}\n{line.text}")
-            cue_index += 1
+        all_word_events.extend(line_word_events)
         timeline_offset += duration
 
     concat_list_path = AUDIO_FRAGMENTS_DIR / "concat.txt"
@@ -657,60 +631,9 @@ async def generate_voiceover(script: VideoScript) -> tuple[list[LineSegment], fl
         "Audio concatenation",
     )
 
-    CAPTIONS_PATH.write_text("\n\n".join(merged_srt_parts) + "\n", encoding="utf-8")
     total_duration = probe_duration(AUDIO_PATH)
     logger.info("Voiceover ready: %.2fs (%s segments)", total_duration, len(segments))
-    return segments, total_duration
-
-
-def pexels_headers() -> dict[str, str]:
-    return {"Authorization": require_env("PEXELS_API_KEY")}
-
-
-def search_pexels_videos(query: str, used_ids: set[int]) -> list[dict[str, Any]]:
-    params = {
-        "query": query,
-        "per_page": 20,
-        "orientation": "portrait",
-    }
-
-    def _search() -> list[dict[str, Any]]:
-        response = requests.get(
-            PEXELS_SEARCH_URL,
-            headers=pexels_headers(),
-            params=params,
-            timeout=30,
-        )
-        response.raise_for_status()
-        payload = response.json()
-        videos = payload.get("videos", [])
-        if not isinstance(videos, list):
-            return []
-        return videos
-
-    videos = retry(_search, f"Pexels search for '{query}'")
-    return [video for video in videos if video.get("id") not in used_ids]
-
-
-def choose_video_file(video: dict[str, Any]) -> dict[str, Any] | None:
-    files = video.get("video_files", [])
-    if not isinstance(files, list) or not files:
-        return None
-
-    portrait_candidates = [
-        item
-        for item in files
-        if item.get("width") and item.get("height") and item["height"] > item["width"]
-    ]
-    candidates = portrait_candidates or files
-    candidates.sort(
-        key=lambda item: (
-            item.get("height", 0),
-            item.get("width", 0),
-        ),
-        reverse=True,
-    )
-    return candidates[0]
+    return segments, total_duration, all_word_events
 
 
 def download_file(url: str, destination: Path) -> None:
@@ -728,117 +651,45 @@ def download_file(url: str, destination: Path) -> None:
 
 
 def download_background_clips(segments: list[LineSegment]) -> list[Path]:
-    used_video_ids: set[int] = set()
-    clip_paths: list[Path] = []
-
-    for segment in segments:
-        keywords = [segment.search_keywords, *get_active_profile().fallback_keywords]
-        selected_video: dict[str, Any] | None = None
-        selected_file: dict[str, Any] | None = None
-
-        for keyword in keywords:
-            videos = search_pexels_videos(keyword, used_video_ids)
-            for video in videos:
-                video_file = choose_video_file(video)
-                if video_file and video_file.get("link"):
-                    selected_video = video
-                    selected_file = video_file
-                    break
-            if selected_video:
-                break
-
-        if not selected_video or not selected_file:
-            raise PipelineError(f"No Pexels video found for line {segment.index}: {segment.search_keywords}")
-
-        video_id = int(selected_video["id"])
-        used_video_ids.add(video_id)
-        raw_clip_path = CLIPS_DIR / f"raw_{segment.index:02d}.mp4"
-        download_file(str(selected_file["link"]), raw_clip_path)
-        clip_paths.append(raw_clip_path)
-        logger.info(
-            "Downloaded clip %s for line %s (%s)",
-            video_id,
-            segment.index,
-            segment.search_keywords,
-        )
-
-    return clip_paths
-
-
-def normalize_and_trim_clip(source_path: Path, destination_path: Path, duration: float) -> None:
-    filter_chain = (
-        f"scale={TARGET_WIDTH}:{TARGET_HEIGHT}:force_original_aspect_ratio=increase,"
-        f"crop={TARGET_WIDTH}:{TARGET_HEIGHT},"
-        f"setsar=1,fps={TARGET_FPS},format=yuv420p"
+    profile = get_active_profile()
+    total_duration = sum(segment.duration for segment in segments)
+    build_background(
+        total_duration,
+        segments,
+        "pexels",
+        fallback_keywords=profile.fallback_keywords,
+        clips_dir=CLIPS_DIR,
+        background_path=BACKGROUND_PATH,
+        minecraft_state_path=profile.data_dir / "minecraft_state.json",
+        run_command=run_command,
+        download_file=download_file,
+        probe_duration=probe_duration,
+        require_env=require_env,
+        retry=retry,
+        pipeline_error=PipelineError,
     )
-    run_command(
-        [
-            "ffmpeg",
-            "-y",
-            "-stream_loop",
-            "-1",
-            "-i",
-            str(source_path),
-            "-t",
-            f"{duration:.3f}",
-            "-vf",
-            filter_chain,
-            "-an",
-            "-c:v",
-            "libx264",
-            "-preset",
-            "veryfast",
-            "-crf",
-            "23",
-            "-movflags",
-            "+faststart",
-            str(destination_path),
-        ],
-        f"Normalize clip {source_path.name}",
-    )
+    return sorted(CLIPS_DIR.glob("raw_*.mp4"))
 
 
 def build_background_video(raw_clips: list[Path], segments: list[LineSegment]) -> None:
-    processed_clips: list[Path] = []
-    for raw_clip, segment in zip(raw_clips, segments, strict=True):
-        processed_path = CLIPS_DIR / f"processed_{segment.index:02d}.mp4"
-        normalize_and_trim_clip(raw_clip, processed_path, segment.duration)
-        processed_clips.append(processed_path)
-
-    concat_list_path = CLIPS_DIR / "concat.txt"
-    with concat_list_path.open("w", encoding="utf-8") as concat_file:
-        for clip_path in processed_clips:
-            concat_file.write(f"file '{clip_path.resolve().as_posix()}'\n")
-
-    run_command(
-        [
-            "ffmpeg",
-            "-y",
-            "-f",
-            "concat",
-            "-safe",
-            "0",
-            "-i",
-            str(concat_list_path),
-            "-c",
-            "copy",
-            str(BACKGROUND_PATH),
-        ],
-        "Background video concatenation",
-    )
-    logger.info("Background video created at %s", BACKGROUND_PATH)
+    del raw_clips, segments
+    if BACKGROUND_PATH.exists():
+        return
+    raise PipelineError("Background video was not built")
 
 
-def resolve_subtitle_font() -> str:
+def resolve_subtitle_font() -> tuple[str, str]:
     candidates = [
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        ("/System/Library/Fonts/Supplemental/Impact.ttf", "Impact"),
+        ("/Library/Fonts/Arial Black.ttf", "Arial Black"),
+        ("/System/Library/Fonts/Supplemental/Arial Bold.ttf", "Arial Black"),
+        ("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "DejaVu Sans"),
+        ("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "DejaVu Sans"),
     ]
-    for candidate in candidates:
-        if Path(candidate).exists():
-            return candidate
-    return "DejaVu Sans"
+    for font_path, font_name in candidates:
+        if Path(font_path).exists():
+            return font_path, font_name
+    return "DejaVu Sans", "DejaVu Sans"
 
 
 def ensure_ffmpeg_subtitles_filter() -> None:
@@ -857,18 +708,17 @@ def ensure_ffmpeg_subtitles_filter() -> None:
         )
 
 
-def build_subtitle_filter(srt_path: Path) -> str:
-    srt_ref = srt_path.as_posix()
-    style = subtitle_force_style(get_active_profile().subtitle_style)
-    font_path = Path(resolve_subtitle_font())
-    fonts_dir = font_path.parent.as_posix().replace(":", r"\:")
-    return f"subtitles={srt_ref}:fontsdir={fonts_dir}:force_style='{style}'"
+def build_subtitle_filter(captions_path: Path) -> str:
+    captions_ref = captions_path.as_posix().replace(":", r"\:")
+    font_path, _ = resolve_subtitle_font()
+    fonts_dir = Path(font_path).parent.as_posix().replace(":", r"\:")
+    return f"subtitles={captions_ref}:fontsdir={fonts_dir}"
 
 
 def build_hook_drawtext_filter(hook_text: str) -> str:
     profile = get_active_profile()
-    font_path = Path(resolve_subtitle_font())
-    fontfile = font_path.as_posix().replace(":", r"\:")
+    font_path, _ = resolve_subtitle_font()
+    fontfile = Path(font_path).as_posix().replace(":", r"\:")
     text = escape_drawtext(hook_text)
     return (
         f"drawtext=fontfile={fontfile}:text='{text}':"
@@ -967,7 +817,8 @@ def generate_thumbnail_image(script: VideoScript) -> None:
     image.save(THUMBNAIL_PATH, format="JPEG", quality=92)
 
 
-def compose_final_video(script: VideoScript) -> None:
+def compose_final_video(script: VideoScript, audio_path: Path | None = None) -> None:
+    final_audio_path = audio_path or AUDIO_PATH
     video_filter = build_video_filter(script)
 
     run_command(
@@ -977,7 +828,7 @@ def compose_final_video(script: VideoScript) -> None:
             "-i",
             str(BACKGROUND_PATH),
             "-i",
-            str(AUDIO_PATH),
+            str(final_audio_path),
             "-vf",
             video_filter,
             "-map",
@@ -1130,13 +981,53 @@ def upload_to_youtube(script: VideoScript) -> tuple[str, str]:
 async def run_pipeline(skip_upload: bool = False) -> None:
     configure_work_paths()
     ensure_ffmpeg_subtitles_filter()
+    try:
+        ensure_assets()
+    except AssetBootstrapError as exc:
+        raise PipelineError(str(exc)) from exc
     reset_work_dir()
     upload_slot = os.environ.get("UPLOAD_SLOT", "manual").strip() or "manual"
-    script = generate_script()
-    segments, _ = await generate_voiceover(script)
-    raw_clips = download_background_clips(segments)
-    build_background_video(raw_clips, segments)
-    compose_final_video(script)
+    profile = get_active_profile()
+    content_type = pick_content_type()
+    background_mode = pick_background_mode()
+    logger.info("Pipeline mode: content_type=%s background_mode=%s", content_type, background_mode)
+
+    script = generate_script(content_type)
+    segments, total_duration, word_events = await generate_voiceover(script)
+
+    _, font_name = resolve_subtitle_font()
+    build_ass_captions(
+        word_events,
+        CAPTIONS_PATH,
+        font_name=font_name,
+        subtitle_style=profile.subtitle_style,
+    )
+
+    music_path = select_background_music()
+    mix_voiceover_with_music(
+        AUDIO_PATH,
+        music_path,
+        MIXED_AUDIO_PATH,
+        total_duration,
+        run_command,
+    )
+
+    build_background(
+        total_duration,
+        segments,
+        background_mode,
+        fallback_keywords=profile.fallback_keywords,
+        clips_dir=CLIPS_DIR,
+        background_path=BACKGROUND_PATH,
+        minecraft_state_path=profile.data_dir / "minecraft_state.json",
+        run_command=run_command,
+        download_file=download_file,
+        probe_duration=probe_duration,
+        require_env=require_env,
+        retry=retry,
+        pipeline_error=PipelineError,
+    )
+    compose_final_video(script, audio_path=MIXED_AUDIO_PATH)
     if skip_upload:
         logger.info(
             "Skipping YouTube upload. Final video ready at %s (%.2fs)",

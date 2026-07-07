@@ -35,11 +35,19 @@ concurrency:
 jobs:
   generate-and-upload:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Cache media assets
+        uses: actions/cache@v4
+        with:
+          path: |
+            background_music/
+            minecraft_gameplay/
+          key: media-assets-v1-${{ runner.os }}
 
       - name: Decide if this schedule window should run
         id: gate
@@ -67,7 +75,7 @@ jobs:
         if: steps.gate.outputs.should_run == 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-dejavu-extra
 
       - name: Verify FFmpeg subtitle support
         if: steps.gate.outputs.should_run == 'true'
