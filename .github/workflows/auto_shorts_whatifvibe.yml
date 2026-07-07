@@ -115,7 +115,19 @@ jobs:
             echo "No history changes to commit."
           else
             git commit -m "chore: record WhatIfVibe Short upload for ${UPLOAD_SLOT}"
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git push; then
+                echo "Pushed upload history on attempt ${attempt}."
+                break
+              fi
+              echo "Push rejected on attempt ${attempt}; rebasing on latest main."
+              git pull --rebase --autostash origin main
+              if [ "${attempt}" -eq 5 ]; then
+                echo "Failed to push upload history after ${attempt} attempts." >&2
+                exit 1
+              fi
+              sleep $((attempt * 3))
+            done
           fi
 
       - name: Upload build artifacts on failure
