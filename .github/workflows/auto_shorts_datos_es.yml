@@ -2,9 +2,9 @@ name: Daily YouTube Short — Datos ES
 
 on:
   schedule:
-    - cron: "0 8 * * *"
-    - cron: "0 12 * * *"
-    - cron: "0 16 * * *"
+    - cron: "17 8 * * *"
+    - cron: "17 12 * * *"
+    - cron: "17 16 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:
