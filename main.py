@@ -20,6 +20,7 @@ import edge_tts
 import requests
 from google import genai
 from google.genai import types
+from google.genai.errors import APIError
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -382,16 +383,59 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
     )
 
 
+def gemini_error_code(exc: Exception) -> int | None:
+    if isinstance(exc, APIError):
+        return exc.code
+    return None
+
+
+def is_daily_gemini_quota_exhausted(exc: Exception) -> bool:
+    message = str(exc)
+    return "PerDay" in message or "limit: 0" in message
+
+
+def gemini_retry_delay(exc: Exception, attempt: int) -> float:
+    match = re.search(r"retry in ([0-9.]+)s", str(exc), flags=re.IGNORECASE)
+    if match:
+        return float(match.group(1)) + random.uniform(0.5, 1.5)
+    return min(5.0 * attempt, 20.0)
+
+
+def call_gemini_for_script(
+    client: genai.Client,
+    profile: ChannelProfile,
+    model: str,
+    recent_titles: list[str],
+) -> VideoScript:
+    response = client.models.generate_content(
+        model=model,
+        contents=profile.build_prompt(recent_titles),
+        config=types.GenerateContentConfig(
+            temperature=0.9,
+            response_mime_type="application/json",
+        ),
+    )
+    raw_text = (response.text or "").strip()
+    if not raw_text:
+        raise PipelineError("Gemini returned an empty response")
+    payload = extract_json_payload(raw_text)
+    return validate_script_payload(payload)
+
+
 def generate_script() -> VideoScript:
     profile = get_active_profile()
     api_key = require_env("GEMINI_API_KEY")
+    allowed_models = [profile.gemini_model, *profile.gemini_fallback_models]
     configured_model = os.environ.get("GEMINI_MODEL", "").strip()
     models: list[str] = []
     if configured_model:
+        if configured_model not in allowed_models:
+            raise PipelineError(
+                f"Invalid GEMINI_MODEL '{configured_model}'. "
+                f"Allowed models for profile '{profile.name}': {allowed_models}"
+            )
         models.append(configured_model)
-    if profile.gemini_model not in models:
-        models.append(profile.gemini_model)
-    for model in profile.gemini_fallback_models:
+    for model in allowed_models:
         if model not in models:
             models.append(model)
 
@@ -400,38 +444,72 @@ def generate_script() -> VideoScript:
     last_error: Exception | None = None
 
     for model in models:
-        def _call_gemini(current_model: str = model) -> VideoScript:
-            response = client.models.generate_content(
-                model=current_model,
-                contents=profile.build_prompt(recent_titles),
-                config=types.GenerateContentConfig(
-                    temperature=0.9,
-                    response_mime_type="application/json",
-                ),
-            )
-            raw_text = (response.text or "").strip()
-            if not raw_text:
-                raise PipelineError("Gemini returned an empty response")
-            payload = extract_json_payload(raw_text)
-            return validate_script_payload(payload)
+        max_attempts = 2
+        for attempt in range(1, max_attempts + 1):
+            try:
+                script = call_gemini_for_script(client, profile, model, recent_titles)
+                logger.info(
+                    "Generated script with %s: %s (%s lines)",
+                    model,
+                    script.video_title,
+                    len(script.lines),
+                )
+                return script
+            except Exception as exc:
+                last_error = exc
+                code = gemini_error_code(exc)
 
-        try:
-            script = retry(
-                _call_gemini,
-                f"Gemini script generation ({model})",
-                max_attempts=4,
-                base_delay=20.0,
-            )
-            logger.info(
-                "Generated script with %s: %s (%s lines)",
-                model,
-                script.video_title,
-                len(script.lines),
-            )
-            return script
-        except PipelineError as exc:
-            last_error = exc
-            logger.warning("Model %s unavailable, trying next fallback: %s", model, exc)
+                if code == 404:
+                    logger.warning("Model %s not found, trying next fallback.", model)
+                    break
+
+                if code == 429:
+                    if is_daily_gemini_quota_exhausted(exc):
+                        logger.warning(
+                            "Model %s daily quota exhausted, trying next fallback.",
+                            model,
+                        )
+                        break
+                    if attempt < max_attempts:
+                        delay = gemini_retry_delay(exc, attempt)
+                        logger.warning(
+                            "Model %s rate-limited (429), retrying in %.1fs.",
+                            model,
+                            delay,
+                        )
+                        time.sleep(delay)
+                        continue
+                    logger.warning("Model %s still rate-limited, trying next fallback.", model)
+                    break
+
+                if code == 503:
+                    if attempt < max_attempts:
+                        delay = gemini_retry_delay(exc, attempt)
+                        logger.warning(
+                            "Model %s unavailable (503), retrying in %.1fs.",
+                            model,
+                            delay,
+                        )
+                        time.sleep(delay)
+                        continue
+                    logger.warning("Model %s still unavailable, trying next fallback.", model)
+                    break
+
+                if attempt < max_attempts:
+                    delay = gemini_retry_delay(exc, attempt)
+                    logger.warning(
+                        "Gemini script generation (%s) failed on attempt %s/%s: %s. Retrying in %.1fs.",
+                        model,
+                        attempt,
+                        max_attempts,
+                        exc,
+                        delay,
+                    )
+                    time.sleep(delay)
+                    continue
+
+                logger.warning("Model %s failed, trying next fallback: %s", model, exc)
+                break
 
     raise PipelineError(f"All Gemini models failed. Last error: {last_error}")
 

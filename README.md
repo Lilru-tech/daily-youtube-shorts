@@ -135,4 +135,7 @@ branding/{profile}/
 - The pipeline sets `containsSyntheticMedia: true` on every upload
 - On macOS, subtitle burn-in requires FFmpeg with libass: `brew install ffmpeg-full`
 - `scripts/setup_channel.py` is a wrapper for `create_branding.py --channel datos_es --update-youtube`
-- If Gemini returns `RESOURCE_EXHAUSTED (429)` you need a key with available quota (typically by enabling billing / using a paid plan key).
+- Gemini script generation tries multiple models with separate free-tier quotas:
+  `gemini-2.5-flash-lite` → `gemini-2.5-flash` → `gemini-2.0-flash-lite` → `gemini-2.0-flash`.
+  On `429` daily quota for one model, the pipeline automatically switches to the next model.
+- If all models return `RESOURCE_EXHAUSTED (429)`, update `GEMINI_API_KEY` or enable billing on the Google AI project.
