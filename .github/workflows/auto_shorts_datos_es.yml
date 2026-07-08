@@ -44,7 +44,7 @@ permissions:
 
 concurrency:
   group: youtube-shorts-gemini-global
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   generate-and-upload:
