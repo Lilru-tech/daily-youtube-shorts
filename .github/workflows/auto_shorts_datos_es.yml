@@ -43,8 +43,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: youtube-shorts-gemini-global
-  cancel-in-progress: true
+  group: youtube-shorts-${{ github.workflow }}-${{ github.run_id }}
+  cancel-in-progress: false
 
 jobs:
   generate-and-upload:
