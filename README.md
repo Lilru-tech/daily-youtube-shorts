@@ -111,12 +111,38 @@ If you have an existing `YT_REFRESH_TOKEN` for the Spanish channel, rename it to
 
 ## GitHub workflows
 
-- **Daily YouTube Short — Datos ES** (`auto_shorts_datos_es.yml`): ~10:17, 14:17, 18:17 Europe/Madrid (first UTC attempt per slot: 08:17, 12:17, 16:17)
-- **Daily YouTube Short — WhatIfVibe** (`auto_shorts_whatifvibe.yml`): ~10:23, 14:23, 18:23 US Eastern / EDT (first UTC attempt per slot: 14:23, 18:23, 22:23)
+| Workflow | Channel | Local target | First UTC attempt | Retry window (local) |
+|----------|---------|--------------|-------------------|----------------------|
+| `auto_shorts_datos_es.yml` | `datos_es` | 10:00 / 14:00 / 18:00 Europe/Madrid | 07:42 / 11:42 / 15:42 UTC | ~09:42–10:42 / 13:42–14:42 / 17:42–18:42 Madrid (CEST) |
+| `auto_shorts_whatifvibe.yml` | `whatifvibe` | 10:00 / 14:00 / 18:00 US Eastern | 13:42 / 17:42 / 21:42 UTC | ~09:42–10:42 / 13:42–14:42 / 17:42–18:42 EDT |
+| `schedule_watchdog.yml` | both | backup only | external trigger | fires missing slots via `workflow_dispatch` |
 
-Scheduled runs map each cron expression directly to an upload slot, so GitHub Actions delays do not skip uploads. Because GitHub frequently delays or silently drops scheduled events (worse on private/low-activity repos), each slot has several redundant cron attempts spaced ~20 min apart; `should_run.py` dedupes by slot/day so at most one upload happens per slot. If you change any cron, update `CRON_SLOT_MAP` in `scripts/should_run.py` so every cron string still maps to a slot.
+GitHub Actions cron runs in **UTC only**. Summer offsets: Madrid CEST = UTC+2, US Eastern EDT = UTC−4. Each slot has four redundant cron attempts at minutes `:42`, `:02`, `:22`, `:42` to avoid on-the-hour scheduler queues. Channel windows are staggered so Datos ES and WhatIfVibe never overlap (shared `GEMINI_API_KEY` and `youtube-shorts-gemini-global` concurrency group).
 
-Trigger either workflow manually from **Actions** in GitHub.
+Scheduled runs map each cron expression directly to an upload slot via `CRON_SLOT_MAP` in `scripts/should_run.py`, so GitHub delays do not skip uploads. `should_run.py` dedupes by slot/day so at most one upload happens per slot. If you change any cron, update `CRON_SLOT_MAP` to match.
+
+### Private-repo scheduler reliability
+
+This repo is private. GitHub frequently **delays or silently drops** scheduled workflow events on low-activity private repositories. Mitigations:
+
+1. **Redundant crons** (configured above) — four attempts per slot.
+2. **Schedule Watchdog** (`schedule_watchdog.yml`) — external backup via `repository_dispatch`. Configure [cron-job.org](https://cron-job.org) (or similar) to POST at ~09:50 / 13:50 / 17:50 local time per channel, **after** the primary window, only if the slot may have been missed:
+
+   ```
+   POST https://api.github.com/repos/Lilru-tech/daily-youtube-shorts/dispatches
+   Authorization: Bearer <PAT with repo scope>
+   {"event_type":"schedule_watchdog","client_payload":{"channel":"datos_es","slot":"morning"}}
+   ```
+
+   Replace `channel` / `slot` for each backup (six dispatches per day total). The watchdog checks `recent_topics.json` and triggers the channel workflow with `force_slot` only when today's slot is missing.
+
+3. **Make the repo public** (simplest fix) — scheduled events become significantly more reliable; secrets remain protected.
+
+### Daylight saving drift
+
+Fixed UTC crons shift local publish times by **one hour** when clocks change (CET/EST in winter vs CEST/EDT in summer). Update cron hours seasonally or accept ~1 h drift.
+
+Trigger any workflow manually from **Actions** in GitHub.
 
 ## Data layout
 

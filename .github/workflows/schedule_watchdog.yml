@@ -1,0 +1,71 @@
+name: Schedule Watchdog
+
+on:
+  repository_dispatch:
+    types: [schedule_watchdog]
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Channel profile to check"
+        required: true
+        type: choice
+        options:
+          - datos_es
+          - whatifvibe
+      slot:
+        description: "Upload slot to verify"
+        required: true
+        type: choice
+        options:
+          - morning
+          - afternoon
+          - evening
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: youtube-shorts-gemini-global
+  cancel-in-progress: false
+
+jobs:
+  check-and-trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Resolve channel and slot
+        id: params
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "channel=${{ github.event.client_payload.channel }}" >> "$GITHUB_OUTPUT"
+            echo "slot=${{ github.event.client_payload.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "channel=${{ inputs.channel }}" >> "$GITHUB_OUTPUT"
+            echo "slot=${{ inputs.slot }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check if upload slot is missing today
+        id: check
+        env:
+          CHANNEL_PROFILE: ${{ steps.params.outputs.channel }}
+          WATCHDOG_SLOT: ${{ steps.params.outputs.slot }}
+        run: python scripts/watchdog_check.py
+
+      - name: Trigger channel workflow
+        if: steps.check.outputs.needs_trigger == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CHANNEL="${{ steps.params.outputs.channel }}"
+          SLOT="${{ steps.params.outputs.slot }}"
+          if [ "$CHANNEL" = "datos_es" ]; then
+            WORKFLOW="auto_shorts_datos_es.yml"
+          else
+            WORKFLOW="auto_shorts_whatifvibe.yml"
+          fi
+          gh workflow run "$WORKFLOW" --ref main -f "force_slot=$SLOT"
