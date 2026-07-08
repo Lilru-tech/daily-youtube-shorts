@@ -111,32 +111,19 @@ If you have an existing `YT_REFRESH_TOKEN` for the Spanish channel, rename it to
 
 ## GitHub workflows
 
-| Workflow | Channel | Local target | First UTC attempt | Retry window (local) |
-|----------|---------|--------------|-------------------|----------------------|
-| `auto_shorts_datos_es.yml` | `datos_es` | 10:00 / 14:00 / 18:00 Europe/Madrid | 07:42 / 11:42 / 15:42 UTC | ~09:42–10:42 / 13:42–14:42 / 17:42–18:42 Madrid (CEST) |
-| `auto_shorts_whatifvibe.yml` | `whatifvibe` | 10:00 / 14:00 / 18:00 US Eastern | 13:42 / 17:42 / 21:42 UTC | ~09:42–10:42 / 13:42–14:42 / 17:42–18:42 EDT |
-| `schedule_watchdog.yml` | both | backup only | external trigger | fires missing slots via `workflow_dispatch` |
+| Workflow | Channel | Local target | UTC attempts | Local window (summer) |
+|----------|---------|--------------|--------------|------------------------|
+| `auto_shorts_datos_es.yml` | `datos_es` | 10:00 / 14:00 / 18:00 Europe/Madrid | 07:42+08:22 / 11:42+12:22 / 15:42+16:22 | two tries per slot, ~20 min apart |
+| `auto_shorts_whatifvibe.yml` | `whatifvibe` | 10:00 / 14:00 / 18:00 US Eastern | 13:42+14:22 / 17:42+18:22 / 21:42+22:22 | two tries per slot, ~20 min apart |
+| `schedule_watchdog.yml` | both | manual recovery | `workflow_dispatch` only | re-triggers a missing slot after checking `recent_topics.json` |
 
-GitHub Actions cron runs in **UTC only**. Summer offsets: Madrid CEST = UTC+2, US Eastern EDT = UTC−4. Each slot has four redundant cron attempts at minutes `:42`, `:02`, `:22`, `:42` to avoid on-the-hour scheduler queues. Channel windows are staggered so Datos ES and WhatIfVibe never overlap (shared `GEMINI_API_KEY` and `youtube-shorts-gemini-global` concurrency group).
+This repository is **public** for reliable GitHub Actions cron scheduling. Secrets (`GEMINI_API_KEY`, OAuth tokens, etc.) live only in **GitHub Actions Secrets** — never in the repo.
+
+GitHub Actions cron runs in **UTC only**. Summer offsets: Madrid CEST = UTC+2, US Eastern EDT = UTC−4. Each slot has two cron attempts at minutes `:42` and `:22` to avoid on-the-hour scheduler queues. Channel windows are staggered so Datos ES and WhatIfVibe never overlap (shared `GEMINI_API_KEY` and `youtube-shorts-gemini-global` concurrency group).
 
 Scheduled runs map each cron expression directly to an upload slot via `CRON_SLOT_MAP` in `scripts/should_run.py`, so GitHub delays do not skip uploads. `should_run.py` dedupes by slot/day so at most one upload happens per slot. If you change any cron, update `CRON_SLOT_MAP` to match.
 
-### Private-repo scheduler reliability
-
-This repo is private. GitHub frequently **delays or silently drops** scheduled workflow events on low-activity private repositories. Mitigations:
-
-1. **Redundant crons** (configured above) — four attempts per slot.
-2. **Schedule Watchdog** (`schedule_watchdog.yml`) — external backup via `repository_dispatch`. Configure [cron-job.org](https://cron-job.org) (or similar) to POST at ~09:50 / 13:50 / 17:50 local time per channel, **after** the primary window, only if the slot may have been missed:
-
-   ```
-   POST https://api.github.com/repos/Lilru-tech/daily-youtube-shorts/dispatches
-   Authorization: Bearer <PAT with repo scope>
-   {"event_type":"schedule_watchdog","client_payload":{"channel":"datos_es","slot":"morning"}}
-   ```
-
-   Replace `channel` / `slot` for each backup (six dispatches per day total). The watchdog checks `recent_topics.json` and triggers the channel workflow with `force_slot` only when today's slot is missing.
-
-3. **Make the repo public** (simplest fix) — scheduled events become significantly more reliable; secrets remain protected.
+If a scheduled slot is missed, run **Schedule Watchdog** manually from Actions (pick channel + slot). No external cron service or PAT is required.
 
 ### Daylight saving drift
 
@@ -144,15 +131,29 @@ Fixed UTC crons shift local publish times by **one hour** when clocks change (CE
 
 Trigger any workflow manually from **Actions** in GitHub.
 
+## Security
+
+**Audit result:** OAuth JSON files (`youtube_secrets_*.json`, `client_secret.json`), `.env`, and `token.json` have **never been committed** to git history. Only `client_secret.json.template` (placeholder values) is tracked.
+
+Files blocked by `.gitignore` and must stay local:
+
+- `youtube_secrets_*.json`, `client_secret.json`, `token.json`
+- `.env`, `.env.*`
+- `work/`, `.venv/`, `data/*_log.csv`
+
+**Token rotation is not required** from a git-leak perspective. Rotate OAuth refresh tokens only if you suspect local machine compromise.
+
+Never commit real credentials. Use `get_token.py` locally and store tokens in GitHub Secrets.
+
 ## Data layout
 
 ```
-data/datos_es/recent_topics.json
-data/datos_es/uploads_log.csv
+data/datos_es/recent_topics.json      # tracked (dedup state)
+data/datos_es/uploads_log.csv         # local/CI only (gitignored)
 data/whatifvibe/recent_topics.json
 data/whatifvibe/uploads_log.csv
-work/{profile}/{date}_{slot}/
-branding/{profile}/
+work/{profile}/{date}_{slot}/         # gitignored
+branding/{profile}/                   # gitignored
 ```
 
 ## Notes

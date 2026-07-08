@@ -2,25 +2,17 @@ name: Daily YouTube Short — WhatIfVibe
 
 on:
   schedule:
-    # Redundant attempts per slot: GitHub frequently drops/delays scheduled
-    # events, so each slot is retried a few times. should_run.py dedupes by
-    # slot/day, so at most one upload happens per slot.
-    # Minutes :42/:02/:22/:42 avoid on-the-hour queue peaks (EDT = UTC-4).
-    # morning ~10:00 EDT (14:00 UTC) — retries 09:42–10:42 EDT
+    # Public repo: two attempts per slot (~20 min apart) at off-peak minutes.
+    # EDT = UTC-4. Target windows: ~10:00 / 14:00 / 18:00 US Eastern.
+    # morning — 09:42 and 10:22 EDT
     - cron: "42 13 * * *"
-    - cron: "2 14 * * *"
     - cron: "22 14 * * *"
-    - cron: "42 14 * * *"
-    # afternoon ~14:00 EDT (18:00 UTC) — retries 13:42–14:42 EDT
+    # afternoon — 13:42 and 14:22 EDT
     - cron: "42 17 * * *"
-    - cron: "2 18 * * *"
     - cron: "22 18 * * *"
-    - cron: "42 18 * * *"
-    # evening ~18:00 EDT (22:00 UTC) — retries 17:42–18:42 EDT
+    # evening — 17:42 and 18:22 EDT
     - cron: "42 21 * * *"
-    - cron: "2 22 * * *"
     - cron: "22 22 * * *"
-    - cron: "42 22 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:
@@ -127,7 +119,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/whatifvibe/recent_topics.json data/whatifvibe/uploads_log.csv
+          git add data/whatifvibe/recent_topics.json
           if git diff --staged --quiet; then
             echo "No history changes to commit."
           else

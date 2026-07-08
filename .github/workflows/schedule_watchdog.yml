@@ -1,8 +1,6 @@
 name: Schedule Watchdog
 
 on:
-  repository_dispatch:
-    types: [schedule_watchdog]
   workflow_dispatch:
     inputs:
       channel:
@@ -38,22 +36,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Resolve channel and slot
-        id: params
-        run: |
-          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
-            echo "channel=${{ github.event.client_payload.channel }}" >> "$GITHUB_OUTPUT"
-            echo "slot=${{ github.event.client_payload.slot }}" >> "$GITHUB_OUTPUT"
-          else
-            echo "channel=${{ inputs.channel }}" >> "$GITHUB_OUTPUT"
-            echo "slot=${{ inputs.slot }}" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Check if upload slot is missing today
         id: check
         env:
-          CHANNEL_PROFILE: ${{ steps.params.outputs.channel }}
-          WATCHDOG_SLOT: ${{ steps.params.outputs.slot }}
+          CHANNEL_PROFILE: ${{ inputs.channel }}
+          WATCHDOG_SLOT: ${{ inputs.slot }}
         run: python scripts/watchdog_check.py
 
       - name: Trigger channel workflow
@@ -61,8 +48,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          CHANNEL="${{ steps.params.outputs.channel }}"
-          SLOT="${{ steps.params.outputs.slot }}"
+          CHANNEL="${{ inputs.channel }}"
+          SLOT="${{ inputs.slot }}"
           if [ "$CHANNEL" = "datos_es" ]; then
             WORKFLOW="auto_shorts_datos_es.yml"
           else

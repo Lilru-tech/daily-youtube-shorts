@@ -1,16 +1,40 @@
-work/
-branding/
+# Local OAuth and API credentials — never commit
 youtube_secrets_*.json
-__pycache__/
-*.pyc
-.env
-.env.*
+youtube_secrets.json
 client_secret.json
 token.json
-youtube_secrets.json
-get_token.py
-*.mp4
-*.mp3
-.DS_Store
+credentials.json
+*.credentials.json
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
 .venv/
 venv/
+
+# Build artifacts and generated media
+work/
+*.mp4
+*.mp3
+*.wav
+*.webm
+
+# Local branding outputs (regenerate with create_branding.py)
+branding/
+
+# Upload logs (local/CI only; recent_topics.json stays tracked for dedup)
+data/*_log.csv
+data/*/uploads_log.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Legacy local helper (use scripts/setup_oauth.py)
+get_token.py
