@@ -2,17 +2,23 @@ name: Daily YouTube Short — Datos ES
 
 on:
   schedule:
-    # Public repo: two attempts per slot (~20 min apart) at off-peak minutes.
+    # Four attempts per slot (~20 min apart) to tolerate cron drift/queueing.
     # CEST = UTC+2. Target windows: ~10:00 / 14:00 / 18:00 Europe/Madrid.
-    # morning — 09:42 and 10:22 Madrid
+    # morning — 09:42 / 10:02 / 10:22 / 10:42 Madrid
     - cron: "42 7 * * *"
+    - cron: "2 8 * * *"
     - cron: "22 8 * * *"
-    # afternoon — 13:42 and 14:22 Madrid
+    - cron: "42 8 * * *"
+    # afternoon — 13:42 / 14:02 / 14:22 / 14:42 Madrid
     - cron: "42 11 * * *"
+    - cron: "2 12 * * *"
     - cron: "22 12 * * *"
-    # evening — 17:42 and 18:22 Madrid
+    - cron: "42 12 * * *"
+    # evening — 17:42 / 18:02 / 18:22 / 18:42 Madrid
     - cron: "42 15 * * *"
+    - cron: "2 16 * * *"
     - cron: "22 16 * * *"
+    - cron: "42 16 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:

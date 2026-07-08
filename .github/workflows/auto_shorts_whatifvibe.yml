@@ -2,17 +2,23 @@ name: Daily YouTube Short — WhatIfVibe
 
 on:
   schedule:
-    # Public repo: two attempts per slot (~20 min apart) at off-peak minutes.
+    # Four attempts per slot (~20 min apart) to tolerate cron drift/queueing.
     # EDT = UTC-4. Target windows: ~10:00 / 14:00 / 18:00 US Eastern.
-    # morning — 09:42 and 10:22 EDT
+    # morning — 09:42 / 10:02 / 10:22 / 10:42 EDT
     - cron: "42 13 * * *"
+    - cron: "2 14 * * *"
     - cron: "22 14 * * *"
-    # afternoon — 13:42 and 14:22 EDT
+    - cron: "42 14 * * *"
+    # afternoon — 13:42 / 14:02 / 14:22 / 14:42 EDT
     - cron: "42 17 * * *"
+    - cron: "2 18 * * *"
     - cron: "22 18 * * *"
-    # evening — 17:42 and 18:22 EDT
+    - cron: "42 18 * * *"
+    # evening — 17:42 / 18:02 / 18:22 / 18:42 EDT
     - cron: "42 21 * * *"
+    - cron: "2 22 * * *"
     - cron: "22 22 * * *"
+    - cron: "42 22 * * *"
   workflow_dispatch:
     inputs:
       skip_upload:
