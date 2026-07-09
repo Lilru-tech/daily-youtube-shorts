@@ -94,17 +94,22 @@ def _choose_video_file(video: dict[str, Any]) -> dict[str, Any] | None:
     return candidates[0]
 
 
+def _build_scaled_filter_chain() -> str:
+    pulse = "if(lte(mod(t\\,3)\\,1.5)\\,1.05\\,1.0)"
+    return (
+        f"scale=w='trunc(iw*{pulse}/2)*2':h='trunc(ih*{pulse}/2)*2',"
+        f"crop={TARGET_WIDTH}:{TARGET_HEIGHT}:(iw-{TARGET_WIDTH})/2:(ih-{TARGET_HEIGHT})/2,"
+        f"setsar=1,fps={TARGET_FPS},format=yuv420p"
+    )
+
+
 def _normalize_and_trim_clip(
     source_path: Path,
     destination_path: Path,
     duration: float,
     run_command,
 ) -> None:
-    filter_chain = (
-        f"scale={TARGET_WIDTH}:{TARGET_HEIGHT}:force_original_aspect_ratio=increase,"
-        f"crop={TARGET_WIDTH}:{TARGET_HEIGHT},"
-        f"setsar=1,fps={TARGET_FPS},format=yuv420p"
-    )
+    filter_chain = _build_scaled_filter_chain()
     run_command(
         [
             "ffmpeg",
@@ -248,11 +253,7 @@ def build_minecraft_background(
     if start_offset > max_start:
         start_offset = random.uniform(0.0, max(0.0, max_start))
 
-    filter_chain = (
-        f"scale={TARGET_WIDTH}:{TARGET_HEIGHT}:force_original_aspect_ratio=increase,"
-        f"crop={TARGET_WIDTH}:{TARGET_HEIGHT},"
-        f"setsar=1,fps={TARGET_FPS},format=yuv420p"
-    )
+    filter_chain = _build_scaled_filter_chain()
     run_command(
         [
             "ffmpeg",

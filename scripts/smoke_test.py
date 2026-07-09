@@ -24,6 +24,7 @@ from main import (  # noqa: E402
     probe_duration,
     reset_work_dir,
     resolve_subtitle_font,
+    trim_trailing_silence,
 )
 from video_assets import ensure_assets
 from video_audio import mix_voiceover_with_music, select_background_music
@@ -50,7 +51,7 @@ SAMPLE_SCRIPTS: dict[str, VideoScript] = {
                 search_keywords="meditacion calma",
             ),
             ScriptLine(
-                text="Cada repeticion fortalece las conexiones que mas usas en tu mente.",
+                text="Cada repeticion fortalece las conexiones que mas usas, y por eso tu cerebro puede",
                 search_keywords="mente pensando",
             ),
         ],
@@ -74,7 +75,7 @@ SAMPLE_SCRIPTS: dict[str, VideoScript] = {
                 search_keywords="eye doctor exam",
             ),
             ScriptLine(
-                text="Your brain would force micro-blinks to protect you before permanent damage set in.",
+                text="Your brain would force micro-blinks to protect you, but what happens if you stopped",
                 search_keywords="brain scan medical",
             ),
         ],
@@ -109,6 +110,7 @@ async def run_smoke_test(channel: str) -> None:
     script = SAMPLE_SCRIPTS[channel]
     reset_work_dir()
     segments, audio_duration, word_events = await generate_voiceover(script)
+    audio_duration = trim_trailing_silence(AUDIO_PATH)
     print(f"Audio: {AUDIO_PATH} ({audio_duration:.2f}s)")
 
     _, font_name = resolve_subtitle_font()
@@ -156,7 +158,7 @@ async def run_smoke_test(channel: str) -> None:
     )
     print(f"Background video ready in {CLIPS_DIR}")
 
-    compose_final_video(script, audio_path=MIXED_AUDIO_PATH)
+    compose_final_video(script, audio_path=MIXED_AUDIO_PATH, total_duration=audio_duration)
     final_duration = probe_duration(FINAL_PATH)
     print(f"Final video: {FINAL_PATH} ({final_duration:.2f}s)")
     print(f"Smoke test passed for {channel}.")

@@ -163,6 +163,7 @@ branding/{profile}/                   # gitignored
 - On macOS, subtitle burn-in requires FFmpeg with libass: `brew install ffmpeg-full`
 - `scripts/setup_channel.py` is a wrapper for `create_branding.py --channel datos_es --update-youtube`
 - Gemini script generation tries multiple models with separate free-tier quotas:
-  `gemini-2.5-flash-lite` → `gemini-2.5-flash` → `gemini-2.0-flash-lite` → `gemini-2.0-flash`.
-  On `429` daily quota for one model, the pipeline automatically switches to the next model.
+  `gemini-2.5-flash-lite` → `gemini-2.5-flash` → `gemini-2.0-flash-lite` → `gemini-2.0-flash` → `gemini-1.5-flash` → `gemini-1.5-flash-8b`.
+  On `429` daily quota for one model, the pipeline automatically switches to the next model. Per-minute `429` responses wait and retry.
+- Both channel workflows share the `youtube-shorts-gemini-global` concurrency group so only one Gemini call runs at a time.
 - If all models return `RESOURCE_EXHAUSTED (429)`, update `GEMINI_API_KEY` or enable billing on the Google AI project.

@@ -79,6 +79,13 @@ YOUTUBE_CATEGORY_ID = "27"
 FFMPEG_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
 FFPROBE_FULL_PATH = Path("/opt/homebrew/opt/ffmpeg-full/bin/ffprobe")
 
+BANNED_OPENER_PATTERNS = re.compile(
+    r"^(hola|hey|hi|hello|oye|mira|atencion|atención|sabias|sabías|did you know|"
+    r"welcome|bienvenid|escucha|listen up|today we|hoy vamos)",
+    re.IGNORECASE,
+)
+WEAK_ARTICLE_OPENERS = re.compile(r"^(el |la |los |las |un |una |the |a |an )", re.IGNORECASE)
+
 
 class PipelineError(Exception):
     pass
@@ -337,6 +344,16 @@ def extract_json_payload(raw_text: str) -> dict[str, Any]:
     return json.loads(text)
 
 
+def validate_opener_line(text: str) -> None:
+    opener = text[:30].strip()
+    if not opener:
+        raise PipelineError("First line opener is empty")
+    if BANNED_OPENER_PATTERNS.search(opener):
+        raise PipelineError(f"First line uses banned soft opener: {opener!r}")
+    if WEAK_ARTICLE_OPENERS.match(opener):
+        raise PipelineError(f"First line starts with weak article opener: {opener!r}")
+
+
 def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
     profile = get_active_profile()
     required_keys = {"video_title", "hook_text", "description", "tags", "lines"}
@@ -359,6 +376,8 @@ def validate_script_payload(payload: dict[str, Any]) -> VideoScript:
         if not keywords:
             raise PipelineError(f"Line {index} has empty search_keywords")
         lines.append(ScriptLine(text=text, search_keywords=keywords))
+
+    validate_opener_line(lines[0].text)
 
     total_chars = sum(len(line.text) for line in lines)
     if total_chars < MIN_SCRIPT_CHARS or total_chars > MAX_SCRIPT_CHARS:
@@ -401,7 +420,13 @@ def gemini_error_code(exc: Exception) -> int | None:
 
 def is_daily_gemini_quota_exhausted(exc: Exception) -> bool:
     message = str(exc)
-    return "PerDay" in message or "limit: 0" in message
+    daily_markers = (
+        "PerDay",
+        "PerDayPerProject",
+        "GenerateRequestsPerDay",
+        "GenerateContentInputTokensPerModelPerDay",
+    )
+    return any(marker in message for marker in daily_markers)
 
 
 def gemini_retry_delay(exc: Exception, attempt: int) -> float:
@@ -409,6 +434,80 @@ def gemini_retry_delay(exc: Exception, attempt: int) -> float:
     if match:
         return float(match.group(1)) + random.uniform(0.5, 1.5)
     return min(5.0 * attempt, 20.0)
+
+
+def normalize_gemini_model_name(name: str) -> str:
+    return name.removeprefix("models/").strip()
+
+
+def list_available_gemini_models(client: genai.Client) -> set[str]:
+    try:
+        available: set[str] = set()
+        for model in client.models.list():
+            model_name = normalize_gemini_model_name(getattr(model, "name", "") or "")
+            if not model_name:
+                continue
+            actions = getattr(model, "supported_actions", None) or []
+            action_names = {str(action).lower() for action in actions}
+            if "generatecontent" in action_names or not action_names:
+                available.add(model_name)
+        logger.info(
+            "Gemini models available for generateContent (%s): %s",
+            len(available),
+            ", ".join(sorted(available)[:12]),
+        )
+        return available
+    except Exception as exc:
+        logger.warning("Could not list Gemini models, using configured order: %s", exc)
+        return set()
+
+
+def resolve_gemini_model_candidates(client: genai.Client, models: list[str]) -> list[str]:
+    available = list_available_gemini_models(client)
+    if not available:
+        return models
+
+    ordered: list[str] = []
+    seen: set[str] = set()
+    for model in models:
+        if model in available and model not in seen:
+            ordered.append(model)
+            seen.add(model)
+
+    missing = [model for model in models if model not in available]
+    if missing:
+        logger.warning("Skipping unavailable Gemini models: %s", missing)
+
+    preferred_extras = [
+        "gemini-2.5-flash-lite",
+        "gemini-2.5-flash",
+        "gemini-2.0-flash-lite",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-001",
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
+        "gemini-1.5-flash-latest",
+        "gemini-1.5-flash-8b-latest",
+    ]
+    for model in preferred_extras:
+        if model in available and model not in seen:
+            ordered.append(model)
+            seen.add(model)
+
+    extra_models = os.environ.get("GEMINI_EXTRA_MODELS", "").strip()
+    if extra_models:
+        for model in extra_models.split(","):
+            cleaned = model.strip()
+            if cleaned and cleaned in available and cleaned not in seen:
+                ordered.append(cleaned)
+                seen.add(cleaned)
+
+    if not ordered:
+        raise PipelineError(
+            "No configured Gemini models are available for this API key. "
+            f"Requested={models}, available={sorted(available)}"
+        )
+    return ordered
 
 
 def pick_content_type() -> ContentType:
@@ -452,22 +551,19 @@ def generate_script(content_type: ContentType) -> VideoScript:
     configured_model = os.environ.get("GEMINI_MODEL", "").strip()
     models: list[str] = []
     if configured_model:
-        if configured_model not in allowed_models:
-            raise PipelineError(
-                f"Invalid GEMINI_MODEL '{configured_model}'. "
-                f"Allowed models for profile '{profile.name}': {allowed_models}"
-            )
         models.append(configured_model)
     for model in allowed_models:
         if model not in models:
             models.append(model)
 
     client = genai.Client(api_key=api_key)
+    models = resolve_gemini_model_candidates(client, models)
     recent_titles = get_recent_titles_for_prompt()
     last_error: Exception | None = None
+    saw_rate_limit = False
 
     for model in models:
-        max_attempts = 2
+        max_attempts = 3
         for attempt in range(1, max_attempts + 1):
             try:
                 script = call_gemini_for_script(client, profile, model, recent_titles, content_type)
@@ -483,6 +579,15 @@ def generate_script(content_type: ContentType) -> VideoScript:
                 code = gemini_error_code(exc)
 
                 if code == 404:
+                    if attempt < max_attempts:
+                        delay = gemini_retry_delay(exc, attempt)
+                        logger.warning(
+                            "Model %s not found (404), retrying in %.1fs.",
+                            model,
+                            delay,
+                        )
+                        time.sleep(delay)
+                        continue
                     logger.warning("Model %s not found, trying next fallback.", model)
                     break
 
@@ -493,6 +598,7 @@ def generate_script(content_type: ContentType) -> VideoScript:
                             model,
                         )
                         break
+                    saw_rate_limit = True
                     if attempt < max_attempts:
                         delay = gemini_retry_delay(exc, attempt)
                         logger.warning(
@@ -533,6 +639,28 @@ def generate_script(content_type: ContentType) -> VideoScript:
 
                 logger.warning("Model %s failed, trying next fallback: %s", model, exc)
                 break
+
+    if saw_rate_limit and models:
+        cooldown = float(os.environ.get("GEMINI_COOLDOWN_SECONDS", "65"))
+        final_model = models[-1]
+        logger.warning(
+            "All Gemini models were rate-limited; waiting %.1fs before final retry with %s.",
+            cooldown,
+            final_model,
+        )
+        time.sleep(cooldown)
+        try:
+            script = call_gemini_for_script(client, profile, final_model, recent_titles, content_type)
+            logger.info(
+                "Generated script after cooldown with %s: %s (%s lines)",
+                final_model,
+                script.video_title,
+                len(script.lines),
+            )
+            return script
+        except Exception as exc:
+            last_error = exc
+            logger.warning("Final cooldown retry with %s failed: %s", final_model, exc)
 
     raise PipelineError(f"All Gemini models failed. Last error: {last_error}")
 
@@ -730,16 +858,28 @@ def build_hook_drawtext_filter(hook_text: str) -> str:
     text = escape_drawtext(hook_text)
     return (
         f"drawtext=fontfile={fontfile}:text='{text}':"
-        f"fontsize={profile.hook_fontsize}:fontcolor=yellow:borderw={profile.hook_borderw}:bordercolor=black:"
+        f"fontsize={profile.hook_fontsize}:fontcolor={profile.hook_fontcolor}:"
+        f"borderw={profile.hook_borderw}:bordercolor=black:"
+        f"box=1:boxcolor=black@0.75:boxborderw=24:"
         f"x=(w-text_w)/2:y=(h-text_h)/2:"
         f"enable='between(t,0,{profile.hook_duration_seconds})'"
     )
 
 
-def build_video_filter(script: VideoScript) -> str:
+def build_progress_bar_filter(total_duration: float, color: str, height: int = 5) -> str:
+    return (
+        f"drawbox=x=0:y=h-{height}:"
+        f"w='min(w\\,w*t/{total_duration:.3f})':"
+        f"h={height}:color={color}@0.9:t=fill"
+    )
+
+
+def build_video_filter(script: VideoScript, total_duration: float) -> str:
+    profile = get_active_profile()
     hook_filter = build_hook_drawtext_filter(script.hook_text)
+    progress_filter = build_progress_bar_filter(total_duration, profile.progress_bar_color)
     subtitle_filter = build_subtitle_filter(CAPTIONS_PATH)
-    return f"{hook_filter},{subtitle_filter}"
+    return f"{hook_filter},{progress_filter},{subtitle_filter}"
 
 
 def generate_thumbnail_image(script: VideoScript) -> None:
@@ -825,9 +965,40 @@ def generate_thumbnail_image(script: VideoScript) -> None:
     image.save(THUMBNAIL_PATH, format="JPEG", quality=92)
 
 
-def compose_final_video(script: VideoScript, audio_path: Path | None = None) -> None:
+def trim_trailing_silence(audio_path: Path) -> float:
+    trimmed_path = audio_path.with_name(f"{audio_path.stem}_trimmed{audio_path.suffix}")
+    threshold = os.environ.get("SILENCE_TRIM_THRESHOLD", "-45dB").strip() or "-45dB"
+    run_command(
+        [
+            "ffmpeg",
+            "-y",
+            "-i",
+            str(audio_path),
+            "-af",
+            f"silenceremove=stop_periods=-1:stop_duration=0.05:stop_threshold={threshold}",
+            "-c:a",
+            "libmp3lame",
+            "-b:a",
+            "192k",
+            str(trimmed_path),
+        ],
+        "Trailing silence trim",
+    )
+    shutil.move(trimmed_path, audio_path)
+    duration = probe_duration(audio_path)
+    logger.info("Trimmed trailing silence from %s (%.2fs)", audio_path.name, duration)
+    return duration
+
+
+def compose_final_video(
+    script: VideoScript,
+    audio_path: Path | None = None,
+    total_duration: float | None = None,
+) -> None:
     final_audio_path = audio_path or AUDIO_PATH
-    video_filter = build_video_filter(script)
+    if total_duration is None:
+        total_duration = probe_duration(final_audio_path)
+    video_filter = build_video_filter(script, total_duration)
 
     run_command(
         [
@@ -1002,6 +1173,7 @@ async def run_pipeline(skip_upload: bool = False) -> None:
 
     script = generate_script(content_type)
     segments, total_duration, word_events = await generate_voiceover(script)
+    total_duration = trim_trailing_silence(AUDIO_PATH)
 
     _, font_name = resolve_subtitle_font()
     build_ass_captions(
@@ -1040,7 +1212,7 @@ async def run_pipeline(skip_upload: bool = False) -> None:
         retry=retry,
         pipeline_error=PipelineError,
     )
-    compose_final_video(script, audio_path=final_audio_path)
+    compose_final_video(script, audio_path=final_audio_path, total_duration=total_duration)
     if skip_upload:
         logger.info(
             "Skipping YouTube upload. Final video ready at %s (%.2fs)",

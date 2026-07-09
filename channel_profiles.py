@@ -34,6 +34,8 @@ class ChannelProfile:
     hook_duration_seconds: float
     hook_fontsize: int
     hook_borderw: int
+    hook_fontcolor: str
+    progress_bar_color: str
     subtitle_style: SubtitleStyle
     thumbnail_style: ThumbnailStyle
     require_title_emoji: bool
@@ -120,9 +122,12 @@ Eres un guionista viral de YouTube Shorts especializado en retencion maxima.
 Escribe un guion en espanol (Espana, neutro y natural) para un Short vertical de 40-50 segundos.
 Usa 6-8 lineas cortas habladas. Cada linea debe ser una frase impactante.
 {content_block}
-REGLA BRUTAL DE GANCHO: La primera linea (lines[0].text) DEBE ser un gancho psicologico agresivo.
-Prohibido saludos, intros conversacionales o relleno tipo "hola", "sabias que", "atencion".
-Debe enganchar en menos de 2 segundos de lectura.
+REGLA BRUTAL DE GANCHO (30 CARACTERES): La primera linea (lines[0].text) DEBE contener una declaracion brutal y chocante dentro de los primeros 30 caracteres.
+Prohibido saludos, intros conversacionales o relleno tipo "hola", "sabias que", "atencion", "oye", "mira esto".
+El impacto debe ser inmediato: el espectador no debe poder deslizar sin leer el golpe.
+
+REGLA DE BUCLE PERFECTO: La ultima linea (lines[-1].text) DEBE terminar en una premisa incompleta o transicion a medias que fluya directamente hacia lines[0].text al repetirse el video.
+Evita cierres duros ("en resumen", "suscribete", "eso es todo"). La ultima palabra debe sentirse cortada a mitad de frase para provocar rewatch accidental.
 
 Devuelve SOLO JSON valido con este esquema exacto:
 {{
@@ -144,7 +149,7 @@ Reglas de titulo viral:
 
 Reglas de hook_text:
 - 1-4 palabras en MAYUSCULAS.
-- Debe resumir el gancho visual del primer frame.
+- Debe resumir el gancho visual del primer frame (ejemplos: "NUNCA HAGAS ESTO", "TE MINTIERON", "TU CEREBRO ENGAÑA").
 
 Reglas generales:
 - Todo en espanol. Prohibido ingles.
@@ -192,9 +197,12 @@ You are a viral YouTube Shorts scriptwriter for the US channel "WhatIfVibe".
 Write a script in strict American English for a 40-50 second vertical Short.
 Use 6-8 short spoken lines. Each line must hit hard and keep viewers watching.
 {content_block}
-BRUTAL HOOK RULE: Line 1 (lines[0].text) MUST be an aggressive psychological hook.
-No greetings, no conversational intros, no filler like "hey guys" or "did you know".
-It must grab attention within 2 seconds of reading.
+BRUTAL HOOK RULE (30 CHARACTERS): Line 1 (lines[0].text) MUST deliver a shocking statement within the first 30 characters.
+No greetings, no conversational intros, no filler like "hey guys", "did you know", or slow warm-up questions.
+The impact must be instant: the viewer cannot scroll without reading the punch.
+
+SEAMLESS LOOP RULE: The final line (lines[-1].text) MUST end on an incomplete premise or mid-thought transition that flows directly into lines[0].text when the video replays.
+Avoid hard closers ("that's all", "follow for more", "in conclusion"). The last word should feel cut mid-sentence so a rewatch feels accidental.
 
 Return ONLY valid JSON with this exact schema:
 {{
@@ -215,12 +223,12 @@ Viral title rules:
 
 hook_text rules:
 - 1-4 words in UPPERCASE.
-- Must summarize the visual hook of the first frame.
+- Must summarize the visual hook of the first frame (examples: "NEVER DO THIS", "THEY LIED TO YOU", "STOP BLINKING").
 
 General rules:
 - Strict American English only. No Spanish. Use US spellings.
 - search_keywords: English, 2-4 words, Pexels-friendly nouns (e.g. "planet space", "brain scan").
-- Pacing: escalation → twist → cliffhanger CTA at the end.
+- Pacing: escalation → twist → incomplete loop ending (no CTA, no sign-off).
 - No markdown, no comments, no extra keys.
 - Total spoken text between 300 and 900 characters.
 {recent_block}
@@ -253,11 +261,16 @@ DATOS_ES = ChannelProfile(
         "gemini-2.5-flash",
         "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
+        "gemini-2.0-flash-001",
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
     ],
     fallback_keywords=["paisaje naturaleza", "cerebro pensando", "ciudad noche"],
-    hook_duration_seconds=2.5,
-    hook_fontsize=84,
-    hook_borderw=5,
+    hook_duration_seconds=1.5,
+    hook_fontsize=100,
+    hook_borderw=8,
+    hook_fontcolor="yellow",
+    progress_bar_color="yellow",
     subtitle_style="yellow_black",
     thumbnail_style="purple_yellow",
     require_title_emoji=True,
@@ -294,11 +307,16 @@ WHATIFVIBE = ChannelProfile(
         "gemini-2.5-flash",
         "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
+        "gemini-2.0-flash-001",
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b",
     ],
     fallback_keywords=["space galaxy", "human body", "city night", "science lab", "ocean deep"],
-    hook_duration_seconds=2.0,
-    hook_fontsize=88,
-    hook_borderw=6,
+    hook_duration_seconds=1.5,
+    hook_fontsize=104,
+    hook_borderw=8,
+    hook_fontcolor="0x00F0FF",
+    progress_bar_color="0x00F0FF",
     subtitle_style="white_yellow",
     thumbnail_style="cyberpunk_cyan",
     require_title_emoji=False,
