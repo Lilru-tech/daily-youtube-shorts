@@ -874,12 +874,21 @@ def build_progress_bar_filter(total_duration: float, color: str, height: int = 5
     )
 
 
+def build_zoom_pulse_filter() -> str:
+    return (
+        f"zoompan=z='if(lte(mod(on\\,90)\\,45)\\,1.05\\,1.0)':"
+        f"d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
+        f"s={TARGET_WIDTH}x{TARGET_HEIGHT}:fps={TARGET_FPS}"
+    )
+
+
 def build_video_filter(script: VideoScript, total_duration: float) -> str:
     profile = get_active_profile()
+    zoom_filter = build_zoom_pulse_filter()
     hook_filter = build_hook_drawtext_filter(script.hook_text)
     progress_filter = build_progress_bar_filter(total_duration, profile.progress_bar_color)
     subtitle_filter = build_subtitle_filter(CAPTIONS_PATH)
-    return f"{hook_filter},{progress_filter},{subtitle_filter}"
+    return f"{zoom_filter},{hook_filter},{progress_filter},{subtitle_filter}"
 
 
 def generate_thumbnail_image(script: VideoScript) -> None:

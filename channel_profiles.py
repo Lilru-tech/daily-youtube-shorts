@@ -256,9 +256,9 @@ DATOS_ES = ChannelProfile(
     language="es",
     voice="es-ES-AlvaroNeural",
     voice_fallbacks=[],
-    gemini_model="gemini-2.5-flash-lite",
+    gemini_model="gemini-2.5-flash",
     gemini_fallback_models=[
-        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
         "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
         "gemini-2.0-flash-001",
@@ -302,9 +302,9 @@ WHATIFVIBE = ChannelProfile(
     language="en",
     voice="en-US-ChristopherNeural",
     voice_fallbacks=["en-US-EricNeural"],
-    gemini_model="gemini-2.5-flash-lite",
+    gemini_model="gemini-2.5-flash",
     gemini_fallback_models=[
-        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
         "gemini-2.0-flash-lite",
         "gemini-2.0-flash",
         "gemini-2.0-flash-001",
