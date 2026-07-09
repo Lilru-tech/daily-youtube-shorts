@@ -868,8 +868,8 @@ def build_hook_drawtext_filter(hook_text: str) -> str:
 
 def build_progress_bar_filter(total_duration: float, color: str, height: int = 5) -> str:
     return (
-        f"drawbox=x=0:y=main_h-{height}:"
-        f"w='min(main_w\\,main_w*t/{total_duration:.3f})':"
+        f"drawbox=x=0:y=ih-{height}:"
+        f"w='min(iw\\,iw*t/{total_duration:.3f})':"
         f"h={height}:color={color}@0.9:t=fill"
     )
 
