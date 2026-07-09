@@ -875,10 +875,10 @@ def build_progress_bar_filter(total_duration: float, color: str, height: int = 5
 
 
 def build_zoom_pulse_filter() -> str:
+    pulse = "if(lte(mod(n\\,90)\\,45)\\,1.05\\,1.0)"
     return (
-        f"zoompan=z='if(lte(mod(on\\,90)\\,45)\\,1.05\\,1.0)':"
-        f"d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
-        f"s={TARGET_WIDTH}x{TARGET_HEIGHT}:fps={TARGET_FPS}"
+        f"scale=w='trunc(iw*{pulse}/2)*2':h='trunc(ih*{pulse}/2)*2',"
+        f"crop={TARGET_WIDTH}:{TARGET_HEIGHT}:(iw-{TARGET_WIDTH})/2:(ih-{TARGET_HEIGHT})/2"
     )
 
 
