@@ -868,13 +868,15 @@ def build_hook_drawtext_filter(hook_text: str) -> str:
 
 def build_progress_bar_filter(total_duration: float, color: str, height: int = 5) -> str:
     return (
-        f"drawbox=x=0:y=h-{height}:"
-        f"w='min(w\\,w*t/{total_duration:.3f})':"
+        f"drawbox=x=0:y=main_h-{height}:"
+        f"w='min(main_w\\,main_w*t/{total_duration:.3f})':"
         f"h={height}:color={color}@0.9:t=fill"
     )
 
 
 def build_zoom_pulse_filter() -> str:
+    if os.environ.get("ENABLE_ZOOM_PULSE", "0").strip().lower() not in {"1", "true", "yes"}:
+        return "null"
     pulse = "if(lte(mod(n\\,90)\\,45)\\,1.05\\,1.0)"
     return (
         f"scale=w='trunc(iw*{pulse}/2)*2':h='trunc(ih*{pulse}/2)*2',"
@@ -884,11 +886,13 @@ def build_zoom_pulse_filter() -> str:
 
 def build_video_filter(script: VideoScript, total_duration: float) -> str:
     profile = get_active_profile()
-    zoom_filter = build_zoom_pulse_filter()
-    hook_filter = build_hook_drawtext_filter(script.hook_text)
-    progress_filter = build_progress_bar_filter(total_duration, profile.progress_bar_color)
-    subtitle_filter = build_subtitle_filter(CAPTIONS_PATH)
-    return f"{zoom_filter},{hook_filter},{progress_filter},{subtitle_filter}"
+    filters = [
+        build_zoom_pulse_filter(),
+        build_hook_drawtext_filter(script.hook_text),
+        build_progress_bar_filter(total_duration, profile.progress_bar_color),
+        build_subtitle_filter(CAPTIONS_PATH),
+    ]
+    return ",".join(filter_name for filter_name in filters if filter_name != "null")
 
 
 def generate_thumbnail_image(script: VideoScript) -> None:
