@@ -113,7 +113,7 @@ If you have an existing `YT_REFRESH_TOKEN` for the Spanish channel, rename it to
 
 | Workflow | Channel | Local target | UTC attempts | Local window (summer) |
 |----------|---------|--------------|--------------|------------------------|
-| `auto_shorts_datos_es.yml` | `datos_es` | 10:00 / 14:00 / 18:00 Europe/Madrid | 07:42+08:22 / 11:42+12:22 / 15:42+16:22 | two tries per slot, ~20 min apart |
+| `auto_shorts_datos_es_v2.yml` | `datos_es` | 10:00 / 14:00 / 18:00 Europe/Madrid | 07:42+08:22 / 11:42+12:22 / 15:42+16:22 | two tries per slot, ~20 min apart |
 | `auto_shorts_whatifvibe.yml` | `whatifvibe` | 10:00 / 14:00 / 18:00 US Eastern | 13:42+14:22 / 17:42+18:22 / 21:42+22:22 | two tries per slot, ~20 min apart |
 | `schedule_watchdog.yml` | both | manual recovery | `workflow_dispatch` only | re-triggers a missing slot after checking `recent_topics.json` |
 

@@ -51,7 +51,7 @@ jobs:
           CHANNEL="${{ inputs.channel }}"
           SLOT="${{ inputs.slot }}"
           if [ "$CHANNEL" = "datos_es" ]; then
-            WORKFLOW="auto_shorts_datos_es.yml"
+            WORKFLOW="auto_shorts_datos_es_v2.yml"
           else
             WORKFLOW="auto_shorts_whatifvibe.yml"
           fi
