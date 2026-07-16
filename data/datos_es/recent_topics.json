@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-07",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te miente a diario",
-    "video_id": "il6WBnRxws8"
-  },
-  {
-    "date": "2026-07-07",
     "slot": "afternoon",
     "title": "🧠 Tu mente te engaña asi",
     "video_id": "UafSH68Evl8"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤫 Esto explica TU PEOR HÁBITO",
     "video_id": "yaZpp80vrFw"
+  },
+  {
+    "date": "2026-07-16",
+    "slot": "afternoon",
+    "title": "🤫 Esto te controla sin saberlo",
+    "video_id": "aqljU1eZH_s"
   }
 ]
