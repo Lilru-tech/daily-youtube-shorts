@@ -2,12 +2,6 @@
   {
     "date": "2026-07-07",
     "slot": "morning",
-    "title": "What If You Lived Inside a Black Hole? 🤯",
-    "video_id": "xWKONcXMyuA"
-  },
-  {
-    "date": "2026-07-07",
-    "slot": "morning",
     "title": "What If Your Reflection Wasn't You? 😱",
     "video_id": "4ZmBcgLJsAk"
   },
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Couldn't Feel PAIN? 🤯",
     "video_id": "BAQeQ3snxSg"
+  },
+  {
+    "date": "2026-07-16",
+    "slot": "evening",
+    "title": "What If Earth Lost Its Magnetic Field? 🤯",
+    "video_id": "u7O8wSMHkRA"
   }
 ]
