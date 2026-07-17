@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-07",
-    "slot": "morning",
-    "title": "🧠 La ILUSIÓN que manipula tu mente",
-    "video_id": "DauMZtfWekw"
-  },
-  {
-    "date": "2026-07-07",
     "slot": "evening",
     "title": "🧠 El sesgo que te ciega",
     "video_id": "-zWHJ4ZpXbw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu realidad NO es real",
     "video_id": "jeGq2M6_Xi8"
+  },
+  {
+    "date": "2026-07-17",
+    "slot": "afternoon",
+    "title": "🤫 Haces esto sin darte cuenta",
+    "video_id": "BZMrhS-8JkY"
   }
 ]
