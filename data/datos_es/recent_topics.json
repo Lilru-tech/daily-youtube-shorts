@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-07",
-    "slot": "evening",
-    "title": "🧠 El sesgo que te ciega",
-    "video_id": "-zWHJ4ZpXbw"
-  },
-  {
     "date": "2026-07-08",
     "slot": "morning",
     "title": "👁️ La sombra que te sigue",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤫 Haces esto sin darte cuenta",
     "video_id": "BZMrhS-8JkY"
+  },
+  {
+    "date": "2026-07-17",
+    "slot": "evening",
+    "title": "😱 El rostro que no era tuyo",
+    "video_id": "ovMYg_kinPk"
   }
 ]
