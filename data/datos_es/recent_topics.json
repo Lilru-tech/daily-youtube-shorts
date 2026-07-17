@@ -2,12 +2,6 @@
   {
     "date": "2026-07-07",
     "slot": "morning",
-    "title": "🧠 Tu cerebro es un MENTIROSO",
-    "video_id": "fo9JWdjWEVE"
-  },
-  {
-    "date": "2026-07-07",
-    "slot": "morning",
     "title": "🧠 La ILUSIÓN que manipula tu mente",
     "video_id": "DauMZtfWekw"
   },
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu MENTE reescribe tu PASADO",
     "video_id": "cvEjiCnQo7o"
+  },
+  {
+    "date": "2026-07-17",
+    "slot": "morning",
+    "title": "🧠 Tu realidad NO es real",
+    "video_id": "jeGq2M6_Xi8"
   }
 ]
