@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-07",
-    "slot": "evening",
-    "title": "What If You Ate Nothing But Pure Sugar? 💀",
-    "video_id": "oeS_ssBM-Dw"
-  },
-  {
     "date": "2026-07-08",
     "slot": "morning",
     "title": "What If You Lived on Mercury? 🥵",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If The Speed Of Light Was Slower? 🤯",
     "video_id": "Os1pPEIsAqw"
+  },
+  {
+    "date": "2026-07-17",
+    "slot": "evening",
+    "title": "What If You Could See Infrared Light? 🤯",
+    "video_id": "G86ZI4e4Z6o"
   }
 ]
