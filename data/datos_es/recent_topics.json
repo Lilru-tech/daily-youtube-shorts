@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-08",
-    "slot": "evening",
-    "title": "🤯 ¿Quién vive tu vida?",
-    "video_id": "yVQiTKlNNYE"
-  },
-  {
     "date": "2026-07-09",
     "slot": "morning",
     "title": "🧠 Por que crees lo que no es",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👁️ Tu reflejo NO ERES TÚ",
     "video_id": "bEBHYVxmwmA"
+  },
+  {
+    "date": "2026-07-18",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro TE ENGAÑA",
+    "video_id": "zjablIzrG3U"
   }
 ]
