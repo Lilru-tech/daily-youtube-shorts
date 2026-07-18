@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-08",
-    "slot": "morning",
-    "title": "👁️ La sombra que te sigue",
-    "video_id": "FzHy22ZOGZY"
-  },
-  {
-    "date": "2026-07-08",
     "slot": "afternoon",
     "title": "🧠 Tu mente: el gran ENGAÑO",
     "video_id": "i69MB1eyllw"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😱 El rostro que no era tuyo",
     "video_id": "ovMYg_kinPk"
+  },
+  {
+    "date": "2026-07-18",
+    "slot": "morning",
+    "title": "💀 Nadie sabe QUIÉN te observa",
+    "video_id": "53Idbw3-9Dw"
   }
 ]
