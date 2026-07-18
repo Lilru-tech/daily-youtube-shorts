@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-08",
-    "slot": "evening",
-    "title": "What If Your Heart Stopped for 5 Seconds?",
-    "video_id": "nlVG3ybNydA"
-  },
-  {
     "date": "2026-07-09",
     "slot": "morning",
     "title": "What If You Could Teleport Instantly? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Spun TWICE as Fast? 🤯",
     "video_id": "DT5N_AvOURU"
+  },
+  {
+    "date": "2026-07-18",
+    "slot": "evening",
+    "title": "What If YOUR Voice Wasn't Yours? 🤯",
+    "video_id": "w7Rb6d4CqyM"
   }
 ]
