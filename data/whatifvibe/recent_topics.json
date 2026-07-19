@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-09",
-    "slot": "morning",
-    "title": "What If You Could Teleport Instantly? 🤯",
-    "video_id": "PPU7LGrDctk"
-  },
-  {
-    "date": "2026-07-09",
     "slot": "afternoon",
     "title": "What If You Never Slept Again? 🤯",
     "video_id": "G7hRXYAMOpQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If YOUR Voice Wasn't Yours? 🤯",
     "video_id": "w7Rb6d4CqyM"
+  },
+  {
+    "date": "2026-07-19",
+    "slot": "morning",
+    "title": "What If Your Reflection Isn't Yours? 😨",
+    "video_id": "HpiTkhQdtBQ"
   }
 ]
