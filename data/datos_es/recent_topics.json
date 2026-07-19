@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-09",
-    "slot": "afternoon",
-    "title": "🧠 Esto te controla sin saberlo",
-    "video_id": "DDxxME9rdHo"
-  },
-  {
-    "date": "2026-07-09",
     "slot": "evening",
     "title": "🧠 El secreto de tu memoria",
     "video_id": "wZRp5LBP2JM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu percepción es una mentira",
     "video_id": "pBi1OudLjs4"
+  },
+  {
+    "date": "2026-07-19",
+    "slot": "afternoon",
+    "title": "🤯 Tu pasado ES FALSO",
+    "video_id": "PVLAIRvVnmI"
   }
 ]
