@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-09",
-    "slot": "evening",
-    "title": "What If Earth Stopped Spinning? 🤯",
-    "video_id": "uUyG-q4DGmc"
-  },
-  {
     "date": "2026-07-10",
     "slot": "morning",
     "title": "What If ALL Air Vanished for 5 Minutes? 💨",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Heard a Sound NO ONE ELSE Can? 🤯",
     "video_id": "VJJ_MQ1OUio"
+  },
+  {
+    "date": "2026-07-19",
+    "slot": "evening",
+    "title": "What If Your Own Shadow Betrayed You? 😨",
+    "video_id": "B13CYEr6cz0"
   }
 ]
