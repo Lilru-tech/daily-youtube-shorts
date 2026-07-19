@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-09",
-    "slot": "evening",
-    "title": "🧠 El secreto de tu memoria",
-    "video_id": "wZRp5LBP2JM"
-  },
-  {
     "date": "2026-07-10",
     "slot": "morning",
     "title": "🧠 Esta trampa dirige tu vida",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu pasado ES FALSO",
     "video_id": "PVLAIRvVnmI"
+  },
+  {
+    "date": "2026-07-19",
+    "slot": "evening",
+    "title": "🚪 Esta puerta no LLEVA a casa",
+    "video_id": "WyTGTUEBrpM"
   }
 ]
