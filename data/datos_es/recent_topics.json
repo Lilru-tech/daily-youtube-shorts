@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-10",
-    "slot": "evening",
-    "title": "🧠 Nadie te dijo ESTO de tu mente",
-    "video_id": "0gQvc-cTtCs"
-  },
-  {
     "date": "2026-07-11",
     "slot": "morning",
     "title": "🧠 Tu mente NO es solo tuya",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente te OCULTA esto",
     "video_id": "cM9683lluNg"
+  },
+  {
+    "date": "2026-07-20",
+    "slot": "evening",
+    "title": "🤯 Tu memoria: la gran mentira",
+    "video_id": "Xwd0xtke7Y8"
   }
 ]
