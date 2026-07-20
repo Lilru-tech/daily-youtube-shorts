@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-10",
-    "slot": "morning",
-    "title": "🧠 Esta trampa dirige tu vida",
-    "video_id": "zxuUNxqdSvA"
-  },
-  {
-    "date": "2026-07-10",
     "slot": "afternoon",
     "title": "🧠 La gran ILUSIÓN de tu cerebro",
     "video_id": "xM5n5x5uGLE"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🚪 Esta puerta no LLEVA a casa",
     "video_id": "WyTGTUEBrpM"
+  },
+  {
+    "date": "2026-07-20",
+    "slot": "morning",
+    "title": "🤯 Tu mente NO ES SOLO TUYA",
+    "video_id": "Kx7vm99tYlI"
   }
 ]
