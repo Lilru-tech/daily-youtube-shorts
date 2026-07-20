@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-10",
-    "slot": "evening",
-    "title": "What If a Gamma-Ray Burst Hit Earth? 💀",
-    "video_id": "f13r79xfj6I"
-  },
-  {
     "date": "2026-07-11",
     "slot": "morning",
     "title": "What If You NEVER Felt PAIN? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If the Moon Disappeared Tomorrow? 🌑",
     "video_id": "bgSObEY6jwE"
+  },
+  {
+    "date": "2026-07-20",
+    "slot": "evening",
+    "title": "What If YOUR Home Isn't Yours? 🏡",
+    "video_id": "a5MOFYjcnH8"
   }
 ]
