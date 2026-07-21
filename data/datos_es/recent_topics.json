@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-11",
-    "slot": "evening",
-    "title": "🧠 Tu mente te MIENTE ASÍ",
-    "video_id": "m2JIyme9roo"
-  },
-  {
     "date": "2026-07-12",
     "slot": "morning",
     "title": "🧠 La voz que no era tuya",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 La trampa de tu mente",
     "video_id": "szc27_Nf8Rs"
+  },
+  {
+    "date": "2026-07-21",
+    "slot": "evening",
+    "title": "🤯 Esta mañana no desperté yo",
+    "video_id": "YGYIC0lZljY"
   }
 ]
