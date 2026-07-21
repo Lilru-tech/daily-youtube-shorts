@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-11",
-    "slot": "afternoon",
-    "title": "🧠 Eres un robot sin saberlo",
-    "video_id": "t57YrceAA-I"
-  },
-  {
-    "date": "2026-07-11",
     "slot": "evening",
     "title": "🧠 Tu mente te MIENTE ASÍ",
     "video_id": "m2JIyme9roo"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu reflejo TE VIGILA",
     "video_id": "k81S7S0vZRA"
+  },
+  {
+    "date": "2026-07-21",
+    "slot": "afternoon",
+    "title": "🤯 La trampa de tu mente",
+    "video_id": "szc27_Nf8Rs"
   }
 ]
