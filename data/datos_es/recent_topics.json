@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-12",
-    "slot": "afternoon",
-    "title": "🧠 Tu mente INVENTA la verdad",
-    "video_id": "6POcXyfyETc"
-  },
-  {
-    "date": "2026-07-12",
     "slot": "evening",
     "title": "🧠 Tu cerebro TE ENGAÑA así",
     "video_id": "qmqwZiTzqx0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Nadie te dijo ESTO",
     "video_id": "NnD0dZ0jkpY"
+  },
+  {
+    "date": "2026-07-22",
+    "slot": "afternoon",
+    "title": "🤯 Tu cerebro te CONTROLA",
+    "video_id": "1FefMnKeNZU"
   }
 ]
