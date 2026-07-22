@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-12",
-    "slot": "evening",
-    "title": "🧠 Tu cerebro TE ENGAÑA así",
-    "video_id": "qmqwZiTzqx0"
-  },
-  {
     "date": "2026-07-13",
     "slot": "morning",
     "title": "🧠 Tu realidad NO es real",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu cerebro te CONTROLA",
     "video_id": "1FefMnKeNZU"
+  },
+  {
+    "date": "2026-07-22",
+    "slot": "evening",
+    "title": "🧠 ¿Quién maneja tu mente ahora?",
+    "video_id": "B4EaiaoDzDU"
   }
 ]
