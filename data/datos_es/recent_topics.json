@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-12",
-    "slot": "morning",
-    "title": "🧠 La voz que no era tuya",
-    "video_id": "wcQjFY6tD-k"
-  },
-  {
-    "date": "2026-07-12",
     "slot": "afternoon",
     "title": "🧠 Tu mente INVENTA la verdad",
     "video_id": "6POcXyfyETc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Esta mañana no desperté yo",
     "video_id": "YGYIC0lZljY"
+  },
+  {
+    "date": "2026-07-22",
+    "slot": "morning",
+    "title": "🧠 Nadie te dijo ESTO",
+    "video_id": "NnD0dZ0jkpY"
   }
 ]
