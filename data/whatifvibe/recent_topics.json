@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-12",
-    "slot": "morning",
-    "title": "What If Light Was SLOWER? 🤯",
-    "video_id": "F8LfRBRwpOU"
-  },
-  {
-    "date": "2026-07-12",
     "slot": "afternoon",
     "title": "What If Time Started Flowing Backwards? 🤯",
     "video_id": "l7tPP1Zy51s"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Remembered EVERY Second? 🤯",
     "video_id": "QPVHwRueRH8"
+  },
+  {
+    "date": "2026-07-22",
+    "slot": "morning",
+    "title": "What If Earth STOPPED Spinning? 🤯",
+    "video_id": "Zg2CAmW2FxI"
   }
 ]
