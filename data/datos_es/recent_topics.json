@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-13",
-    "slot": "evening",
-    "title": "🚪 La puerta que NO EXISTÍA",
-    "video_id": "vFBo66ZOSj8"
-  },
-  {
     "date": "2026-07-14",
     "slot": "morning",
     "title": "👁️ Tu percepción ES UNA ILUSIÓN",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro: ¿realidad o trampa?",
     "video_id": "ycYW489zAL4"
+  },
+  {
+    "date": "2026-07-23",
+    "slot": "evening",
+    "title": "🤯 Tu mente te hace ESTO",
+    "video_id": "cENghgB6J-U"
   }
 ]
