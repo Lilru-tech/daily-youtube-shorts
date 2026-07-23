@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-13",
-    "slot": "evening",
-    "title": "What If Something Is Always Behind You? 😨",
-    "video_id": "LbpcMQVEBoI"
-  },
-  {
     "date": "2026-07-14",
     "slot": "morning",
     "title": "What If Earth Stopped Spinning? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth's Oceans Vanished TOMORROW? 🌊",
     "video_id": "aqbvOeR0yzM"
+  },
+  {
+    "date": "2026-07-23",
+    "slot": "evening",
+    "title": "What If Gravity Vanished for 5 Seconds? 🤯",
+    "video_id": "O2_znw5_mRE"
   }
 ]
