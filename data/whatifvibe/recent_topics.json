@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-13",
-    "slot": "afternoon",
-    "title": "What If You Ate 1,000 Apples? 🍎",
-    "video_id": "QVK411AYyHY"
-  },
-  {
-    "date": "2026-07-13",
     "slot": "evening",
     "title": "What If Something Is Always Behind You? 😨",
     "video_id": "LbpcMQVEBoI"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If ALL Color VANISHED? 🤯",
     "video_id": "JdvnKLUNCHg"
+  },
+  {
+    "date": "2026-07-23",
+    "slot": "afternoon",
+    "title": "What If Earth's Oceans Vanished TOMORROW? 🌊",
+    "video_id": "aqbvOeR0yzM"
   }
 ]
