@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-14",
-    "slot": "evening",
-    "title": "🤯 Esto cambia tu realidad",
-    "video_id": "l6fEQmfavgA"
-  },
-  {
     "date": "2026-07-15",
     "slot": "morning",
     "title": "🚫 Tu mente te OCULTA esto",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 No eres quien crees ser",
     "video_id": "IClNtIoL9D4"
+  },
+  {
+    "date": "2026-07-24",
+    "slot": "evening",
+    "title": "🤯 La ilusión de tu cerebro",
+    "video_id": "5kz_ZL0iNYM"
   }
 ]
