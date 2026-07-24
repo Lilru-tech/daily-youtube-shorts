@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-14",
-    "slot": "afternoon",
-    "title": "🧠 Esto te hace invisible",
-    "video_id": "6p0CVKG-JxM"
-  },
-  {
-    "date": "2026-07-14",
     "slot": "evening",
     "title": "🤯 Esto cambia tu realidad",
     "video_id": "l6fEQmfavgA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😵‍💫 No controlas tu mente",
     "video_id": "E2o4tka3EwA"
+  },
+  {
+    "date": "2026-07-24",
+    "slot": "afternoon",
+    "title": "🤯 No eres quien crees ser",
+    "video_id": "IClNtIoL9D4"
   }
 ]
