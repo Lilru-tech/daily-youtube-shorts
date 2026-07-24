@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-14",
-    "slot": "morning",
-    "title": "👁️ Tu percepción ES UNA ILUSIÓN",
-    "video_id": "ICW3JOWYViM"
-  },
-  {
-    "date": "2026-07-14",
     "slot": "afternoon",
     "title": "🧠 Esto te hace invisible",
     "video_id": "6p0CVKG-JxM"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te hace ESTO",
     "video_id": "cENghgB6J-U"
+  },
+  {
+    "date": "2026-07-24",
+    "slot": "morning",
+    "title": "😵‍💫 No controlas tu mente",
+    "video_id": "E2o4tka3EwA"
   }
 ]
