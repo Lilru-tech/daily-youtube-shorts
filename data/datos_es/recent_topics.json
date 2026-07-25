@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-15",
-    "slot": "evening",
-    "title": "😈 El otro TÚ que no conoces",
-    "video_id": "hqpkvI6ECyw"
-  },
-  {
     "date": "2026-07-16",
     "slot": "morning",
     "title": "🤫 Esto explica TU PEOR HÁBITO",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu mente te esconde esto",
     "video_id": "6Kj6diWif8g"
+  },
+  {
+    "date": "2026-07-25",
+    "slot": "evening",
+    "title": "🤯 Así funciona TU mente",
+    "video_id": "WLILmHwMHZ4"
   }
 ]
