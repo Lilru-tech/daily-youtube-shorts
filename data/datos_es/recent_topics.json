@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-15",
-    "slot": "afternoon",
-    "title": "😵‍💫 Tu cerebro te MIENTE",
-    "video_id": "PH0WciG_vvs"
-  },
-  {
-    "date": "2026-07-15",
     "slot": "evening",
     "title": "😈 El otro TÚ que no conoces",
     "video_id": "hqpkvI6ECyw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😵‍💫 Tus decisiones no son tuyas",
     "video_id": "6J1FMKazdFo"
+  },
+  {
+    "date": "2026-07-25",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente te esconde esto",
+    "video_id": "6Kj6diWif8g"
   }
 ]
