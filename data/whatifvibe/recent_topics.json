@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-15",
-    "slot": "evening",
-    "title": "What Happens If Oxygen Disappears for 5 Seconds? 🤯",
-    "video_id": "-TdXXnP2hpQ"
-  },
-  {
     "date": "2026-07-16",
     "slot": "morning",
     "title": "What If Earth Suddenly Went Silent? 🔇",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Heart Stopped for 60 Seconds? 🤯",
     "video_id": "4LIfSjZsoP0"
+  },
+  {
+    "date": "2026-07-25",
+    "slot": "evening",
+    "title": "What If Light Speed Was Only 100 MPH? 🤯",
+    "video_id": "cFPSOEMMynQ"
   }
 ]
