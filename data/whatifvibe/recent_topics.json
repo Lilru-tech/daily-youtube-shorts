@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-15",
-    "slot": "morning",
-    "title": "What If You Remembered EVERY SINGLE THING? 🤯",
-    "video_id": "c3ParV7VPNQ"
-  },
-  {
-    "date": "2026-07-15",
     "slot": "afternoon",
     "title": "What If Your Reflection Wasn't You? 😨",
     "video_id": "mVGIyq6L63o"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If a Gamma-Ray Burst Hit Earth? 💥",
     "video_id": "kTNel5GHkK8"
+  },
+  {
+    "date": "2026-07-25",
+    "slot": "morning",
+    "title": "What If You NEVER Felt PAIN? 🤯",
+    "video_id": "-Qu3kRQxuaE"
   }
 ]
