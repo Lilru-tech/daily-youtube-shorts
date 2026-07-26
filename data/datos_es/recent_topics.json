@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-16",
-    "slot": "afternoon",
-    "title": "🤫 Esto te controla sin saberlo",
-    "video_id": "aqljU1eZH_s"
-  },
-  {
-    "date": "2026-07-16",
     "slot": "evening",
     "title": "🤯 Tu MENTE reescribe tu PASADO",
     "video_id": "cvEjiCnQo7o"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Haces ESTO sin darte cuenta",
     "video_id": "kYaW9phtMdw"
+  },
+  {
+    "date": "2026-07-26",
+    "slot": "afternoon",
+    "title": "🧠 Esto te controla sin que lo sepas",
+    "video_id": "6qObJYwNIro"
   }
 ]
