@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-16",
-    "slot": "evening",
-    "title": "🤯 Tu MENTE reescribe tu PASADO",
-    "video_id": "cvEjiCnQo7o"
-  },
-  {
     "date": "2026-07-17",
     "slot": "morning",
     "title": "🧠 Tu realidad NO es real",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Esto te controla sin que lo sepas",
     "video_id": "6qObJYwNIro"
+  },
+  {
+    "date": "2026-07-26",
+    "slot": "evening",
+    "title": "😵‍💫 ¿Recuerdas esto?",
+    "video_id": "_V6pkN-5k24"
   }
 ]
