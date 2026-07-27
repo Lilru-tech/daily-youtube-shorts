@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-17",
-    "slot": "evening",
-    "title": "😱 El rostro que no era tuyo",
-    "video_id": "ovMYg_kinPk"
-  },
-  {
     "date": "2026-07-18",
     "slot": "morning",
     "title": "💀 Nadie sabe QUIÉN te observa",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engana asi",
     "video_id": "t0oCGtOB-3k"
+  },
+  {
+    "date": "2026-07-27",
+    "slot": "evening",
+    "title": "💀 Hay algo en tu reflejo",
+    "video_id": "OONCXXN-z08"
   }
 ]
