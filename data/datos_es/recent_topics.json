@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-17",
-    "slot": "morning",
-    "title": "🧠 Tu realidad NO es real",
-    "video_id": "jeGq2M6_Xi8"
-  },
-  {
-    "date": "2026-07-17",
     "slot": "afternoon",
     "title": "🤫 Haces esto sin darte cuenta",
     "video_id": "BZMrhS-8JkY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😵‍💫 ¿Recuerdas esto?",
     "video_id": "_V6pkN-5k24"
+  },
+  {
+    "date": "2026-07-27",
+    "slot": "morning",
+    "title": "🚪 Esto cambia cuando duermes",
+    "video_id": "frBwKh__BOo"
   }
 ]
