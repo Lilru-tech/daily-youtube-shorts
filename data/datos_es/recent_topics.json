@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-17",
-    "slot": "afternoon",
-    "title": "🤫 Haces esto sin darte cuenta",
-    "video_id": "BZMrhS-8JkY"
-  },
-  {
-    "date": "2026-07-17",
     "slot": "evening",
     "title": "😱 El rostro que no era tuyo",
     "video_id": "ovMYg_kinPk"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🚪 Esto cambia cuando duermes",
     "video_id": "frBwKh__BOo"
+  },
+  {
+    "date": "2026-07-27",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engana asi",
+    "video_id": "t0oCGtOB-3k"
   }
 ]
