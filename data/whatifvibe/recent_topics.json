@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-17",
-    "slot": "evening",
-    "title": "What If You Could See Infrared Light? 🤯",
-    "video_id": "G86ZI4e4Z6o"
-  },
-  {
     "date": "2026-07-18",
     "slot": "morning",
     "title": "What If You Weren't Alone in Your Head? 😨",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Mirror Lied To You? 🪞",
     "video_id": "x1icMZoj1nM"
+  },
+  {
+    "date": "2026-07-27",
+    "slot": "evening",
+    "title": "What If You NEVER Slept Again? 🤯",
+    "video_id": "r157XeAJ7bs"
   }
 ]
