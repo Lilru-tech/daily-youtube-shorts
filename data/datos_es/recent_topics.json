@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-18",
-    "slot": "afternoon",
-    "title": "👁️ Tu reflejo NO ERES TÚ",
-    "video_id": "bEBHYVxmwmA"
-  },
-  {
-    "date": "2026-07-18",
     "slot": "evening",
     "title": "🧠 Tu cerebro TE ENGAÑA",
     "video_id": "zjablIzrG3U"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu historia no es real",
     "video_id": "H9edFuL-vw8"
+  },
+  {
+    "date": "2026-07-28",
+    "slot": "afternoon",
+    "title": "🤯 Tu realidad es solo una...",
+    "video_id": "k2a2JpYX98k"
   }
 ]
