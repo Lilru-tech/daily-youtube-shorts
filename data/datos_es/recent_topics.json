@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-18",
-    "slot": "morning",
-    "title": "💀 Nadie sabe QUIÉN te observa",
-    "video_id": "53Idbw3-9Dw"
-  },
-  {
-    "date": "2026-07-18",
     "slot": "afternoon",
     "title": "👁️ Tu reflejo NO ERES TÚ",
     "video_id": "bEBHYVxmwmA"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "💀 Hay algo en tu reflejo",
     "video_id": "OONCXXN-z08"
+  },
+  {
+    "date": "2026-07-28",
+    "slot": "morning",
+    "title": "🧠 Tu historia no es real",
+    "video_id": "H9edFuL-vw8"
   }
 ]
