@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-18",
-    "slot": "evening",
-    "title": "🧠 Tu cerebro TE ENGAÑA",
-    "video_id": "zjablIzrG3U"
-  },
-  {
     "date": "2026-07-19",
     "slot": "morning",
     "title": "🤯 Tu percepción es una mentira",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu realidad es solo una...",
     "video_id": "k2a2JpYX98k"
+  },
+  {
+    "date": "2026-07-28",
+    "slot": "evening",
+    "title": "👁️ Tu cerebro te miente AHORA",
+    "video_id": "QKt7x7nkEks"
   }
 ]
