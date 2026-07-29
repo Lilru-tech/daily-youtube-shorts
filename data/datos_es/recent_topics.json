@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-19",
-    "slot": "morning",
-    "title": "🤯 Tu percepción es una mentira",
-    "video_id": "pBi1OudLjs4"
-  },
-  {
-    "date": "2026-07-19",
     "slot": "afternoon",
     "title": "🤯 Tu pasado ES FALSO",
     "video_id": "PVLAIRvVnmI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👁️ Tu cerebro te miente AHORA",
     "video_id": "QKt7x7nkEks"
+  },
+  {
+    "date": "2026-07-29",
+    "slot": "morning",
+    "title": "👁️ Algo observa en tus sueños",
+    "video_id": "gJV7W-yv6ko"
   }
 ]
