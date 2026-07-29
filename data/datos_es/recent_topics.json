@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-19",
-    "slot": "afternoon",
-    "title": "🤯 Tu pasado ES FALSO",
-    "video_id": "PVLAIRvVnmI"
-  },
-  {
-    "date": "2026-07-19",
     "slot": "evening",
     "title": "🚪 Esta puerta no LLEVA a casa",
     "video_id": "WyTGTUEBrpM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "👁️ Algo observa en tus sueños",
     "video_id": "gJV7W-yv6ko"
+  },
+  {
+    "date": "2026-07-29",
+    "slot": "afternoon",
+    "title": "💀 NADIE te cree esto",
+    "video_id": "TQfolnmMnzU"
   }
 ]
