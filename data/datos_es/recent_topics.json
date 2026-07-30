@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-20",
-    "slot": "morning",
-    "title": "🤯 Tu mente NO ES SOLO TUYA",
-    "video_id": "Kx7vm99tYlI"
-  },
-  {
-    "date": "2026-07-20",
     "slot": "afternoon",
     "title": "🧠 Tu mente te OCULTA esto",
     "video_id": "cM9683lluNg"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Esto distorsiona tu realidad",
     "video_id": "THbsZoO3Mk0"
+  },
+  {
+    "date": "2026-07-30",
+    "slot": "morning",
+    "title": "🤯 Tu mente te hace esto",
+    "video_id": "vF4THRdxHiU"
   }
 ]
