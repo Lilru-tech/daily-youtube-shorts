@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-20",
-    "slot": "evening",
-    "title": "What If YOUR Home Isn't Yours? 🏡",
-    "video_id": "a5MOFYjcnH8"
-  },
-  {
     "date": "2026-07-21",
     "slot": "morning",
     "title": "What If Time Went Backwards? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Saw YOURSELF Die? 💀",
     "video_id": "uvF5zwY8j6k"
+  },
+  {
+    "date": "2026-07-30",
+    "slot": "evening",
+    "title": "What If Time Started Moving Backwards? ⏳",
+    "video_id": "6ZZtjxVVSJc"
   }
 ]
