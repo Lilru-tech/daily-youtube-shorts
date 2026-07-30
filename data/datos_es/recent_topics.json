@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-20",
-    "slot": "afternoon",
-    "title": "🧠 Tu mente te OCULTA esto",
-    "video_id": "cM9683lluNg"
-  },
-  {
-    "date": "2026-07-20",
     "slot": "evening",
     "title": "🤯 Tu memoria: la gran mentira",
     "video_id": "Xwd0xtke7Y8"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te hace esto",
     "video_id": "vF4THRdxHiU"
+  },
+  {
+    "date": "2026-07-30",
+    "slot": "afternoon",
+    "title": "👤 Alguien más vive en ti",
+    "video_id": "pDP8lFDSfoo"
   }
 ]
