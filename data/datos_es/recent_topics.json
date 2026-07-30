@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-20",
-    "slot": "evening",
-    "title": "🤯 Tu memoria: la gran mentira",
-    "video_id": "Xwd0xtke7Y8"
-  },
-  {
     "date": "2026-07-21",
     "slot": "morning",
     "title": "🤯 Tu reflejo TE VIGILA",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👤 Alguien más vive en ti",
     "video_id": "pDP8lFDSfoo"
+  },
+  {
+    "date": "2026-07-30",
+    "slot": "evening",
+    "title": "🤯 Tu otro yo te controla",
+    "video_id": "MtXsGKrmTo4"
   }
 ]
