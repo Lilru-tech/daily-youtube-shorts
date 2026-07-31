@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-21",
-    "slot": "morning",
-    "title": "🤯 Tu reflejo TE VIGILA",
-    "video_id": "k81S7S0vZRA"
-  },
-  {
-    "date": "2026-07-21",
     "slot": "afternoon",
     "title": "🤯 La trampa de tu mente",
     "video_id": "szc27_Nf8Rs"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu otro yo te controla",
     "video_id": "MtXsGKrmTo4"
+  },
+  {
+    "date": "2026-07-31",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te controla AHORA",
+    "video_id": "02HVEKMtyIo"
   }
 ]
