@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-21",
-    "slot": "afternoon",
-    "title": "🤯 La trampa de tu mente",
-    "video_id": "szc27_Nf8Rs"
-  },
-  {
-    "date": "2026-07-21",
     "slot": "evening",
     "title": "🤯 Esta mañana no desperté yo",
     "video_id": "YGYIC0lZljY"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu cerebro te controla AHORA",
     "video_id": "02HVEKMtyIo"
+  },
+  {
+    "date": "2026-07-31",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente te esconde esto",
+    "video_id": "2JjUpko05h0"
   }
 ]
