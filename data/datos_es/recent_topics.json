@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-22",
-    "slot": "evening",
-    "title": "🧠 ¿Quién maneja tu mente ahora?",
-    "video_id": "B4EaiaoDzDU"
-  },
-  {
     "date": "2026-07-23",
     "slot": "morning",
     "title": "🧠 Tu cerebro te ENGAÑA así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "3n0GIJBi_t0"
+  },
+  {
+    "date": "2026-08-01",
+    "slot": "evening",
+    "title": "😱 Tu casa te esconde algo",
+    "video_id": "xp8_ONmy46A"
   }
 ]
