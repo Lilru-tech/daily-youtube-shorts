@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-22",
-    "slot": "afternoon",
-    "title": "🤯 Tu cerebro te CONTROLA",
-    "video_id": "1FefMnKeNZU"
-  },
-  {
-    "date": "2026-07-22",
     "slot": "evening",
     "title": "🧠 ¿Quién maneja tu mente ahora?",
     "video_id": "B4EaiaoDzDU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu memoria te juega una trampa",
     "video_id": "fnw6vnJldz4"
+  },
+  {
+    "date": "2026-08-01",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "3n0GIJBi_t0"
   }
 ]
