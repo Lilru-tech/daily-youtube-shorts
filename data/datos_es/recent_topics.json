@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-22",
-    "slot": "morning",
-    "title": "🧠 Nadie te dijo ESTO",
-    "video_id": "NnD0dZ0jkpY"
-  },
-  {
-    "date": "2026-07-22",
     "slot": "afternoon",
     "title": "🤯 Tu cerebro te CONTROLA",
     "video_id": "1FefMnKeNZU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Esto controla tu PERCEPCIÓN",
     "video_id": "FZZEYyaocTw"
+  },
+  {
+    "date": "2026-08-01",
+    "slot": "morning",
+    "title": "🧠 Tu memoria te juega una trampa",
+    "video_id": "fnw6vnJldz4"
   }
 ]
