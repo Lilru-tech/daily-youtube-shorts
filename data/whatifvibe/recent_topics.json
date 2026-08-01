@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-22",
-    "slot": "morning",
-    "title": "What If Earth STOPPED Spinning? 🤯",
-    "video_id": "Zg2CAmW2FxI"
-  },
-  {
-    "date": "2026-07-22",
     "slot": "afternoon",
     "title": "What If Your Room Was a Trap? 🤯",
     "video_id": "O-H49BKTJ6A"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Never Slept Again? 🤯",
     "video_id": "5q-sdGPEciQ"
+  },
+  {
+    "date": "2026-08-01",
+    "slot": "morning",
+    "title": "What If Someone KNEW Everything About You? 😱",
+    "video_id": "81CDjbf3zx0"
   }
 ]
