@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-23",
-    "slot": "morning",
-    "title": "What If ALL Color VANISHED? 🤯",
-    "video_id": "JdvnKLUNCHg"
-  },
-  {
-    "date": "2026-07-23",
     "slot": "afternoon",
     "title": "What If Earth's Oceans Vanished TOMORROW? 🌊",
     "video_id": "aqbvOeR0yzM"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Were in the Mariana Trench? 🌊😱",
     "video_id": "Uf3KqdUj77w"
+  },
+  {
+    "date": "2026-08-02",
+    "slot": "morning",
+    "title": "What If Earth Lost Its Moon? 🤯",
+    "video_id": "Mzftz_O7udk"
   }
 ]
