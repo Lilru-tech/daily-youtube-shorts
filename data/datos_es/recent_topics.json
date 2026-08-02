@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-23",
-    "slot": "evening",
-    "title": "🤯 Tu mente te hace ESTO",
-    "video_id": "cENghgB6J-U"
-  },
-  {
     "date": "2026-07-24",
     "slot": "morning",
     "title": "😵‍💫 No controlas tu mente",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu voluntad es una trampa",
     "video_id": "HsPyMIofdzc"
+  },
+  {
+    "date": "2026-08-02",
+    "slot": "evening",
+    "title": "🤯 Tu mente manipula cada decisión",
+    "video_id": "z9hJxzT01sw"
   }
 ]
