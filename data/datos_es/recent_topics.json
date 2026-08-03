@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-24",
-    "slot": "afternoon",
-    "title": "🤯 No eres quien crees ser",
-    "video_id": "IClNtIoL9D4"
-  },
-  {
-    "date": "2026-07-24",
     "slot": "evening",
     "title": "🤯 La ilusión de tu cerebro",
     "video_id": "5kz_ZL0iNYM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Esto explica tu ansiedad",
     "video_id": "B12tAknkAnk"
+  },
+  {
+    "date": "2026-08-03",
+    "slot": "afternoon",
+    "title": "🧠 Tu reflejo no es tuyo",
+    "video_id": "3A8p98yfygw"
   }
 ]
