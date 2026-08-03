@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-24",
-    "slot": "morning",
-    "title": "😵‍💫 No controlas tu mente",
-    "video_id": "E2o4tka3EwA"
-  },
-  {
-    "date": "2026-07-24",
     "slot": "afternoon",
     "title": "🤯 No eres quien crees ser",
     "video_id": "IClNtIoL9D4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente manipula cada decisión",
     "video_id": "z9hJxzT01sw"
+  },
+  {
+    "date": "2026-08-03",
+    "slot": "morning",
+    "title": "🧠 Esto explica tu ansiedad",
+    "video_id": "B12tAknkAnk"
   }
 ]
