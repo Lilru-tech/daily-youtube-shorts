@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-24",
-    "slot": "evening",
-    "title": "🤯 La ilusión de tu cerebro",
-    "video_id": "5kz_ZL0iNYM"
-  },
-  {
     "date": "2026-07-25",
     "slot": "morning",
     "title": "😵‍💫 Tus decisiones no son tuyas",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu reflejo no es tuyo",
     "video_id": "3A8p98yfygw"
+  },
+  {
+    "date": "2026-08-03",
+    "slot": "evening",
+    "title": "🤯 Tu cerebro te SABOTEA así",
+    "video_id": "u2GezDtUUUA"
   }
 ]
