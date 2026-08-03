@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-24",
-    "slot": "evening",
-    "title": "What If a Gamma-Ray Burst Hit Earth? 💥",
-    "video_id": "kTNel5GHkK8"
-  },
-  {
     "date": "2026-07-25",
     "slot": "morning",
     "title": "What If You NEVER Felt PAIN? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Could Regenerate Any Body Part? 🤯",
     "video_id": "2_cUFdKNXSA"
+  },
+  {
+    "date": "2026-08-03",
+    "slot": "evening",
+    "title": "What If TIME FROZE for Everyone But YOU? 🤯",
+    "video_id": "T70iAy37AGA"
   }
 ]
