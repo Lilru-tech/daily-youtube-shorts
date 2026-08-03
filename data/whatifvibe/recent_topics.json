@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-24",
-    "slot": "morning",
-    "title": "What If Our Moon Just DISAPPEARED? 🤯",
-    "video_id": "dNDV_LUbVZo"
-  },
-  {
-    "date": "2026-07-24",
     "slot": "afternoon",
     "title": "What If Jupiter Just VANISHED? 🤯",
     "video_id": "FA3Lt6IGbs8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Shadow Wasn't Yours? 😱",
     "video_id": "_jHtBq-6G1w"
+  },
+  {
+    "date": "2026-08-03",
+    "slot": "morning",
+    "title": "What If You Could NEVER Feel Pain? 🤯",
+    "video_id": "ZiCfAu2ExRs"
   }
 ]
