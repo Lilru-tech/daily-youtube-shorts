@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-25",
-    "slot": "evening",
-    "title": "🤯 Así funciona TU mente",
-    "video_id": "WLILmHwMHZ4"
-  },
-  {
     "date": "2026-07-26",
     "slot": "morning",
     "title": "🤯 Haces ESTO sin darte cuenta",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente esconde esto",
     "video_id": "enrsADu3_Ec"
+  },
+  {
+    "date": "2026-08-04",
+    "slot": "evening",
+    "title": "🤯 Tu mente te atrapa sin que lo sepas",
+    "video_id": "UOZtTl864oE"
   }
 ]
