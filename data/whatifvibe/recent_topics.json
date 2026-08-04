@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-25",
-    "slot": "evening",
-    "title": "What If Light Speed Was Only 100 MPH? 🤯",
-    "video_id": "cFPSOEMMynQ"
-  },
-  {
     "date": "2026-07-26",
     "slot": "morning",
     "title": "What If Earth Stopped Spinning Instantly? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Humans Lived On Mars? 🔴",
     "video_id": "2RTm3Az7TxY"
+  },
+  {
+    "date": "2026-08-04",
+    "slot": "evening",
+    "title": "What If Earth Spun TWICE As Fast? 🤯",
+    "video_id": "rELJe3dvgDU"
   }
 ]
