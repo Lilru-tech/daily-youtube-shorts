@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-25",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te esconde esto",
-    "video_id": "6Kj6diWif8g"
-  },
-  {
-    "date": "2026-07-25",
     "slot": "evening",
     "title": "🤯 Así funciona TU mente",
     "video_id": "WLILmHwMHZ4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu percepción es una trampa",
     "video_id": "UsQFz7S-Lao"
+  },
+  {
+    "date": "2026-08-04",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente esconde esto",
+    "video_id": "enrsADu3_Ec"
   }
 ]
