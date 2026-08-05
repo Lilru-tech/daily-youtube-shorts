@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-26",
-    "slot": "morning",
-    "title": "🤯 Haces ESTO sin darte cuenta",
-    "video_id": "kYaW9phtMdw"
-  },
-  {
-    "date": "2026-07-26",
     "slot": "afternoon",
     "title": "🧠 Esto te controla sin que lo sepas",
     "video_id": "6qObJYwNIro"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te atrapa sin que lo sepas",
     "video_id": "UOZtTl864oE"
+  },
+  {
+    "date": "2026-08-05",
+    "slot": "morning",
+    "title": "🤯 Esto te persigue en tu casa",
+    "video_id": "n_iPjLqCQoc"
   }
 ]
