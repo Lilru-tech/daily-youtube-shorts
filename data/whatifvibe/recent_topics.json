@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-26",
-    "slot": "morning",
-    "title": "What If Earth Stopped Spinning Instantly? 🤯",
-    "video_id": "sBes7a5Q5_s"
-  },
-  {
-    "date": "2026-07-26",
     "slot": "afternoon",
     "title": "What If Our Sun Turned BLUE?! 🤯",
     "video_id": "JTX91FwAzsc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Spun TWICE As Fast? 🤯",
     "video_id": "rELJe3dvgDU"
+  },
+  {
+    "date": "2026-08-05",
+    "slot": "morning",
+    "title": "What If Your Mirror Image Came ALIVE? 😱",
+    "video_id": "iHdzzYfSKnI"
   }
 ]
