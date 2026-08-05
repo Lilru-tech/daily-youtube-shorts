@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-26",
-    "slot": "afternoon",
-    "title": "What If Our Sun Turned BLUE?! 🤯",
-    "video_id": "JTX91FwAzsc"
-  },
-  {
-    "date": "2026-07-26",
     "slot": "evening",
     "title": "What If a Micro Black Hole Hit Earth? 🤯",
     "video_id": "BUChEas19RE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Mirror Image Came ALIVE? 😱",
     "video_id": "iHdzzYfSKnI"
+  },
+  {
+    "date": "2026-08-05",
+    "slot": "afternoon",
+    "title": "What If OXYGEN Vanished for 5 Seconds? 😱",
+    "video_id": "1e1aH3KUr7c"
   }
 ]
