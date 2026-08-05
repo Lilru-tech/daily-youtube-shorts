@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-26",
-    "slot": "afternoon",
-    "title": "🧠 Esto te controla sin que lo sepas",
-    "video_id": "6qObJYwNIro"
-  },
-  {
-    "date": "2026-07-26",
     "slot": "evening",
     "title": "😵‍💫 ¿Recuerdas esto?",
     "video_id": "_V6pkN-5k24"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Esto te persigue en tu casa",
     "video_id": "n_iPjLqCQoc"
+  },
+  {
+    "date": "2026-08-05",
+    "slot": "afternoon",
+    "title": "🧠 Nadie sabe esto de ti",
+    "video_id": "iphM_OQ5eWU"
   }
 ]
