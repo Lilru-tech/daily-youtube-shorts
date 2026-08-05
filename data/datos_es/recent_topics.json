@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-26",
-    "slot": "evening",
-    "title": "😵‍💫 ¿Recuerdas esto?",
-    "video_id": "_V6pkN-5k24"
-  },
-  {
     "date": "2026-07-27",
     "slot": "morning",
     "title": "🚪 Esto cambia cuando duermes",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Nadie sabe esto de ti",
     "video_id": "iphM_OQ5eWU"
+  },
+  {
+    "date": "2026-08-05",
+    "slot": "evening",
+    "title": "🧠 Tu memoria te ENGAÑA",
+    "video_id": "43_WZmr5M0U"
   }
 ]
