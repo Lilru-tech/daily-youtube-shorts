@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-27",
-    "slot": "morning",
-    "title": "🚪 Esto cambia cuando duermes",
-    "video_id": "frBwKh__BOo"
-  },
-  {
-    "date": "2026-07-27",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engana asi",
     "video_id": "t0oCGtOB-3k"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu memoria te ENGAÑA",
     "video_id": "43_WZmr5M0U"
+  },
+  {
+    "date": "2026-08-06",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te engana asi",
+    "video_id": "fc7exIY8rvs"
   }
 ]
