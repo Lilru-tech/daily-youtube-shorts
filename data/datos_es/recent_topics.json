@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-28",
-    "slot": "afternoon",
-    "title": "🤯 Tu realidad es solo una...",
-    "video_id": "k2a2JpYX98k"
-  },
-  {
-    "date": "2026-07-28",
     "slot": "evening",
     "title": "👁️ Tu cerebro te miente AHORA",
     "video_id": "QKt7x7nkEks"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤫 Tu reflejo te HABLA así",
     "video_id": "mk2a3kRh6u4"
+  },
+  {
+    "date": "2026-08-07",
+    "slot": "evening",
+    "title": "🔑 La llave que no puedes tirar",
+    "video_id": "cAsSXh83wM4"
   }
 ]
