@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-27",
-    "slot": "evening",
-    "title": "💀 Hay algo en tu reflejo",
-    "video_id": "OONCXXN-z08"
-  },
-  {
     "date": "2026-07-28",
     "slot": "morning",
     "title": "🧠 Tu historia no es real",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu mente NO es tuya",
     "video_id": "DaibeFrygWs"
+  },
+  {
+    "date": "2026-08-07",
+    "slot": "morning",
+    "title": "🤯 Tu reflejo te ESCONDE algo",
+    "video_id": "dOKirKuomsM"
   }
 ]
