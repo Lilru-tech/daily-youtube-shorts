@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-29",
-    "slot": "morning",
-    "title": "👁️ Algo observa en tus sueños",
-    "video_id": "gJV7W-yv6ko"
-  },
-  {
-    "date": "2026-07-29",
     "slot": "afternoon",
     "title": "💀 NADIE te cree esto",
     "video_id": "TQfolnmMnzU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te hace creer esto",
     "video_id": "jzeshp8UD7k"
+  },
+  {
+    "date": "2026-08-08",
+    "slot": "afternoon",
+    "title": "🚪 Tu casa YA NO es tuya",
+    "video_id": "v6mMN68DynY"
   }
 ]
