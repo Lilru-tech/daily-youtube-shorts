@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-29",
-    "slot": "afternoon",
-    "title": "💀 NADIE te cree esto",
-    "video_id": "TQfolnmMnzU"
-  },
-  {
-    "date": "2026-07-29",
     "slot": "evening",
     "title": "🤯 Esto distorsiona tu realidad",
     "video_id": "THbsZoO3Mk0"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🚪 Tu casa YA NO es tuya",
     "video_id": "v6mMN68DynY"
+  },
+  {
+    "date": "2026-08-08",
+    "slot": "evening",
+    "title": "🧠 Tu mente te miente así",
+    "video_id": "CpnQUMe0bIo"
   }
 ]
