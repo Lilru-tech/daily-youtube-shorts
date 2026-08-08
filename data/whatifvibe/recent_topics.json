@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-29",
-    "slot": "afternoon",
-    "title": "What If Your Reflection BLINKED Back? 🪞",
-    "video_id": "y70XEbnGTP4"
-  },
-  {
-    "date": "2026-07-29",
     "slot": "evening",
     "title": "What If Something Else Controlled You? 🤯",
     "video_id": "3QqDtTEOzkA"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Touched a Neutron Star? 🤯",
     "video_id": "rGRg1QP14yw"
+  },
+  {
+    "date": "2026-08-08",
+    "slot": "evening",
+    "title": "What If GRAVITY Just DISAPPEARED? 🤯",
+    "video_id": "WOuWMCmX68s"
   }
 ]
