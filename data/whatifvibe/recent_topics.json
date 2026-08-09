@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-29",
-    "slot": "evening",
-    "title": "What If Something Else Controlled You? 🤯",
-    "video_id": "3QqDtTEOzkA"
-  },
-  {
     "date": "2026-07-30",
     "slot": "morning",
     "title": "What If Earth STOPPED Spinning Instantly?! 🤯",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If GRAVITY Just DISAPPEARED? 🤯",
     "video_id": "WOuWMCmX68s"
+  },
+  {
+    "date": "2026-08-09",
+    "slot": "morning",
+    "title": "What If Your Hand Wasn't Yours? 🤯",
+    "video_id": "w4ju8hDzyeQ"
   }
 ]
