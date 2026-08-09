@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-29",
-    "slot": "evening",
-    "title": "🤯 Esto distorsiona tu realidad",
-    "video_id": "THbsZoO3Mk0"
-  },
-  {
     "date": "2026-07-30",
     "slot": "morning",
     "title": "🤯 Tu mente te hace esto",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu mente te miente así",
     "video_id": "CpnQUMe0bIo"
+  },
+  {
+    "date": "2026-08-09",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te controla así",
+    "video_id": "gz3teK3Zprc"
   }
 ]
