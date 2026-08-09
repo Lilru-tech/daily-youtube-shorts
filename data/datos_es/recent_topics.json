@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-30",
-    "slot": "afternoon",
-    "title": "👤 Alguien más vive en ti",
-    "video_id": "pDP8lFDSfoo"
-  },
-  {
-    "date": "2026-07-30",
     "slot": "evening",
     "title": "🤯 Tu otro yo te controla",
     "video_id": "MtXsGKrmTo4"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu realidad NO es tuya",
     "video_id": "HtTsfaJgqdY"
+  },
+  {
+    "date": "2026-08-09",
+    "slot": "evening",
+    "title": "💥 Tu mente te SABOTEA así",
+    "video_id": "pldJbsWf33Y"
   }
 ]
