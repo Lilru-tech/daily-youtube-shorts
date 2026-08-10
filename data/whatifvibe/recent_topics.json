@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-31",
-    "slot": "morning",
-    "title": "What If Your Reflection Wasn't You? 😱",
-    "video_id": "O4LNVQ5g05w"
-  },
-  {
-    "date": "2026-07-31",
     "slot": "afternoon",
     "title": "What If Earth's Magnetic Field COLLAPSED?! 🤯",
     "video_id": "-bc5rpQQvsM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth Just Stopped Spinning? 🤯",
     "video_id": "QvtJCpUmIV4"
+  },
+  {
+    "date": "2026-08-10",
+    "slot": "afternoon",
+    "title": "What If Your Reflection Isn't Yours? 😱",
+    "video_id": "rZ0LIw7iGHQ"
   }
 ]
