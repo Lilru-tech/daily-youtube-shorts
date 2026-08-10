@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-31",
-    "slot": "afternoon",
-    "title": "What If Earth's Magnetic Field COLLAPSED?! 🤯",
-    "video_id": "-bc5rpQQvsM"
-  },
-  {
-    "date": "2026-07-31",
     "slot": "evening",
     "title": "What If You Never Slept Again? 🤯",
     "video_id": "5q-sdGPEciQ"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 😱",
     "video_id": "rZ0LIw7iGHQ"
+  },
+  {
+    "date": "2026-08-10",
+    "slot": "evening",
+    "title": "What If You Heard a Voice... That Wasn't Yours? 🤯",
+    "video_id": "8YPeWLDh2Sg"
   }
 ]
