@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-31",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te controla AHORA",
-    "video_id": "02HVEKMtyIo"
-  },
-  {
-    "date": "2026-07-31",
     "slot": "afternoon",
     "title": "🤯 Tu mente te esconde esto",
     "video_id": "2JjUpko05h0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu decisión NO ES tuya",
     "video_id": "3uQENxtvFSg"
+  },
+  {
+    "date": "2026-08-10",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "vKY50lPyXf0"
   }
 ]
