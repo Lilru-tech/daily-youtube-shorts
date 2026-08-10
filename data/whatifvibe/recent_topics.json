@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-30",
-    "slot": "evening",
-    "title": "What If Time Started Moving Backwards? ⏳",
-    "video_id": "6ZZtjxVVSJc"
-  },
-  {
     "date": "2026-07-31",
     "slot": "morning",
     "title": "What If Your Reflection Wasn't You? 😱",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Time Froze For A Single Second? 🤯",
     "video_id": "K_q_KqOKWF4"
+  },
+  {
+    "date": "2026-08-10",
+    "slot": "morning",
+    "title": "What If Earth Just Stopped Spinning? 🤯",
+    "video_id": "QvtJCpUmIV4"
   }
 ]
