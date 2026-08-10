@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-30",
-    "slot": "evening",
-    "title": "🤯 Tu otro yo te controla",
-    "video_id": "MtXsGKrmTo4"
-  },
-  {
     "date": "2026-07-31",
     "slot": "morning",
     "title": "🧠 Tu cerebro te controla AHORA",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "💥 Tu mente te SABOTEA así",
     "video_id": "pldJbsWf33Y"
+  },
+  {
+    "date": "2026-08-10",
+    "slot": "morning",
+    "title": "🤯 Tu decisión NO ES tuya",
+    "video_id": "3uQENxtvFSg"
   }
 ]
