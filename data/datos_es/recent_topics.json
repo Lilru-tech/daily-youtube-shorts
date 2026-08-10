@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-07-31",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te esconde esto",
-    "video_id": "2JjUpko05h0"
-  },
-  {
-    "date": "2026-07-31",
     "slot": "evening",
     "title": "🧠 Esto controla tu PERCEPCIÓN",
     "video_id": "FZZEYyaocTw"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "vKY50lPyXf0"
+  },
+  {
+    "date": "2026-08-10",
+    "slot": "evening",
+    "title": "🤯 Tu mente te hace ver esto",
+    "video_id": "pex7UXA811s"
   }
 ]
