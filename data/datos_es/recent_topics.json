@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-07-31",
-    "slot": "evening",
-    "title": "🧠 Esto controla tu PERCEPCIÓN",
-    "video_id": "FZZEYyaocTw"
-  },
-  {
     "date": "2026-08-01",
     "slot": "morning",
     "title": "🧠 Tu memoria te juega una trampa",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te hace ver esto",
     "video_id": "pex7UXA811s"
+  },
+  {
+    "date": "2026-08-11",
+    "slot": "morning",
+    "title": "🤯 Tu cerebro no decide NADA",
+    "video_id": "5sw5fXTg4-g"
   }
 ]
