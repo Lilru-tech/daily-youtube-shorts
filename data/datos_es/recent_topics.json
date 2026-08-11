@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-01",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "3n0GIJBi_t0"
-  },
-  {
-    "date": "2026-08-01",
     "slot": "evening",
     "title": "😱 Tu casa te esconde algo",
     "video_id": "xp8_ONmy46A"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Esa cara NO es la tuya",
     "video_id": "aSmXR6-9nfQ"
+  },
+  {
+    "date": "2026-08-11",
+    "slot": "evening",
+    "title": "🤯 Tu realidad es UN ENGAÑO",
+    "video_id": "j5lNd6nRFp8"
   }
 ]
