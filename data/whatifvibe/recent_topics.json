@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-02",
-    "slot": "morning",
-    "title": "What If Earth Lost Its Moon? 🤯",
-    "video_id": "Mzftz_O7udk"
-  },
-  {
-    "date": "2026-08-02",
     "slot": "afternoon",
     "title": "What If Gravity Just VANISHED? 🤯",
     "video_id": "JyizfhqfoSE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth Swapped Spots With Mars? 🤯",
     "video_id": "Szqt8HG6CJI"
+  },
+  {
+    "date": "2026-08-12",
+    "slot": "afternoon",
+    "title": "What If ALL Sound Just Vanished? 🔇",
+    "video_id": "OcGOzQg2U2A"
   }
 ]
