@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-02",
-    "slot": "afternoon",
-    "title": "What If Gravity Just VANISHED? 🤯",
-    "video_id": "JyizfhqfoSE"
-  },
-  {
-    "date": "2026-08-02",
     "slot": "evening",
     "title": "What If Your Shadow Wasn't Yours? 😱",
     "video_id": "_jHtBq-6G1w"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If ALL Sound Just Vanished? 🔇",
     "video_id": "OcGOzQg2U2A"
+  },
+  {
+    "date": "2026-08-12",
+    "slot": "evening",
+    "title": "What If You Could NEVER Sleep Again? 🤯",
+    "video_id": "vrMemhq0fuA"
   }
 ]
