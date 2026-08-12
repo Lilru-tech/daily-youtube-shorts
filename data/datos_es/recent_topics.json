@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-01",
-    "slot": "evening",
-    "title": "😱 Tu casa te esconde algo",
-    "video_id": "xp8_ONmy46A"
-  },
-  {
     "date": "2026-08-02",
     "slot": "morning",
     "title": "🤯 Tu realidad es una ilusión",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu realidad es UN ENGAÑO",
     "video_id": "j5lNd6nRFp8"
+  },
+  {
+    "date": "2026-08-12",
+    "slot": "morning",
+    "title": "☠️ Esa elección te cambió",
+    "video_id": "3c-bhqvoTk8"
   }
 ]
