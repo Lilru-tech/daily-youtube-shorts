@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-02",
-    "slot": "morning",
-    "title": "🤯 Tu realidad es una ilusión",
-    "video_id": "9WSeItXsprQ"
-  },
-  {
-    "date": "2026-08-02",
     "slot": "afternoon",
     "title": "🧠 Tu voluntad es una trampa",
     "video_id": "HsPyMIofdzc"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "☠️ Esa elección te cambió",
     "video_id": "3c-bhqvoTk8"
+  },
+  {
+    "date": "2026-08-12",
+    "slot": "afternoon",
+    "title": "🤯 Esto explica tu realidad",
+    "video_id": "EVewrX0aAuE"
   }
 ]
