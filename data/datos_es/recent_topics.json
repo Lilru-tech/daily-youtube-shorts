@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-02",
-    "slot": "afternoon",
-    "title": "🧠 Tu voluntad es una trampa",
-    "video_id": "HsPyMIofdzc"
-  },
-  {
-    "date": "2026-08-02",
     "slot": "evening",
     "title": "🤯 Tu mente manipula cada decisión",
     "video_id": "z9hJxzT01sw"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Esto explica tu realidad",
     "video_id": "EVewrX0aAuE"
+  },
+  {
+    "date": "2026-08-12",
+    "slot": "evening",
+    "title": "🤯 Tu mente te miente así",
+    "video_id": "B1975XkbhnM"
   }
 ]
