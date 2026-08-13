@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-02",
-    "slot": "evening",
-    "title": "🤯 Tu mente manipula cada decisión",
-    "video_id": "z9hJxzT01sw"
-  },
-  {
     "date": "2026-08-03",
     "slot": "morning",
     "title": "🧠 Esto explica tu ansiedad",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te miente así",
     "video_id": "B1975XkbhnM"
+  },
+  {
+    "date": "2026-08-13",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te oculta ESTO.",
+    "video_id": "cNbEMt4I7zM"
   }
 ]
