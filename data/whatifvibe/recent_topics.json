@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-03",
-    "slot": "afternoon",
-    "title": "What If You Could Regenerate Any Body Part? 🤯",
-    "video_id": "2_cUFdKNXSA"
-  },
-  {
-    "date": "2026-08-03",
     "slot": "evening",
     "title": "What If TIME FROZE for Everyone But YOU? 🤯",
     "video_id": "T70iAy37AGA"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If The Sun Suddenly VANISHED? 🤯",
     "video_id": "OEjJzeIFps4"
+  },
+  {
+    "date": "2026-08-13",
+    "slot": "evening",
+    "title": "What If Earth's Gravity DOUBLED? 😱",
+    "video_id": "hRT8WlAF_2s"
   }
 ]
