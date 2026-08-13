@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-03",
-    "slot": "morning",
-    "title": "What If You Could NEVER Feel Pain? 🤯",
-    "video_id": "ZiCfAu2ExRs"
-  },
-  {
-    "date": "2026-08-03",
     "slot": "afternoon",
     "title": "What If You Could Regenerate Any Body Part? 🤯",
     "video_id": "2_cUFdKNXSA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You NEVER Blinked For 24 Hours? 😱",
     "video_id": "XeaOZvXjldw"
+  },
+  {
+    "date": "2026-08-13",
+    "slot": "afternoon",
+    "title": "What If The Sun Suddenly VANISHED? 🤯",
+    "video_id": "OEjJzeIFps4"
   }
 ]
