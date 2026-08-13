@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-03",
-    "slot": "morning",
-    "title": "🧠 Esto explica tu ansiedad",
-    "video_id": "B12tAknkAnk"
-  },
-  {
-    "date": "2026-08-03",
     "slot": "afternoon",
     "title": "🧠 Tu reflejo no es tuyo",
     "video_id": "3A8p98yfygw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu cerebro te oculta ESTO.",
     "video_id": "cNbEMt4I7zM"
+  },
+  {
+    "date": "2026-08-13",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente decide por ti",
+    "video_id": "N1SqiLz3eIU"
   }
 ]
