@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-04",
-    "slot": "morning",
-    "title": "What If Your Reflection Isn't YOU? 😱",
-    "video_id": "QmAvhXmOCeQ"
-  },
-  {
-    "date": "2026-08-04",
     "slot": "afternoon",
     "title": "What If Humans Lived On Mars? 🔴",
     "video_id": "2RTm3Az7TxY"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Reflection Isn't Yours? 😱",
     "video_id": "aMiVsueeEok"
+  },
+  {
+    "date": "2026-08-14",
+    "slot": "afternoon",
+    "title": "What If You COULDN'T Feel PAIN? 🤯",
+    "video_id": "iJ8KFyCY6xI"
   }
 ]
