@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-04",
-    "slot": "afternoon",
-    "title": "🧠 Tu mente esconde esto",
-    "video_id": "enrsADu3_Ec"
-  },
-  {
-    "date": "2026-08-04",
     "slot": "evening",
     "title": "🤯 Tu mente te atrapa sin que lo sepas",
     "video_id": "UOZtTl864oE"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 La realidad es un truco mental",
     "video_id": "NDaRRx1akTg"
+  },
+  {
+    "date": "2026-08-14",
+    "slot": "evening",
+    "title": "🧠 Tu mente oculta el horror",
+    "video_id": "5jO9FRpnI04"
   }
 ]
