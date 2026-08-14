@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-03",
-    "slot": "evening",
-    "title": "🤯 Tu cerebro te SABOTEA así",
-    "video_id": "u2GezDtUUUA"
-  },
-  {
     "date": "2026-08-04",
     "slot": "morning",
     "title": "🤯 Tu percepción es una trampa",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te manipula así",
     "video_id": "pQCrRCKulu0"
+  },
+  {
+    "date": "2026-08-14",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te ENGAÑA asombrosamente",
+    "video_id": "ib3DwuIUEmI"
   }
 ]
