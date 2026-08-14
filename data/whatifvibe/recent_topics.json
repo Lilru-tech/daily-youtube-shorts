@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-04",
-    "slot": "afternoon",
-    "title": "What If Humans Lived On Mars? 🔴",
-    "video_id": "2RTm3Az7TxY"
-  },
-  {
-    "date": "2026-08-04",
     "slot": "evening",
     "title": "What If Earth Spun TWICE As Fast? 🤯",
     "video_id": "rELJe3dvgDU"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You COULDN'T Feel PAIN? 🤯",
     "video_id": "iJ8KFyCY6xI"
+  },
+  {
+    "date": "2026-08-14",
+    "slot": "evening",
+    "title": "What If Earth Suddenly STOPPED Spinning? 🤯",
+    "video_id": "3Vy4SJNgnRc"
   }
 ]
