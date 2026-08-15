@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-04",
-    "slot": "evening",
-    "title": "What If Earth Spun TWICE As Fast? 🤯",
-    "video_id": "rELJe3dvgDU"
-  },
-  {
     "date": "2026-08-05",
     "slot": "morning",
     "title": "What If Your Mirror Image Came ALIVE? 😱",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Suddenly STOPPED Spinning? 🤯",
     "video_id": "3Vy4SJNgnRc"
+  },
+  {
+    "date": "2026-08-15",
+    "slot": "morning",
+    "title": "What If Your Reflection Smirked Back? 😱",
+    "video_id": "55CIKwgr6lY"
   }
 ]
