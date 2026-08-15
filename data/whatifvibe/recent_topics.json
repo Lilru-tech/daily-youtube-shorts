@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-05",
-    "slot": "morning",
-    "title": "What If Your Mirror Image Came ALIVE? 😱",
-    "video_id": "iHdzzYfSKnI"
-  },
-  {
-    "date": "2026-08-05",
     "slot": "afternoon",
     "title": "What If OXYGEN Vanished for 5 Seconds? 😱",
     "video_id": "1e1aH3KUr7c"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Reflection Smirked Back? 😱",
     "video_id": "55CIKwgr6lY"
+  },
+  {
+    "date": "2026-08-15",
+    "slot": "afternoon",
+    "title": "What If Your Memories Aren't Yours? 🤯",
+    "video_id": "zxRNV8b2TV0"
   }
 ]
