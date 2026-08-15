@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-05",
-    "slot": "afternoon",
-    "title": "🧠 Nadie sabe esto de ti",
-    "video_id": "iphM_OQ5eWU"
-  },
-  {
-    "date": "2026-08-05",
     "slot": "evening",
     "title": "🧠 Tu memoria te ENGAÑA",
     "video_id": "43_WZmr5M0U"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "💀 Tu mente es tu propia trampa",
     "video_id": "4eHtlP9T3iQ"
+  },
+  {
+    "date": "2026-08-15",
+    "slot": "evening",
+    "title": "😵‍💫 Tu mente te sabotea sin piedad",
+    "video_id": "4CEVazCtUMU"
   }
 ]
