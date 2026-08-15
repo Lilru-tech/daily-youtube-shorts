@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-05",
-    "slot": "afternoon",
-    "title": "What If OXYGEN Vanished for 5 Seconds? 😱",
-    "video_id": "1e1aH3KUr7c"
-  },
-  {
-    "date": "2026-08-05",
     "slot": "evening",
     "title": "What If the MOON Disappeared? 😱",
     "video_id": "oL8HnYKMkN0"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Memories Aren't Yours? 🤯",
     "video_id": "zxRNV8b2TV0"
+  },
+  {
+    "date": "2026-08-15",
+    "slot": "evening",
+    "title": "What If You Saw Your EXACT Double? 🤯",
+    "video_id": "bR6SfaguUt8"
   }
 ]
