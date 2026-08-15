@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-05",
-    "slot": "morning",
-    "title": "🤯 Esto te persigue en tu casa",
-    "video_id": "n_iPjLqCQoc"
-  },
-  {
-    "date": "2026-08-05",
     "slot": "afternoon",
     "title": "🧠 Nadie sabe esto de ti",
     "video_id": "iphM_OQ5eWU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te esconde algo",
     "video_id": "0J0ts19H1Us"
+  },
+  {
+    "date": "2026-08-15",
+    "slot": "afternoon",
+    "title": "💀 Tu mente es tu propia trampa",
+    "video_id": "4eHtlP9T3iQ"
   }
 ]
