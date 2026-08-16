@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-06",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente NO es tuya",
-    "video_id": "DaibeFrygWs"
-  },
-  {
     "date": "2026-08-07",
     "slot": "morning",
     "title": "🤯 Tu reflejo te ESCONDE algo",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te oculta el control",
     "video_id": "0SAh6vtMNVo"
+  },
+  {
+    "date": "2026-08-16",
+    "slot": "evening",
+    "title": "🧠 Tu mente esconde un secreto mortal",
+    "video_id": "MEEyla1zrSo"
   }
 ]
