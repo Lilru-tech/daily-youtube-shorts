@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-06",
-    "slot": "evening",
-    "title": "What If You Were Trapped in the Mirror? 😱",
-    "video_id": "6MfqzpmZYCw"
-  },
-  {
     "date": "2026-08-07",
     "slot": "morning",
     "title": "What If Earth Lost Its Magnetic Field? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Hands Weren't Yours Anymore? 😱",
     "video_id": "YJKAF1N03UQ"
+  },
+  {
+    "date": "2026-08-16",
+    "slot": "evening",
+    "title": "What If Your Shadow Knew Something You Don't? 😱",
+    "video_id": "ZrQUi_EVg2Q"
   }
 ]
