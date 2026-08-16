@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-05",
-    "slot": "evening",
-    "title": "🧠 Tu memoria te ENGAÑA",
-    "video_id": "43_WZmr5M0U"
-  },
-  {
     "date": "2026-08-06",
     "slot": "morning",
     "title": "🧠 Tu cerebro te engana asi",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😵‍💫 Tu mente te sabotea sin piedad",
     "video_id": "4CEVazCtUMU"
+  },
+  {
+    "date": "2026-08-16",
+    "slot": "morning",
+    "title": "🧠 Nadie te dice la verdad.",
+    "video_id": "4rIWVKH1ArU"
   }
 ]
