@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-06",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te engana asi",
-    "video_id": "fc7exIY8rvs"
-  },
-  {
-    "date": "2026-08-06",
     "slot": "afternoon",
     "title": "🤯 Tu mente NO es tuya",
     "video_id": "DaibeFrygWs"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Nadie te dice la verdad.",
     "video_id": "4rIWVKH1ArU"
+  },
+  {
+    "date": "2026-08-16",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te oculta el control",
+    "video_id": "0SAh6vtMNVo"
   }
 ]
