@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-07",
-    "slot": "morning",
-    "title": "🤯 Tu reflejo te ESCONDE algo",
-    "video_id": "dOKirKuomsM"
-  },
-  {
-    "date": "2026-08-07",
     "slot": "afternoon",
     "title": "🤫 Tu reflejo te HABLA así",
     "video_id": "mk2a3kRh6u4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu mente esconde un secreto mortal",
     "video_id": "MEEyla1zrSo"
+  },
+  {
+    "date": "2026-08-17",
+    "slot": "morning",
+    "title": "🤯 Tu cerebro te miente con la realidad",
+    "video_id": "RKeBjpUbgfs"
   }
 ]
