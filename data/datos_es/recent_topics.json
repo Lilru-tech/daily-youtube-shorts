@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-07",
-    "slot": "evening",
-    "title": "🔑 La llave que no puedes tirar",
-    "video_id": "cAsSXh83wM4"
-  },
-  {
     "date": "2026-08-08",
     "slot": "morning",
     "title": "🤯 Tu mente te hace creer esto",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente te domina así",
     "video_id": "DF7JfWvMFCQ"
+  },
+  {
+    "date": "2026-08-17",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro te engana así",
+    "video_id": "YQ4Eflhunc4"
   }
 ]
