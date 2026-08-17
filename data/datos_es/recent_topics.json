@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-07",
-    "slot": "afternoon",
-    "title": "🤫 Tu reflejo te HABLA así",
-    "video_id": "mk2a3kRh6u4"
-  },
-  {
-    "date": "2026-08-07",
     "slot": "evening",
     "title": "🔑 La llave que no puedes tirar",
     "video_id": "cAsSXh83wM4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu cerebro te miente con la realidad",
     "video_id": "RKeBjpUbgfs"
+  },
+  {
+    "date": "2026-08-17",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente te domina así",
+    "video_id": "DF7JfWvMFCQ"
   }
 ]
