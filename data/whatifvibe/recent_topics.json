@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-08",
-    "slot": "afternoon",
-    "title": "What If You Touched a Neutron Star? 🤯",
-    "video_id": "rGRg1QP14yw"
-  },
-  {
-    "date": "2026-08-08",
     "slot": "evening",
     "title": "What If GRAVITY Just DISAPPEARED? 🤯",
     "video_id": "WOuWMCmX68s"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Time FROZE For Everyone But YOU? 🤯",
     "video_id": "Q6JfQrxqPno"
+  },
+  {
+    "date": "2026-08-18",
+    "slot": "afternoon",
+    "title": "What If You Could NEVER Blink Again? 😱",
+    "video_id": "ur1zt40WvUQ"
   }
 ]
