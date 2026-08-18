@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-08",
-    "slot": "morning",
-    "title": "🤯 Tu mente te hace creer esto",
-    "video_id": "jzeshp8UD7k"
-  },
-  {
-    "date": "2026-08-08",
     "slot": "afternoon",
     "title": "🚪 Tu casa YA NO es tuya",
     "video_id": "v6mMN68DynY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cerebro te engana así",
     "video_id": "YQ4Eflhunc4"
+  },
+  {
+    "date": "2026-08-18",
+    "slot": "morning",
+    "title": "🤯 No eres quien crees ser",
+    "video_id": "C2pbP3OoXNI"
   }
 ]
