@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-08",
-    "slot": "evening",
-    "title": "What If GRAVITY Just DISAPPEARED? 🤯",
-    "video_id": "WOuWMCmX68s"
-  },
-  {
     "date": "2026-08-09",
     "slot": "morning",
     "title": "What If Your Hand Wasn't Yours? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Could NEVER Blink Again? 😱",
     "video_id": "ur1zt40WvUQ"
+  },
+  {
+    "date": "2026-08-18",
+    "slot": "evening",
+    "title": "What If You Could Never Lie Again? 🤯",
+    "video_id": "YZxv3NdVOqQ"
   }
 ]
