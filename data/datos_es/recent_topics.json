@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-08",
-    "slot": "afternoon",
-    "title": "🚪 Tu casa YA NO es tuya",
-    "video_id": "v6mMN68DynY"
-  },
-  {
-    "date": "2026-08-08",
     "slot": "evening",
     "title": "🧠 Tu mente te miente así",
     "video_id": "CpnQUMe0bIo"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 No eres quien crees ser",
     "video_id": "C2pbP3OoXNI"
+  },
+  {
+    "date": "2026-08-18",
+    "slot": "afternoon",
+    "title": "😵‍💫 Esto te cambiará la realidad",
+    "video_id": "aMH05bl_zyk"
   }
 ]
