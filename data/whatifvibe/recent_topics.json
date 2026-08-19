@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-09",
-    "slot": "afternoon",
-    "title": "What If You Woke Up Watching Yourself Sleep? 😱",
-    "video_id": "tmr_5cYCF7o"
-  },
-  {
-    "date": "2026-08-09",
     "slot": "evening",
     "title": "What If Time Froze For A Single Second? 🤯",
     "video_id": "K_q_KqOKWF4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If The World Lost All Color? 😱",
     "video_id": "Y_0P-60iuRQ"
+  },
+  {
+    "date": "2026-08-19",
+    "slot": "afternoon",
+    "title": "What If Earth Lost Its Magnetic Field? 🤯",
+    "video_id": "IWMkaXcYI6s"
   }
 ]
