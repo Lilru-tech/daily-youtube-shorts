@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-09",
-    "slot": "evening",
-    "title": "💥 Tu mente te SABOTEA así",
-    "video_id": "pldJbsWf33Y"
-  },
-  {
     "date": "2026-08-10",
     "slot": "morning",
     "title": "🤯 Tu decisión NO ES tuya",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Haces esto sin pensar",
     "video_id": "Zm4plvxP02E"
+  },
+  {
+    "date": "2026-08-19",
+    "slot": "evening",
+    "title": "🤯 Esto manipula tus decisiones",
+    "video_id": "dqzux3xiABI"
   }
 ]
