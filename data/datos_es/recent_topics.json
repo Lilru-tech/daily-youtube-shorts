@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-09",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te controla así",
-    "video_id": "gz3teK3Zprc"
-  },
-  {
-    "date": "2026-08-09",
     "slot": "afternoon",
     "title": "🤯 Tu realidad NO es tuya",
     "video_id": "HtTsfaJgqdY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Lo que ves no existe",
     "video_id": "uK1IFOSN58A"
+  },
+  {
+    "date": "2026-08-19",
+    "slot": "morning",
+    "title": "🤯 Tu mente oculta esto",
+    "video_id": "_OeGwEMzfjc"
   }
 ]
