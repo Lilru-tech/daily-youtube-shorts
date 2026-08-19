@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-09",
-    "slot": "evening",
-    "title": "What If Time Froze For A Single Second? 🤯",
-    "video_id": "K_q_KqOKWF4"
-  },
-  {
     "date": "2026-08-10",
     "slot": "morning",
     "title": "What If Earth Just Stopped Spinning? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Lost Its Magnetic Field? 🤯",
     "video_id": "IWMkaXcYI6s"
+  },
+  {
+    "date": "2026-08-19",
+    "slot": "evening",
+    "title": "What If Your Brain NEVER Stopped Thinking? 🤯",
+    "video_id": "Ntc6KLRrNGE"
   }
 ]
