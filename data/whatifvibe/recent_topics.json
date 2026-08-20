@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-10",
-    "slot": "morning",
-    "title": "What If Earth Just Stopped Spinning? 🤯",
-    "video_id": "QvtJCpUmIV4"
-  },
-  {
-    "date": "2026-08-10",
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 😱",
     "video_id": "rZ0LIw7iGHQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Brain NEVER Stopped Thinking? 🤯",
     "video_id": "Ntc6KLRrNGE"
+  },
+  {
+    "date": "2026-08-20",
+    "slot": "morning",
+    "title": "What If Water Became POISONOUS? 💧",
+    "video_id": "fEdNuHUtnuk"
   }
 ]
