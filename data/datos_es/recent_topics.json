@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-10",
-    "slot": "morning",
-    "title": "🤯 Tu decisión NO ES tuya",
-    "video_id": "3uQENxtvFSg"
-  },
-  {
-    "date": "2026-08-10",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "vKY50lPyXf0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Esto manipula tus decisiones",
     "video_id": "dqzux3xiABI"
+  },
+  {
+    "date": "2026-08-20",
+    "slot": "morning",
+    "title": "🧠 Esto manipula tu percepción",
+    "video_id": "dBi2yxFo2oQ"
   }
 ]
