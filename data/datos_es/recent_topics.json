@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-10",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "vKY50lPyXf0"
-  },
-  {
-    "date": "2026-08-10",
     "slot": "evening",
     "title": "🤯 Tu mente te hace ver esto",
     "video_id": "pex7UXA811s"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Esto manipula tu percepción",
     "video_id": "dBi2yxFo2oQ"
+  },
+  {
+    "date": "2026-08-20",
+    "slot": "afternoon",
+    "title": "🤯 La trampa de tu mente",
+    "video_id": "mw_bHVa6w2A"
   }
 ]
