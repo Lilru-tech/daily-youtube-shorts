@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-11",
-    "slot": "afternoon",
-    "title": "What If You Lived Inside a Black Hole? 🤯",
-    "video_id": "yH3ZMc4G0eI"
-  },
-  {
-    "date": "2026-08-11",
     "slot": "evening",
     "title": "What If Your Old Photos Changed? 😱",
     "video_id": "3ZoEOCLYXQc"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If The Moon Vanished Tomorrow? 🌑",
     "video_id": "KOLGdhAlfE4"
+  },
+  {
+    "date": "2026-08-21",
+    "slot": "afternoon",
+    "title": "What If You Heard a Sound No One Else Could? 😱",
+    "video_id": "GlpvNl66vQo"
   }
 ]
