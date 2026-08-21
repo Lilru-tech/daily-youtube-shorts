@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-11",
-    "slot": "evening",
-    "title": "What If Your Old Photos Changed? 😱",
-    "video_id": "3ZoEOCLYXQc"
-  },
-  {
     "date": "2026-08-12",
     "slot": "morning",
     "title": "What If Earth Swapped Spots With Mars? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Heard a Sound No One Else Could? 😱",
     "video_id": "GlpvNl66vQo"
+  },
+  {
+    "date": "2026-08-21",
+    "slot": "evening",
+    "title": "What If You Stop Blinking for 24 Hours? 🤯",
+    "video_id": "Ym-ImV2ltuY"
   }
 ]
