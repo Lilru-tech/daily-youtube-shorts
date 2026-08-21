@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-11",
-    "slot": "afternoon",
-    "title": "🤯 Esa cara NO es la tuya",
-    "video_id": "aSmXR6-9nfQ"
-  },
-  {
-    "date": "2026-08-11",
     "slot": "evening",
     "title": "🤯 Tu realidad es UN ENGAÑO",
     "video_id": "j5lNd6nRFp8"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😵‍💫 Tu mente es una ilusión",
     "video_id": "pSPTsZrOSaE"
+  },
+  {
+    "date": "2026-08-21",
+    "slot": "afternoon",
+    "title": "🧠 Tu memoria te juega sucio",
+    "video_id": "luAbMwb-ouY"
   }
 ]
