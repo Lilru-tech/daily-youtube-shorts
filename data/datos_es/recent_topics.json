@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-11",
-    "slot": "morning",
-    "title": "🤯 Tu cerebro no decide NADA",
-    "video_id": "5sw5fXTg4-g"
-  },
-  {
-    "date": "2026-08-11",
     "slot": "afternoon",
     "title": "🤯 Esa cara NO es la tuya",
     "video_id": "aSmXR6-9nfQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🪞 Tu reflejo esconde un secreto",
     "video_id": "QiiIU5vzVRc"
+  },
+  {
+    "date": "2026-08-21",
+    "slot": "morning",
+    "title": "😵‍💫 Tu mente es una ilusión",
+    "video_id": "pSPTsZrOSaE"
   }
 ]
