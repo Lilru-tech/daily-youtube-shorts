@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-12",
-    "slot": "evening",
-    "title": "🤯 Tu mente te miente así",
-    "video_id": "B1975XkbhnM"
-  },
-  {
     "date": "2026-08-13",
     "slot": "morning",
     "title": "🧠 Tu cerebro te oculta ESTO.",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "bt3G1p60NJc"
+  },
+  {
+    "date": "2026-08-22",
+    "slot": "evening",
+    "title": "😵‍💫 La mente te traiciona",
+    "video_id": "BfCcD0A7_Os"
   }
 ]
