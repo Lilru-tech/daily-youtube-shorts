@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-12",
-    "slot": "afternoon",
-    "title": "🤯 Esto explica tu realidad",
-    "video_id": "EVewrX0aAuE"
-  },
-  {
-    "date": "2026-08-12",
     "slot": "evening",
     "title": "🤯 Tu mente te miente así",
     "video_id": "B1975XkbhnM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Esto controla tu mente",
     "video_id": "2ft9utQL6-w"
+  },
+  {
+    "date": "2026-08-22",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "bt3G1p60NJc"
   }
 ]
