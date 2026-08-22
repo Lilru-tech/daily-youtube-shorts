@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-12",
-    "slot": "morning",
-    "title": "What If Earth Swapped Spots With Mars? 🤯",
-    "video_id": "Szqt8HG6CJI"
-  },
-  {
-    "date": "2026-08-12",
     "slot": "afternoon",
     "title": "What If ALL Sound Just Vanished? 🔇",
     "video_id": "OcGOzQg2U2A"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Stop Blinking for 24 Hours? 🤯",
     "video_id": "Ym-ImV2ltuY"
+  },
+  {
+    "date": "2026-08-22",
+    "slot": "morning",
+    "title": "What If Your Reflection Knew Your Next Move? 🤯",
+    "video_id": "RetszXr7iW4"
   }
 ]
