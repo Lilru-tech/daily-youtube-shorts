@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-12",
-    "slot": "morning",
-    "title": "☠️ Esa elección te cambió",
-    "video_id": "3c-bhqvoTk8"
-  },
-  {
-    "date": "2026-08-12",
     "slot": "afternoon",
     "title": "🤯 Esto explica tu realidad",
     "video_id": "EVewrX0aAuE"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Esto manipula tu voluntad",
     "video_id": "zmYtYN71w6c"
+  },
+  {
+    "date": "2026-08-22",
+    "slot": "morning",
+    "title": "🤯 Esto controla tu mente",
+    "video_id": "2ft9utQL6-w"
   }
 ]
