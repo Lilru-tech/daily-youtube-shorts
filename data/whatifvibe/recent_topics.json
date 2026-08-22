@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-12",
-    "slot": "evening",
-    "title": "What If You Could NEVER Sleep Again? 🤯",
-    "video_id": "vrMemhq0fuA"
-  },
-  {
     "date": "2026-08-13",
     "slot": "morning",
     "title": "What If You NEVER Blinked For 24 Hours? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 😱",
     "video_id": "oa3ZekVeZ2Q"
+  },
+  {
+    "date": "2026-08-22",
+    "slot": "evening",
+    "title": "What If Gravity Stopped for 5 Seconds? 🤯",
+    "video_id": "_eXaOyzOvcs"
   }
 ]
