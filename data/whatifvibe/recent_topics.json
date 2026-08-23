@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-13",
-    "slot": "afternoon",
-    "title": "What If The Sun Suddenly VANISHED? 🤯",
-    "video_id": "OEjJzeIFps4"
-  },
-  {
-    "date": "2026-08-13",
     "slot": "evening",
     "title": "What If Earth's Gravity DOUBLED? 😱",
     "video_id": "hRT8WlAF_2s"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Everything Was the Same Color? 🤯",
     "video_id": "OTCA7q3SU2A"
+  },
+  {
+    "date": "2026-08-23",
+    "slot": "afternoon",
+    "title": "What If Your Reflection Is Watching You? 😱",
+    "video_id": "GHqqwZDQhUc"
   }
 ]
