@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-13",
-    "slot": "morning",
-    "title": "What If You NEVER Blinked For 24 Hours? 😱",
-    "video_id": "XeaOZvXjldw"
-  },
-  {
-    "date": "2026-08-13",
     "slot": "afternoon",
     "title": "What If The Sun Suddenly VANISHED? 🤯",
     "video_id": "OEjJzeIFps4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Gravity Stopped for 5 Seconds? 🤯",
     "video_id": "_eXaOyzOvcs"
+  },
+  {
+    "date": "2026-08-23",
+    "slot": "morning",
+    "title": "What If Everything Was the Same Color? 🤯",
+    "video_id": "OTCA7q3SU2A"
   }
 ]
