@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-13",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te oculta ESTO.",
-    "video_id": "cNbEMt4I7zM"
-  },
-  {
-    "date": "2026-08-13",
     "slot": "afternoon",
     "title": "🧠 Tu mente decide por ti",
     "video_id": "N1SqiLz3eIU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😵‍💫 La mente te traiciona",
     "video_id": "BfCcD0A7_Os"
+  },
+  {
+    "date": "2026-08-23",
+    "slot": "morning",
+    "title": "🫨 Tu cerebro te domina",
+    "video_id": "frIUQN4Dq7M"
   }
 ]
