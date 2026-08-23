@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-13",
-    "slot": "evening",
-    "title": "🤯 Tu mente te manipula así",
-    "video_id": "pQCrRCKulu0"
-  },
-  {
     "date": "2026-08-14",
     "slot": "morning",
     "title": "🧠 Tu cerebro te ENGAÑA asombrosamente",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤔 Haces esto sin pensar",
     "video_id": "5fO7vS6lM48"
+  },
+  {
+    "date": "2026-08-23",
+    "slot": "evening",
+    "title": "👁️ Tu visión del mundo es una ilusión",
+    "video_id": "aYw0AuW3t3o"
   }
 ]
