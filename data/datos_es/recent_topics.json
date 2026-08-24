@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-14",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te ENGAÑA asombrosamente",
-    "video_id": "ib3DwuIUEmI"
-  },
-  {
-    "date": "2026-08-14",
     "slot": "afternoon",
     "title": "🤯 La realidad es un truco mental",
     "video_id": "NDaRRx1akTg"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👁️ Tu visión del mundo es una ilusión",
     "video_id": "aYw0AuW3t3o"
+  },
+  {
+    "date": "2026-08-24",
+    "slot": "morning",
+    "title": "😵 Tu mente decide por ti",
+    "video_id": "CK2wBCiAKyg"
   }
 ]
