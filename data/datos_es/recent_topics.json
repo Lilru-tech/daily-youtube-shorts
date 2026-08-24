@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-14",
-    "slot": "evening",
-    "title": "🧠 Tu mente oculta el horror",
-    "video_id": "5jO9FRpnI04"
-  },
-  {
     "date": "2026-08-15",
     "slot": "morning",
     "title": "🤯 Tu mente te esconde algo",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu mente te miente así",
     "video_id": "8UbngwVZYSA"
+  },
+  {
+    "date": "2026-08-24",
+    "slot": "evening",
+    "title": "😵‍💫 Esto controla tus decisiones",
+    "video_id": "vwhRWbRE62w"
   }
 ]
