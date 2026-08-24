@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-14",
-    "slot": "morning",
-    "title": "What If Your Reflection Isn't Yours? 😱",
-    "video_id": "aMiVsueeEok"
-  },
-  {
-    "date": "2026-08-14",
     "slot": "afternoon",
     "title": "What If You COULDN'T Feel PAIN? 🤯",
     "video_id": "iJ8KFyCY6xI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If The Sun Just Vanished? 🤯",
     "video_id": "cxY4EkLKSls"
+  },
+  {
+    "date": "2026-08-24",
+    "slot": "morning",
+    "title": "What If Earth Lost Its Magnetic Field? 🤯",
+    "video_id": "zZo-3Cdja30"
   }
 ]
