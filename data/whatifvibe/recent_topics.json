@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-14",
-    "slot": "evening",
-    "title": "What If Earth Suddenly STOPPED Spinning? 🤯",
-    "video_id": "3Vy4SJNgnRc"
-  },
-  {
     "date": "2026-08-15",
     "slot": "morning",
     "title": "What If Your Reflection Smirked Back? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Walls Started Whispering? 😱",
     "video_id": "MSUQMoIyIz4"
+  },
+  {
+    "date": "2026-08-24",
+    "slot": "evening",
+    "title": "What If the World Glitched? 👾",
+    "video_id": "LJew46pginQ"
   }
 ]
