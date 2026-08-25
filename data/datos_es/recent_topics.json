@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-15",
-    "slot": "morning",
-    "title": "🤯 Tu mente te esconde algo",
-    "video_id": "0J0ts19H1Us"
-  },
-  {
-    "date": "2026-08-15",
     "slot": "afternoon",
     "title": "💀 Tu mente es tu propia trampa",
     "video_id": "4eHtlP9T3iQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😵‍💫 Esto controla tus decisiones",
     "video_id": "vwhRWbRE62w"
+  },
+  {
+    "date": "2026-08-25",
+    "slot": "morning",
+    "title": "😳 Tu cerebro fabrica tu realidad",
+    "video_id": "1xp1K7yKWA4"
   }
 ]
