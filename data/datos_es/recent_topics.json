@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-15",
-    "slot": "evening",
-    "title": "😵‍💫 Tu mente te sabotea sin piedad",
-    "video_id": "4CEVazCtUMU"
-  },
-  {
     "date": "2026-08-16",
     "slot": "morning",
     "title": "🧠 Nadie te dice la verdad.",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤫 Nadie te dirá esto de tu mente",
     "video_id": "OzkfDrmbRJI"
+  },
+  {
+    "date": "2026-08-25",
+    "slot": "evening",
+    "title": "🤯 Así te manipula tu cerebro",
+    "video_id": "ZhGtZEockjA"
   }
 ]
