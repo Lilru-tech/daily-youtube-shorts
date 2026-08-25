@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-15",
-    "slot": "morning",
-    "title": "What If Your Reflection Smirked Back? 😱",
-    "video_id": "55CIKwgr6lY"
-  },
-  {
-    "date": "2026-08-15",
     "slot": "afternoon",
     "title": "What If Your Memories Aren't Yours? 🤯",
     "video_id": "zxRNV8b2TV0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If the World Glitched? 👾",
     "video_id": "LJew46pginQ"
+  },
+  {
+    "date": "2026-08-25",
+    "slot": "morning",
+    "title": "What If You Heard EVERY Sound? 🤯",
+    "video_id": "-GSjhBNv-VQ"
   }
 ]
