@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-16",
-    "slot": "afternoon",
-    "title": "What If Your Hands Weren't Yours Anymore? 😱",
-    "video_id": "YJKAF1N03UQ"
-  },
-  {
-    "date": "2026-08-16",
     "slot": "evening",
     "title": "What If Your Shadow Knew Something You Don't? 😱",
     "video_id": "ZrQUi_EVg2Q"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If ALL Your Dreams Came True? 🤯",
     "video_id": "34rdDCGwa5w"
+  },
+  {
+    "date": "2026-08-26",
+    "slot": "afternoon",
+    "title": "What If Your Reflection Blinked Back? 😱",
+    "video_id": "Y-wLoKZpuQs"
   }
 ]
