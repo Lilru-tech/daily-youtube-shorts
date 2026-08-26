@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-16",
-    "slot": "evening",
-    "title": "🧠 Tu mente esconde un secreto mortal",
-    "video_id": "MEEyla1zrSo"
-  },
-  {
     "date": "2026-08-17",
     "slot": "morning",
     "title": "🤯 Tu cerebro te miente con la realidad",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña sin que te des cuenta",
     "video_id": "J3Q3R5wPN1g"
+  },
+  {
+    "date": "2026-08-26",
+    "slot": "evening",
+    "title": "🤯 Tu cerebro no eres tú",
+    "video_id": "jkkm1VCZaZA"
   }
 ]
