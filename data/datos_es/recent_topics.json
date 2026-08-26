@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-16",
-    "slot": "morning",
-    "title": "🧠 Nadie te dice la verdad.",
-    "video_id": "4rIWVKH1ArU"
-  },
-  {
-    "date": "2026-08-16",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te oculta el control",
     "video_id": "0SAh6vtMNVo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Así te manipula tu cerebro",
     "video_id": "ZhGtZEockjA"
+  },
+  {
+    "date": "2026-08-26",
+    "slot": "morning",
+    "title": "🤯 Así te engaña tu memoria",
+    "video_id": "6IPDRZu_J7s"
   }
 ]
