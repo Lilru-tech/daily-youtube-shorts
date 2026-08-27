@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-16",
-    "slot": "evening",
-    "title": "What If Your Shadow Knew Something You Don't? 😱",
-    "video_id": "ZrQUi_EVg2Q"
-  },
-  {
     "date": "2026-08-17",
     "slot": "morning",
     "title": "What If The Sun Just VANISHED? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Reflection Blinked Back? 😱",
     "video_id": "Y-wLoKZpuQs"
+  },
+  {
+    "date": "2026-08-26",
+    "slot": "evening",
+    "title": "What If Time STOPPED Forever? 🤯",
+    "video_id": "z3wlcj5uPlc"
   }
 ]
