@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-17",
-    "slot": "evening",
-    "title": "🧠 Tu cerebro te engana así",
-    "video_id": "YQ4Eflhunc4"
-  },
-  {
     "date": "2026-08-18",
     "slot": "morning",
     "title": "🤯 No eres quien crees ser",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Esto explica por qué no controlas nada",
     "video_id": "uAgl_Hxosr8"
+  },
+  {
+    "date": "2026-08-28",
+    "slot": "afternoon",
+    "title": "🧠 Así te engaña tu propia mente",
+    "video_id": "Q3u3a_W_hyo"
   }
 ]
