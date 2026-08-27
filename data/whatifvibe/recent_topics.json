@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-17",
-    "slot": "morning",
-    "title": "What If The Sun Just VANISHED? 🤯",
-    "video_id": "n2rQS_KmbYs"
-  },
-  {
-    "date": "2026-08-17",
     "slot": "afternoon",
     "title": "What If Gravity Just REVERSED? 😱",
     "video_id": "8KAOypqDqSg"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Time STOPPED Forever? 🤯",
     "video_id": "z3wlcj5uPlc"
+  },
+  {
+    "date": "2026-08-27",
+    "slot": "morning",
+    "title": "What If Gravity Flipped for 60 Seconds? 🤯",
+    "video_id": "oOe6fmmgV9E"
   }
 ]
