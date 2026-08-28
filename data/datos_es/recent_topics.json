@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-18",
-    "slot": "afternoon",
-    "title": "😵‍💫 Esto te cambiará la realidad",
-    "video_id": "aMH05bl_zyk"
-  },
-  {
-    "date": "2026-08-18",
     "slot": "evening",
     "title": "🤯 Lo que ves no existe",
     "video_id": "uK1IFOSN58A"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤫 La VERDAD oculta de tu mente",
     "video_id": "-tfmIUEx4I0"
+  },
+  {
+    "date": "2026-08-28",
+    "slot": "morning",
+    "title": "😳 Tu cerebro te miente así",
+    "video_id": "21u-rzvhSOU"
   }
 ]
