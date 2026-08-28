@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-18",
-    "slot": "evening",
-    "title": "🤯 Lo que ves no existe",
-    "video_id": "uK1IFOSN58A"
-  },
-  {
     "date": "2026-08-19",
     "slot": "morning",
     "title": "🤯 Tu mente oculta esto",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😳 Tu cerebro te miente así",
     "video_id": "21u-rzvhSOU"
+  },
+  {
+    "date": "2026-08-29",
+    "slot": "afternoon",
+    "title": "👁️ Tu percepción es una trampa",
+    "video_id": "ILb9ib0kyho"
   }
 ]
