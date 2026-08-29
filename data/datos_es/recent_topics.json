@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-19",
-    "slot": "morning",
-    "title": "🤯 Tu mente oculta esto",
-    "video_id": "_OeGwEMzfjc"
-  },
-  {
-    "date": "2026-08-19",
     "slot": "afternoon",
     "title": "🤯 Haces esto sin pensar",
     "video_id": "Zm4plvxP02E"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👁️ Tu percepción es una trampa",
     "video_id": "ILb9ib0kyho"
+  },
+  {
+    "date": "2026-08-29",
+    "slot": "evening",
+    "title": "🤫 Tus decisiones NO son tuyas",
+    "video_id": "ziTiR7qvWGs"
   }
 ]
