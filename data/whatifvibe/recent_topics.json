@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-19",
-    "slot": "afternoon",
-    "title": "What If Earth Lost Its Magnetic Field? 🤯",
-    "video_id": "IWMkaXcYI6s"
-  },
-  {
-    "date": "2026-08-19",
     "slot": "evening",
     "title": "What If Your Brain NEVER Stopped Thinking? 🤯",
     "video_id": "Ntc6KLRrNGE"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If YOU Were the Monster? 😱",
     "video_id": "Xgnfe8T42As"
+  },
+  {
+    "date": "2026-08-29",
+    "slot": "evening",
+    "title": "What If Someone Else Saw Your Memories? 😱",
+    "video_id": "0OZcpab0FSk"
   }
 ]
