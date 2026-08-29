@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-19",
-    "slot": "morning",
-    "title": "What If The World Lost All Color? 😱",
-    "video_id": "Y_0P-60iuRQ"
-  },
-  {
-    "date": "2026-08-19",
     "slot": "afternoon",
     "title": "What If Earth Lost Its Magnetic Field? 🤯",
     "video_id": "IWMkaXcYI6s"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Light Traveled Slower? 🤯",
     "video_id": "JaHPFh2nfWE"
+  },
+  {
+    "date": "2026-08-29",
+    "slot": "afternoon",
+    "title": "What If YOU Were the Monster? 😱",
+    "video_id": "Xgnfe8T42As"
   }
 ]
