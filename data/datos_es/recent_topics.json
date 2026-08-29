@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-19",
-    "slot": "afternoon",
-    "title": "🤯 Haces esto sin pensar",
-    "video_id": "Zm4plvxP02E"
-  },
-  {
-    "date": "2026-08-19",
     "slot": "evening",
     "title": "🤯 Esto manipula tus decisiones",
     "video_id": "dqzux3xiABI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤫 Tus decisiones NO son tuyas",
     "video_id": "ziTiR7qvWGs"
+  },
+  {
+    "date": "2026-08-29",
+    "slot": "morning",
+    "title": "🤯 Tu mente te CONTROLA así",
+    "video_id": "lFbJJZ2I_Cc"
   }
 ]
