@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-20",
-    "slot": "afternoon",
-    "title": "🤯 La trampa de tu mente",
-    "video_id": "mw_bHVa6w2A"
-  },
-  {
-    "date": "2026-08-20",
     "slot": "evening",
     "title": "🪞 Tu reflejo esconde un secreto",
     "video_id": "QiiIU5vzVRc"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu mente te sabotea",
     "video_id": "2wBYAveFzgc"
+  },
+  {
+    "date": "2026-08-30",
+    "slot": "evening",
+    "title": "🧠 Tu realidad es pura ilusión",
+    "video_id": "LjTV3IU0ovI"
   }
 ]
