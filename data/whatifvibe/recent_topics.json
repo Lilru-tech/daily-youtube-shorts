@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-19",
-    "slot": "evening",
-    "title": "What If Your Brain NEVER Stopped Thinking? 🤯",
-    "video_id": "Ntc6KLRrNGE"
-  },
-  {
     "date": "2026-08-20",
     "slot": "morning",
     "title": "What If Water Became POISONOUS? 💧",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Someone Else Saw Your Memories? 😱",
     "video_id": "0OZcpab0FSk"
+  },
+  {
+    "date": "2026-08-30",
+    "slot": "morning",
+    "title": "What If Earth LOST Its Magnetic Field? 🤯",
+    "video_id": "7KUVpoep2Mo"
   }
 ]
