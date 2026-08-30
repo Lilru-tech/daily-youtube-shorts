@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-20",
-    "slot": "morning",
-    "title": "What If Water Became POISONOUS? 💧",
-    "video_id": "fEdNuHUtnuk"
-  },
-  {
-    "date": "2026-08-20",
     "slot": "afternoon",
     "title": "What If a New Door Appeared in Your Home? 😱",
     "video_id": "NmobfxdTgnE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth LOST Its Magnetic Field? 🤯",
     "video_id": "7KUVpoep2Mo"
+  },
+  {
+    "date": "2026-08-30",
+    "slot": "afternoon",
+    "title": "What If Your Reflection Spoke Back? 😱",
+    "video_id": "8pj6Md6Fchc"
   }
 ]
