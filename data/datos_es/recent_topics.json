@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-19",
-    "slot": "evening",
-    "title": "🤯 Esto manipula tus decisiones",
-    "video_id": "dqzux3xiABI"
-  },
-  {
     "date": "2026-08-20",
     "slot": "morning",
     "title": "🧠 Esto manipula tu percepción",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te CONTROLA así",
     "video_id": "lFbJJZ2I_Cc"
+  },
+  {
+    "date": "2026-08-30",
+    "slot": "morning",
+    "title": "🚨 Esto hace tu cerebro",
+    "video_id": "ta7J-rrzhHU"
   }
 ]
