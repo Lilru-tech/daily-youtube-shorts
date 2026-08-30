@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-20",
-    "slot": "afternoon",
-    "title": "What If a New Door Appeared in Your Home? 😱",
-    "video_id": "NmobfxdTgnE"
-  },
-  {
-    "date": "2026-08-20",
     "slot": "evening",
     "title": "What If Earth Suddenly Stopped Spinning? 🤯",
     "video_id": "RfHkHkByk30"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Reflection Spoke Back? 😱",
     "video_id": "8pj6Md6Fchc"
+  },
+  {
+    "date": "2026-08-30",
+    "slot": "evening",
+    "title": "What If the Sun Just VANISHED? 🤯",
+    "video_id": "T0fD5r7FcTE"
   }
 ]
