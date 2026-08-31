@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-21",
-    "slot": "morning",
-    "title": "😵‍💫 Tu mente es una ilusión",
-    "video_id": "pSPTsZrOSaE"
-  },
-  {
-    "date": "2026-08-21",
     "slot": "afternoon",
     "title": "🧠 Tu memoria te juega sucio",
     "video_id": "luAbMwb-ouY"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "gHNWKGSCb80"
+  },
+  {
+    "date": "2026-08-31",
+    "slot": "afternoon",
+    "title": "🪞 Tu reflejo NO eres tú",
+    "video_id": "ZiJscODgesY"
   }
 ]
