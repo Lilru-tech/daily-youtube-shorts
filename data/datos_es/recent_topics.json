@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-20",
-    "slot": "evening",
-    "title": "🪞 Tu reflejo esconde un secreto",
-    "video_id": "QiiIU5vzVRc"
-  },
-  {
     "date": "2026-08-21",
     "slot": "morning",
     "title": "😵‍💫 Tu mente es una ilusión",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu realidad es pura ilusión",
     "video_id": "LjTV3IU0ovI"
+  },
+  {
+    "date": "2026-08-31",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "gHNWKGSCb80"
   }
 ]
