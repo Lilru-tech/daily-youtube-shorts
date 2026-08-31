@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-20",
-    "slot": "evening",
-    "title": "What If Earth Suddenly Stopped Spinning? 🤯",
-    "video_id": "RfHkHkByk30"
-  },
-  {
     "date": "2026-08-21",
     "slot": "morning",
     "title": "What If The Moon Vanished Tomorrow? 🌑",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If the Sun Just VANISHED? 🤯",
     "video_id": "T0fD5r7FcTE"
+  },
+  {
+    "date": "2026-08-31",
+    "slot": "morning",
+    "title": "What If the Moon Vanished Overnight? 😱",
+    "video_id": "jRUZWMMnjfY"
   }
 ]
