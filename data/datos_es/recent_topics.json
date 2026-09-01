@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-22",
-    "slot": "morning",
-    "title": "🤯 Esto controla tu mente",
-    "video_id": "2ft9utQL6-w"
-  },
-  {
-    "date": "2026-08-22",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "bt3G1p60NJc"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente es un engaño",
     "video_id": "lUJMHKktSig"
+  },
+  {
+    "date": "2026-09-01",
+    "slot": "afternoon",
+    "title": "👀 Tu mente te ESCONDE",
+    "video_id": "pqv7ITkBb3g"
   }
 ]
