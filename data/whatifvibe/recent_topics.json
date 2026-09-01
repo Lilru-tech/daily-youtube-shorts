@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-21",
-    "slot": "afternoon",
-    "title": "What If You Heard a Sound No One Else Could? 😱",
-    "video_id": "GlpvNl66vQo"
-  },
-  {
-    "date": "2026-08-21",
     "slot": "evening",
     "title": "What If You Stop Blinking for 24 Hours? 🤯",
     "video_id": "Ym-ImV2ltuY"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Felt NO Fear? 🤯",
     "video_id": "K4qTKhWdYOo"
+  },
+  {
+    "date": "2026-08-31",
+    "slot": "evening",
+    "title": "What If You Could NEVER Sleep Again? 😵",
+    "video_id": "0WEVAek4yQM"
   }
 ]
