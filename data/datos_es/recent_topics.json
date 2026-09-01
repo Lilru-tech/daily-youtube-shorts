@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-21",
-    "slot": "evening",
-    "title": "🤯 Esto manipula tu voluntad",
-    "video_id": "zmYtYN71w6c"
-  },
-  {
     "date": "2026-08-22",
     "slot": "morning",
     "title": "🤯 Esto controla tu mente",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤫 Tu memoria es un fraude",
     "video_id": "9BYPJx7JpxA"
+  },
+  {
+    "date": "2026-09-01",
+    "slot": "morning",
+    "title": "🤯 Tu mente es un engaño",
+    "video_id": "lUJMHKktSig"
   }
 ]
