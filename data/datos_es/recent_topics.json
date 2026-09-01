@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-22",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "bt3G1p60NJc"
-  },
-  {
-    "date": "2026-08-22",
     "slot": "evening",
     "title": "😵‍💫 La mente te traiciona",
     "video_id": "BfCcD0A7_Os"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👀 Tu mente te ESCONDE",
     "video_id": "pqv7ITkBb3g"
+  },
+  {
+    "date": "2026-09-01",
+    "slot": "evening",
+    "title": "👁️ Lo que ves NO existe",
+    "video_id": "zve7Ul-NW60"
   }
 ]
