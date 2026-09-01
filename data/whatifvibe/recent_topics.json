@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-22",
-    "slot": "morning",
-    "title": "What If Your Reflection Knew Your Next Move? 🤯",
-    "video_id": "RetszXr7iW4"
-  },
-  {
-    "date": "2026-08-22",
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 😱",
     "video_id": "oa3ZekVeZ2Q"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth's Gravity SUDDENLY DOUBLED? 🤯",
     "video_id": "Efu3vs0ef1A"
+  },
+  {
+    "date": "2026-09-01",
+    "slot": "afternoon",
+    "title": "What If Time Started Moving Backwards? ⏳",
+    "video_id": "OwBh5bwg7js"
   }
 ]
