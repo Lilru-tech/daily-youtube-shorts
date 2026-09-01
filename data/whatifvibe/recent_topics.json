@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-21",
-    "slot": "evening",
-    "title": "What If You Stop Blinking for 24 Hours? 🤯",
-    "video_id": "Ym-ImV2ltuY"
-  },
-  {
     "date": "2026-08-22",
     "slot": "morning",
     "title": "What If Your Reflection Knew Your Next Move? 🤯",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Could NEVER Sleep Again? 😵",
     "video_id": "0WEVAek4yQM"
+  },
+  {
+    "date": "2026-09-01",
+    "slot": "morning",
+    "title": "What If Earth's Gravity SUDDENLY DOUBLED? 🤯",
+    "video_id": "Efu3vs0ef1A"
   }
 ]
