@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-22",
-    "slot": "afternoon",
-    "title": "What If Your Reflection Isn't Yours? 😱",
-    "video_id": "oa3ZekVeZ2Q"
-  },
-  {
-    "date": "2026-08-22",
     "slot": "evening",
     "title": "What If Gravity Stopped for 5 Seconds? 🤯",
     "video_id": "_eXaOyzOvcs"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Time Started Moving Backwards? ⏳",
     "video_id": "OwBh5bwg7js"
+  },
+  {
+    "date": "2026-09-01",
+    "slot": "evening",
+    "title": "What If Your Reflection Came Alive? 😱",
+    "video_id": "u1snth1O_-U"
   }
 ]
