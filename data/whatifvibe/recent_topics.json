@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-23",
-    "slot": "afternoon",
-    "title": "What If Your Reflection Is Watching You? 😱",
-    "video_id": "GHqqwZDQhUc"
-  },
-  {
-    "date": "2026-08-23",
     "slot": "evening",
     "title": "What If The Sun Just Vanished? 🤯",
     "video_id": "cxY4EkLKSls"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If ALL Insects Vanished? 🌎",
     "video_id": "HDs1Y3KT_yI"
+  },
+  {
+    "date": "2026-09-02",
+    "slot": "evening",
+    "title": "What If Light Suddenly SLOWED? 🤯",
+    "video_id": "gq8l5QpOUOw"
   }
 ]
