@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-23",
-    "slot": "morning",
-    "title": "🫨 Tu cerebro te domina",
-    "video_id": "frIUQN4Dq7M"
-  },
-  {
-    "date": "2026-08-23",
     "slot": "afternoon",
     "title": "🤔 Haces esto sin pensar",
     "video_id": "5fO7vS6lM48"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "⚠️ La verdad tras EL ESPEJO",
     "video_id": "7zcSdKfpmEY"
+  },
+  {
+    "date": "2026-09-02",
+    "slot": "afternoon",
+    "title": "🚨 Tu mente NO es tuya",
+    "video_id": "q4REq5JV6U8"
   }
 ]
