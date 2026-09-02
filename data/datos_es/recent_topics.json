@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-23",
-    "slot": "afternoon",
-    "title": "🤔 Haces esto sin pensar",
-    "video_id": "5fO7vS6lM48"
-  },
-  {
-    "date": "2026-08-23",
     "slot": "evening",
     "title": "👁️ Tu visión del mundo es una ilusión",
     "video_id": "aYw0AuW3t3o"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🚨 Tu mente NO es tuya",
     "video_id": "q4REq5JV6U8"
+  },
+  {
+    "date": "2026-09-02",
+    "slot": "evening",
+    "title": "🚫 Tu libre albedrío NO existe",
+    "video_id": "QIWgK94omfg"
   }
 ]
