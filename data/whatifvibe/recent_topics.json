@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-24",
-    "slot": "morning",
-    "title": "What If Earth Lost Its Magnetic Field? 🤯",
-    "video_id": "zZo-3Cdja30"
-  },
-  {
-    "date": "2026-08-24",
     "slot": "afternoon",
     "title": "What If Your Walls Started Whispering? 😱",
     "video_id": "MSUQMoIyIz4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Doppelgänger Moved In? 😱",
     "video_id": "0hBluFCDtM0"
+  },
+  {
+    "date": "2026-09-03",
+    "slot": "afternoon",
+    "title": "What If Your Memories Aren't Yours? 🤯",
+    "video_id": "CB5svW75C14"
   }
 ]
