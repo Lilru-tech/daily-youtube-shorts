@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-24",
-    "slot": "morning",
-    "title": "😵 Tu mente decide por ti",
-    "video_id": "CK2wBCiAKyg"
-  },
-  {
-    "date": "2026-08-24",
     "slot": "afternoon",
     "title": "🤯 Tu mente te miente así",
     "video_id": "8UbngwVZYSA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😱 Tu propio cuerpo NO es tuyo",
     "video_id": "89wJ8oKtRe0"
+  },
+  {
+    "date": "2026-09-03",
+    "slot": "afternoon",
+    "title": "💀 La trampa de tu propia mente",
+    "video_id": "wJreiiWkVVc"
   }
 ]
