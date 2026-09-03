@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-23",
-    "slot": "evening",
-    "title": "👁️ Tu visión del mundo es una ilusión",
-    "video_id": "aYw0AuW3t3o"
-  },
-  {
     "date": "2026-08-24",
     "slot": "morning",
     "title": "😵 Tu mente decide por ti",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🚫 Tu libre albedrío NO existe",
     "video_id": "QIWgK94omfg"
+  },
+  {
+    "date": "2026-09-03",
+    "slot": "morning",
+    "title": "😱 Tu propio cuerpo NO es tuyo",
+    "video_id": "89wJ8oKtRe0"
   }
 ]
