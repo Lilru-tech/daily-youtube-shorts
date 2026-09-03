@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-24",
-    "slot": "afternoon",
-    "title": "What If Your Walls Started Whispering? 😱",
-    "video_id": "MSUQMoIyIz4"
-  },
-  {
-    "date": "2026-08-24",
     "slot": "evening",
     "title": "What If the World Glitched? 👾",
     "video_id": "LJew46pginQ"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Memories Aren't Yours? 🤯",
     "video_id": "CB5svW75C14"
+  },
+  {
+    "date": "2026-09-03",
+    "slot": "evening",
+    "title": "What If Your Reflection BLINKED Back? 😱",
+    "video_id": "ZeT9JQAb7vg"
   }
 ]
