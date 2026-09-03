@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-24",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te miente así",
-    "video_id": "8UbngwVZYSA"
-  },
-  {
-    "date": "2026-08-24",
     "slot": "evening",
     "title": "😵‍💫 Esto controla tus decisiones",
     "video_id": "vwhRWbRE62w"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "💀 La trampa de tu propia mente",
     "video_id": "wJreiiWkVVc"
+  },
+  {
+    "date": "2026-09-03",
+    "slot": "evening",
+    "title": "🧠 Tu mente es su nuevo HOGAR",
+    "video_id": "U2uMy27Pzzo"
   }
 ]
