@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-24",
-    "slot": "evening",
-    "title": "😵‍💫 Esto controla tus decisiones",
-    "video_id": "vwhRWbRE62w"
-  },
-  {
     "date": "2026-08-25",
     "slot": "morning",
     "title": "😳 Tu cerebro fabrica tu realidad",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu mente es su nuevo HOGAR",
     "video_id": "U2uMy27Pzzo"
+  },
+  {
+    "date": "2026-09-04",
+    "slot": "morning",
+    "title": "😨 Tu peor enemigo eres TÚ",
+    "video_id": "vU8fJ6nHO3I"
   }
 ]
