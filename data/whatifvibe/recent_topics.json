@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-25",
-    "slot": "morning",
-    "title": "What If You Heard EVERY Sound? 🤯",
-    "video_id": "-GSjhBNv-VQ"
-  },
-  {
-    "date": "2026-08-25",
     "slot": "afternoon",
     "title": "What If You NEVER Slept Again? 🤯",
     "video_id": "827y-mDwa-E"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Space Expanded FASTER Than Light? 🌌",
     "video_id": "F6EGcnSQMFg"
+  },
+  {
+    "date": "2026-09-04",
+    "slot": "afternoon",
+    "title": "What If Earth Suddenly SPUN Backwards? 🤯",
+    "video_id": "kSkWo6ZG8c4"
   }
 ]
