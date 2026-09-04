@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-25",
-    "slot": "afternoon",
-    "title": "What If You NEVER Slept Again? 🤯",
-    "video_id": "827y-mDwa-E"
-  },
-  {
-    "date": "2026-08-25",
     "slot": "evening",
     "title": "What If Your Memories Aren't Yours? 🤯",
     "video_id": "pHmVS2VHrEY"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Suddenly SPUN Backwards? 🤯",
     "video_id": "kSkWo6ZG8c4"
+  },
+  {
+    "date": "2026-09-04",
+    "slot": "evening",
+    "title": "What If You Could NEVER Sleep Again? 🤯",
+    "video_id": "MHid6AMJcV4"
   }
 ]
