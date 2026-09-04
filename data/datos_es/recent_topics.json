@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-25",
-    "slot": "morning",
-    "title": "😳 Tu cerebro fabrica tu realidad",
-    "video_id": "1xp1K7yKWA4"
-  },
-  {
-    "date": "2026-08-25",
     "slot": "afternoon",
     "title": "🤫 Nadie te dirá esto de tu mente",
     "video_id": "OzkfDrmbRJI"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😨 Tu peor enemigo eres TÚ",
     "video_id": "vU8fJ6nHO3I"
+  },
+  {
+    "date": "2026-09-04",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "fq-yKFBnKBs"
   }
 ]
