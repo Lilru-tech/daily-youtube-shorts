@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-25",
-    "slot": "afternoon",
-    "title": "🤫 Nadie te dirá esto de tu mente",
-    "video_id": "OzkfDrmbRJI"
-  },
-  {
-    "date": "2026-08-25",
     "slot": "evening",
     "title": "🤯 Así te manipula tu cerebro",
     "video_id": "ZhGtZEockjA"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "fq-yKFBnKBs"
+  },
+  {
+    "date": "2026-09-04",
+    "slot": "evening",
+    "title": "🧠 Tu memoria es una ilusión",
+    "video_id": "bc_j4sUe_3E"
   }
 ]
