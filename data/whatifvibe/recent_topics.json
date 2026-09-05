@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-26",
-    "slot": "morning",
-    "title": "What If ALL Your Dreams Came True? 🤯",
-    "video_id": "34rdDCGwa5w"
-  },
-  {
-    "date": "2026-08-26",
     "slot": "afternoon",
     "title": "What If Your Reflection Blinked Back? 😱",
     "video_id": "Y-wLoKZpuQs"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Saw Your Future Self? 🤯",
     "video_id": "cjLT_9tQi9Q"
+  },
+  {
+    "date": "2026-09-05",
+    "slot": "afternoon",
+    "title": "What If Gravity Just… VANISHED? 🤯",
+    "video_id": "j70dDrJ8fLU"
   }
 ]
