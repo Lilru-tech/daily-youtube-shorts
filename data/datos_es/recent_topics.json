@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-26",
-    "slot": "morning",
-    "title": "🤯 Así te engaña tu memoria",
-    "video_id": "6IPDRZu_J7s"
-  },
-  {
-    "date": "2026-08-26",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña sin que te des cuenta",
     "video_id": "J3Q3R5wPN1g"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🚨 Esto esconde tu MENTE",
     "video_id": "eUiWTVDgiho"
+  },
+  {
+    "date": "2026-09-05",
+    "slot": "afternoon",
+    "title": "🧠 No eres LIBRE",
+    "video_id": "jDBroeIsKRg"
   }
 ]
