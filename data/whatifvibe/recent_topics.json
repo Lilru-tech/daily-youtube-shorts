@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-26",
-    "slot": "afternoon",
-    "title": "What If Your Reflection Blinked Back? 😱",
-    "video_id": "Y-wLoKZpuQs"
-  },
-  {
-    "date": "2026-08-26",
     "slot": "evening",
     "title": "What If Time STOPPED Forever? 🤯",
     "video_id": "z3wlcj5uPlc"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Gravity Just… VANISHED? 🤯",
     "video_id": "j70dDrJ8fLU"
+  },
+  {
+    "date": "2026-09-05",
+    "slot": "evening",
+    "title": "What If Your Reflection Wasn't You? 🤯",
+    "video_id": "PLQZ9ZYRd18"
   }
 ]
