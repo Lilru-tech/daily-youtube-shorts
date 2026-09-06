@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-27",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "7Y00fSj7Jhc"
-  },
-  {
-    "date": "2026-08-27",
     "slot": "afternoon",
     "title": "🤯 Esto explica por qué no controlas nada",
     "video_id": "uAgl_Hxosr8"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente te SABOTEA",
     "video_id": "Tl27gx7Ma2I"
+  },
+  {
+    "date": "2026-09-06",
+    "slot": "afternoon",
+    "title": "🧠 No confíes en tus OJOS",
+    "video_id": "EyDRDqmomBo"
   }
 ]
