@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-27",
-    "slot": "morning",
-    "title": "What If Gravity Flipped for 60 Seconds? 🤯",
-    "video_id": "oOe6fmmgV9E"
-  },
-  {
-    "date": "2026-08-27",
     "slot": "afternoon",
     "title": "What If Your Shadow Wasn't Yours? 😱",
     "video_id": "WMBevkEhWns"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Stopped Blinking for 24 Hours? 🤯",
     "video_id": "oP9G2VhHgg0"
+  },
+  {
+    "date": "2026-09-06",
+    "slot": "afternoon",
+    "title": "What If Time FROZE For Everyone Else? ⏳",
+    "video_id": "dDeuYqyAlCY"
   }
 ]
