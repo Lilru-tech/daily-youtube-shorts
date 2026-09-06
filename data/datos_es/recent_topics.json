@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-27",
-    "slot": "afternoon",
-    "title": "🤯 Esto explica por qué no controlas nada",
-    "video_id": "uAgl_Hxosr8"
-  },
-  {
     "date": "2026-08-28",
     "slot": "afternoon",
     "title": "🧠 Así te engaña tu propia mente",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 No confíes en tus OJOS",
     "video_id": "EyDRDqmomBo"
+  },
+  {
+    "date": "2026-09-06",
+    "slot": "evening",
+    "title": "🧠 Así manipulan tu realidad",
+    "video_id": "UU9IWtPCdvM"
   }
 ]
