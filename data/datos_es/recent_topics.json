@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-26",
-    "slot": "evening",
-    "title": "🤯 Tu cerebro no eres tú",
-    "video_id": "jkkm1VCZaZA"
-  },
-  {
     "date": "2026-08-27",
     "slot": "morning",
     "title": "🧠 Tu cerebro te engaña así",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu realidad es una ILUSIÓN",
     "video_id": "0qOy2sVoMF8"
+  },
+  {
+    "date": "2026-09-06",
+    "slot": "morning",
+    "title": "🧠 Tu mente te SABOTEA",
+    "video_id": "Tl27gx7Ma2I"
   }
 ]
