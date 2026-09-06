@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-27",
-    "slot": "afternoon",
-    "title": "What If Your Shadow Wasn't Yours? 😱",
-    "video_id": "WMBevkEhWns"
-  },
-  {
     "date": "2026-08-28",
     "slot": "evening",
     "title": "What If Earth Suddenly STOPPED Spinning? 🌎",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Time FROZE For Everyone Else? ⏳",
     "video_id": "dDeuYqyAlCY"
+  },
+  {
+    "date": "2026-09-06",
+    "slot": "evening",
+    "title": "What If You Suddenly Grew a THIRD Eye? 👁️",
+    "video_id": "lRaal_fjjik"
   }
 ]
