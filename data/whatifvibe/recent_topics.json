@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-26",
-    "slot": "evening",
-    "title": "What If Time STOPPED Forever? 🤯",
-    "video_id": "z3wlcj5uPlc"
-  },
-  {
     "date": "2026-08-27",
     "slot": "morning",
     "title": "What If Gravity Flipped for 60 Seconds? 🤯",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Reflection Wasn't You? 🤯",
     "video_id": "PLQZ9ZYRd18"
+  },
+  {
+    "date": "2026-09-06",
+    "slot": "morning",
+    "title": "What If You Stopped Blinking for 24 Hours? 🤯",
+    "video_id": "oP9G2VhHgg0"
   }
 ]
