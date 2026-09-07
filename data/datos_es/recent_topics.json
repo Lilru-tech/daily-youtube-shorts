@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-28",
-    "slot": "afternoon",
-    "title": "🧠 Así te engaña tu propia mente",
-    "video_id": "Q3u3a_W_hyo"
-  },
-  {
-    "date": "2026-08-28",
     "slot": "evening",
     "title": "🤫 La VERDAD oculta de tu mente",
     "video_id": "-tfmIUEx4I0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Así manipulan tu realidad",
     "video_id": "UU9IWtPCdvM"
+  },
+  {
+    "date": "2026-09-07",
+    "slot": "morning",
+    "title": "🤯 La MENTE te OCULTA algo",
+    "video_id": "rXzn-2TXAIk"
   }
 ]
