@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-28",
-    "slot": "evening",
-    "title": "🤫 La VERDAD oculta de tu mente",
-    "video_id": "-tfmIUEx4I0"
-  },
-  {
-    "date": "2026-08-28",
     "slot": "morning",
     "title": "😳 Tu cerebro te miente así",
     "video_id": "21u-rzvhSOU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 La MENTE te OCULTA algo",
     "video_id": "rXzn-2TXAIk"
+  },
+  {
+    "date": "2026-09-07",
+    "slot": "afternoon",
+    "title": "🧠 El TRUCO de tu PERCEPCIÓN",
+    "video_id": "4hj_v_3O7E4"
   }
 ]
