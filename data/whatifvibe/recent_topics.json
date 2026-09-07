@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-28",
-    "slot": "evening",
-    "title": "What If Earth Suddenly STOPPED Spinning? 🌎",
-    "video_id": "swMc3hSiOuI"
-  },
-  {
-    "date": "2026-08-28",
     "slot": "morning",
     "title": "What If Sound Traveled in Space? 🤯",
     "video_id": "cCbE-QB1NI8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Suddenly Grew a THIRD Eye? 👁️",
     "video_id": "lRaal_fjjik"
+  },
+  {
+    "date": "2026-09-07",
+    "slot": "morning",
+    "title": "What If Earth's Core Went Completely Cold? 🥶",
+    "video_id": "6YHdJZnJ41s"
   }
 ]
