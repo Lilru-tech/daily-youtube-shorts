@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-28",
-    "slot": "afternoon",
-    "title": "What If Someone Lived Your Life While You Slept? 😱",
-    "video_id": "OAcbI8B6wT0"
-  },
-  {
     "date": "2026-08-29",
     "slot": "morning",
     "title": "What If Light Traveled Slower? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Lost Its Moon? 🌑",
     "video_id": "HPNd9ZDDL2E"
+  },
+  {
+    "date": "2026-09-07",
+    "slot": "evening",
+    "title": "What If You Kept Finding Your Own Notes? 📝",
+    "video_id": "DJu89p-MiPk"
   }
 ]
