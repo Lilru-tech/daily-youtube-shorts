@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-28",
-    "slot": "morning",
-    "title": "😳 Tu cerebro te miente así",
-    "video_id": "21u-rzvhSOU"
-  },
-  {
     "date": "2026-08-29",
     "slot": "afternoon",
     "title": "👁️ Tu percepción es una trampa",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 El TRUCO de tu PERCEPCIÓN",
     "video_id": "4hj_v_3O7E4"
+  },
+  {
+    "date": "2026-09-07",
+    "slot": "evening",
+    "title": "🧠 La trampa de tu mente",
+    "video_id": "Xa3lzp4H3bw"
   }
 ]
