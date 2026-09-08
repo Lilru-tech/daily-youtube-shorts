@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-29",
-    "slot": "afternoon",
-    "title": "👁️ Tu percepción es una trampa",
-    "video_id": "ILb9ib0kyho"
-  },
-  {
-    "date": "2026-08-29",
     "slot": "evening",
     "title": "🤫 Tus decisiones NO son tuyas",
     "video_id": "ziTiR7qvWGs"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 La trampa de tu mente",
     "video_id": "Xa3lzp4H3bw"
+  },
+  {
+    "date": "2026-09-08",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te engana asi",
+    "video_id": "iETVRWxf5yI"
   }
 ]
