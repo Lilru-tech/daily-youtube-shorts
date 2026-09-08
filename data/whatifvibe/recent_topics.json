@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-29",
-    "slot": "afternoon",
-    "title": "What If YOU Were the Monster? 😱",
-    "video_id": "Xgnfe8T42As"
-  },
-  {
-    "date": "2026-08-29",
     "slot": "evening",
     "title": "What If Someone Else Saw Your Memories? 😱",
     "video_id": "0OZcpab0FSk"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth Started Spinning Backward? 🤯",
     "video_id": "Yq_YJ9TAEFM"
+  },
+  {
+    "date": "2026-09-08",
+    "slot": "afternoon",
+    "title": "What If You Lived on a Planet with NO Atmosphere? 😱",
+    "video_id": "M-M3XXskr7Q"
   }
 ]
