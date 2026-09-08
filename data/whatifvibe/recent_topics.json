@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-29",
-    "slot": "morning",
-    "title": "What If Light Traveled Slower? 🤯",
-    "video_id": "JaHPFh2nfWE"
-  },
-  {
-    "date": "2026-08-29",
     "slot": "afternoon",
     "title": "What If YOU Were the Monster? 😱",
     "video_id": "Xgnfe8T42As"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Kept Finding Your Own Notes? 📝",
     "video_id": "DJu89p-MiPk"
+  },
+  {
+    "date": "2026-09-08",
+    "slot": "morning",
+    "title": "What If Earth Started Spinning Backward? 🤯",
+    "video_id": "Yq_YJ9TAEFM"
   }
 ]
