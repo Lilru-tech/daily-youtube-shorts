@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-29",
-    "slot": "morning",
-    "title": "🤯 Tu mente te CONTROLA así",
-    "video_id": "lFbJJZ2I_Cc"
-  },
-  {
     "date": "2026-08-30",
     "slot": "morning",
     "title": "🚨 Esto hace tu cerebro",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😱 Tus ojos te mienten SIEMPRE",
     "video_id": "S_pQwhN2pow"
+  },
+  {
+    "date": "2026-09-08",
+    "slot": "evening",
+    "title": "🚫 No puedes dejarlo IR",
+    "video_id": "flSxOL9BzH8"
   }
 ]
