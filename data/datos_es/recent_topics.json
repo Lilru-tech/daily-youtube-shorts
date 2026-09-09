@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-30",
-    "slot": "morning",
-    "title": "🚨 Esto hace tu cerebro",
-    "video_id": "ta7J-rrzhHU"
-  },
-  {
-    "date": "2026-08-30",
     "slot": "afternoon",
     "title": "🤯 Tu mente te sabotea",
     "video_id": "2wBYAveFzgc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🚫 No puedes dejarlo IR",
     "video_id": "flSxOL9BzH8"
+  },
+  {
+    "date": "2026-09-09",
+    "slot": "morning",
+    "title": "💀 No estás solo en casa",
+    "video_id": "TNWFX7mc9rk"
   }
 ]
