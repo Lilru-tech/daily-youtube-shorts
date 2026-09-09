@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-30",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te sabotea",
-    "video_id": "2wBYAveFzgc"
-  },
-  {
-    "date": "2026-08-30",
     "slot": "evening",
     "title": "🧠 Tu realidad es pura ilusión",
     "video_id": "LjTV3IU0ovI"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "💀 No estás solo en casa",
     "video_id": "TNWFX7mc9rk"
+  },
+  {
+    "date": "2026-09-09",
+    "slot": "afternoon",
+    "title": "🤫 Nadie te dice esto de tu mente",
+    "video_id": "5vf4JIQB9so"
   }
 ]
