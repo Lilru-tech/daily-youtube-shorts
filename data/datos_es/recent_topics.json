@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-30",
-    "slot": "evening",
-    "title": "🧠 Tu realidad es pura ilusión",
-    "video_id": "LjTV3IU0ovI"
-  },
-  {
     "date": "2026-08-31",
     "slot": "morning",
     "title": "🧠 Tu cerebro te engaña así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤫 Nadie te dice esto de tu mente",
     "video_id": "5vf4JIQB9so"
+  },
+  {
+    "date": "2026-09-09",
+    "slot": "evening",
+    "title": "🤯 Nadie te ha dicho ESTO",
+    "video_id": "PIOJFDXaDG0"
   }
 ]
