@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-30",
-    "slot": "evening",
-    "title": "What If the Sun Just VANISHED? 🤯",
-    "video_id": "T0fD5r7FcTE"
-  },
-  {
     "date": "2026-08-31",
     "slot": "morning",
     "title": "What If the Moon Vanished Overnight? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Lost Its Magnetic Field? 😱",
     "video_id": "EXMBhvH7YVo"
+  },
+  {
+    "date": "2026-09-09",
+    "slot": "evening",
+    "title": "What If Humans Could Photosynthesize? ☀️",
+    "video_id": "RLTWZXt4weM"
   }
 ]
