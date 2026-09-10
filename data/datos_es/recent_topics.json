@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-08-31",
-    "slot": "evening",
-    "title": "🤫 Tu memoria es un fraude",
-    "video_id": "9BYPJx7JpxA"
-  },
-  {
     "date": "2026-09-01",
     "slot": "morning",
     "title": "🤯 Tu mente es un engaño",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Haces esto sin darte cuenta",
     "video_id": "6ma5ijjofPc"
+  },
+  {
+    "date": "2026-09-10",
+    "slot": "evening",
+    "title": "💥 Tu voluntad es una ilusión",
+    "video_id": "Kh3NopO0B4c"
   }
 ]
