@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-08-31",
-    "slot": "afternoon",
-    "title": "🪞 Tu reflejo NO eres tú",
-    "video_id": "ZiJscODgesY"
-  },
-  {
-    "date": "2026-08-31",
     "slot": "evening",
     "title": "🤫 Tu memoria es un fraude",
     "video_id": "9BYPJx7JpxA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te sabotea así",
     "video_id": "4QIoBF6wySk"
+  },
+  {
+    "date": "2026-09-10",
+    "slot": "afternoon",
+    "title": "🤯 Haces esto sin darte cuenta",
+    "video_id": "6ma5ijjofPc"
   }
 ]
