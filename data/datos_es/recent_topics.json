@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-01",
-    "slot": "evening",
-    "title": "👁️ Lo que ves NO existe",
-    "video_id": "zve7Ul-NW60"
-  },
-  {
     "date": "2026-09-02",
     "slot": "morning",
     "title": "⚠️ La verdad tras EL ESPEJO",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Ves la realidad distorsionada",
     "video_id": "wJnTOockZpM"
+  },
+  {
+    "date": "2026-09-11",
+    "slot": "evening",
+    "title": "🧠 No controlas tus DESEOS",
+    "video_id": "oDcKJ0jYk9I"
   }
 ]
