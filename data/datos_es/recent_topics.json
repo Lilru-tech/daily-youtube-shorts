@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-01",
-    "slot": "afternoon",
-    "title": "👀 Tu mente te ESCONDE",
-    "video_id": "pqv7ITkBb3g"
-  },
-  {
-    "date": "2026-09-01",
     "slot": "evening",
     "title": "👁️ Lo que ves NO existe",
     "video_id": "zve7Ul-NW60"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "👻 Tu reflejo te está OBSERVANDO",
     "video_id": "aI5nNebP0zQ"
+  },
+  {
+    "date": "2026-09-11",
+    "slot": "afternoon",
+    "title": "🤯 Ves la realidad distorsionada",
+    "video_id": "wJnTOockZpM"
   }
 ]
