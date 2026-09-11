@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-01",
-    "slot": "morning",
-    "title": "🤯 Tu mente es un engaño",
-    "video_id": "lUJMHKktSig"
-  },
-  {
-    "date": "2026-09-01",
     "slot": "afternoon",
     "title": "👀 Tu mente te ESCONDE",
     "video_id": "pqv7ITkBb3g"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "💥 Tu voluntad es una ilusión",
     "video_id": "Kh3NopO0B4c"
+  },
+  {
+    "date": "2026-09-11",
+    "slot": "morning",
+    "title": "👻 Tu reflejo te está OBSERVANDO",
+    "video_id": "aI5nNebP0zQ"
   }
 ]
