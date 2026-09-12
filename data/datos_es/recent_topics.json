@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-02",
-    "slot": "evening",
-    "title": "🚫 Tu libre albedrío NO existe",
-    "video_id": "QIWgK94omfg"
-  },
-  {
     "date": "2026-09-03",
     "slot": "morning",
     "title": "😱 Tu propio cuerpo NO es tuyo",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu cerebro INVENTA la realidad",
     "video_id": "3UEfz0eJ2PI"
+  },
+  {
+    "date": "2026-09-12",
+    "slot": "evening",
+    "title": "🤯 Tu control es una ilusión",
+    "video_id": "XOfytv4Sn40"
   }
 ]
