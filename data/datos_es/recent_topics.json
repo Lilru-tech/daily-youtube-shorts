@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-02",
-    "slot": "morning",
-    "title": "⚠️ La verdad tras EL ESPEJO",
-    "video_id": "7zcSdKfpmEY"
-  },
-  {
-    "date": "2026-09-02",
     "slot": "afternoon",
     "title": "🚨 Tu mente NO es tuya",
     "video_id": "q4REq5JV6U8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 No controlas tus DESEOS",
     "video_id": "oDcKJ0jYk9I"
+  },
+  {
+    "date": "2026-09-12",
+    "slot": "morning",
+    "title": "🧠 Tu mente te miente así",
+    "video_id": "Y1hNPblh25E"
   }
 ]
