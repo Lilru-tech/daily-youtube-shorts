@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-02",
-    "slot": "morning",
-    "title": "What If Humans Could Breathe Underwater? 🤯",
-    "video_id": "PKgidSiCF8s"
-  },
-  {
-    "date": "2026-09-02",
     "slot": "afternoon",
     "title": "What If ALL Insects Vanished? 🌎",
     "video_id": "HDs1Y3KT_yI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Had TWO Suns? 🤯",
     "video_id": "E-H2BPyhi5k"
+  },
+  {
+    "date": "2026-09-12",
+    "slot": "morning",
+    "title": "What If You Saw Things That Weren't There? 👁️",
+    "video_id": "O4uSgHhxGyQ"
   }
 ]
