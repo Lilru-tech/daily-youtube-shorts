@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-02",
-    "slot": "afternoon",
-    "title": "🚨 Tu mente NO es tuya",
-    "video_id": "q4REq5JV6U8"
-  },
-  {
-    "date": "2026-09-02",
     "slot": "evening",
     "title": "🚫 Tu libre albedrío NO existe",
     "video_id": "QIWgK94omfg"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente te miente así",
     "video_id": "Y1hNPblh25E"
+  },
+  {
+    "date": "2026-09-12",
+    "slot": "afternoon",
+    "title": "🤯 Tu cerebro INVENTA la realidad",
+    "video_id": "3UEfz0eJ2PI"
   }
 ]
