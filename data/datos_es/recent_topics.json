@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-03",
-    "slot": "afternoon",
-    "title": "💀 La trampa de tu propia mente",
-    "video_id": "wJreiiWkVVc"
-  },
-  {
-    "date": "2026-09-03",
     "slot": "evening",
     "title": "🧠 Tu mente es su nuevo HOGAR",
     "video_id": "U2uMy27Pzzo"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente no decide nada",
     "video_id": "PHoEAcGJ3t4"
+  },
+  {
+    "date": "2026-09-13",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente te esconde la verdad",
+    "video_id": "HgRtIY4a56Q"
   }
 ]
