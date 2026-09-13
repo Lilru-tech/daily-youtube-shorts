@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-03",
-    "slot": "morning",
-    "title": "What If Your Doppelgänger Moved In? 😱",
-    "video_id": "0hBluFCDtM0"
-  },
-  {
-    "date": "2026-09-03",
     "slot": "afternoon",
     "title": "What If Your Memories Aren't Yours? 🤯",
     "video_id": "CB5svW75C14"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You STOPPED Breathing Forever? 🌬️",
     "video_id": "ho9YKqMqD1Y"
+  },
+  {
+    "date": "2026-09-13",
+    "slot": "morning",
+    "title": "What If You Lived in Total Darkness for 1 Year? 🤯",
+    "video_id": "_DLDm06QZgs"
   }
 ]
