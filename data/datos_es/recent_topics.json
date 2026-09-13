@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-03",
-    "slot": "morning",
-    "title": "😱 Tu propio cuerpo NO es tuyo",
-    "video_id": "89wJ8oKtRe0"
-  },
-  {
-    "date": "2026-09-03",
     "slot": "afternoon",
     "title": "💀 La trampa de tu propia mente",
     "video_id": "wJreiiWkVVc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu control es una ilusión",
     "video_id": "XOfytv4Sn40"
+  },
+  {
+    "date": "2026-09-13",
+    "slot": "morning",
+    "title": "🧠 Tu mente no decide nada",
+    "video_id": "PHoEAcGJ3t4"
   }
 ]
