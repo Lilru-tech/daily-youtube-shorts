@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-04",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "fq-yKFBnKBs"
-  },
-  {
-    "date": "2026-09-04",
     "slot": "evening",
     "title": "🧠 Tu memoria es una ilusión",
     "video_id": "bc_j4sUe_3E"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "👻 Tu reflejo te OBSERVABA",
     "video_id": "59Up36IaZPM"
+  },
+  {
+    "date": "2026-09-14",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engana asi",
+    "video_id": "xwOXhcbHV-g"
   }
 ]
