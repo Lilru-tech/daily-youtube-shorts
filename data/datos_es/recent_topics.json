@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-04",
-    "slot": "morning",
-    "title": "😨 Tu peor enemigo eres TÚ",
-    "video_id": "vU8fJ6nHO3I"
-  },
-  {
-    "date": "2026-09-04",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "fq-yKFBnKBs"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu memoria te miente así",
     "video_id": "p-xJ6x0ZvgM"
+  },
+  {
+    "date": "2026-09-14",
+    "slot": "morning",
+    "title": "👻 Tu reflejo te OBSERVABA",
+    "video_id": "59Up36IaZPM"
   }
 ]
