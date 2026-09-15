@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-05",
-    "slot": "evening",
-    "title": "🧠 Tu realidad es una ILUSIÓN",
-    "video_id": "0qOy2sVoMF8"
-  },
-  {
     "date": "2026-09-06",
     "slot": "morning",
     "title": "🧠 Tu mente te SABOTEA",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👁️ Tu percepción es una mentira",
     "video_id": "Zl47TiT04jI"
+  },
+  {
+    "date": "2026-09-15",
+    "slot": "evening",
+    "title": "🧠 Tu realidad es una fabricación",
+    "video_id": "-a9cO83IAks"
   }
 ]
