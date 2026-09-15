@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-05",
-    "slot": "morning",
-    "title": "🚨 Esto esconde tu MENTE",
-    "video_id": "eUiWTVDgiho"
-  },
-  {
-    "date": "2026-09-05",
     "slot": "afternoon",
     "title": "🧠 No eres LIBRE",
     "video_id": "jDBroeIsKRg"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Nadie elige su vida",
     "video_id": "wvFA8O4EfQg"
+  },
+  {
+    "date": "2026-09-15",
+    "slot": "morning",
+    "title": "👤 Tu reflejo te ESCONDE algo",
+    "video_id": "qayUPjueJPA"
   }
 ]
