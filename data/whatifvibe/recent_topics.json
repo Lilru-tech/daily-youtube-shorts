@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-05",
-    "slot": "morning",
-    "title": "What If You Saw Your Future Self? 🤯",
-    "video_id": "cjLT_9tQi9Q"
-  },
-  {
-    "date": "2026-09-05",
     "slot": "afternoon",
     "title": "What If Gravity Just… VANISHED? 🤯",
     "video_id": "j70dDrJ8fLU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Suddenly Stopped Spinning? 🤯",
     "video_id": "tHh7xiuvoMo"
+  },
+  {
+    "date": "2026-09-15",
+    "slot": "morning",
+    "title": "What If You NEVER Slept Again? 😴",
+    "video_id": "KMe28OJFciI"
   }
 ]
