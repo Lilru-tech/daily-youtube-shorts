@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-06",
-    "slot": "morning",
-    "title": "What If You Stopped Blinking for 24 Hours? 🤯",
-    "video_id": "oP9G2VhHgg0"
-  },
-  {
-    "date": "2026-09-06",
     "slot": "afternoon",
     "title": "What If Time FROZE For Everyone Else? ⏳",
     "video_id": "dDeuYqyAlCY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If the World Started to Shift? 😵‍💫",
     "video_id": "gYSFWyWo5bA"
+  },
+  {
+    "date": "2026-09-16",
+    "slot": "morning",
+    "title": "What If Your Body Temperature DROPPED? 🥶",
+    "video_id": "S09FBL1ip7I"
   }
 ]
