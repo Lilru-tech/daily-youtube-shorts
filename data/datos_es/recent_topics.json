@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-06",
-    "slot": "morning",
-    "title": "🧠 Tu mente te SABOTEA",
-    "video_id": "Tl27gx7Ma2I"
-  },
-  {
-    "date": "2026-09-06",
     "slot": "afternoon",
     "title": "🧠 No confíes en tus OJOS",
     "video_id": "EyDRDqmomBo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu realidad es una fabricación",
     "video_id": "-a9cO83IAks"
+  },
+  {
+    "date": "2026-09-16",
+    "slot": "morning",
+    "title": "🤯 Tu mente te esconde esto",
+    "video_id": "gZkDVIbQK9Y"
   }
 ]
