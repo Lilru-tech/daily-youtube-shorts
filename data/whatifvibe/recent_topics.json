@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-06",
-    "slot": "afternoon",
-    "title": "What If Time FROZE For Everyone Else? ⏳",
-    "video_id": "dDeuYqyAlCY"
-  },
-  {
-    "date": "2026-09-06",
     "slot": "evening",
     "title": "What If You Suddenly Grew a THIRD Eye? 👁️",
     "video_id": "lRaal_fjjik"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Body Temperature DROPPED? 🥶",
     "video_id": "S09FBL1ip7I"
+  },
+  {
+    "date": "2026-09-16",
+    "slot": "afternoon",
+    "title": "What If The Universe STOPPED Expanding? 🤯",
+    "video_id": "18cT0zsUS8w"
   }
 ]
