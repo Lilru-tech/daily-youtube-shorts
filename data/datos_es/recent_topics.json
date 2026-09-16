@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-06",
-    "slot": "evening",
-    "title": "🧠 Así manipulan tu realidad",
-    "video_id": "UU9IWtPCdvM"
-  },
-  {
     "date": "2026-09-07",
     "slot": "morning",
     "title": "🤯 La MENTE te OCULTA algo",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😵 ¿Quién eres de verdad?",
     "video_id": "x13mq9AdirM"
+  },
+  {
+    "date": "2026-09-16",
+    "slot": "evening",
+    "title": "🪞 Lo que el espejo te oculta",
+    "video_id": "Y7XC1hV3ABA"
   }
 ]
