@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-07",
-    "slot": "morning",
-    "title": "What If Earth's Core Went Completely Cold? 🥶",
-    "video_id": "6YHdJZnJ41s"
-  },
-  {
-    "date": "2026-09-07",
     "slot": "afternoon",
     "title": "What If Earth Lost Its Moon? 🌑",
     "video_id": "HPNd9ZDDL2E"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You NEVER Felt Pain? 😱",
     "video_id": "HtzqROFFktE"
+  },
+  {
+    "date": "2026-09-17",
+    "slot": "morning",
+    "title": "What If The Sun Just DISAPPEARED? 😱",
+    "video_id": "OlhjDK0LQWo"
   }
 ]
