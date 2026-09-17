@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-07",
-    "slot": "evening",
-    "title": "🧠 La trampa de tu mente",
-    "video_id": "Xa3lzp4H3bw"
-  },
-  {
     "date": "2026-09-08",
     "slot": "morning",
     "title": "🧠 Tu cerebro te engana asi",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Esta trampa no era mía",
     "video_id": "4_PlEsXuLH4"
+  },
+  {
+    "date": "2026-09-17",
+    "slot": "evening",
+    "title": "🧠 ¿Decides de verdad?",
+    "video_id": "bobnMIegXu0"
   }
 ]
