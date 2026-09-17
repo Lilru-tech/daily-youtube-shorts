@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-07",
-    "slot": "afternoon",
-    "title": "🧠 El TRUCO de tu PERCEPCIÓN",
-    "video_id": "4hj_v_3O7E4"
-  },
-  {
-    "date": "2026-09-07",
     "slot": "evening",
     "title": "🧠 La trampa de tu mente",
     "video_id": "Xa3lzp4H3bw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😵 Tu reflejo NO eres tú",
     "video_id": "4ECBXin2ZXI"
+  },
+  {
+    "date": "2026-09-17",
+    "slot": "afternoon",
+    "title": "🤯 Esta trampa no era mía",
+    "video_id": "4_PlEsXuLH4"
   }
 ]
