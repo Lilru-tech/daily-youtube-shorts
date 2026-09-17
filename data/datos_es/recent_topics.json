@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-07",
-    "slot": "morning",
-    "title": "🤯 La MENTE te OCULTA algo",
-    "video_id": "rXzn-2TXAIk"
-  },
-  {
-    "date": "2026-09-07",
     "slot": "afternoon",
     "title": "🧠 El TRUCO de tu PERCEPCIÓN",
     "video_id": "4hj_v_3O7E4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🪞 Lo que el espejo te oculta",
     "video_id": "Y7XC1hV3ABA"
+  },
+  {
+    "date": "2026-09-17",
+    "slot": "morning",
+    "title": "😵 Tu reflejo NO eres tú",
+    "video_id": "4ECBXin2ZXI"
   }
 ]
