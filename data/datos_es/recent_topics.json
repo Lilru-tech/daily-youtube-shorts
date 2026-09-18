@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-08",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te engana asi",
-    "video_id": "iETVRWxf5yI"
-  },
-  {
-    "date": "2026-09-08",
     "slot": "afternoon",
     "title": "😱 Tus ojos te mienten SIEMPRE",
     "video_id": "S_pQwhN2pow"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 ¿Decides de verdad?",
     "video_id": "bobnMIegXu0"
+  },
+  {
+    "date": "2026-09-18",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te ENGAÑA así",
+    "video_id": "60Pjnvhm0ww"
   }
 ]
