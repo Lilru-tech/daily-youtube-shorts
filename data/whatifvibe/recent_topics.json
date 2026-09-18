@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-08",
-    "slot": "afternoon",
-    "title": "What If You Lived on a Planet with NO Atmosphere? 😱",
-    "video_id": "M-M3XXskr7Q"
-  },
-  {
-    "date": "2026-09-08",
     "slot": "evening",
     "title": "What If ALL Sound Suddenly Vanished? 🔇",
     "video_id": "7i0wO7LyM5M"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Were Trapped In Pure Silence? 🤯",
     "video_id": "giuFNxBEaao"
+  },
+  {
+    "date": "2026-09-18",
+    "slot": "afternoon",
+    "title": "What If You Saw Your Own Ghost?",
+    "video_id": "0OELdGEAu3A"
   }
 ]
