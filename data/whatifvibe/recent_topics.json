@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-07",
-    "slot": "evening",
-    "title": "What If You Kept Finding Your Own Notes? 📝",
-    "video_id": "DJu89p-MiPk"
-  },
-  {
     "date": "2026-09-08",
     "slot": "morning",
     "title": "What If Earth Started Spinning Backward? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Found a Secret Room in Your Home? 🚪",
     "video_id": "liBK0Wxfjk8"
+  },
+  {
+    "date": "2026-09-17",
+    "slot": "evening",
+    "title": "What If You Lived on Mars? 🚀",
+    "video_id": "gdbbFRN1myk"
   }
 ]
