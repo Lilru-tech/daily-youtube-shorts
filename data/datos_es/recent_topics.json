@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-08",
-    "slot": "evening",
-    "title": "🚫 No puedes dejarlo IR",
-    "video_id": "flSxOL9BzH8"
-  },
-  {
     "date": "2026-09-09",
     "slot": "morning",
     "title": "💀 No estás solo en casa",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu memoria es falsa",
     "video_id": "RX4hAFr0NAU"
+  },
+  {
+    "date": "2026-09-18",
+    "slot": "evening",
+    "title": "🤫 Manipulan tu atención así",
+    "video_id": "TKcGdwxL1Xk"
   }
 ]
