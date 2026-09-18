@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-08",
-    "slot": "morning",
-    "title": "What If Earth Started Spinning Backward? 🤯",
-    "video_id": "Yq_YJ9TAEFM"
-  },
-  {
-    "date": "2026-09-08",
     "slot": "afternoon",
     "title": "What If You Lived on a Planet with NO Atmosphere? 😱",
     "video_id": "M-M3XXskr7Q"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Lived on Mars? 🚀",
     "video_id": "gdbbFRN1myk"
+  },
+  {
+    "date": "2026-09-18",
+    "slot": "morning",
+    "title": "What If You Were Trapped In Pure Silence? 🤯",
+    "video_id": "giuFNxBEaao"
   }
 ]
