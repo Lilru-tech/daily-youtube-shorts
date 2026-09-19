@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-09",
-    "slot": "afternoon",
-    "title": "🤫 Nadie te dice esto de tu mente",
-    "video_id": "5vf4JIQB9so"
-  },
-  {
-    "date": "2026-09-09",
     "slot": "evening",
     "title": "🤯 Nadie te ha dicho ESTO",
     "video_id": "PIOJFDXaDG0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 No controlas tu mente",
     "video_id": "xtrYpRhjP2A"
+  },
+  {
+    "date": "2026-09-19",
+    "slot": "afternoon",
+    "title": "😵 Tu mente NO es tuya",
+    "video_id": "9z0DCV9DW8g"
   }
 ]
