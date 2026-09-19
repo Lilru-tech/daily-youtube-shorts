@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-09",
-    "slot": "evening",
-    "title": "🤯 Nadie te ha dicho ESTO",
-    "video_id": "PIOJFDXaDG0"
-  },
-  {
     "date": "2026-09-10",
     "slot": "morning",
     "title": "🤯 Tu mente te sabotea así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😵 Tu mente NO es tuya",
     "video_id": "9z0DCV9DW8g"
+  },
+  {
+    "date": "2026-09-19",
+    "slot": "evening",
+    "title": "😵‍💫 Eres un impostor, lo sé",
+    "video_id": "clXO1sKDOvo"
   }
 ]
