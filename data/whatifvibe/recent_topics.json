@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-09",
-    "slot": "evening",
-    "title": "What If Humans Could Photosynthesize? ☀️",
-    "video_id": "RLTWZXt4weM"
-  },
-  {
     "date": "2026-09-10",
     "slot": "morning",
     "title": "What If a New Room Appeared in Your House? 🚪",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Diary Knew Your Future? 🤫",
     "video_id": "Oil-LjS-Wtc"
+  },
+  {
+    "date": "2026-09-19",
+    "slot": "evening",
+    "title": "What If You Woke Up With a STRANGE Scar? 😱",
+    "video_id": "cSdFLeOKKdA"
   }
 ]
