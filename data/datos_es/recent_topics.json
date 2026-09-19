@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-09",
-    "slot": "morning",
-    "title": "💀 No estás solo en casa",
-    "video_id": "TNWFX7mc9rk"
-  },
-  {
-    "date": "2026-09-09",
     "slot": "afternoon",
     "title": "🤫 Nadie te dice esto de tu mente",
     "video_id": "5vf4JIQB9so"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤫 Manipulan tu atención así",
     "video_id": "TKcGdwxL1Xk"
+  },
+  {
+    "date": "2026-09-19",
+    "slot": "morning",
+    "title": "🤯 No controlas tu mente",
+    "video_id": "xtrYpRhjP2A"
   }
 ]
