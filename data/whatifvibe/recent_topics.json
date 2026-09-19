@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-09",
-    "slot": "morning",
-    "title": "What If Gravity Suddenly Flipped? 🤯",
-    "video_id": "Ae5yesmGRvY"
-  },
-  {
-    "date": "2026-09-09",
     "slot": "afternoon",
     "title": "What If Earth Lost Its Magnetic Field? 😱",
     "video_id": "EXMBhvH7YVo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Stopped Spinning for 1 Second? 🤯",
     "video_id": "R0ySELwhpjU"
+  },
+  {
+    "date": "2026-09-19",
+    "slot": "morning",
+    "title": "What If Your Reflection Stared Back Differently? 😱",
+    "video_id": "fEeSA4XPDOU"
   }
 ]
