@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-10",
-    "slot": "afternoon",
-    "title": "🤯 Haces esto sin darte cuenta",
-    "video_id": "6ma5ijjofPc"
-  },
-  {
-    "date": "2026-09-10",
     "slot": "evening",
     "title": "💥 Tu voluntad es una ilusión",
     "video_id": "Kh3NopO0B4c"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "👁️‍🗨️ ¿Quién mira a través de ti?",
     "video_id": "ZRfcHAXNFEU"
+  },
+  {
+    "date": "2026-09-20",
+    "slot": "afternoon",
+    "title": "😵‍💫 Tu mente te hace esto",
+    "video_id": "aalt8c_Wiy0"
   }
 ]
