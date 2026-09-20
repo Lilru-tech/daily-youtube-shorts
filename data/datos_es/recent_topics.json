@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-10",
-    "slot": "morning",
-    "title": "🤯 Tu mente te sabotea así",
-    "video_id": "4QIoBF6wySk"
-  },
-  {
-    "date": "2026-09-10",
     "slot": "afternoon",
     "title": "🤯 Haces esto sin darte cuenta",
     "video_id": "6ma5ijjofPc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😵‍💫 Eres un impostor, lo sé",
     "video_id": "clXO1sKDOvo"
+  },
+  {
+    "date": "2026-09-20",
+    "slot": "morning",
+    "title": "👁️‍🗨️ ¿Quién mira a través de ti?",
+    "video_id": "ZRfcHAXNFEU"
   }
 ]
