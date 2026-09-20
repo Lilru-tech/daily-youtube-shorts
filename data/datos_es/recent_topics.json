@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-10",
-    "slot": "evening",
-    "title": "💥 Tu voluntad es una ilusión",
-    "video_id": "Kh3NopO0B4c"
-  },
-  {
     "date": "2026-09-11",
     "slot": "morning",
     "title": "👻 Tu reflejo te está OBSERVANDO",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😵‍💫 Tu mente te hace esto",
     "video_id": "aalt8c_Wiy0"
+  },
+  {
+    "date": "2026-09-20",
+    "slot": "evening",
+    "title": "🧠 Nadie te dice esto de tu mente",
+    "video_id": "U4C-z-jEf7I"
   }
 ]
