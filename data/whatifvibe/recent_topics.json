@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-11",
-    "slot": "afternoon",
-    "title": "What If You Instantly Fell Into Space? 😱",
-    "video_id": "WcB9QR6FsiU"
-  },
-  {
-    "date": "2026-09-11",
     "slot": "evening",
     "title": "What If Earth Had TWO Suns? 🤯",
     "video_id": "E-H2BPyhi5k"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Never Forgot ANYTHING? 🤯",
     "video_id": "mOXvM72GUOM"
+  },
+  {
+    "date": "2026-09-21",
+    "slot": "afternoon",
+    "title": "What If You Forgot How To Recognize Faces? 🎭",
+    "video_id": "Jh8va3QAi_Y"
   }
 ]
