@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-11",
-    "slot": "morning",
-    "title": "👻 Tu reflejo te está OBSERVANDO",
-    "video_id": "aI5nNebP0zQ"
-  },
-  {
-    "date": "2026-09-11",
     "slot": "afternoon",
     "title": "🤯 Ves la realidad distorsionada",
     "video_id": "wJnTOockZpM"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Nadie te dice esto de tu mente",
     "video_id": "U4C-z-jEf7I"
+  },
+  {
+    "date": "2026-09-21",
+    "slot": "morning",
+    "title": "💀 No eres quien crees ser",
+    "video_id": "Yu62h9UEiSY"
   }
 ]
