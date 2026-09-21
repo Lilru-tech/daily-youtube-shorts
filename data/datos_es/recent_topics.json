@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-11",
-    "slot": "afternoon",
-    "title": "🤯 Ves la realidad distorsionada",
-    "video_id": "wJnTOockZpM"
-  },
-  {
-    "date": "2026-09-11",
     "slot": "evening",
     "title": "🧠 No controlas tus DESEOS",
     "video_id": "oDcKJ0jYk9I"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "💀 No eres quien crees ser",
     "video_id": "Yu62h9UEiSY"
+  },
+  {
+    "date": "2026-09-21",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente te sabotea sin",
+    "video_id": "paSOMBlI6GA"
   }
 ]
