@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-11",
-    "slot": "evening",
-    "title": "🧠 No controlas tus DESEOS",
-    "video_id": "oDcKJ0jYk9I"
-  },
-  {
     "date": "2026-09-12",
     "slot": "morning",
     "title": "🧠 Tu mente te miente así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente te sabotea sin",
     "video_id": "paSOMBlI6GA"
+  },
+  {
+    "date": "2026-09-21",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro te engana asi",
+    "video_id": "p30Zbc8b56E"
   }
 ]
