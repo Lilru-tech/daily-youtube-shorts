@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-11",
-    "slot": "morning",
-    "title": "What If You Never Slept Again? 🤯",
-    "video_id": "WkRSiqaERXg"
-  },
-  {
-    "date": "2026-09-11",
     "slot": "afternoon",
     "title": "What If You Instantly Fell Into Space? 😱",
     "video_id": "WcB9QR6FsiU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Our Sun Vanished Instantly? 🤯",
     "video_id": "d6ZTuXqXylE"
+  },
+  {
+    "date": "2026-09-21",
+    "slot": "morning",
+    "title": "What If You Never Forgot ANYTHING? 🤯",
+    "video_id": "mOXvM72GUOM"
   }
 ]
