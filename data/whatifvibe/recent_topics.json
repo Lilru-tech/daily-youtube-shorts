@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-12",
-    "slot": "evening",
-    "title": "What If You STOPPED Breathing Forever? 🌬️",
-    "video_id": "ho9YKqMqD1Y"
-  },
-  {
     "date": "2026-09-13",
     "slot": "morning",
     "title": "What If You Lived in Total Darkness for 1 Year? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Heard a Voice No One Else Could? 🤯",
     "video_id": "l24joST1s0s"
+  },
+  {
+    "date": "2026-09-22",
+    "slot": "evening",
+    "title": "What If Earth Spun Twice as Fast? 🌍",
+    "video_id": "SqXiHNPdSvk"
   }
 ]
