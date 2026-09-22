@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-12",
-    "slot": "morning",
-    "title": "🧠 Tu mente te miente así",
-    "video_id": "Y1hNPblh25E"
-  },
-  {
-    "date": "2026-09-12",
     "slot": "afternoon",
     "title": "🤯 Tu cerebro INVENTA la realidad",
     "video_id": "3UEfz0eJ2PI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cerebro te engana asi",
     "video_id": "p30Zbc8b56E"
+  },
+  {
+    "date": "2026-09-22",
+    "slot": "morning",
+    "title": "🤯 Esto te controla sin que lo sepas",
+    "video_id": "2rJTF_ZMTcE"
   }
 ]
