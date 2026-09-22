@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-12",
-    "slot": "evening",
-    "title": "🤯 Tu control es una ilusión",
-    "video_id": "XOfytv4Sn40"
-  },
-  {
     "date": "2026-09-13",
     "slot": "morning",
     "title": "🧠 Tu mente no decide nada",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😵‍💫 La trampa mental que te atrapa",
     "video_id": "kTb8Lc1rGF4"
+  },
+  {
+    "date": "2026-09-22",
+    "slot": "evening",
+    "title": "🎭 Tu identidad es una ilusión",
+    "video_id": "WeyxzXPk64Y"
   }
 ]
