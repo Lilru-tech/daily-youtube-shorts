@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-13",
-    "slot": "afternoon",
-    "title": "What If Our Moon Vanished Overnight? 🌕",
-    "video_id": "T4rxSu45n0w"
-  },
-  {
-    "date": "2026-09-13",
     "slot": "evening",
     "title": "What If Earth Instantly Lost Its Gravity? 😱",
     "video_id": "x6-6GrAwcl0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Reflection Had Its OWN Mind? 😱",
     "video_id": "A9jPU9K3XMg"
+  },
+  {
+    "date": "2026-09-23",
+    "slot": "afternoon",
+    "title": "What If Earth Lost Its Magnetic Field? 😱",
+    "video_id": "hOx0QsCc_Bs"
   }
 ]
