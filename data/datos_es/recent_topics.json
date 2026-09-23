@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-13",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te esconde la verdad",
-    "video_id": "HgRtIY4a56Q"
-  },
-  {
-    "date": "2026-09-13",
     "slot": "evening",
     "title": "🧠 Tu memoria te miente así",
     "video_id": "p-xJ6x0ZvgM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "👁️ Tu realidad es una ilusión",
     "video_id": "BoUHZgzht5o"
+  },
+  {
+    "date": "2026-09-23",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente te miente así",
+    "video_id": "rdXjSK6bU-k"
   }
 ]
