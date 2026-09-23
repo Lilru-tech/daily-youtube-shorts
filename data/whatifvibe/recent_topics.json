@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-13",
-    "slot": "morning",
-    "title": "What If You Lived in Total Darkness for 1 Year? 🤯",
-    "video_id": "_DLDm06QZgs"
-  },
-  {
-    "date": "2026-09-13",
     "slot": "afternoon",
     "title": "What If Our Moon Vanished Overnight? 🌕",
     "video_id": "T4rxSu45n0w"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Spun Twice as Fast? 🌍",
     "video_id": "SqXiHNPdSvk"
+  },
+  {
+    "date": "2026-09-23",
+    "slot": "morning",
+    "title": "What If Your Reflection Had Its OWN Mind? 😱",
+    "video_id": "A9jPU9K3XMg"
   }
 ]
