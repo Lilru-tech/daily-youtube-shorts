@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-13",
-    "slot": "evening",
-    "title": "🧠 Tu memoria te miente así",
-    "video_id": "p-xJ6x0ZvgM"
-  },
-  {
     "date": "2026-09-14",
     "slot": "morning",
     "title": "👻 Tu reflejo te OBSERVABA",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente te miente así",
     "video_id": "rdXjSK6bU-k"
+  },
+  {
+    "date": "2026-09-23",
+    "slot": "evening",
+    "title": "🤯 Tu realidad se desmorona",
+    "video_id": "5jZaZtJkqbE"
   }
 ]
