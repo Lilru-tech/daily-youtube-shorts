@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-14",
-    "slot": "afternoon",
-    "title": "What If A New Door Appeared In Your Home? 🚪",
-    "video_id": "F0nmCDH1Jm0"
-  },
-  {
-    "date": "2026-09-14",
     "slot": "evening",
     "title": "What If Earth Suddenly Stopped Spinning? 🤯",
     "video_id": "tHh7xiuvoMo"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Never Slept Again? 🤯",
     "video_id": "joCIA4DXeDE"
+  },
+  {
+    "date": "2026-09-24",
+    "slot": "afternoon",
+    "title": "What If ALL Insects Vanished? 🌍",
+    "video_id": "94KiXlqPWG8"
   }
 ]
