@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-14",
-    "slot": "morning",
-    "title": "What If Gravity DOUBLED Instantly? 🤯",
-    "video_id": "ruaXeZbtSnA"
-  },
-  {
-    "date": "2026-09-14",
     "slot": "afternoon",
     "title": "What If A New Door Appeared In Your Home? 🚪",
     "video_id": "F0nmCDH1Jm0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Time Stopped for 1 Second? 🤯",
     "video_id": "mhdcEbBnIZo"
+  },
+  {
+    "date": "2026-09-24",
+    "slot": "morning",
+    "title": "What If You Never Slept Again? 🤯",
+    "video_id": "joCIA4DXeDE"
   }
 ]
