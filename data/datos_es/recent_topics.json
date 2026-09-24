@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-14",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te engana asi",
-    "video_id": "xwOXhcbHV-g"
-  },
-  {
-    "date": "2026-09-14",
     "slot": "evening",
     "title": "🤯 Nadie elige su vida",
     "video_id": "wvFA8O4EfQg"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤫 Algo más vive en tu cabeza",
     "video_id": "kkovQ70ZHSY"
+  },
+  {
+    "date": "2026-09-24",
+    "slot": "afternoon",
+    "title": "🤔 Tu mente te manipula así",
+    "video_id": "27E_u7DDDmk"
   }
 ]
