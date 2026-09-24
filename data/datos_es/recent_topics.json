@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-14",
-    "slot": "evening",
-    "title": "🤯 Nadie elige su vida",
-    "video_id": "wvFA8O4EfQg"
-  },
-  {
     "date": "2026-09-15",
     "slot": "morning",
     "title": "👤 Tu reflejo te ESCONDE algo",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤔 Tu mente te manipula así",
     "video_id": "27E_u7DDDmk"
+  },
+  {
+    "date": "2026-09-24",
+    "slot": "evening",
+    "title": "🧠 Tu memoria te miente así",
+    "video_id": "Z3PwnBbRx50"
   }
 ]
