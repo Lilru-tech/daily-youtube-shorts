@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-14",
-    "slot": "morning",
-    "title": "👻 Tu reflejo te OBSERVABA",
-    "video_id": "59Up36IaZPM"
-  },
-  {
-    "date": "2026-09-14",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engana asi",
     "video_id": "xwOXhcbHV-g"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu realidad se desmorona",
     "video_id": "5jZaZtJkqbE"
+  },
+  {
+    "date": "2026-09-24",
+    "slot": "morning",
+    "title": "🤫 Algo más vive en tu cabeza",
+    "video_id": "kkovQ70ZHSY"
   }
 ]
