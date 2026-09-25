@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-15",
-    "slot": "evening",
-    "title": "🧠 Tu realidad es una fabricación",
-    "video_id": "-a9cO83IAks"
-  },
-  {
     "date": "2026-09-16",
     "slot": "morning",
     "title": "🤯 Tu mente te esconde esto",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu libertad es una ilusión",
     "video_id": "4qwaqcm8i3Y"
+  },
+  {
+    "date": "2026-09-25",
+    "slot": "evening",
+    "title": "👁️ No ves esto de tu vida",
+    "video_id": "JNPLRZSTuYA"
   }
 ]
