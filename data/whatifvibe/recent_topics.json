@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-15",
-    "slot": "morning",
-    "title": "What If You NEVER Slept Again? 😴",
-    "video_id": "KMe28OJFciI"
-  },
-  {
-    "date": "2026-09-15",
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 🤯",
     "video_id": "nGoaJ_QHLgo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Something ELSE Beat Inside You? 🤯",
     "video_id": "7WSaJoXzpZk"
+  },
+  {
+    "date": "2026-09-25",
+    "slot": "morning",
+    "title": "What If Earth Suddenly Stopped Orbiting? 🤯",
+    "video_id": "nZ47bGDbpmU"
   }
 ]
