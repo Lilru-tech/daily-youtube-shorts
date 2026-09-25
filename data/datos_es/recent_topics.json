@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-15",
-    "slot": "morning",
-    "title": "👤 Tu reflejo te ESCONDE algo",
-    "video_id": "qayUPjueJPA"
-  },
-  {
-    "date": "2026-09-15",
     "slot": "afternoon",
     "title": "👁️ Tu percepción es una mentira",
     "video_id": "Zl47TiT04jI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu memoria te miente así",
     "video_id": "Z3PwnBbRx50"
+  },
+  {
+    "date": "2026-09-25",
+    "slot": "morning",
+    "title": "❌ Tu cerebro te sabotea así",
+    "video_id": "wx-kW_Xj_pU"
   }
 ]
