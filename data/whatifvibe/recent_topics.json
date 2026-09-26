@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-16",
-    "slot": "morning",
-    "title": "What If Your Body Temperature DROPPED? 🥶",
-    "video_id": "S09FBL1ip7I"
-  },
-  {
-    "date": "2026-09-16",
     "slot": "afternoon",
     "title": "What If The Universe STOPPED Expanding? 🤯",
     "video_id": "18cT0zsUS8w"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Ate a Star? 🤯",
     "video_id": "p9Giig2Hkjw"
+  },
+  {
+    "date": "2026-09-26",
+    "slot": "morning",
+    "title": "What If Your Reflection Blinked A Second Late? 😱",
+    "video_id": "2Z926KseKkI"
   }
 ]
