@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-16",
-    "slot": "evening",
-    "title": "🪞 Lo que el espejo te oculta",
-    "video_id": "Y7XC1hV3ABA"
-  },
-  {
     "date": "2026-09-17",
     "slot": "morning",
     "title": "😵 Tu reflejo NO eres tú",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "-V62q-FkWxw"
+  },
+  {
+    "date": "2026-09-26",
+    "slot": "evening",
+    "title": "🤯 Esto cambia tu percepción",
+    "video_id": "-ni80OktQaQ"
   }
 ]
