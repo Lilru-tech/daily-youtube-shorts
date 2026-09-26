@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-16",
-    "slot": "afternoon",
-    "title": "😵 ¿Quién eres de verdad?",
-    "video_id": "x13mq9AdirM"
-  },
-  {
-    "date": "2026-09-16",
     "slot": "evening",
     "title": "🪞 Lo que el espejo te oculta",
     "video_id": "Y7XC1hV3ABA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te oculta cosas",
     "video_id": "tku_y71rDfg"
+  },
+  {
+    "date": "2026-09-26",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "-V62q-FkWxw"
   }
 ]
