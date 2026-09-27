@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-17",
-    "slot": "afternoon",
-    "title": "🤯 Esta trampa no era mía",
-    "video_id": "4_PlEsXuLH4"
-  },
-  {
-    "date": "2026-09-17",
     "slot": "evening",
     "title": "🧠 ¿Decides de verdad?",
     "video_id": "bobnMIegXu0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🚫 La trampa mental que usas",
     "video_id": "BeldKGBWDkw"
+  },
+  {
+    "date": "2026-09-27",
+    "slot": "afternoon",
+    "title": "🤯 ¿Quién controla tu mente?",
+    "video_id": "AGgv-twB4Ss"
   }
 ]
