@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-17",
-    "slot": "evening",
-    "title": "What If You Lived on Mars? 🚀",
-    "video_id": "gdbbFRN1myk"
-  },
-  {
     "date": "2026-09-18",
     "slot": "morning",
     "title": "What If You Were Trapped In Pure Silence? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Woke Up In Someone Else's Skin? 😱",
     "video_id": "5MAgEARE82k"
+  },
+  {
+    "date": "2026-09-27",
+    "slot": "evening",
+    "title": "What If You Never Slept Again? 🤯",
+    "video_id": "EX5tnEChUEQ"
   }
 ]
