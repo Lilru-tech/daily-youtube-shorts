@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-17",
-    "slot": "morning",
-    "title": "😵 Tu reflejo NO eres tú",
-    "video_id": "4ECBXin2ZXI"
-  },
-  {
-    "date": "2026-09-17",
     "slot": "afternoon",
     "title": "🤯 Esta trampa no era mía",
     "video_id": "4_PlEsXuLH4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Esto cambia tu percepción",
     "video_id": "-ni80OktQaQ"
+  },
+  {
+    "date": "2026-09-27",
+    "slot": "morning",
+    "title": "🚫 La trampa mental que usas",
+    "video_id": "BeldKGBWDkw"
   }
 ]
