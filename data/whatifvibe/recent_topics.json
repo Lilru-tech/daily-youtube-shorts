@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-17",
-    "slot": "morning",
-    "title": "What If The Sun Just DISAPPEARED? 😱",
-    "video_id": "OlhjDK0LQWo"
-  },
-  {
-    "date": "2026-09-17",
     "slot": "afternoon",
     "title": "What If You Found a Secret Room in Your Home? 🚪",
     "video_id": "liBK0Wxfjk8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Never Felt PAIN? 🤯",
     "video_id": "YQDlkWoJagY"
+  },
+  {
+    "date": "2026-09-27",
+    "slot": "morning",
+    "title": "What If Gravity Just VANISHED? 🤯",
+    "video_id": "gpzpZX8Zr4s"
   }
 ]
