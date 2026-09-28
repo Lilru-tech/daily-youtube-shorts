@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-18",
-    "slot": "morning",
-    "title": "What If You Were Trapped In Pure Silence? 🤯",
-    "video_id": "giuFNxBEaao"
-  },
-  {
-    "date": "2026-09-18",
     "slot": "afternoon",
     "title": "What If You Saw Your Own Ghost?",
     "video_id": "0OELdGEAu3A"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Never Slept Again? 🤯",
     "video_id": "EX5tnEChUEQ"
+  },
+  {
+    "date": "2026-09-28",
+    "slot": "morning",
+    "title": "What If The Moon Just VANISHED? 🤯",
+    "video_id": "C91-EOOgz6w"
   }
 ]
