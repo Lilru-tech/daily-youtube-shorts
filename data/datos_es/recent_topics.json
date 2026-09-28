@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-18",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te ENGAÑA así",
-    "video_id": "60Pjnvhm0ww"
-  },
-  {
-    "date": "2026-09-18",
     "slot": "afternoon",
     "title": "🧠 Tu memoria es falsa",
     "video_id": "RX4hAFr0NAU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "💀 ¿Quién te observa en la noche?",
     "video_id": "VoWx5Id-hUk"
+  },
+  {
+    "date": "2026-09-28",
+    "slot": "morning",
+    "title": "🤯 Esto te pasa sin saberlo",
+    "video_id": "qpa1Z_Pz09w"
   }
 ]
