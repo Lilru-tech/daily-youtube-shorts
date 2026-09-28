@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-19",
-    "slot": "morning",
-    "title": "🤯 No controlas tu mente",
-    "video_id": "xtrYpRhjP2A"
-  },
-  {
-    "date": "2026-09-19",
     "slot": "afternoon",
     "title": "😵 Tu mente NO es tuya",
     "video_id": "9z0DCV9DW8g"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Nadie elige NADA de verdad.",
     "video_id": "20McI9ybuUU"
+  },
+  {
+    "date": "2026-09-29",
+    "slot": "evening",
+    "title": "🤯 Así te controlan sin saberlo",
+    "video_id": "KNCOv4Pu48c"
   }
 ]
