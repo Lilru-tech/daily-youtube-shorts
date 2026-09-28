@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-18",
-    "slot": "afternoon",
-    "title": "What If You Saw Your Own Ghost?",
-    "video_id": "0OELdGEAu3A"
-  },
-  {
-    "date": "2026-09-18",
     "slot": "evening",
     "title": "What If Earth Stopped Spinning for 1 Second? 🤯",
     "video_id": "R0ySELwhpjU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If The Moon Just VANISHED? 🤯",
     "video_id": "C91-EOOgz6w"
+  },
+  {
+    "date": "2026-09-28",
+    "slot": "afternoon",
+    "title": "What If Your Memories Were Rewritten Nightly? 😱",
+    "video_id": "-qteqoSXeUY"
   }
 ]
