@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-19",
-    "slot": "afternoon",
-    "title": "What If Your Diary Knew Your Future? 🤫",
-    "video_id": "Oil-LjS-Wtc"
-  },
-  {
-    "date": "2026-09-19",
     "slot": "evening",
     "title": "What If You Woke Up With a STRANGE Scar? 😱",
     "video_id": "cSdFLeOKKdA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Heartbeat Wasn't Yours? 🫀",
     "video_id": "r56vm1VoUsU"
+  },
+  {
+    "date": "2026-09-29",
+    "slot": "afternoon",
+    "title": "What If Your House Knew Your Name? 😱",
+    "video_id": "3bV8uUfxOnw"
   }
 ]
