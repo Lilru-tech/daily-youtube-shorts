@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-19",
-    "slot": "evening",
-    "title": "😵‍💫 Eres un impostor, lo sé",
-    "video_id": "clXO1sKDOvo"
-  },
-  {
     "date": "2026-09-20",
     "slot": "morning",
     "title": "👁️‍🗨️ ¿Quién mira a través de ti?",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu decisión NO es tuya.",
     "video_id": "I-SSd0EdnkY"
+  },
+  {
+    "date": "2026-09-29",
+    "slot": "afternoon",
+    "title": "🤯 Tu memoria te traiciona así",
+    "video_id": "DJTI3vrqCIM"
   }
 ]
