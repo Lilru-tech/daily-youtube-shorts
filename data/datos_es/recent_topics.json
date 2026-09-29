@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-19",
-    "slot": "afternoon",
-    "title": "😵 Tu mente NO es tuya",
-    "video_id": "9z0DCV9DW8g"
-  },
-  {
-    "date": "2026-09-19",
     "slot": "evening",
     "title": "😵‍💫 Eres un impostor, lo sé",
     "video_id": "clXO1sKDOvo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Así te controlan sin saberlo",
     "video_id": "KNCOv4Pu48c"
+  },
+  {
+    "date": "2026-09-29",
+    "slot": "morning",
+    "title": "🤯 Tu decisión NO es tuya.",
+    "video_id": "I-SSd0EdnkY"
   }
 ]
