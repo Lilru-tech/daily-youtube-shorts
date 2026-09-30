@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-20",
-    "slot": "morning",
-    "title": "👁️‍🗨️ ¿Quién mira a través de ti?",
-    "video_id": "ZRfcHAXNFEU"
-  },
-  {
-    "date": "2026-09-20",
     "slot": "afternoon",
     "title": "😵‍💫 Tu mente te hace esto",
     "video_id": "aalt8c_Wiy0"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu memoria te traiciona así",
     "video_id": "DJTI3vrqCIM"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te manipula así",
+    "video_id": "W-DCImhPlhg"
   }
 ]
