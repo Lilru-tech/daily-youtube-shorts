@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-20",
-    "slot": "evening",
-    "title": "What If Our Sun Vanished Instantly? 🤯",
-    "video_id": "d6ZTuXqXylE"
-  },
-  {
     "date": "2026-09-21",
     "slot": "morning",
     "title": "What If You Never Forgot ANYTHING? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Could NEVER Feel Pain? 🤯",
     "video_id": "nYY8k96tOxY"
+  },
+  {
+    "date": "2026-09-30",
+    "slot": "evening",
+    "title": "What If Gravity Suddenly VANISHED? 🤯",
+    "video_id": "2V-QfnWaEuI"
   }
 ]
