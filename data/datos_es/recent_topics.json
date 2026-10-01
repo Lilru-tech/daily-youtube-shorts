@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-21",
-    "slot": "morning",
-    "title": "💀 No eres quien crees ser",
-    "video_id": "Yu62h9UEiSY"
-  },
-  {
-    "date": "2026-09-21",
     "slot": "afternoon",
     "title": "🧠 Tu mente te sabotea sin",
     "video_id": "paSOMBlI6GA"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te miente así",
     "video_id": "Hfh8F6PsFCE"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "morning",
+    "title": "😵‍💫 Tu reflejo te esconde algo",
+    "video_id": "4i2t7DeWQaU"
   }
 ]
