@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-21",
-    "slot": "morning",
-    "title": "What If You Never Forgot ANYTHING? 🤯",
-    "video_id": "mOXvM72GUOM"
-  },
-  {
-    "date": "2026-09-21",
     "slot": "afternoon",
     "title": "What If You Forgot How To Recognize Faces? 🎭",
     "video_id": "Jh8va3QAi_Y"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Gravity Suddenly VANISHED? 🤯",
     "video_id": "2V-QfnWaEuI"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "morning",
+    "title": "What If All Your Doors Just VANISHED? 😱",
+    "video_id": "yTf3eI4vdnc"
   }
 ]
