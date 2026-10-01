@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-21",
-    "slot": "evening",
-    "title": "🧠 Tu cerebro te engana asi",
-    "video_id": "p30Zbc8b56E"
-  },
-  {
     "date": "2026-09-22",
     "slot": "morning",
     "title": "🤯 Esto te controla sin que lo sepas",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu libre albedrío es una broma",
     "video_id": "DMEA2UKGXqI"
+  },
+  {
+    "date": "2026-10-01",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "GTH9zTmeoA0"
   }
 ]
