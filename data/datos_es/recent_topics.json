@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-22",
-    "slot": "morning",
-    "title": "🤯 Esto te controla sin que lo sepas",
-    "video_id": "2rJTF_ZMTcE"
-  },
-  {
-    "date": "2026-09-22",
     "slot": "afternoon",
     "title": "😵‍💫 La trampa mental que te atrapa",
     "video_id": "kTb8Lc1rGF4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "GTH9zTmeoA0"
+  },
+  {
+    "date": "2026-10-02",
+    "slot": "morning",
+    "title": "💀 Esto te acecha en casa",
+    "video_id": "Vdp0iuawvcw"
   }
 ]
