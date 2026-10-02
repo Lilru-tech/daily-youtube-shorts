@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-22",
-    "slot": "afternoon",
-    "title": "😵‍💫 La trampa mental que te atrapa",
-    "video_id": "kTb8Lc1rGF4"
-  },
-  {
-    "date": "2026-09-22",
     "slot": "evening",
     "title": "🎭 Tu identidad es una ilusión",
     "video_id": "WeyxzXPk64Y"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "💀 Esto te acecha en casa",
     "video_id": "Vdp0iuawvcw"
+  },
+  {
+    "date": "2026-10-02",
+    "slot": "afternoon",
+    "title": "🧠 Nadie te dice tu verdad",
+    "video_id": "xFP09vMn1Cw"
   }
 ]
