@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-24",
-    "slot": "afternoon",
-    "title": "What If ALL Insects Vanished? 🌍",
-    "video_id": "94KiXlqPWG8"
-  },
-  {
-    "date": "2026-09-24",
     "slot": "evening",
     "title": "What If Something ELSE Beat Inside You? 🤯",
     "video_id": "7WSaJoXzpZk"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Reflection Moved First? 😱",
     "video_id": "Ni17gsHcpdY"
+  },
+  {
+    "date": "2026-10-04",
+    "slot": "afternoon",
+    "title": "What If Gravity Suddenly DOUBLED? 🤯",
+    "video_id": "oLJaVV01-CM"
   }
 ]
