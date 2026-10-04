@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-24",
-    "slot": "afternoon",
-    "title": "🤔 Tu mente te manipula así",
-    "video_id": "27E_u7DDDmk"
-  },
-  {
-    "date": "2026-09-24",
     "slot": "evening",
     "title": "🧠 Tu memoria te miente así",
     "video_id": "Z3PwnBbRx50"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu cerebro: ¿eres tú quien decide?",
     "video_id": "lePg56ifVaw"
+  },
+  {
+    "date": "2026-10-04",
+    "slot": "afternoon",
+    "title": "🧠 Tu realidad es una ilusión",
+    "video_id": "slTmrvhyKqE"
   }
 ]
