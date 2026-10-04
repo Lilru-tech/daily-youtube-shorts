@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-24",
-    "slot": "morning",
-    "title": "🤫 Algo más vive en tu cabeza",
-    "video_id": "kkovQ70ZHSY"
-  },
-  {
-    "date": "2026-09-24",
     "slot": "afternoon",
     "title": "🤔 Tu mente te manipula así",
     "video_id": "27E_u7DDDmk"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😮 Esto oculta tu cerebro",
     "video_id": "gD4Ry4WuXjE"
+  },
+  {
+    "date": "2026-10-04",
+    "slot": "morning",
+    "title": "🤯 Tu cerebro: ¿eres tú quien decide?",
+    "video_id": "lePg56ifVaw"
   }
 ]
