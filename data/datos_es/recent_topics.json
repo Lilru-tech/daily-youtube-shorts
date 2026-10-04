@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-24",
-    "slot": "evening",
-    "title": "🧠 Tu memoria te miente así",
-    "video_id": "Z3PwnBbRx50"
-  },
-  {
     "date": "2026-09-25",
     "slot": "morning",
     "title": "❌ Tu cerebro te sabotea así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu realidad es una ilusión",
     "video_id": "slTmrvhyKqE"
+  },
+  {
+    "date": "2026-10-04",
+    "slot": "evening",
+    "title": "👁️‍🗨️ Tu casa tiene un secreto",
+    "video_id": "Kmj9xAunjlM"
   }
 ]
