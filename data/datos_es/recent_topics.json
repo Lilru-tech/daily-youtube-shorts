@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-25",
-    "slot": "afternoon",
-    "title": "🧠 Tu libertad es una ilusión",
-    "video_id": "4qwaqcm8i3Y"
-  },
-  {
-    "date": "2026-09-25",
     "slot": "evening",
     "title": "👁️ No ves esto de tu vida",
     "video_id": "JNPLRZSTuYA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "💥 Tu cerebro te manipula",
     "video_id": "vxAYb-y49Sg"
+  },
+  {
+    "date": "2026-10-05",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente te esconde algo",
+    "video_id": "j2xpVQqPf0g"
   }
 ]
