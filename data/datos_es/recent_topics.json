@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-25",
-    "slot": "morning",
-    "title": "❌ Tu cerebro te sabotea así",
-    "video_id": "wx-kW_Xj_pU"
-  },
-  {
-    "date": "2026-09-25",
     "slot": "afternoon",
     "title": "🧠 Tu libertad es una ilusión",
     "video_id": "4qwaqcm8i3Y"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👁️‍🗨️ Tu casa tiene un secreto",
     "video_id": "Kmj9xAunjlM"
+  },
+  {
+    "date": "2026-10-05",
+    "slot": "morning",
+    "title": "💥 Tu cerebro te manipula",
+    "video_id": "vxAYb-y49Sg"
   }
 ]
