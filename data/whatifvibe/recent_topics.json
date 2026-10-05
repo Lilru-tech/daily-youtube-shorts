@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-25",
-    "slot": "afternoon",
-    "title": "What If You Could SEE AIR? 🤯",
-    "video_id": "wB81UUO1WXM"
-  },
-  {
-    "date": "2026-09-25",
     "slot": "evening",
     "title": "What If You Ate a Star? 🤯",
     "video_id": "p9Giig2Hkjw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Never Felt Pain? 🤯",
     "video_id": "0Ptf9BTXwfI"
+  },
+  {
+    "date": "2026-10-05",
+    "slot": "afternoon",
+    "title": "What If ALL Stars Vanished Tonight? 🌌",
+    "video_id": "1EkYHLUI7V0"
   }
 ]
