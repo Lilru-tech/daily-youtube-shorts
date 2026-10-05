@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-24",
-    "slot": "evening",
-    "title": "What If Something ELSE Beat Inside You? 🤯",
-    "video_id": "7WSaJoXzpZk"
-  },
-  {
     "date": "2026-09-25",
     "slot": "morning",
     "title": "What If Earth Suddenly Stopped Orbiting? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Gravity Suddenly DOUBLED? 🤯",
     "video_id": "oLJaVV01-CM"
+  },
+  {
+    "date": "2026-10-04",
+    "slot": "evening",
+    "title": "What If You Hear Voices Nobody Else Can? 😱",
+    "video_id": "cabMdO67pJQ"
   }
 ]
