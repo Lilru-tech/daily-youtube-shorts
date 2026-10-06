@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-25",
-    "slot": "evening",
-    "title": "What If You Ate a Star? 🤯",
-    "video_id": "p9Giig2Hkjw"
-  },
-  {
     "date": "2026-09-26",
     "slot": "morning",
     "title": "What If Your Reflection Blinked A Second Late? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If ALL Stars Vanished Tonight? 🌌",
     "video_id": "1EkYHLUI7V0"
+  },
+  {
+    "date": "2026-10-05",
+    "slot": "evening",
+    "title": "What If a Whisper Never Stopped? 👂",
+    "video_id": "lZXLjNASz6M"
   }
 ]
