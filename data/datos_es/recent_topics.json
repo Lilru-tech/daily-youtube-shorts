@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-26",
-    "slot": "morning",
-    "title": "🤯 Tu mente te oculta cosas",
-    "video_id": "tku_y71rDfg"
-  },
-  {
-    "date": "2026-09-26",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "-V62q-FkWxw"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😱 Tu cerebro te miente",
     "video_id": "RbYSruwfuyc"
+  },
+  {
+    "date": "2026-10-06",
+    "slot": "morning",
+    "title": "😱 Tu cerebro te ha creado ESTA realidad",
+    "video_id": "KXEHNuh-L-o"
   }
 ]
