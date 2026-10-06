@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-26",
-    "slot": "afternoon",
-    "title": "What If Your Silence Whispered Back? 😱",
-    "video_id": "AR4oV2rv0pc"
-  },
-  {
-    "date": "2026-09-26",
     "slot": "evening",
     "title": "What If You Never Felt PAIN? 🤯",
     "video_id": "YQDlkWoJagY"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Never Drank Water Again? 💧",
     "video_id": "S6HuYg5WY2s"
+  },
+  {
+    "date": "2026-10-06",
+    "slot": "afternoon",
+    "title": "What If Light Speed Was SLOWER? 🤯",
+    "video_id": "fd88qBNry7g"
   }
 ]
