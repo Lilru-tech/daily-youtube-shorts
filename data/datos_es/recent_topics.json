@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-26",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "-V62q-FkWxw"
-  },
-  {
-    "date": "2026-09-26",
     "slot": "evening",
     "title": "🤯 Esto cambia tu percepción",
     "video_id": "-ni80OktQaQ"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "😱 Tu cerebro te ha creado ESTA realidad",
     "video_id": "KXEHNuh-L-o"
+  },
+  {
+    "date": "2026-10-06",
+    "slot": "afternoon",
+    "title": "🤯 Esto SIENTE tu cerebro cada día",
+    "video_id": "t5y4K_G3_Ns"
   }
 ]
