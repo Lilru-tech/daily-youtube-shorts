@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-27",
-    "slot": "morning",
-    "title": "🚫 La trampa mental que usas",
-    "video_id": "BeldKGBWDkw"
-  },
-  {
-    "date": "2026-09-27",
     "slot": "afternoon",
     "title": "🤯 ¿Quién controla tu mente?",
     "video_id": "AGgv-twB4Ss"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu realidad es pura ilusión",
     "video_id": "oC2Txwc3_Xw"
+  },
+  {
+    "date": "2026-10-07",
+    "slot": "afternoon",
+    "title": "😱 Esto pasó cuando desperté",
+    "video_id": "Q1mAU1Ex01g"
   }
 ]
