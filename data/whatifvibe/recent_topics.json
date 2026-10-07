@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-26",
-    "slot": "evening",
-    "title": "What If You Never Felt PAIN? 🤯",
-    "video_id": "YQDlkWoJagY"
-  },
-  {
     "date": "2026-09-27",
     "slot": "morning",
     "title": "What If Gravity Just VANISHED? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Light Speed Was SLOWER? 🤯",
     "video_id": "fd88qBNry7g"
+  },
+  {
+    "date": "2026-10-06",
+    "slot": "evening",
+    "title": "What If You Held Your Breath Forever? 😮",
+    "video_id": "UE4_YiL5u9Y"
   }
 ]
