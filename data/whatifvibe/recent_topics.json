@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-27",
-    "slot": "morning",
-    "title": "What If Gravity Just VANISHED? 🤯",
-    "video_id": "gpzpZX8Zr4s"
-  },
-  {
-    "date": "2026-09-27",
     "slot": "afternoon",
     "title": "What If You Woke Up In Someone Else's Skin? 😱",
     "video_id": "5MAgEARE82k"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Held Your Breath Forever? 😮",
     "video_id": "UE4_YiL5u9Y"
+  },
+  {
+    "date": "2026-10-07",
+    "slot": "morning",
+    "title": "What If You Weren't Alone in Your Own Skin? 😱",
+    "video_id": "-rniq3oK98A"
   }
 ]
