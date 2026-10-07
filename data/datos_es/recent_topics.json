@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-26",
-    "slot": "evening",
-    "title": "🤯 Esto cambia tu percepción",
-    "video_id": "-ni80OktQaQ"
-  },
-  {
     "date": "2026-09-27",
     "slot": "morning",
     "title": "🚫 La trampa mental que usas",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Esto SIENTE tu cerebro cada día",
     "video_id": "t5y4K_G3_Ns"
+  },
+  {
+    "date": "2026-10-07",
+    "slot": "morning",
+    "title": "🧠 Tu realidad es pura ilusión",
+    "video_id": "oC2Txwc3_Xw"
   }
 ]
