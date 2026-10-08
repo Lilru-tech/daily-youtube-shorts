@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-28",
-    "slot": "morning",
-    "title": "What If The Moon Just VANISHED? 🤯",
-    "video_id": "C91-EOOgz6w"
-  },
-  {
-    "date": "2026-09-28",
     "slot": "afternoon",
     "title": "What If Your Memories Were Rewritten Nightly? 😱",
     "video_id": "-qteqoSXeUY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Hands Weren't Yours? 🖐️",
     "video_id": "jcTyUssnGgg"
+  },
+  {
+    "date": "2026-10-08",
+    "slot": "morning",
+    "title": "What If You Never Slept Again? 🤯",
+    "video_id": "0yOAr6VlOXs"
   }
 ]
