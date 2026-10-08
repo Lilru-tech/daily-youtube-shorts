@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-28",
-    "slot": "morning",
-    "title": "🤯 Esto te pasa sin saberlo",
-    "video_id": "qpa1Z_Pz09w"
-  },
-  {
-    "date": "2026-09-28",
     "slot": "afternoon",
     "title": "🤯 Tu realidad es solo un...",
     "video_id": "2aJVOmjdfAw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🚪 Tu casa guarda un secreto aterrador",
     "video_id": "niKNn0TcbX0"
+  },
+  {
+    "date": "2026-10-08",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente te esconde ESTO",
+    "video_id": "z1391tG5Kj4"
   }
 ]
