@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-28",
-    "slot": "afternoon",
-    "title": "🤯 Tu realidad es solo un...",
-    "video_id": "2aJVOmjdfAw"
-  },
-  {
-    "date": "2026-09-28",
     "slot": "evening",
     "title": "🤯 Nadie elige NADA de verdad.",
     "video_id": "20McI9ybuUU"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente te esconde ESTO",
     "video_id": "z1391tG5Kj4"
+  },
+  {
+    "date": "2026-10-08",
+    "slot": "evening",
+    "title": "🤯 Tu reflejo: ¿eres tú?",
+    "video_id": "lvSq9OdmLxI"
   }
 ]
