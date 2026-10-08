@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-27",
-    "slot": "evening",
-    "title": "💀 ¿Quién te observa en la noche?",
-    "video_id": "VoWx5Id-hUk"
-  },
-  {
     "date": "2026-09-28",
     "slot": "morning",
     "title": "🤯 Esto te pasa sin saberlo",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu realidad: ¿quién la escribe?",
     "video_id": "52Z1qgArkpQ"
+  },
+  {
+    "date": "2026-10-08",
+    "slot": "morning",
+    "title": "🚪 Tu casa guarda un secreto aterrador",
+    "video_id": "niKNn0TcbX0"
   }
 ]
