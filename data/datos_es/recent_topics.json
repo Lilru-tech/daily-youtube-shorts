@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-29",
-    "slot": "evening",
-    "title": "🤯 Así te controlan sin saberlo",
-    "video_id": "KNCOv4Pu48c"
-  },
-  {
-    "date": "2026-09-29",
     "slot": "morning",
     "title": "🤯 Tu decisión NO es tuya.",
     "video_id": "I-SSd0EdnkY"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "☠️ Esto no lo hiciste tú... ¿o sí?",
     "video_id": "vPJVkGl6vdo"
+  },
+  {
+    "date": "2026-10-09",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente no es solo tuya",
+    "video_id": "p7-gBoMzkTo"
   }
 ]
