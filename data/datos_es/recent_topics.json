@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-28",
-    "slot": "evening",
-    "title": "🤯 Nadie elige NADA de verdad.",
-    "video_id": "20McI9ybuUU"
-  },
-  {
     "date": "2026-09-29",
     "slot": "evening",
     "title": "🤯 Así te controlan sin saberlo",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu reflejo: ¿eres tú?",
     "video_id": "lvSq9OdmLxI"
+  },
+  {
+    "date": "2026-10-09",
+    "slot": "morning",
+    "title": "☠️ Esto no lo hiciste tú... ¿o sí?",
+    "video_id": "vPJVkGl6vdo"
   }
 ]
