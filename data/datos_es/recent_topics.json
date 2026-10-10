@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-29",
-    "slot": "afternoon",
-    "title": "🤯 Tu memoria te traiciona así",
-    "video_id": "DJTI3vrqCIM"
-  },
-  {
     "date": "2026-09-30",
     "slot": "morning",
     "title": "🧠 Tu cerebro te manipula así",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu cuerpo no es tuyo",
     "video_id": "sXVA2soaGqc"
+  },
+  {
+    "date": "2026-10-10",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "UoNDK_4LhUE"
   }
 ]
