@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-09-30",
-    "slot": "afternoon",
-    "title": "🤯 Haces esto sin darte cuenta.",
-    "video_id": "2Acfh0jiEvY"
-  },
-  {
-    "date": "2026-09-30",
     "slot": "evening",
     "title": "🤯 Tu mente te miente así",
     "video_id": "Hfh8F6PsFCE"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu mente: ¿quién decide?",
     "video_id": "F9JzHBOGSak"
+  },
+  {
+    "date": "2026-10-10",
+    "slot": "evening",
+    "title": "👁️ Así tu cerebro te manipula",
+    "video_id": "Z4JDS1tNo_4"
   }
 ]
