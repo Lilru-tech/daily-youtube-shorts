@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-29",
-    "slot": "evening",
-    "title": "What If You're NOT Alone in Your Own Mind? 🤯",
-    "video_id": "cpn3MPpAXqE"
-  },
-  {
     "date": "2026-09-30",
     "slot": "morning",
     "title": "What If You Never Drank Water Again? 💧",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Our Sun Became a Black Hole? 🤯",
     "video_id": "HXH6vZDBbuM"
+  },
+  {
+    "date": "2026-10-09",
+    "slot": "evening",
+    "title": "What If Gravity Vanished for 5 Seconds? 🤯",
+    "video_id": "L6A2SnlS0bE"
   }
 ]
