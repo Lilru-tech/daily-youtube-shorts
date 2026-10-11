@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-30",
-    "slot": "evening",
-    "title": "🤯 Tu mente te miente así",
-    "video_id": "Hfh8F6PsFCE"
-  },
-  {
     "date": "2026-10-01",
     "slot": "morning",
     "title": "😵‍💫 Tu reflejo te esconde algo",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👁️ Así tu cerebro te manipula",
     "video_id": "Z4JDS1tNo_4"
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "morning",
+    "title": "🤯 La gran mentira de tu mente",
+    "video_id": "rR6f30-me68"
   }
 ]
