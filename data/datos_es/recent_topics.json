@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "slot": "morning",
-    "title": "😵‍💫 Tu reflejo te esconde algo",
-    "video_id": "4i2t7DeWQaU"
-  },
-  {
-    "date": "2026-10-01",
     "slot": "afternoon",
     "title": "🧠 Tu libre albedrío es una broma",
     "video_id": "DMEA2UKGXqI"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 La gran mentira de tu mente",
     "video_id": "rR6f30-me68"
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "afternoon",
+    "title": "🤫 Tu mente hace ESTO y no lo sabes",
+    "video_id": "MAbNhdTbSlI"
   }
 ]
