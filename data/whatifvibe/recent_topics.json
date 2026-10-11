@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "slot": "morning",
-    "title": "What If All Your Doors Just VANISHED? 😱",
-    "video_id": "yTf3eI4vdnc"
-  },
-  {
-    "date": "2026-10-01",
     "slot": "afternoon",
     "title": "What If Time STOPPED for You? 🤯",
     "video_id": "TSmgl1vurdY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You NEVER Drank Water Again? 💧",
     "video_id": "foPDGzJL3lc"
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "morning",
+    "title": "What If You NEVER Breathed Again? 🤯",
+    "video_id": "KBryC5fgG7g"
   }
 ]
