@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-01",
-    "slot": "afternoon",
-    "title": "🧠 Tu libre albedrío es una broma",
-    "video_id": "DMEA2UKGXqI"
-  },
-  {
-    "date": "2026-10-01",
     "slot": "evening",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "GTH9zTmeoA0"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤫 Tu mente hace ESTO y no lo sabes",
     "video_id": "MAbNhdTbSlI"
+  },
+  {
+    "date": "2026-10-11",
+    "slot": "evening",
+    "title": "😈 El espejo te miente",
+    "video_id": "v_R3BNn9LB0"
   }
 ]
