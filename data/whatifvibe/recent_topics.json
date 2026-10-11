@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-09-30",
-    "slot": "evening",
-    "title": "What If Gravity Suddenly VANISHED? 🤯",
-    "video_id": "2V-QfnWaEuI"
-  },
-  {
     "date": "2026-10-01",
     "slot": "morning",
     "title": "What If All Your Doors Just VANISHED? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If All Colors Vanished? 🤯",
     "video_id": "JjI1XXXynI4"
+  },
+  {
+    "date": "2026-10-10",
+    "slot": "evening",
+    "title": "What If You NEVER Drank Water Again? 💧",
+    "video_id": "foPDGzJL3lc"
   }
 ]
