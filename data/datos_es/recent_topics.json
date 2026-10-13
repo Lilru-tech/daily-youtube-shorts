@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-02",
-    "slot": "morning",
-    "title": "💀 Esto te acecha en casa",
-    "video_id": "Vdp0iuawvcw"
-  },
-  {
-    "date": "2026-10-02",
     "slot": "afternoon",
     "title": "🧠 Nadie te dice tu verdad",
     "video_id": "xFP09vMn1Cw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "⚠️ Alguien controla tus acciones",
     "video_id": "3cUTK4yWw1k"
+  },
+  {
+    "date": "2026-10-13",
+    "slot": "afternoon",
+    "title": "🤯 Esto no lo elegiste tú",
+    "video_id": "YPeQOfs3kR4"
   }
 ]
