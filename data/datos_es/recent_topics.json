@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-02",
-    "slot": "afternoon",
-    "title": "🧠 Nadie te dice tu verdad",
-    "video_id": "xFP09vMn1Cw"
-  },
-  {
-    "date": "2026-10-02",
     "slot": "evening",
     "title": "🤫 Tu mente te oculta el secreto",
     "video_id": "9SW_DZiMsts"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Esto no lo elegiste tú",
     "video_id": "YPeQOfs3kR4"
+  },
+  {
+    "date": "2026-10-13",
+    "slot": "evening",
+    "title": "🤯 Tu mente: ¿quién la controla?",
+    "video_id": "57vQlUwzqeE"
   }
 ]
