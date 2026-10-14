@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-03",
-    "slot": "morning",
-    "title": "🤯 Tu mente es un campo de batalla",
-    "video_id": "hDhWGOxJcKw"
-  },
-  {
-    "date": "2026-10-03",
     "slot": "afternoon",
     "title": "🎭 Tu memoria te traiciona así",
     "video_id": "neJXEXeoRl0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente: ¿ficción o realidad?",
     "video_id": "FtcVMGccBuU"
+  },
+  {
+    "date": "2026-10-14",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente te ENGAÑA, ¿por qué?",
+    "video_id": "kSrKgPsRQ8w"
   }
 ]
