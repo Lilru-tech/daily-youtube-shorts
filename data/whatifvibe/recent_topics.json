@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-03",
-    "slot": "afternoon",
-    "title": "What If Earth Lost Its Magnetic Field? 🧲",
-    "video_id": "FX5NQ-SGUm4"
-  },
-  {
-    "date": "2026-10-03",
     "slot": "evening",
     "title": "What If You Woke Up With No Reflection? 🤯",
     "video_id": "AmdG3aLhTsQ"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Echo Answered Back? 😨",
     "video_id": "TqgglejV668"
+  },
+  {
+    "date": "2026-10-14",
+    "slot": "afternoon",
+    "title": "What If You NEVER Felt Pain? 🤯",
+    "video_id": "xcaz4njOwZg"
   }
 ]
