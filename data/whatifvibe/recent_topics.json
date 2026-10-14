@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-03",
-    "slot": "morning",
-    "title": "What If Another Mind Lived Inside Yours? 🤯",
-    "video_id": "v4pGom5rXGQ"
-  },
-  {
-    "date": "2026-10-03",
     "slot": "afternoon",
     "title": "What If Earth Lost Its Magnetic Field? 🧲",
     "video_id": "FX5NQ-SGUm4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Reflection Blinked First? 😨",
     "video_id": "A50BDK7G2WA"
+  },
+  {
+    "date": "2026-10-14",
+    "slot": "morning",
+    "title": "What If Your Echo Answered Back? 😨",
+    "video_id": "TqgglejV668"
   }
 ]
