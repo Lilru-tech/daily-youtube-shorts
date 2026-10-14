@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-03",
-    "slot": "afternoon",
-    "title": "🎭 Tu memoria te traiciona así",
-    "video_id": "neJXEXeoRl0"
-  },
-  {
-    "date": "2026-10-03",
     "slot": "evening",
     "title": "😮 Esto oculta tu cerebro",
     "video_id": "gD4Ry4WuXjE"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu mente te ENGAÑA, ¿por qué?",
     "video_id": "kSrKgPsRQ8w"
+  },
+  {
+    "date": "2026-10-14",
+    "slot": "evening",
+    "title": "🤫 Hay algo DENTRO de ti.",
+    "video_id": "_E6-3_S6FRU"
   }
 ]
