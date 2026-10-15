@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-03",
-    "slot": "evening",
-    "title": "😮 Esto oculta tu cerebro",
-    "video_id": "gD4Ry4WuXjE"
-  },
-  {
     "date": "2026-10-04",
     "slot": "morning",
     "title": "🤯 Tu cerebro: ¿eres tú quien decide?",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤫 Hay algo DENTRO de ti.",
     "video_id": "_E6-3_S6FRU"
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "morning",
+    "title": "🤯 Esto MANIPULA tu mente",
+    "video_id": "RXqRKJIRnak"
   }
 ]
