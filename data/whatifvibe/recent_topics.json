@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-04",
-    "slot": "evening",
-    "title": "What If You Hear Voices Nobody Else Can? 😱",
-    "video_id": "cabMdO67pJQ"
-  },
-  {
     "date": "2026-10-05",
     "slot": "morning",
     "title": "What If You Never Felt Pain? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Gravity Just... Reversed? 🤯",
     "video_id": "OrUBoBk0GYk"
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "evening",
+    "title": "What If Earth Lost Its Magnetic Field? 🤯",
+    "video_id": "qZcfImxe6o4"
   }
 ]
