@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-04",
-    "slot": "morning",
-    "title": "🤯 Tu cerebro: ¿eres tú quien decide?",
-    "video_id": "lePg56ifVaw"
-  },
-  {
-    "date": "2026-10-04",
     "slot": "afternoon",
     "title": "🧠 Tu realidad es una ilusión",
     "video_id": "slTmrvhyKqE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Esto MANIPULA tu mente",
     "video_id": "RXqRKJIRnak"
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "afternoon",
+    "title": "👁️‍🗨️ Nadie te cuenta ESTO",
+    "video_id": "07tZzScajWM"
   }
 ]
