@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-04",
-    "slot": "afternoon",
-    "title": "🧠 Tu realidad es una ilusión",
-    "video_id": "slTmrvhyKqE"
-  },
-  {
-    "date": "2026-10-04",
     "slot": "evening",
     "title": "👁️‍🗨️ Tu casa tiene un secreto",
     "video_id": "Kmj9xAunjlM"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👁️‍🗨️ Nadie te cuenta ESTO",
     "video_id": "07tZzScajWM"
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "evening",
+    "title": "🤯 La realidad es un ENGAÑO",
+    "video_id": "z7M2foFlqAg"
   }
 ]
