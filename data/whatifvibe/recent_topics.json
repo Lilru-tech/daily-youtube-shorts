@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-04",
-    "slot": "afternoon",
-    "title": "What If Gravity Suddenly DOUBLED? 🤯",
-    "video_id": "oLJaVV01-CM"
-  },
-  {
-    "date": "2026-10-04",
     "slot": "evening",
     "title": "What If You Hear Voices Nobody Else Can? 😱",
     "video_id": "cabMdO67pJQ"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Own Handwriting Betrayed You? 🤯",
     "video_id": "xoXKJN8K79c"
+  },
+  {
+    "date": "2026-10-15",
+    "slot": "afternoon",
+    "title": "What If Gravity Just... Reversed? 🤯",
+    "video_id": "OrUBoBk0GYk"
   }
 ]
