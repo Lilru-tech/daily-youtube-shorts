@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-05",
-    "slot": "morning",
-    "title": "💥 Tu cerebro te manipula",
-    "video_id": "vxAYb-y49Sg"
-  },
-  {
-    "date": "2026-10-05",
     "slot": "afternoon",
     "title": "🤯 Tu mente te esconde algo",
     "video_id": "j2xpVQqPf0g"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te hace esto",
     "video_id": "_TkWxfcwqHY"
+  },
+  {
+    "date": "2026-10-16",
+    "slot": "afternoon",
+    "title": "🪞 ¿Eres tú quien mira?",
+    "video_id": "CprIIipwh7o"
   }
 ]
