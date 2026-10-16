@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-04",
-    "slot": "evening",
-    "title": "👁️‍🗨️ Tu casa tiene un secreto",
-    "video_id": "Kmj9xAunjlM"
-  },
-  {
     "date": "2026-10-05",
     "slot": "morning",
     "title": "💥 Tu cerebro te manipula",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 La realidad es un ENGAÑO",
     "video_id": "z7M2foFlqAg"
+  },
+  {
+    "date": "2026-10-16",
+    "slot": "morning",
+    "title": "🤯 Tu mente te hace esto",
+    "video_id": "_TkWxfcwqHY"
   }
 ]
