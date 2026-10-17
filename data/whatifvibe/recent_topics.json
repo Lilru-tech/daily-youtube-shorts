@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-06",
-    "slot": "morning",
-    "title": "What If You Never Drank Water Again? 💧",
-    "video_id": "S6HuYg5WY2s"
-  },
-  {
-    "date": "2026-10-06",
     "slot": "afternoon",
     "title": "What If Light Speed Was SLOWER? 🤯",
     "video_id": "fd88qBNry7g"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Stopped Spinning INSTANTLY? 🤯",
     "video_id": "VEBW7JhJLG0"
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "morning",
+    "title": "What If Your Phone Texted You From Yourself? 😱",
+    "video_id": "bAU8wHGP-WA"
   }
 ]
