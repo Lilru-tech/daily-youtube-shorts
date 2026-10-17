@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-06",
-    "slot": "morning",
-    "title": "😱 Tu cerebro te ha creado ESTA realidad",
-    "video_id": "KXEHNuh-L-o"
-  },
-  {
-    "date": "2026-10-06",
     "slot": "afternoon",
     "title": "🤯 Esto SIENTE tu cerebro cada día",
     "video_id": "t5y4K_G3_Ns"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu realidad es una ilusión.",
     "video_id": "qOXcoEiZMdo"
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "afternoon",
+    "title": "🚪 Esto ABRE un portal",
+    "video_id": "eZkNKjplsJQ"
   }
 ]
