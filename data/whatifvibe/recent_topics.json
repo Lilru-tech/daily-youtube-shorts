@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-06",
-    "slot": "evening",
-    "title": "What If You Held Your Breath Forever? 😮",
-    "video_id": "UE4_YiL5u9Y"
-  },
-  {
     "date": "2026-10-07",
     "slot": "morning",
     "title": "What If You Weren't Alone in Your Own Skin? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Could NEVER Sleep Again? 😴",
     "video_id": "MbTVtUeOwHY"
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "evening",
+    "title": "What If All Sounds Were AMPLIFIED? 👂💥",
+    "video_id": "8bHz4LvGB34"
   }
 ]
