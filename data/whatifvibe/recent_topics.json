@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-06",
-    "slot": "afternoon",
-    "title": "What If Light Speed Was SLOWER? 🤯",
-    "video_id": "fd88qBNry7g"
-  },
-  {
-    "date": "2026-10-06",
     "slot": "evening",
     "title": "What If You Held Your Breath Forever? 😮",
     "video_id": "UE4_YiL5u9Y"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Phone Texted You From Yourself? 😱",
     "video_id": "bAU8wHGP-WA"
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "afternoon",
+    "title": "What If You Could NEVER Sleep Again? 😴",
+    "video_id": "MbTVtUeOwHY"
   }
 ]
