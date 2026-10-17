@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-06",
-    "slot": "afternoon",
-    "title": "🤯 Esto SIENTE tu cerebro cada día",
-    "video_id": "t5y4K_G3_Ns"
-  },
-  {
     "date": "2026-10-07",
     "slot": "morning",
     "title": "🧠 Tu realidad es pura ilusión",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🚪 Esto ABRE un portal",
     "video_id": "eZkNKjplsJQ"
+  },
+  {
+    "date": "2026-10-17",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "5_WrpdOiybU"
   }
 ]
