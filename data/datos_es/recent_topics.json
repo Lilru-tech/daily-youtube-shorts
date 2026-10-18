@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-07",
-    "slot": "morning",
-    "title": "🧠 Tu realidad es pura ilusión",
-    "video_id": "oC2Txwc3_Xw"
-  },
-  {
-    "date": "2026-10-07",
     "slot": "afternoon",
     "title": "😱 Esto pasó cuando desperté",
     "video_id": "Q1mAU1Ex01g"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "5_WrpdOiybU"
+  },
+  {
+    "date": "2026-10-18",
+    "slot": "morning",
+    "title": "🤯 Alguien VIVE en tu mente",
+    "video_id": "R08FbckO4Zc"
   }
 ]
