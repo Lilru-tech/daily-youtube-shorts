@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-07",
-    "slot": "afternoon",
-    "title": "😱 Esto pasó cuando desperté",
-    "video_id": "Q1mAU1Ex01g"
-  },
-  {
-    "date": "2026-10-07",
     "slot": "evening",
     "title": "🤯 Tu realidad: ¿quién la escribe?",
     "video_id": "52Z1qgArkpQ"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Alguien VIVE en tu mente",
     "video_id": "R08FbckO4Zc"
+  },
+  {
+    "date": "2026-10-18",
+    "slot": "afternoon",
+    "title": "🧠 Así CONTROLAN tus decisiones",
+    "video_id": "CZHJN4SjMBQ"
   }
 ]
