@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-07",
-    "slot": "evening",
-    "title": "🤯 Tu realidad: ¿quién la escribe?",
-    "video_id": "52Z1qgArkpQ"
-  },
-  {
     "date": "2026-10-08",
     "slot": "morning",
     "title": "🚪 Tu casa guarda un secreto aterrador",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Así CONTROLAN tus decisiones",
     "video_id": "CZHJN4SjMBQ"
+  },
+  {
+    "date": "2026-10-18",
+    "slot": "evening",
+    "title": "🧠 Tu mente NO es tuya",
+    "video_id": "oqqnSGbER7M"
   }
 ]
