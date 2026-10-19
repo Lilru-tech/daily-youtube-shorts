@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-08",
-    "slot": "morning",
-    "title": "🚪 Tu casa guarda un secreto aterrador",
-    "video_id": "niKNn0TcbX0"
-  },
-  {
-    "date": "2026-10-08",
     "slot": "afternoon",
     "title": "🧠 Tu mente te esconde ESTO",
     "video_id": "z1391tG5Kj4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu mente NO es tuya",
     "video_id": "oqqnSGbER7M"
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "morning",
+    "title": "🪞 El espejo TE MIRA a ti",
+    "video_id": "2Yuq3bVDGA0"
   }
 ]
