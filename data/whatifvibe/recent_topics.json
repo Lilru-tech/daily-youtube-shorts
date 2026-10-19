@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-08",
-    "slot": "morning",
-    "title": "What If You Never Slept Again? 🤯",
-    "video_id": "0yOAr6VlOXs"
-  },
-  {
-    "date": "2026-10-08",
     "slot": "afternoon",
     "title": "What If EVERYONE Read Your Mind? 🤯",
     "video_id": "vpieJzsm-ao"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Oxygen Levels DOUBLED? 🤯",
     "video_id": "WhXeAA8VJv4"
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "morning",
+    "title": "What If Your Reflection Isn't Yours? 🪞",
+    "video_id": "gs2pxRFRk2o"
   }
 ]
