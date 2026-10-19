@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-08",
-    "slot": "evening",
-    "title": "🤯 Tu reflejo: ¿eres tú?",
-    "video_id": "lvSq9OdmLxI"
-  },
-  {
     "date": "2026-10-09",
     "slot": "morning",
     "title": "☠️ Esto no lo hiciste tú... ¿o sí?",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🪞 El espejo TE ESTÁ USANDO",
     "video_id": "fJiDOukB-DE"
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "evening",
+    "title": "🚪 ¿Qué ves cuando NO hay nada?",
+    "video_id": "oSoL4uCDsiM"
   }
 ]
