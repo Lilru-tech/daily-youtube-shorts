@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-08",
-    "slot": "afternoon",
-    "title": "🧠 Tu mente te esconde ESTO",
-    "video_id": "z1391tG5Kj4"
-  },
-  {
-    "date": "2026-10-08",
     "slot": "evening",
     "title": "🤯 Tu reflejo: ¿eres tú?",
     "video_id": "lvSq9OdmLxI"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🪞 El espejo TE MIRA a ti",
     "video_id": "2Yuq3bVDGA0"
+  },
+  {
+    "date": "2026-10-19",
+    "slot": "afternoon",
+    "title": "🪞 El espejo TE ESTÁ USANDO",
+    "video_id": "fJiDOukB-DE"
   }
 ]
