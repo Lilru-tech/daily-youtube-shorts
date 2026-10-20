@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-09",
-    "slot": "evening",
-    "title": "🤯 Tu cuerpo no es tuyo",
-    "video_id": "sXVA2soaGqc"
-  },
-  {
     "date": "2026-10-10",
     "slot": "morning",
     "title": "🧠 Tu cerebro te engaña así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤫 Hay algo en tu reflejo",
     "video_id": "eLPcdx0Qxwk"
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "evening",
+    "title": "👁️ Tu realidad es un truco",
+    "video_id": "ujDrESxYKBM"
   }
 ]
