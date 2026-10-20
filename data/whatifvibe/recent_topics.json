@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-09",
-    "slot": "afternoon",
-    "title": "What If Our Sun Became a Black Hole? 🤯",
-    "video_id": "HXH6vZDBbuM"
-  },
-  {
-    "date": "2026-10-09",
     "slot": "evening",
     "title": "What If Gravity Vanished for 5 Seconds? 🤯",
     "video_id": "L6A2SnlS0bE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Never Felt PAIN? 😱",
     "video_id": "oGjBupQGLCM"
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "afternoon",
+    "title": "What If Gravity Suddenly VANISHED? 🤯",
+    "video_id": "QTPbGfuJP1w"
   }
 ]
