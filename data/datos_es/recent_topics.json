@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-09",
-    "slot": "morning",
-    "title": "☠️ Esto no lo hiciste tú... ¿o sí?",
-    "video_id": "vPJVkGl6vdo"
-  },
-  {
-    "date": "2026-10-09",
     "slot": "afternoon",
     "title": "🤯 Tu mente no es solo tuya",
     "video_id": "p7-gBoMzkTo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🚪 ¿Qué ves cuando NO hay nada?",
     "video_id": "oSoL4uCDsiM"
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "morning",
+    "title": "🧠 Nadie te cuenta esto",
+    "video_id": "5h7KnkthGng"
   }
 ]
