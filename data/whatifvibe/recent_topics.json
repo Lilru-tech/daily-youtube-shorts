@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-10",
-    "slot": "afternoon",
-    "title": "What If All Colors Vanished? 🤯",
-    "video_id": "JjI1XXXynI4"
-  },
-  {
-    "date": "2026-10-10",
     "slot": "evening",
     "title": "What If You NEVER Drank Water Again? 💧",
     "video_id": "foPDGzJL3lc"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth LEFT Our Solar System? 🌌",
     "video_id": "Hjcy9VSkUn8"
+  },
+  {
+    "date": "2026-10-21",
+    "slot": "afternoon",
+    "title": "What If You Never Slept AGAIN? 🤯",
+    "video_id": "PpNTjNL95SQ"
   }
 ]
