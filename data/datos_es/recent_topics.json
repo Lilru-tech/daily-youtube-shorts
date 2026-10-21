@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-10",
-    "slot": "morning",
-    "title": "🧠 Tu cerebro te engaña así",
-    "video_id": "UoNDK_4LhUE"
-  },
-  {
-    "date": "2026-10-10",
     "slot": "afternoon",
     "title": "🤯 Tu mente: ¿quién decide?",
     "video_id": "F9JzHBOGSak"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👁️ Tu realidad es un truco",
     "video_id": "ujDrESxYKBM"
+  },
+  {
+    "date": "2026-10-21",
+    "slot": "morning",
+    "title": "🤫 Esto ESCONDEN tus ojos",
+    "video_id": "2N-MWdyNnXc"
   }
 ]
