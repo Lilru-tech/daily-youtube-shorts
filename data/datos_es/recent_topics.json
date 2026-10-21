@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-10",
-    "slot": "evening",
-    "title": "👁️ Así tu cerebro te manipula",
-    "video_id": "Z4JDS1tNo_4"
-  },
-  {
     "date": "2026-10-11",
     "slot": "morning",
     "title": "🤯 La gran mentira de tu mente",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "💀 Tu cuerpo ya NO es tuyo",
     "video_id": "lRqpzGdrEW8"
+  },
+  {
+    "date": "2026-10-21",
+    "slot": "evening",
+    "title": "👥 ¿Quién vive en tu interior?",
+    "video_id": "IIkaeIJlpLc"
   }
 ]
