@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-10",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente: ¿quién decide?",
-    "video_id": "F9JzHBOGSak"
-  },
-  {
-    "date": "2026-10-10",
     "slot": "evening",
     "title": "👁️ Así tu cerebro te manipula",
     "video_id": "Z4JDS1tNo_4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤫 Esto ESCONDEN tus ojos",
     "video_id": "2N-MWdyNnXc"
+  },
+  {
+    "date": "2026-10-21",
+    "slot": "afternoon",
+    "title": "💀 Tu cuerpo ya NO es tuyo",
+    "video_id": "lRqpzGdrEW8"
   }
 ]
