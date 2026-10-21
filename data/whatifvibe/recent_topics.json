@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-09",
-    "slot": "evening",
-    "title": "What If Gravity Vanished for 5 Seconds? 🤯",
-    "video_id": "L6A2SnlS0bE"
-  },
-  {
     "date": "2026-10-10",
     "slot": "morning",
     "title": "What If Time Ran Backwards? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Gravity Suddenly VANISHED? 🤯",
     "video_id": "QTPbGfuJP1w"
+  },
+  {
+    "date": "2026-10-20",
+    "slot": "evening",
+    "title": "What If You Ate Nothing But CHIPS?",
+    "video_id": "TdiWZdHmYcM"
   }
 ]
