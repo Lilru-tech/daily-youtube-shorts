@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-11",
-    "slot": "afternoon",
-    "title": "🤫 Tu mente hace ESTO y no lo sabes",
-    "video_id": "MAbNhdTbSlI"
-  },
-  {
-    "date": "2026-10-11",
     "slot": "evening",
     "title": "😈 El espejo te miente",
     "video_id": "v_R3BNn9LB0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "nvUBhl-4fZE"
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "afternoon",
+    "title": "👽 ¿Te has visto hoy?",
+    "video_id": "1zi4ZTQw7R4"
   }
 ]
