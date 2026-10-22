@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-10",
-    "slot": "evening",
-    "title": "What If You NEVER Drank Water Again? 💧",
-    "video_id": "foPDGzJL3lc"
-  },
-  {
     "date": "2026-10-11",
     "slot": "morning",
     "title": "What If You NEVER Breathed Again? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Never Slept AGAIN? 🤯",
     "video_id": "PpNTjNL95SQ"
+  },
+  {
+    "date": "2026-10-21",
+    "slot": "evening",
+    "title": "What If Your Reflection Took Over? 😱",
+    "video_id": "2mqIZj2kvVI"
   }
 ]
