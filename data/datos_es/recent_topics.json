@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-11",
-    "slot": "morning",
-    "title": "🤯 La gran mentira de tu mente",
-    "video_id": "rR6f30-me68"
-  },
-  {
-    "date": "2026-10-11",
     "slot": "afternoon",
     "title": "🤫 Tu mente hace ESTO y no lo sabes",
     "video_id": "MAbNhdTbSlI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👥 ¿Quién vive en tu interior?",
     "video_id": "IIkaeIJlpLc"
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "nvUBhl-4fZE"
   }
 ]
