@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-11",
-    "slot": "evening",
-    "title": "😈 El espejo te miente",
-    "video_id": "v_R3BNn9LB0"
-  },
-  {
     "date": "2026-10-13",
     "slot": "morning",
     "title": "⚠️ Alguien controla tus acciones",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👽 ¿Te has visto hoy?",
     "video_id": "1zi4ZTQw7R4"
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "evening",
+    "title": "🤫 Nadie te cuenta ESTO",
+    "video_id": "fVoIVSacUkU"
   }
 ]
