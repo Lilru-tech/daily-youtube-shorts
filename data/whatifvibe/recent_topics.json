@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-11",
-    "slot": "morning",
-    "title": "What If You NEVER Breathed Again? 🤯",
-    "video_id": "KBryC5fgG7g"
-  },
-  {
-    "date": "2026-10-11",
     "slot": "afternoon",
     "title": "What If Earth Suddenly STOPPED Spinning? 🤯",
     "video_id": "k4kjoaDUnQ0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Reflection Took Over? 😱",
     "video_id": "2mqIZj2kvVI"
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "morning",
+    "title": "What If Time STOPPED for YOU?! ⏳",
+    "video_id": "lQ9C8xY9V1w"
   }
 ]
