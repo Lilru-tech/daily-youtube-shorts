@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-13",
-    "slot": "morning",
-    "title": "What If Every Human Dreamed the Same Dream? 🤯",
-    "video_id": "-v6pTBbYyuo"
-  },
-  {
-    "date": "2026-10-13",
     "slot": "afternoon",
     "title": "What If Earth Had Rings Like Saturn? 🤯",
     "video_id": "9yRplLHLVqE"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Lost Its Moon... Permanently? 😱",
     "video_id": "xe_EonOaDFE"
+  },
+  {
+    "date": "2026-10-23",
+    "slot": "morning",
+    "title": "What If Your Own Eyes LIED To You? 🤯",
+    "video_id": "-B8etwX45Sc"
   }
 ]
