@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-11",
-    "slot": "evening",
-    "title": "What If Your Loved One Became A Stranger? 🤯",
-    "video_id": "tB7FCE7-h5M"
-  },
-  {
     "date": "2026-10-13",
     "slot": "morning",
     "title": "What If Every Human Dreamed the Same Dream? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If ALL Oxygen Vanished for 5 Seconds? 🌬️",
     "video_id": "iZiSVEsnC8A"
+  },
+  {
+    "date": "2026-10-22",
+    "slot": "evening",
+    "title": "What If Earth Lost Its Moon... Permanently? 😱",
+    "video_id": "xe_EonOaDFE"
   }
 ]
