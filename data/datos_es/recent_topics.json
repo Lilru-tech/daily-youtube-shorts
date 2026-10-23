@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-13",
-    "slot": "afternoon",
-    "title": "🤯 Esto no lo elegiste tú",
-    "video_id": "YPeQOfs3kR4"
-  },
-  {
-    "date": "2026-10-13",
     "slot": "evening",
     "title": "🤯 Tu mente: ¿quién la controla?",
     "video_id": "57vQlUwzqeE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🚪 ¿Quién susurra en tu mente?",
     "video_id": "omovCzY3xos"
+  },
+  {
+    "date": "2026-10-23",
+    "slot": "afternoon",
+    "title": "🤯 Tu mente te miente así",
+    "video_id": "O9Ct4223HcA"
   }
 ]
