@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-13",
-    "slot": "morning",
-    "title": "⚠️ Alguien controla tus acciones",
-    "video_id": "3cUTK4yWw1k"
-  },
-  {
-    "date": "2026-10-13",
     "slot": "afternoon",
     "title": "🤯 Esto no lo elegiste tú",
     "video_id": "YPeQOfs3kR4"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤫 Nadie te cuenta ESTO",
     "video_id": "fVoIVSacUkU"
+  },
+  {
+    "date": "2026-10-23",
+    "slot": "morning",
+    "title": "🚪 ¿Quién susurra en tu mente?",
+    "video_id": "omovCzY3xos"
   }
 ]
