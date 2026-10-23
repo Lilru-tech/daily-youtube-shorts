@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-13",
-    "slot": "afternoon",
-    "title": "What If Earth Had Rings Like Saturn? 🤯",
-    "video_id": "9yRplLHLVqE"
-  },
-  {
-    "date": "2026-10-13",
     "slot": "evening",
     "title": "What If Your Reflection Blinked First? 😨",
     "video_id": "A50BDK7G2WA"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Own Eyes LIED To You? 🤯",
     "video_id": "-B8etwX45Sc"
+  },
+  {
+    "date": "2026-10-23",
+    "slot": "afternoon",
+    "title": "What If Your Memory... Isn't Yours? 🤯",
+    "video_id": "dkqFDAWPWQ0"
   }
 ]
