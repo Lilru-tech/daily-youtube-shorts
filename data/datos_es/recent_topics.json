@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-14",
-    "slot": "evening",
-    "title": "🤫 Hay algo DENTRO de ti.",
-    "video_id": "_E6-3_S6FRU"
-  },
-  {
     "date": "2026-10-15",
     "slot": "morning",
     "title": "🤯 Esto MANIPULA tu mente",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu cerebro te oculta la verdad.",
     "video_id": "ZtTYnuVEax8"
+  },
+  {
+    "date": "2026-10-24",
+    "slot": "evening",
+    "title": "🤯 Esto explica tu falsa realidad",
+    "video_id": "PkPMrWHEKyY"
   }
 ]
