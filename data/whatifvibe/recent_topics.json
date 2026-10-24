@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-13",
-    "slot": "evening",
-    "title": "What If Your Reflection Blinked First? 😨",
-    "video_id": "A50BDK7G2WA"
-  },
-  {
     "date": "2026-10-14",
     "slot": "morning",
     "title": "What If Your Echo Answered Back? 😨",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Memory... Isn't Yours? 🤯",
     "video_id": "dkqFDAWPWQ0"
+  },
+  {
+    "date": "2026-10-23",
+    "slot": "evening",
+    "title": "What If You Drank SEAWATER Daily? 💀",
+    "video_id": "aLcxCfK52Xo"
   }
 ]
