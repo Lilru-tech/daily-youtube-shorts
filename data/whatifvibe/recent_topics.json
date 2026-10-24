@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-14",
-    "slot": "evening",
-    "title": "What If You Lived Underwater?",
-    "video_id": "fx8SP4ff4aQ"
-  },
-  {
     "date": "2026-10-15",
     "slot": "morning",
     "title": "What If Your Own Handwriting Betrayed You? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Gravity Suddenly Flipped Upside Down? 🤯",
     "video_id": "_Im3pz_NGO0"
+  },
+  {
+    "date": "2026-10-24",
+    "slot": "evening",
+    "title": "What If Light SLOWED Down? 🤯",
+    "video_id": "-GPfuThMBQM"
   }
 ]
