@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-14",
-    "slot": "morning",
-    "title": "🧠 Tu mente: ¿ficción o realidad?",
-    "video_id": "FtcVMGccBuU"
-  },
-  {
-    "date": "2026-10-14",
     "slot": "afternoon",
     "title": "🤯 Tu mente te ENGAÑA, ¿por qué?",
     "video_id": "kSrKgPsRQ8w"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🎭 Tu vida, un guion invisible",
     "video_id": "iGOHpdylnXM"
+  },
+  {
+    "date": "2026-10-24",
+    "slot": "morning",
+    "title": "🧠 Tu memoria es una farsa",
+    "video_id": "2qphOS-8t0g"
   }
 ]
