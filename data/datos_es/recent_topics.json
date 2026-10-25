@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-15",
-    "slot": "morning",
-    "title": "🤯 Esto MANIPULA tu mente",
-    "video_id": "RXqRKJIRnak"
-  },
-  {
-    "date": "2026-10-15",
     "slot": "afternoon",
     "title": "👁️‍🗨️ Nadie te cuenta ESTO",
     "video_id": "07tZzScajWM"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Esto explica tu falsa realidad",
     "video_id": "PkPMrWHEKyY"
+  },
+  {
+    "date": "2026-10-25",
+    "slot": "morning",
+    "title": "🧠 Así manipulan tu realidad",
+    "video_id": "56wRzyUUX5M"
   }
 ]
