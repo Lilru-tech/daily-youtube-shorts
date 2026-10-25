@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-15",
-    "slot": "afternoon",
-    "title": "What If Gravity Just... Reversed? 🤯",
-    "video_id": "OrUBoBk0GYk"
-  },
-  {
-    "date": "2026-10-15",
     "slot": "evening",
     "title": "What If Earth Lost Its Magnetic Field? 🤯",
     "video_id": "qZcfImxe6o4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth Just STOPPED Spinning?! 🤯",
     "video_id": "y6SebJ_eEGo"
+  },
+  {
+    "date": "2026-10-25",
+    "slot": "afternoon",
+    "title": "What If ALL Light Became a Black Hole? 🤯",
+    "video_id": "B-TqpiVenmk"
   }
 ]
