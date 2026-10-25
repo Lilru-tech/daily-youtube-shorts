@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-15",
-    "slot": "evening",
-    "title": "🤯 La realidad es un ENGAÑO",
-    "video_id": "z7M2foFlqAg"
-  },
-  {
     "date": "2026-10-16",
     "slot": "morning",
     "title": "🤯 Tu mente te hace esto",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👁️ Esto dirige tus decisiones",
     "video_id": "isWahrCymy4"
+  },
+  {
+    "date": "2026-10-25",
+    "slot": "evening",
+    "title": "🤯 Tu cerebro te sabotea así",
+    "video_id": "w_C0uhkZiCk"
   }
 ]
