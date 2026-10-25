@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-15",
-    "slot": "evening",
-    "title": "What If Earth Lost Its Magnetic Field? 🤯",
-    "video_id": "qZcfImxe6o4"
-  },
-  {
     "date": "2026-10-16",
     "slot": "morning",
     "title": "What If The Moon Vanished INSTANTLY? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If ALL Light Became a Black Hole? 🤯",
     "video_id": "B-TqpiVenmk"
+  },
+  {
+    "date": "2026-10-25",
+    "slot": "evening",
+    "title": "What If Time STOPPED for Everyone Else? 🤯",
+    "video_id": "EcGOxXfRQis"
   }
 ]
