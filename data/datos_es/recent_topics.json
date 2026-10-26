@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-16",
-    "slot": "afternoon",
-    "title": "🪞 ¿Eres tú quien mira?",
-    "video_id": "CprIIipwh7o"
-  },
-  {
-    "date": "2026-10-16",
     "slot": "evening",
     "title": "🧠 Esto ENGAÑA a tu propia mente",
     "video_id": "AYG4JZXSR6s"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu realidad es pura ilusión",
     "video_id": "J5epLRrjLLg"
+  },
+  {
+    "date": "2026-10-26",
+    "slot": "afternoon",
+    "title": "🤯 La trampa de tu propio reflejo",
+    "video_id": "LXhxej-vi9o"
   }
 ]
