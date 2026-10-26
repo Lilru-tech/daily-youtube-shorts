@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-16",
-    "slot": "morning",
-    "title": "🤯 Tu mente te hace esto",
-    "video_id": "_TkWxfcwqHY"
-  },
-  {
-    "date": "2026-10-16",
     "slot": "afternoon",
     "title": "🪞 ¿Eres tú quien mira?",
     "video_id": "CprIIipwh7o"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu cerebro te sabotea así",
     "video_id": "w_C0uhkZiCk"
+  },
+  {
+    "date": "2026-10-26",
+    "slot": "morning",
+    "title": "🧠 Tu realidad es pura ilusión",
+    "video_id": "J5epLRrjLLg"
   }
 ]
