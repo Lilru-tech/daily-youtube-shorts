@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-17",
-    "slot": "afternoon",
-    "title": "What If You Could NEVER Sleep Again? 😴",
-    "video_id": "MbTVtUeOwHY"
-  },
-  {
-    "date": "2026-10-17",
     "slot": "evening",
     "title": "What If All Sounds Were AMPLIFIED? 👂💥",
     "video_id": "8bHz4LvGB34"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Hands Were NOT Yours? 😱",
     "video_id": "lGjASb0F82c"
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "afternoon",
+    "title": "What If You Weren't You? 😱",
+    "video_id": "ECiTSmDkTDg"
   }
 ]
