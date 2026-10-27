@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-17",
-    "slot": "morning",
-    "title": "🧠 Tu realidad es una ilusión.",
-    "video_id": "qOXcoEiZMdo"
-  },
-  {
-    "date": "2026-10-17",
     "slot": "afternoon",
     "title": "🚪 Esto ABRE un portal",
     "video_id": "eZkNKjplsJQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cuerpo no te pertenece",
     "video_id": "wyUefU5He2s"
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "morning",
+    "title": "🧠 Tu libertad es un truco",
+    "video_id": "IkUu41_hc00"
   }
 ]
