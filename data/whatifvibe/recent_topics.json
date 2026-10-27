@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-16",
-    "slot": "evening",
-    "title": "What If Earth Stopped Spinning INSTANTLY? 🤯",
-    "video_id": "VEBW7JhJLG0"
-  },
-  {
     "date": "2026-10-17",
     "slot": "morning",
     "title": "What If Your Phone Texted You From Yourself? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Our Sun Became a Black Hole? 🤯",
     "video_id": "4dJhqBFhWRc"
+  },
+  {
+    "date": "2026-10-26",
+    "slot": "evening",
+    "title": "What If You NEVER Slept Again? 🤯",
+    "video_id": "AqZnk-Z-9pk"
   }
 ]
