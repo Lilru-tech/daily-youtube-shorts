@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-17",
-    "slot": "morning",
-    "title": "What If Your Phone Texted You From Yourself? 😱",
-    "video_id": "bAU8wHGP-WA"
-  },
-  {
-    "date": "2026-10-17",
     "slot": "afternoon",
     "title": "What If You Could NEVER Sleep Again? 😴",
     "video_id": "MbTVtUeOwHY"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You NEVER Slept Again? 🤯",
     "video_id": "AqZnk-Z-9pk"
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "morning",
+    "title": "What If Your Hands Were NOT Yours? 😱",
+    "video_id": "lGjASb0F82c"
   }
 ]
