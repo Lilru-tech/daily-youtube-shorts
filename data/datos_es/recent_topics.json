@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-17",
-    "slot": "afternoon",
-    "title": "🚪 Esto ABRE un portal",
-    "video_id": "eZkNKjplsJQ"
-  },
-  {
-    "date": "2026-10-17",
     "slot": "evening",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "5_WrpdOiybU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu libertad es un truco",
     "video_id": "IkUu41_hc00"
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "afternoon",
+    "title": "🤯 La verdad de tus ojos",
+    "video_id": "sM1wO8DwCG0"
   }
 ]
