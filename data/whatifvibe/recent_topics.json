@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-18",
-    "slot": "morning",
-    "title": "What If You Stopped Breathing Right Now? 🤯",
-    "video_id": "hjBFMz2ZiDo"
-  },
-  {
-    "date": "2026-10-18",
     "slot": "afternoon",
     "title": "What If Your Walls Are Hiding Something? 😱",
     "video_id": "ZH8htRxr3NI"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth's Atmosphere Just... Vanished? 🤯",
     "video_id": "dJxcTWuAhyQ"
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "morning",
+    "title": "What If the Moon Just Vanished? 🌑",
+    "video_id": "T18wlGciAgU"
   }
 ]
