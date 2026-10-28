@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-18",
-    "slot": "afternoon",
-    "title": "🧠 Así CONTROLAN tus decisiones",
-    "video_id": "CZHJN4SjMBQ"
-  },
-  {
-    "date": "2026-10-18",
     "slot": "evening",
     "title": "🧠 Tu mente NO es tuya",
     "video_id": "oqqnSGbER7M"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu cerebro reescribe tu vida",
     "video_id": "ACaCCJKDHxw"
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "afternoon",
+    "title": "🧠 Tu realidad es una invención",
+    "video_id": "H-vnLKiQXr4"
   }
 ]
