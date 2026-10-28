@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-17",
-    "slot": "evening",
-    "title": "What If All Sounds Were AMPLIFIED? 👂💥",
-    "video_id": "8bHz4LvGB34"
-  },
-  {
     "date": "2026-10-18",
     "slot": "morning",
     "title": "What If You Stopped Breathing Right Now? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Weren't You? 😱",
     "video_id": "ECiTSmDkTDg"
+  },
+  {
+    "date": "2026-10-27",
+    "slot": "evening",
+    "title": "What If Earth's Atmosphere Just... Vanished? 🤯",
+    "video_id": "dJxcTWuAhyQ"
   }
 ]
