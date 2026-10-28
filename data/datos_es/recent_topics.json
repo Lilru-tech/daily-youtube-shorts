@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-18",
-    "slot": "evening",
-    "title": "🧠 Tu mente NO es tuya",
-    "video_id": "oqqnSGbER7M"
-  },
-  {
     "date": "2026-10-19",
     "slot": "morning",
     "title": "🪞 El espejo TE MIRA a ti",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu realidad es una invención",
     "video_id": "H-vnLKiQXr4"
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "evening",
+    "title": "🧠 La trampa de tu memoria",
+    "video_id": "0SZZAtVlx8Y"
   }
 ]
