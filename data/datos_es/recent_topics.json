@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-18",
-    "slot": "morning",
-    "title": "🤯 Alguien VIVE en tu mente",
-    "video_id": "R08FbckO4Zc"
-  },
-  {
-    "date": "2026-10-18",
     "slot": "afternoon",
     "title": "🧠 Así CONTROLAN tus decisiones",
     "video_id": "CZHJN4SjMBQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu cerebro ya ha decidido",
     "video_id": "WF0WoAPqwf4"
+  },
+  {
+    "date": "2026-10-28",
+    "slot": "morning",
+    "title": "🧠 Tu cerebro reescribe tu vida",
+    "video_id": "ACaCCJKDHxw"
   }
 ]
