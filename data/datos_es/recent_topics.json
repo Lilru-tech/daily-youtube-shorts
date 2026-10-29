@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-19",
-    "slot": "afternoon",
-    "title": "🪞 El espejo TE ESTÁ USANDO",
-    "video_id": "fJiDOukB-DE"
-  },
-  {
-    "date": "2026-10-19",
     "slot": "evening",
     "title": "🚪 ¿Qué ves cuando NO hay nada?",
     "video_id": "oSoL4uCDsiM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Esta es tu verdadera cárcel",
     "video_id": "Z83k0ezPmLk"
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "afternoon",
+    "title": "😨 La voz que me ordena saltar",
+    "video_id": "y3gZ34fwKj8"
   }
 ]
