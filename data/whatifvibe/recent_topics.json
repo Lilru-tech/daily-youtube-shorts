@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-19",
-    "slot": "morning",
-    "title": "What If Your Reflection Isn't Yours? 🪞",
-    "video_id": "gs2pxRFRk2o"
-  },
-  {
-    "date": "2026-10-19",
     "slot": "afternoon",
     "title": "What If Earth Had TWO MOONS? 😱",
     "video_id": "5xjaTQ8nl_o"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Something Else Grew Inside You? 😱",
     "video_id": "U-l4TUjbv5w"
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "morning",
+    "title": "What If Gravity Just Vanished? 🤯",
+    "video_id": "iUIeNO-DxMM"
   }
 ]
