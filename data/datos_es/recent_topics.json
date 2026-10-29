@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-19",
-    "slot": "evening",
-    "title": "🚪 ¿Qué ves cuando NO hay nada?",
-    "video_id": "oSoL4uCDsiM"
-  },
-  {
     "date": "2026-10-20",
     "slot": "morning",
     "title": "🧠 Nadie te cuenta esto",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😨 La voz que me ordena saltar",
     "video_id": "y3gZ34fwKj8"
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "evening",
+    "title": "🧠 Haces esto sin darte cuenta",
+    "video_id": "0WJ2qO6wsFA"
   }
 ]
