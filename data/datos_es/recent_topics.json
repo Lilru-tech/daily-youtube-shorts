@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-20",
-    "slot": "morning",
-    "title": "🧠 Nadie te cuenta esto",
-    "video_id": "5h7KnkthGng"
-  },
-  {
-    "date": "2026-10-20",
     "slot": "afternoon",
     "title": "🤫 Hay algo en tu reflejo",
     "video_id": "eLPcdx0Qxwk"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Haces esto sin darte cuenta",
     "video_id": "0WJ2qO6wsFA"
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "morning",
+    "title": "🤯 ¿Quién respira a tu lado?",
+    "video_id": "Pq62KNGFXo4"
   }
 ]
