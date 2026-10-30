@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-20",
-    "slot": "afternoon",
-    "title": "🤫 Hay algo en tu reflejo",
-    "video_id": "eLPcdx0Qxwk"
-  },
-  {
-    "date": "2026-10-20",
     "slot": "evening",
     "title": "👁️ Tu realidad es un truco",
     "video_id": "ujDrESxYKBM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 ¿Quién respira a tu lado?",
     "video_id": "Pq62KNGFXo4"
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "afternoon",
+    "title": "🤯 Así te engaña tu propia mente",
+    "video_id": "W0IVb192_n0"
   }
 ]
