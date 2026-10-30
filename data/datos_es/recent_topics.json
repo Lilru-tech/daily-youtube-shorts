@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-20",
-    "slot": "evening",
-    "title": "👁️ Tu realidad es un truco",
-    "video_id": "ujDrESxYKBM"
-  },
-  {
     "date": "2026-10-21",
     "slot": "morning",
     "title": "🤫 Esto ESCONDEN tus ojos",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Así te engaña tu propia mente",
     "video_id": "W0IVb192_n0"
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "evening",
+    "title": "🧠 El último recuerdo borrado",
+    "video_id": "pc_Ps7IOst4"
   }
 ]
