@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-19",
-    "slot": "evening",
-    "title": "What If Your Face Was No Longer Yours? 😱",
-    "video_id": "l-kTvnt2G0I"
-  },
-  {
     "date": "2026-10-20",
     "slot": "morning",
     "title": "What If You Never Felt PAIN? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth's Core Froze? 🥶",
     "video_id": "N5mOdHDCq74"
+  },
+  {
+    "date": "2026-10-29",
+    "slot": "evening",
+    "title": "What If Time Ran Backward? 🤯",
+    "video_id": "uJ7Eu2nyaSI"
   }
 ]
