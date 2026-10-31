@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-20",
-    "slot": "evening",
-    "title": "What If You Ate Nothing But CHIPS?",
-    "video_id": "TdiWZdHmYcM"
-  },
-  {
     "date": "2026-10-21",
     "slot": "morning",
     "title": "What If Earth LEFT Our Solar System? 🌌",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Suddenly STOPPED Spinning? 🤯",
     "video_id": "ZKP7MnahsI0"
+  },
+  {
+    "date": "2026-10-30",
+    "slot": "evening",
+    "title": "What If You Lived on a Dyson Sphere?",
+    "video_id": "4_7XQhMtOew"
   }
 ]
