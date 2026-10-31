@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-21",
-    "slot": "evening",
-    "title": "👥 ¿Quién vive en tu interior?",
-    "video_id": "IIkaeIJlpLc"
-  },
-  {
     "date": "2026-10-22",
     "slot": "morning",
     "title": "🧠 Tu cerebro te engaña así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Nadie te ha contado esto",
     "video_id": "yV6Sz9hN_HE"
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "evening",
+    "title": "🤯 Tu reflejo no eres tú",
+    "video_id": "SDV_wIAuI_Y"
   }
 ]
