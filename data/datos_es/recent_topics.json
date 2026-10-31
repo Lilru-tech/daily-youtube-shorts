@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-21",
-    "slot": "afternoon",
-    "title": "💀 Tu cuerpo ya NO es tuyo",
-    "video_id": "lRqpzGdrEW8"
-  },
-  {
-    "date": "2026-10-21",
     "slot": "evening",
     "title": "👥 ¿Quién vive en tu interior?",
     "video_id": "IIkaeIJlpLc"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu decisión es un espejismo",
     "video_id": "38dn9bs0Yo0"
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "afternoon",
+    "title": "🤯 Nadie te ha contado esto",
+    "video_id": "yV6Sz9hN_HE"
   }
 ]
