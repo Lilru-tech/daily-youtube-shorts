@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-21",
-    "slot": "morning",
-    "title": "🤫 Esto ESCONDEN tus ojos",
-    "video_id": "2N-MWdyNnXc"
-  },
-  {
-    "date": "2026-10-21",
     "slot": "afternoon",
     "title": "💀 Tu cuerpo ya NO es tuyo",
     "video_id": "lRqpzGdrEW8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 El último recuerdo borrado",
     "video_id": "pc_Ps7IOst4"
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "morning",
+    "title": "🧠 Tu decisión es un espejismo",
+    "video_id": "38dn9bs0Yo0"
   }
 ]
