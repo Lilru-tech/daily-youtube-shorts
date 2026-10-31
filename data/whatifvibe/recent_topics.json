@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-21",
-    "slot": "morning",
-    "title": "What If Earth LEFT Our Solar System? 🌌",
-    "video_id": "Hjcy9VSkUn8"
-  },
-  {
-    "date": "2026-10-21",
     "slot": "afternoon",
     "title": "What If You Never Slept AGAIN? 🤯",
     "video_id": "PpNTjNL95SQ"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Lived on a Dyson Sphere?",
     "video_id": "4_7XQhMtOew"
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "morning",
+    "title": "What If You Never Slept Again? 🤯",
+    "video_id": "qSGyz9QJblc"
   }
 ]
