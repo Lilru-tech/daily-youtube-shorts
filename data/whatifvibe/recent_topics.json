@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-21",
-    "slot": "evening",
-    "title": "What If Your Reflection Took Over? 😱",
-    "video_id": "2mqIZj2kvVI"
-  },
-  {
     "date": "2026-10-22",
     "slot": "morning",
     "title": "What If Time STOPPED for YOU?! ⏳",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Earth Had Two Moons? 🌕🤯",
     "video_id": "av1Oq9wfg-o"
+  },
+  {
+    "date": "2026-10-31",
+    "slot": "evening",
+    "title": "What If You Heard the Static of Reality? 🤯",
+    "video_id": "NrHCQ_B-Hmw"
   }
 ]
