@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-22",
-    "slot": "afternoon",
-    "title": "👽 ¿Te has visto hoy?",
-    "video_id": "1zi4ZTQw7R4"
-  },
-  {
-    "date": "2026-10-22",
     "slot": "evening",
     "title": "🤫 Nadie te cuenta ESTO",
     "video_id": "fVoIVSacUkU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu cerebro te miente así",
     "video_id": "MHXoLjXRGAw"
+  },
+  {
+    "date": "2026-11-01",
+    "slot": "afternoon",
+    "title": "🧠 Nunca estás realmente solo",
+    "video_id": "omo6NcTbRRU"
   }
 ]
