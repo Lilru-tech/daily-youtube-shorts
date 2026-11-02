@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-23",
-    "slot": "evening",
-    "title": "🎭 Tu vida, un guion invisible",
-    "video_id": "iGOHpdylnXM"
-  },
-  {
     "date": "2026-10-24",
     "slot": "morning",
     "title": "🧠 Tu memoria es una farsa",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu cuerpo ya no es tuyo",
     "video_id": "24nFvoXdGFk"
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "evening",
+    "title": "🧠 La trampa en el espejo",
+    "video_id": "-OgaE_UvSNs"
   }
 ]
