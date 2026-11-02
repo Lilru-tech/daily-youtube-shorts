@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-23",
-    "slot": "morning",
-    "title": "What If Your Own Eyes LIED To You? 🤯",
-    "video_id": "-B8etwX45Sc"
-  },
-  {
-    "date": "2026-10-23",
     "slot": "afternoon",
     "title": "What If Your Memory... Isn't Yours? 🤯",
     "video_id": "dkqFDAWPWQ0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Reflection Moved Alone? 😨",
     "video_id": "w8votyl-vqw"
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "morning",
+    "title": "What If Gravity Vanished for 5 Seconds? 🤯",
+    "video_id": "FA94j4EcMCo"
   }
 ]
