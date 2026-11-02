@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-23",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te miente así",
-    "video_id": "O9Ct4223HcA"
-  },
-  {
-    "date": "2026-10-23",
     "slot": "evening",
     "title": "🎭 Tu vida, un guion invisible",
     "video_id": "iGOHpdylnXM"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu realidad es un invento",
     "video_id": "N3xWJjCOapo"
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "afternoon",
+    "title": "🤯 Tu cuerpo ya no es tuyo",
+    "video_id": "24nFvoXdGFk"
   }
 ]
