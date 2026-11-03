@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-24",
-    "slot": "morning",
-    "title": "🧠 Tu memoria es una farsa",
-    "video_id": "2qphOS-8t0g"
-  },
-  {
-    "date": "2026-10-24",
     "slot": "afternoon",
     "title": "🤯 Tu cerebro te oculta la verdad.",
     "video_id": "ZtTYnuVEax8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 La trampa en el espejo",
     "video_id": "-OgaE_UvSNs"
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "morning",
+    "title": "🤯 Tu peor enemigo eres tú",
+    "video_id": "-xXM3_Am9T8"
   }
 ]
