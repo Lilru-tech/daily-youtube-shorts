@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-23",
-    "slot": "afternoon",
-    "title": "What If Your Memory... Isn't Yours? 🤯",
-    "video_id": "dkqFDAWPWQ0"
-  },
-  {
-    "date": "2026-10-23",
     "slot": "evening",
     "title": "What If You Drank SEAWATER Daily? 💀",
     "video_id": "aLcxCfK52Xo"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Gravity Vanished for 5 Seconds? 🤯",
     "video_id": "FA94j4EcMCo"
+  },
+  {
+    "date": "2026-11-02",
+    "slot": "afternoon",
+    "title": "What If You Drank Ocean Water?",
+    "video_id": "kAmjVqRGVSw"
   }
 ]
