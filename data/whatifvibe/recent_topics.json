@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-24",
-    "slot": "evening",
-    "title": "What If Light SLOWED Down? 🤯",
-    "video_id": "-GPfuThMBQM"
-  },
-  {
     "date": "2026-10-25",
     "slot": "morning",
     "title": "What If Earth Just STOPPED Spinning?! 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Time Froze For Everyone But You? ⏳",
     "video_id": "QNrcdolUVAA"
+  },
+  {
+    "date": "2026-11-03",
+    "slot": "evening",
+    "title": "What If a Gamma-Ray Burst Hit Earth? 🤯",
+    "video_id": "e6e2mpQHtcA"
   }
 ]
