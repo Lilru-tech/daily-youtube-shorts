@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-24",
-    "slot": "evening",
-    "title": "🤯 Esto explica tu falsa realidad",
-    "video_id": "PkPMrWHEKyY"
-  },
-  {
     "date": "2026-10-25",
     "slot": "morning",
     "title": "🧠 Así manipulan tu realidad",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu decisión NO es tuya",
     "video_id": "HCqB_Nj0Lho"
+  },
+  {
+    "date": "2026-11-04",
+    "slot": "morning",
+    "title": "🧠 Tu memoria te juega así",
+    "video_id": "e5vluinkbsE"
   }
 ]
