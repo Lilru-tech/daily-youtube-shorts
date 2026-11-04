@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-25",
-    "slot": "morning",
-    "title": "🧠 Así manipulan tu realidad",
-    "video_id": "56wRzyUUX5M"
-  },
-  {
-    "date": "2026-10-25",
     "slot": "afternoon",
     "title": "👁️ Esto dirige tus decisiones",
     "video_id": "isWahrCymy4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu memoria te juega así",
     "video_id": "e5vluinkbsE"
+  },
+  {
+    "date": "2026-11-04",
+    "slot": "afternoon",
+    "title": "🤯 Tu reflejo te atrapa",
+    "video_id": "YLfEsLBf3p0"
   }
 ]
