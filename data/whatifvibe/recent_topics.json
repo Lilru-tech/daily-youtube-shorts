@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-26",
-    "slot": "morning",
-    "title": "What If Earth's Magnetic Field Vanished? 😱",
-    "video_id": "_hl5SFP4Pgs"
-  },
-  {
-    "date": "2026-10-26",
     "slot": "afternoon",
     "title": "What If Our Sun Became a Black Hole? 🤯",
     "video_id": "4dJhqBFhWRc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Spun Backwards? 🤯",
     "video_id": "tlfUHdZR9nM"
+  },
+  {
+    "date": "2026-11-05",
+    "slot": "morning",
+    "title": "What If You ONLY Ate Sugar For A Year? 🤯",
+    "video_id": "0yUCR4RYth8"
   }
 ]
