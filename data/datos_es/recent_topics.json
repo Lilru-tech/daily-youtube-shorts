@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-25",
-    "slot": "evening",
-    "title": "🤯 Tu cerebro te sabotea así",
-    "video_id": "w_C0uhkZiCk"
-  },
-  {
     "date": "2026-10-26",
     "slot": "morning",
     "title": "🧠 Tu realidad es pura ilusión",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu mente te crea otra realidad",
     "video_id": "55wH9khSjRs"
+  },
+  {
+    "date": "2026-11-05",
+    "slot": "morning",
+    "title": "🧠 Tu mente te miente así",
+    "video_id": "cYzKcvAAx7Y"
   }
 ]
