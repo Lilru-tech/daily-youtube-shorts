@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-26",
-    "slot": "afternoon",
-    "title": "🤯 La trampa de tu propio reflejo",
-    "video_id": "LXhxej-vi9o"
-  },
-  {
-    "date": "2026-10-26",
     "slot": "evening",
     "title": "🧠 Tu cuerpo no te pertenece",
     "video_id": "wyUefU5He2s"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu subconsciente te domina",
     "video_id": "cEJBK1s5518"
+  },
+  {
+    "date": "2026-11-05",
+    "slot": "evening",
+    "title": "🧠 Tu control es una ilusión",
+    "video_id": "fJN9wUvtZhU"
   }
 ]
