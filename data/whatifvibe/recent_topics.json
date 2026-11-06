@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-27",
-    "slot": "afternoon",
-    "title": "What If You Weren't You? 😱",
-    "video_id": "ECiTSmDkTDg"
-  },
-  {
-    "date": "2026-10-27",
     "slot": "evening",
     "title": "What If Earth's Atmosphere Just... Vanished? 🤯",
     "video_id": "dJxcTWuAhyQ"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Earth STOPPED Spinning? 🤯",
     "video_id": "7deMFnwamWI"
+  },
+  {
+    "date": "2026-11-06",
+    "slot": "afternoon",
+    "title": "What If You Fell Into A Black Hole? 🤯",
+    "video_id": "SLbFD_j03E4"
   }
 ]
