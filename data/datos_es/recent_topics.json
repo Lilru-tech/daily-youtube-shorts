@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-27",
-    "slot": "afternoon",
-    "title": "🤯 La verdad de tus ojos",
-    "video_id": "sM1wO8DwCG0"
-  },
-  {
-    "date": "2026-10-27",
     "slot": "evening",
     "title": "🤯 Tu cerebro ya ha decidido",
     "video_id": "WF0WoAPqwf4"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu realidad es construida",
     "video_id": "jFl-IRBC888"
+  },
+  {
+    "date": "2026-11-06",
+    "slot": "evening",
+    "title": "🧠 Tu voluntad es un engaño",
+    "video_id": "ntpGT_o5Zxg"
   }
 ]
