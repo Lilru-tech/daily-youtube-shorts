@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-26",
-    "slot": "evening",
-    "title": "🧠 Tu cuerpo no te pertenece",
-    "video_id": "wyUefU5He2s"
-  },
-  {
     "date": "2026-10-27",
     "slot": "morning",
     "title": "🧠 Tu libertad es un truco",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu control es una ilusión",
     "video_id": "fJN9wUvtZhU"
+  },
+  {
+    "date": "2026-11-06",
+    "slot": "morning",
+    "title": "🤯 Tus ojos te mienten",
+    "video_id": "YhdoQ6JEW8s"
   }
 ]
