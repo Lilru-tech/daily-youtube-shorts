@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-27",
-    "slot": "evening",
-    "title": "🤯 Tu cerebro ya ha decidido",
-    "video_id": "WF0WoAPqwf4"
-  },
-  {
     "date": "2026-10-28",
     "slot": "morning",
     "title": "🧠 Tu cerebro reescribe tu vida",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu voluntad es un engaño",
     "video_id": "ntpGT_o5Zxg"
+  },
+  {
+    "date": "2026-11-07",
+    "slot": "morning",
+    "title": "🧠 Tu mente decide por ti",
+    "video_id": "ebg_MuGqUNM"
   }
 ]
