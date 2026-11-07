@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-27",
-    "slot": "evening",
-    "title": "What If Earth's Atmosphere Just... Vanished? 🤯",
-    "video_id": "dJxcTWuAhyQ"
-  },
-  {
     "date": "2026-10-28",
     "slot": "morning",
     "title": "What If the Moon Just Vanished? 🌑",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Fell Into A Black Hole? 🤯",
     "video_id": "SLbFD_j03E4"
+  },
+  {
+    "date": "2026-11-06",
+    "slot": "evening",
+    "title": "What If Silence Disappeared Forever? 🤯",
+    "video_id": "0sGVL3AZshY"
   }
 ]
