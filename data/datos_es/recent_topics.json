@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-28",
-    "slot": "afternoon",
-    "title": "🧠 Tu realidad es una invención",
-    "video_id": "H-vnLKiQXr4"
-  },
-  {
-    "date": "2026-10-28",
     "slot": "evening",
     "title": "🧠 La trampa de tu memoria",
     "video_id": "0SZZAtVlx8Y"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente es una trampa",
     "video_id": "yfqcnhArCvI"
+  },
+  {
+    "date": "2026-11-07",
+    "slot": "evening",
+    "title": "🤯 Tu elección no es tuya",
+    "video_id": "lz-_nbT-VH8"
   }
 ]
