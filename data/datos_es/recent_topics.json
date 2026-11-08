@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-28",
-    "slot": "evening",
-    "title": "🧠 La trampa de tu memoria",
-    "video_id": "0SZZAtVlx8Y"
-  },
-  {
     "date": "2026-10-29",
     "slot": "morning",
     "title": "🤯 Esta es tu verdadera cárcel",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu elección no es tuya",
     "video_id": "lz-_nbT-VH8"
+  },
+  {
+    "date": "2026-11-08",
+    "slot": "morning",
+    "title": "🤯 Tu cerebro esconde algo",
+    "video_id": "SymtAetsXGo"
   }
 ]
