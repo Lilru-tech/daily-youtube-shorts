@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-28",
-    "slot": "evening",
-    "title": "What If Something Else Grew Inside You? 😱",
-    "video_id": "U-l4TUjbv5w"
-  },
-  {
     "date": "2026-10-29",
     "slot": "morning",
     "title": "What If Gravity Just Vanished? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Discovered A Glitch In Reality? 🤯",
     "video_id": "pfCuB3gGgXc"
+  },
+  {
+    "date": "2026-11-07",
+    "slot": "evening",
+    "title": "What If Your House Hid a Secret Room? 🚪",
+    "video_id": "82PXREW3Ohw"
   }
 ]
