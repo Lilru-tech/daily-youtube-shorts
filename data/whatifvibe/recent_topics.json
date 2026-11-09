@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-30",
-    "slot": "morning",
-    "title": "What If All Sound Just Vanished? 🤯",
-    "video_id": "HixQh0qT1CI"
-  },
-  {
-    "date": "2026-10-30",
     "slot": "afternoon",
     "title": "What If Earth Suddenly STOPPED Spinning? 🤯",
     "video_id": "ZKP7MnahsI0"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Saw Your Death Coming?",
     "video_id": "734GzaVzNQg"
+  },
+  {
+    "date": "2026-11-09",
+    "slot": "morning",
+    "title": "What If Gravity Vanished For 5 Seconds? 🤯",
+    "video_id": "0KT58rfCtCI"
   }
 ]
