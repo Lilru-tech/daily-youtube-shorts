@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-30",
-    "slot": "morning",
-    "title": "🤯 ¿Quién respira a tu lado?",
-    "video_id": "Pq62KNGFXo4"
-  },
-  {
-    "date": "2026-10-30",
     "slot": "afternoon",
     "title": "🤯 Así te engaña tu propia mente",
     "video_id": "W0IVb192_n0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te hace creer",
     "video_id": "XdzqZioZE2c"
+  },
+  {
+    "date": "2026-11-09",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente fabrica tu pasado",
+    "video_id": "BAUrlO-wMBw"
   }
 ]
