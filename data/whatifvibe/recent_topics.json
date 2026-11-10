@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-31",
-    "slot": "morning",
-    "title": "What If You Never Slept Again? 🤯",
-    "video_id": "qSGyz9QJblc"
-  },
-  {
-    "date": "2026-10-31",
     "slot": "afternoon",
     "title": "What If Earth Had Two Moons? 🌕🤯",
     "video_id": "av1Oq9wfg-o"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Earth Spun Backwards? 🤯",
     "video_id": "1psCzQVD_uw"
+  },
+  {
+    "date": "2026-11-10",
+    "slot": "morning",
+    "title": "What If Your Shadow Knew More Than You? 👤",
+    "video_id": "meZHZTEYcbk"
   }
 ]
