@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-31",
-    "slot": "afternoon",
-    "title": "What If Earth Had Two Moons? 🌕🤯",
-    "video_id": "av1Oq9wfg-o"
-  },
-  {
-    "date": "2026-10-31",
     "slot": "evening",
     "title": "What If You Heard the Static of Reality? 🤯",
     "video_id": "NrHCQ_B-Hmw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Shadow Knew More Than You? 👤",
     "video_id": "meZHZTEYcbk"
+  },
+  {
+    "date": "2026-11-10",
+    "slot": "afternoon",
+    "title": "What If Light Slowed to 10 MPH? 🤯",
+    "video_id": "lKD2kg5OOVE"
   }
 ]
