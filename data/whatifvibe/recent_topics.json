@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-30",
-    "slot": "evening",
-    "title": "What If You Lived on a Dyson Sphere?",
-    "video_id": "4_7XQhMtOew"
-  },
-  {
     "date": "2026-10-31",
     "slot": "morning",
     "title": "What If You Never Slept Again? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If The Moon Vanished? 🌕",
     "video_id": "yHUj01waqS8"
+  },
+  {
+    "date": "2026-11-09",
+    "slot": "evening",
+    "title": "What If Earth Spun Backwards? 🤯",
+    "video_id": "1psCzQVD_uw"
   }
 ]
