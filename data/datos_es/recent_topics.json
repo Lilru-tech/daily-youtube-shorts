@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-30",
-    "slot": "evening",
-    "title": "🧠 El último recuerdo borrado",
-    "video_id": "pc_Ps7IOst4"
-  },
-  {
     "date": "2026-10-31",
     "slot": "morning",
     "title": "🧠 Tu decisión es un espejismo",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu memoria es falsa",
     "video_id": "Ha4k5Jk5BJE"
+  },
+  {
+    "date": "2026-11-10",
+    "slot": "morning",
+    "title": "🧠 Así te manipula tu mente",
+    "video_id": "X1XxRlsLKkU"
   }
 ]
