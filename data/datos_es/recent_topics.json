@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-01",
-    "slot": "morning",
-    "title": "🤯 Tu cerebro te miente así",
-    "video_id": "MHXoLjXRGAw"
-  },
-  {
-    "date": "2026-11-01",
     "slot": "afternoon",
     "title": "🧠 Nunca estás realmente solo",
     "video_id": "omo6NcTbRRU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu cerebro odia la verdad",
     "video_id": "6V0W1pYoJg0"
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "evening",
+    "title": "🤯 Lo que tu cerebro te oculta",
+    "video_id": "zjOGDDnVRao"
   }
 ]
