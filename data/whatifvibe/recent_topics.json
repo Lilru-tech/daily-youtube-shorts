@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-31",
-    "slot": "evening",
-    "title": "What If You Heard the Static of Reality? 🤯",
-    "video_id": "NrHCQ_B-Hmw"
-  },
-  {
     "date": "2026-11-01",
     "slot": "morning",
     "title": "What If You Never Felt Pain? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Light Slowed to 10 MPH? 🤯",
     "video_id": "lKD2kg5OOVE"
+  },
+  {
+    "date": "2026-11-10",
+    "slot": "evening",
+    "title": "What If You Saw ALL Dimensions? 🤯",
+    "video_id": "Vpnh9eEV3Tc"
   }
 ]
