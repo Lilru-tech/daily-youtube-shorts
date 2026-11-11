@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-01",
-    "slot": "morning",
-    "title": "What If You Never Felt Pain? 🤯",
-    "video_id": "pgXeoRpXBno"
-  },
-  {
-    "date": "2026-11-01",
     "slot": "afternoon",
     "title": "What If You Forgot Everything Every Night? 🤯",
     "video_id": "LKXdt548dAo"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Saw ALL Dimensions? 🤯",
     "video_id": "Vpnh9eEV3Tc"
+  },
+  {
+    "date": "2026-11-11",
+    "slot": "morning",
+    "title": "What If You Couldn't Feel Pain? 🤯",
+    "video_id": "OTncNgkfrVo"
   }
 ]
