@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-10-31",
-    "slot": "evening",
-    "title": "🤯 Tu reflejo no eres tú",
-    "video_id": "SDV_wIAuI_Y"
-  },
-  {
     "date": "2026-11-01",
     "slot": "morning",
     "title": "🤯 Tu cerebro te miente así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu realidad es una ilusión",
     "video_id": "oVmJulv0D0E"
+  },
+  {
+    "date": "2026-11-11",
+    "slot": "evening",
+    "title": "🤯 Tu cerebro odia la verdad",
+    "video_id": "6V0W1pYoJg0"
   }
 ]
