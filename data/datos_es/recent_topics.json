@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-10-31",
-    "slot": "afternoon",
-    "title": "🤯 Nadie te ha contado esto",
-    "video_id": "yV6Sz9hN_HE"
-  },
-  {
-    "date": "2026-10-31",
     "slot": "evening",
     "title": "🤯 Tu reflejo no eres tú",
     "video_id": "SDV_wIAuI_Y"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😵‍💫 ¿Eres real o un eco?",
     "video_id": "fq6EpQVd5-w"
+  },
+  {
+    "date": "2026-11-11",
+    "slot": "afternoon",
+    "title": "🧠 Tu realidad es una ilusión",
+    "video_id": "oVmJulv0D0E"
   }
 ]
