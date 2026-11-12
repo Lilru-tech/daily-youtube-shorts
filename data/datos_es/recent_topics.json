@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-01",
-    "slot": "evening",
-    "title": "🤯 Tu mente te sabotea",
-    "video_id": "zWGEioAN76U"
-  },
-  {
     "date": "2026-11-02",
     "slot": "morning",
     "title": "🤯 Tu realidad es un invento",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente te sabotea cada día",
     "video_id": "37ZHuPaxA58"
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "afternoon",
+    "title": "🧠 Tu cerebro TE ENGAÑA así",
+    "video_id": "oXBw19Wxe98"
   }
 ]
