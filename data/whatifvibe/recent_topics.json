@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-02",
-    "slot": "morning",
-    "title": "What If Gravity Vanished for 5 Seconds? 🤯",
-    "video_id": "FA94j4EcMCo"
-  },
-  {
-    "date": "2026-11-02",
     "slot": "afternoon",
     "title": "What If You Drank Ocean Water?",
     "video_id": "kAmjVqRGVSw"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Reflection Isn't You? 😱",
     "video_id": "SHmK45x0NlA"
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "morning",
+    "title": "What If Oxygen Levels Doubled? 🤯",
+    "video_id": "dWGv9lo5gl4"
   }
 ]
