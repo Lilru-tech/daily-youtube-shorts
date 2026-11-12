@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-02",
-    "slot": "afternoon",
-    "title": "What If You Drank Ocean Water?",
-    "video_id": "kAmjVqRGVSw"
-  },
-  {
-    "date": "2026-11-02",
     "slot": "evening",
     "title": "What If Your Brain Rewired Itself? 🤯",
     "video_id": "kztQhxvVoc8"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Oxygen Levels Doubled? 🤯",
     "video_id": "dWGv9lo5gl4"
+  },
+  {
+    "date": "2026-11-12",
+    "slot": "afternoon",
+    "title": "What If You Lost Control of Your Own Body? 😱",
+    "video_id": "15MgpNrsoRg"
   }
 ]
