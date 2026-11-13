@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-02",
-    "slot": "morning",
-    "title": "🤯 Tu realidad es un invento",
-    "video_id": "N3xWJjCOapo"
-  },
-  {
-    "date": "2026-11-02",
     "slot": "afternoon",
     "title": "🤯 Tu cuerpo ya no es tuyo",
     "video_id": "24nFvoXdGFk"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro TE ENGAÑA así",
     "video_id": "oXBw19Wxe98"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "morning",
+    "title": "🤯 Tu cerebro INVENTA tu realidad",
+    "video_id": "wtbFGN41jdM"
   }
 ]
