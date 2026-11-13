@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-03",
-    "slot": "evening",
-    "title": "🧠 La trampa en el espejo",
-    "video_id": "-OgaE_UvSNs"
-  },
-  {
-    "date": "2026-11-03",
     "slot": "morning",
     "title": "🤯 Tu peor enemigo eres tú",
     "video_id": "-xXM3_Am9T8"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😵‍💫 Tu mente: la mayor mentira",
     "video_id": "xO8RpMbAOvQ"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "evening",
+    "title": "🤯 Tu realidad es solo un truco",
+    "video_id": "jG_dAjWTEC8"
   }
 ]
