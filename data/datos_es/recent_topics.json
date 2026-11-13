@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-02",
-    "slot": "afternoon",
-    "title": "🤯 Tu cuerpo ya no es tuyo",
-    "video_id": "24nFvoXdGFk"
-  },
-  {
     "date": "2026-11-03",
     "slot": "evening",
     "title": "🧠 La trampa en el espejo",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu cerebro INVENTA tu realidad",
     "video_id": "wtbFGN41jdM"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "afternoon",
+    "title": "😵‍💫 Tu mente: la mayor mentira",
+    "video_id": "xO8RpMbAOvQ"
   }
 ]
