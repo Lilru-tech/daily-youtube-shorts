@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-04",
-    "slot": "morning",
-    "title": "What If You Never Slept Again? 🤯",
-    "video_id": "Y8j6dvbDjmo"
-  },
-  {
-    "date": "2026-11-04",
     "slot": "afternoon",
     "title": "What If ALL Insects Vanished? 🦗🌍",
     "video_id": "XFjbEI92jmU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Remembered EVERYTHING? 🤯",
     "video_id": "7P0GUbSVgiY"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "morning",
+    "title": "What If Earth Stopped Spinning? 🤯",
+    "video_id": "w10eT17U0jk"
   }
 ]
