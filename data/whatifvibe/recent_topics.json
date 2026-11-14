@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-03",
-    "slot": "evening",
-    "title": "What If a Gamma-Ray Burst Hit Earth? 🤯",
-    "video_id": "e6e2mpQHtcA"
-  },
-  {
     "date": "2026-11-04",
     "slot": "morning",
     "title": "What If You Never Slept Again? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Heart Stopped for 5 Minutes? 😱",
     "video_id": "jextuIM8su0"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "evening",
+    "title": "What If You Remembered EVERYTHING? 🤯",
+    "video_id": "7P0GUbSVgiY"
   }
 ]
