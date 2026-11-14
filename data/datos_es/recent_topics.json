@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-03",
-    "slot": "morning",
-    "title": "🤯 Tu peor enemigo eres tú",
-    "video_id": "-xXM3_Am9T8"
-  },
-  {
-    "date": "2026-11-03",
     "slot": "afternoon",
     "title": "🧠 Tu decisión NO es tuya",
     "video_id": "HCqB_Nj0Lho"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu realidad es solo un truco",
     "video_id": "jG_dAjWTEC8"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "morning",
+    "title": "😵‍💫 Tu mente te MIENTE así",
+    "video_id": "UWrtSUMdBeo"
   }
 ]
