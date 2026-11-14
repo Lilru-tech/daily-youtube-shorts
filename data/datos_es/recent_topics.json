@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-04",
-    "slot": "morning",
-    "title": "🧠 Tu memoria te juega así",
-    "video_id": "e5vluinkbsE"
-  },
-  {
-    "date": "2026-11-04",
     "slot": "afternoon",
     "title": "🤯 Tu reflejo te atrapa",
     "video_id": "YLfEsLBf3p0"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te MANIPULA",
     "video_id": "xfcXe-4hW3A"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "evening",
+    "title": "🤯 Tu cerebro: LA GRAN MENTIRA",
+    "video_id": "1HhdSrJEjQ0"
   }
 ]
