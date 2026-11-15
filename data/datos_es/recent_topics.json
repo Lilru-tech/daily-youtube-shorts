@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-04",
-    "slot": "evening",
-    "title": "🧠 Tu mente te crea otra realidad",
-    "video_id": "55wH9khSjRs"
-  },
-  {
     "date": "2026-11-05",
     "slot": "morning",
     "title": "🧠 Tu mente te miente así",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente REESCRIBE tu pasado",
     "video_id": "r4OwSZb30YU"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "afternoon",
+    "title": "🧠 Tu mente es tu mayor rival",
+    "video_id": "yXIGAZAsszE"
   }
 ]
