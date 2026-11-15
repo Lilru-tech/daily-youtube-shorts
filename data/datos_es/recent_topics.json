@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-04",
-    "slot": "afternoon",
-    "title": "🤯 Tu reflejo te atrapa",
-    "video_id": "YLfEsLBf3p0"
-  },
-  {
-    "date": "2026-11-04",
     "slot": "evening",
     "title": "🧠 Tu mente te crea otra realidad",
     "video_id": "55wH9khSjRs"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu cerebro: LA GRAN MENTIRA",
     "video_id": "1HhdSrJEjQ0"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "morning",
+    "title": "🧠 Tu mente REESCRIBE tu pasado",
+    "video_id": "r4OwSZb30YU"
   }
 ]
