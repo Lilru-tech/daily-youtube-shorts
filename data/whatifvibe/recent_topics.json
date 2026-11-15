@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-05",
-    "slot": "morning",
-    "title": "What If You ONLY Ate Sugar For A Year? 🤯",
-    "video_id": "0yUCR4RYth8"
-  },
-  {
-    "date": "2026-11-05",
     "slot": "afternoon",
     "title": "What If Your House Knew Your Secrets? 🤯",
     "video_id": "4dWMGzz0Wzw"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Gravity Vanished for 60 Seconds? 🤯",
     "video_id": "ZYHhQCscnaI"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "morning",
+    "title": "What If You Could Never Wake Up? 😱",
+    "video_id": "xeOrDNnmZFI"
   }
 ]
