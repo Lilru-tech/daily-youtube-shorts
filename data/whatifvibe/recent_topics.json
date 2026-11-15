@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-05",
-    "slot": "afternoon",
-    "title": "What If Your House Knew Your Secrets? 🤯",
-    "video_id": "4dWMGzz0Wzw"
-  },
-  {
-    "date": "2026-11-05",
     "slot": "evening",
     "title": "What If Your Own Mind Betrayed You? 🤯",
     "video_id": "ok0fSvaUQY4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Could Never Wake Up? 😱",
     "video_id": "xeOrDNnmZFI"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "afternoon",
+    "title": "What If Your Shadow Left You? 👤",
+    "video_id": "aJpb2EM8sWE"
   }
 ]
