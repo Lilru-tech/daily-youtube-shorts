@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-05",
-    "slot": "evening",
-    "title": "What If Your Own Mind Betrayed You? 🤯",
-    "video_id": "ok0fSvaUQY4"
-  },
-  {
     "date": "2026-11-06",
     "slot": "morning",
     "title": "What If Earth STOPPED Spinning? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Shadow Left You? 👤",
     "video_id": "aJpb2EM8sWE"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "evening",
+    "title": "What If ALL Light Vanished Instantly? 🔦",
+    "video_id": "Mwfu-y8PZIg"
   }
 ]
