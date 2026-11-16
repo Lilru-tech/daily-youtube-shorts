@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-05",
-    "slot": "evening",
-    "title": "🧠 Tu control es una ilusión",
-    "video_id": "fJN9wUvtZhU"
-  },
-  {
     "date": "2026-11-06",
     "slot": "morning",
     "title": "🤯 Tus ojos te mienten",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu realidad no es real",
     "video_id": "zKiXWo2-FhQ"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "afternoon",
+    "title": "🤯 Tu memoria te ENGAÑA así",
+    "video_id": "5yIozt7AgO8"
   }
 ]
