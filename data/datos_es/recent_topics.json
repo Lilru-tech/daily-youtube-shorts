@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-06",
-    "slot": "morning",
-    "title": "🤯 Tus ojos te mienten",
-    "video_id": "YhdoQ6JEW8s"
-  },
-  {
-    "date": "2026-11-06",
     "slot": "afternoon",
     "title": "🧠 Tu realidad es construida",
     "video_id": "jFl-IRBC888"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu memoria te ENGAÑA así",
     "video_id": "5yIozt7AgO8"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "evening",
+    "title": "🤯 Esta es la CÁRCEL de tu mente",
+    "video_id": "z5k9QZB4Rdw"
   }
 ]
