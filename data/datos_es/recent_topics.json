@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-05",
-    "slot": "afternoon",
-    "title": "🧠 Tu subconsciente te domina",
-    "video_id": "cEJBK1s5518"
-  },
-  {
-    "date": "2026-11-05",
     "slot": "evening",
     "title": "🧠 Tu control es una ilusión",
     "video_id": "fJN9wUvtZhU"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te miente con esto",
     "video_id": "waqH30NqesU"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "morning",
+    "title": "🤯 Tu realidad no es real",
+    "video_id": "zKiXWo2-FhQ"
   }
 ]
