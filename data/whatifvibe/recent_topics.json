@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-06",
-    "slot": "evening",
-    "title": "What If Silence Disappeared Forever? 🤯",
-    "video_id": "0sGVL3AZshY"
-  },
-  {
     "date": "2026-11-07",
     "slot": "morning",
     "title": "What If Your Reflection Isn't Yours? 😱",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 🪞",
     "video_id": "c3GHWVqDKuE"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "evening",
+    "title": "What If You Fell Into a Black Hole? 🕳️",
+    "video_id": "uljOhIH_FzE"
   }
 ]
