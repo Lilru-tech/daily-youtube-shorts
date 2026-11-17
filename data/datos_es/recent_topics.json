@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-07",
-    "slot": "morning",
-    "title": "🧠 Tu mente decide por ti",
-    "video_id": "ebg_MuGqUNM"
-  },
-  {
-    "date": "2026-11-07",
     "slot": "afternoon",
     "title": "🧠 Tu mente es una trampa",
     "video_id": "yfqcnhArCvI"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 El ruido en tu cabeza",
     "video_id": "nMiJzVmtr20"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "evening",
+    "title": "💀 No parpadees jamás",
+    "video_id": "pln2v71DT-c"
   }
 ]
