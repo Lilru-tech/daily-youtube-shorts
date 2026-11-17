@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-07",
-    "slot": "morning",
-    "title": "What If Your Reflection Isn't Yours? 😱",
-    "video_id": "FzQvLnOh3o0"
-  },
-  {
-    "date": "2026-11-07",
     "slot": "afternoon",
     "title": "What If You Discovered A Glitch In Reality? 🤯",
     "video_id": "pfCuB3gGgXc"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If You Fell Into a Black Hole? 🕳️",
     "video_id": "uljOhIH_FzE"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "morning",
+    "title": "What If Your Hands Weren't Yours? 🤯",
+    "video_id": "vxpkvA7-MsA"
   }
 ]
