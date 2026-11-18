@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-08",
-    "slot": "afternoon",
-    "title": "What If All Your Bones Vanished? 🦴",
-    "video_id": "T8tQR08qZFw"
-  },
-  {
-    "date": "2026-11-08",
     "slot": "evening",
     "title": "What If You Saw Your Death Coming?",
     "video_id": "734GzaVzNQg"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If You Remembered a Life That Wasn't Yours? 🤯",
     "video_id": "4PIrqP3v9QI"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "afternoon",
+    "title": "What If You Keep Losing Time? ⏳",
+    "video_id": "hT0CpNe-_pw"
   }
 ]
