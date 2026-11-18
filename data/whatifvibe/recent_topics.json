@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-07",
-    "slot": "afternoon",
-    "title": "What If You Discovered A Glitch In Reality? 🤯",
-    "video_id": "pfCuB3gGgXc"
-  },
-  {
-    "date": "2026-11-07",
     "slot": "evening",
     "title": "What If Your House Hid a Secret Room? 🚪",
     "video_id": "82PXREW3Ohw"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Hands Weren't Yours? 🤯",
     "video_id": "vxpkvA7-MsA"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "afternoon",
+    "title": "What If Every Sound Was a ROAR? 🔊",
+    "video_id": "qudEZLRJUAA"
   }
 ]
