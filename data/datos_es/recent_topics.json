@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-08",
-    "slot": "morning",
-    "title": "🤯 Tu cerebro esconde algo",
-    "video_id": "SymtAetsXGo"
-  },
-  {
-    "date": "2026-11-08",
     "slot": "afternoon",
     "title": "🤯 Tu mente te juega una trampa",
     "video_id": "BskzFxhxXME"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu cerebro MANIPULA el tiempo",
     "video_id": "00wDYAhbb6o"
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "evening",
+    "title": "🧠 Tu mente no es tuya",
+    "video_id": "yKuAPSAKXNk"
   }
 ]
