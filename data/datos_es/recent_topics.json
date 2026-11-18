@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-07",
-    "slot": "evening",
-    "title": "🤯 Tu elección no es tuya",
-    "video_id": "lz-_nbT-VH8"
-  },
-  {
     "date": "2026-11-08",
     "slot": "morning",
     "title": "🤯 Tu cerebro esconde algo",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu memoria te MIENTE",
     "video_id": "L2C_PLnJ5zA"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "afternoon",
+    "title": "🤯 Tu cerebro MANIPULA el tiempo",
+    "video_id": "00wDYAhbb6o"
   }
 ]
