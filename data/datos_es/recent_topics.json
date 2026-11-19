@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-09",
-    "slot": "morning",
-    "title": "🤯 Tu mente te hace creer",
-    "video_id": "XdzqZioZE2c"
-  },
-  {
-    "date": "2026-11-09",
     "slot": "afternoon",
     "title": "🧠 Tu mente fabrica tu pasado",
     "video_id": "BAUrlO-wMBw"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu decisión NO es tuya",
     "video_id": "VPKPtTJvJX8"
+  },
+  {
+    "date": "2026-11-20",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro te engaña así",
+    "video_id": "QHvbp0PWffI"
   }
 ]
