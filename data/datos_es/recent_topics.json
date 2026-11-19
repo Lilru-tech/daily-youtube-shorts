@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-08",
-    "slot": "afternoon",
-    "title": "🤯 Tu mente te juega una trampa",
-    "video_id": "BskzFxhxXME"
-  },
-  {
-    "date": "2026-11-08",
     "slot": "evening",
     "title": "🧠 Tu reflejo te observa",
     "video_id": "UhxJgqnkmFE"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu mente no es tuya",
     "video_id": "yKuAPSAKXNk"
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "morning",
+    "title": "🤯 Tu felicidad es una trampa",
+    "video_id": "wY7IWA4zWek"
   }
 ]
