@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-09",
-    "slot": "morning",
-    "title": "What If Gravity Vanished For 5 Seconds? 🤯",
-    "video_id": "0KT58rfCtCI"
-  },
-  {
-    "date": "2026-11-09",
     "slot": "afternoon",
     "title": "What If The Moon Vanished? 🌕",
     "video_id": "yHUj01waqS8"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Loved Ones Aren't Who They Seem? 🤯",
     "video_id": "fP5la-AacAs"
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "morning",
+    "title": "What If Your Memories Aren't Yours? 🤯",
+    "video_id": "tqJDVL6-y38"
   }
 ]
