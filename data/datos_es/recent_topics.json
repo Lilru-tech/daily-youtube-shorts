@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-08",
-    "slot": "evening",
-    "title": "🧠 Tu reflejo te observa",
-    "video_id": "UhxJgqnkmFE"
-  },
-  {
     "date": "2026-11-09",
     "slot": "morning",
     "title": "🤯 Tu mente te hace creer",
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu felicidad es una trampa",
     "video_id": "wY7IWA4zWek"
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "afternoon",
+    "title": "🤯 Tu decisión NO es tuya",
+    "video_id": "VPKPtTJvJX8"
   }
 ]
