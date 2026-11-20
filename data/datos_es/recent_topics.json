@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-10",
-    "slot": "evening",
-    "title": "🧠 Tu memoria es falsa",
-    "video_id": "Ha4k5Jk5BJE"
-  },
-  {
-    "date": "2026-11-10",
     "slot": "morning",
     "title": "🧠 Así te manipula tu mente",
     "video_id": "X1XxRlsLKkU"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu realidad ES una ilusión",
     "video_id": "9Q6lsK2l9UM"
+  },
+  {
+    "date": "2026-11-20",
+    "slot": "afternoon",
+    "title": "🤯 Esta trampa mental te DOMINA",
+    "video_id": "Y4CedUgzN0Q"
   }
 ]
