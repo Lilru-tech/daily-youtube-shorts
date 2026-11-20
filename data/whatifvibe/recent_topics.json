@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-10",
-    "slot": "morning",
-    "title": "What If Your Shadow Knew More Than You? 👤",
-    "video_id": "meZHZTEYcbk"
-  },
-  {
-    "date": "2026-11-10",
     "slot": "afternoon",
     "title": "What If Light Slowed to 10 MPH? 🤯",
     "video_id": "lKD2kg5OOVE"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Reality Glitches Around You? 😵‍💫",
     "video_id": "okeEOjYVNhk"
+  },
+  {
+    "date": "2026-11-20",
+    "slot": "morning",
+    "title": "What If Gravity Just... Vanished? 🤯",
+    "video_id": "FXx685OCmgc"
   }
 ]
