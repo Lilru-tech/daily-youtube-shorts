@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-09",
-    "slot": "afternoon",
-    "title": "🧠 Tu mente fabrica tu pasado",
-    "video_id": "BAUrlO-wMBw"
-  },
-  {
     "date": "2026-11-10",
     "slot": "evening",
     "title": "🧠 Tu memoria es falsa",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cerebro te engaña así",
     "video_id": "QHvbp0PWffI"
+  },
+  {
+    "date": "2026-11-20",
+    "slot": "morning",
+    "title": "🤯 Tu realidad ES una ilusión",
+    "video_id": "9Q6lsK2l9UM"
   }
 ]
