@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-09",
-    "slot": "evening",
-    "title": "What If Earth Spun Backwards? 🤯",
-    "video_id": "1psCzQVD_uw"
-  },
-  {
     "date": "2026-11-10",
     "slot": "morning",
     "title": "What If Your Shadow Knew More Than You? 👤",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If Your Shadow Vanished Forever? 👻",
     "video_id": "h80uo6j_sKE"
+  },
+  {
+    "date": "2026-11-19",
+    "slot": "evening",
+    "title": "What If Reality Glitches Around You? 😵‍💫",
+    "video_id": "okeEOjYVNhk"
   }
 ]
