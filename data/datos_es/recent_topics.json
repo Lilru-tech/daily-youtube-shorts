@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-11",
-    "slot": "afternoon",
-    "title": "🧠 Tu realidad es una ilusión",
-    "video_id": "oVmJulv0D0E"
-  },
-  {
-    "date": "2026-11-11",
     "slot": "evening",
     "title": "🤯 Tu cerebro odia la verdad",
     "video_id": "6V0W1pYoJg0"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤯 Tu percepción es FALSA",
     "video_id": "Ext2uvKx_wM"
+  },
+  {
+    "date": "2026-11-21",
+    "slot": "evening",
+    "title": "👻 Tu identidad te ABANDONÓ",
+    "video_id": "lE4lgChDv6U"
   }
 ]
