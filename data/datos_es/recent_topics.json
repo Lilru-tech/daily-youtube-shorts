@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-11",
-    "slot": "evening",
-    "title": "🤯 Tu cerebro odia la verdad",
-    "video_id": "6V0W1pYoJg0"
-  },
-  {
     "date": "2026-11-12",
     "slot": "evening",
     "title": "🤯 Lo que tu cerebro te oculta",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "👻 Tu identidad te ABANDONÓ",
     "video_id": "lE4lgChDv6U"
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "morning",
+    "title": "👁️ Esta visión te persigue sin fin",
+    "video_id": "oPhaKzkmtkM"
   }
 ]
