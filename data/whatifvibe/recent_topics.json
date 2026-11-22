@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-12",
-    "slot": "afternoon",
-    "title": "What If You Lost Control of Your Own Body? 😱",
-    "video_id": "15MgpNrsoRg"
-  },
-  {
-    "date": "2026-11-12",
     "slot": "evening",
     "title": "What If You Woke Up As A Passenger In Your Own Body? 😱",
     "video_id": "V0FTpaFpdk4"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If The Sun Vanished Instantly? 🤯",
     "video_id": "jXJLWWNKC8I"
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "afternoon",
+    "title": "What If You Experienced Perfect Silence? 🤫",
+    "video_id": "-45bKBcvv9k"
   }
 ]
