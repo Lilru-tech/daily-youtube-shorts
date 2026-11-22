@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-12",
-    "slot": "morning",
-    "title": "🧠 Tu mente te sabotea cada día",
-    "video_id": "37ZHuPaxA58"
-  },
-  {
-    "date": "2026-11-12",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro TE ENGAÑA así",
     "video_id": "oXBw19Wxe98"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🤥 Tu memoria te TRAICIONA",
     "video_id": "V_0yGS12BSw"
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "evening",
+    "title": "🤯 Tu mente te delata",
+    "video_id": "m11STCb7muA"
   }
 ]
