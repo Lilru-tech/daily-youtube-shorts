@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-13",
-    "slot": "morning",
-    "title": "🤯 Tu cerebro INVENTA tu realidad",
-    "video_id": "wtbFGN41jdM"
-  },
-  {
-    "date": "2026-11-13",
     "slot": "afternoon",
     "title": "😵‍💫 Tu mente: la mayor mentira",
     "video_id": "xO8RpMbAOvQ"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu cerebro te CONTROLA",
     "video_id": "uXEmmNWvKek"
+  },
+  {
+    "date": "2026-11-23",
+    "slot": "afternoon",
+    "title": "🧠 Lo que NO ves te DOMINA",
+    "video_id": "9NeILIzGdQU"
   }
 ]
