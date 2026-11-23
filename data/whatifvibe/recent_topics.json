@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-12",
-    "slot": "evening",
-    "title": "What If You Woke Up As A Passenger In Your Own Body? 😱",
-    "video_id": "V0FTpaFpdk4"
-  },
-  {
     "date": "2026-11-13",
     "slot": "morning",
     "title": "What If Earth Left The Solar System? 🤯",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Experienced Perfect Silence? 🤫",
     "video_id": "-45bKBcvv9k"
+  },
+  {
+    "date": "2026-11-22",
+    "slot": "evening",
+    "title": "What If You Fell Through a Wormhole? 🤯",
+    "video_id": "rwZLZa2DTvw"
   }
 ]
