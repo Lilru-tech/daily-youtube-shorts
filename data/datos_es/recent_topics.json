@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-13",
-    "slot": "evening",
-    "title": "🤯 Tu realidad es solo un truco",
-    "video_id": "jG_dAjWTEC8"
-  },
-  {
     "date": "2026-11-14",
     "slot": "morning",
     "title": "😵‍💫 Tu mente te MIENTE así",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "👁️ Tu reflejo te OBSERVABA",
     "video_id": "RPQfzdCgeRc"
+  },
+  {
+    "date": "2026-11-24",
+    "slot": "evening",
+    "title": "🤯 Tu mente te tiene atrapado",
+    "video_id": "W5luYe45RIE"
   }
 ]
