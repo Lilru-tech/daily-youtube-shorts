@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-14",
-    "slot": "morning",
-    "title": "😵‍💫 Tu mente te MIENTE así",
-    "video_id": "UWrtSUMdBeo"
-  },
-  {
-    "date": "2026-11-14",
     "slot": "afternoon",
     "title": "🧠 Tu cerebro te MANIPULA",
     "video_id": "xfcXe-4hW3A"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🤯 Tu mente te tiene atrapado",
     "video_id": "W5luYe45RIE"
+  },
+  {
+    "date": "2026-11-24",
+    "slot": "morning",
+    "title": "🧠 Tu mente te OCULTA esto",
+    "video_id": "S85iTf3yA70"
   }
 ]
