@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-14",
-    "slot": "afternoon",
-    "title": "🧠 Tu cerebro te MANIPULA",
-    "video_id": "xfcXe-4hW3A"
-  },
-  {
-    "date": "2026-11-14",
     "slot": "evening",
     "title": "🤯 Tu cerebro: LA GRAN MENTIRA",
     "video_id": "1HhdSrJEjQ0"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🧠 Tu mente te OCULTA esto",
     "video_id": "S85iTf3yA70"
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "evening",
+    "title": "🧠 Tu cerebro decide SIN que lo sepas",
+    "video_id": "PUTO_YZS6AE"
   }
 ]
