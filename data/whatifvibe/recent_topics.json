@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-15",
-    "slot": "morning",
-    "title": "What If You Could Never Wake Up? 😱",
-    "video_id": "xeOrDNnmZFI"
-  },
-  {
-    "date": "2026-11-15",
     "slot": "afternoon",
     "title": "What If Your Shadow Left You? 👤",
     "video_id": "aJpb2EM8sWE"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If The Universe Is A Hologram? 🤯",
     "video_id": "5_sFjqAg_9Y"
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "morning",
+    "title": "What If Time Started SLOWING DOWN? ⏳",
+    "video_id": "FTEzT2q71Zg"
   }
 ]
