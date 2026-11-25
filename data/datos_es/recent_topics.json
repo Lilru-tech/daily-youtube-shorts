@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-15",
-    "slot": "afternoon",
-    "title": "🧠 Tu mente es tu mayor rival",
-    "video_id": "yXIGAZAsszE"
-  },
-  {
-    "date": "2026-11-15",
     "slot": "evening",
     "title": "🤯 Tu mente te miente con esto",
     "video_id": "waqH30NqesU"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mente te ENGAÑA así",
     "video_id": "qZXGiSkTpjY"
+  },
+  {
+    "date": "2026-11-26",
+    "slot": "evening",
+    "title": "😨 Esa sombra te BUSCA",
+    "video_id": "EfhWbkz51z0"
   }
 ]
