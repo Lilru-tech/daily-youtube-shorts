@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-14",
-    "slot": "evening",
-    "title": "🤯 Tu cerebro: LA GRAN MENTIRA",
-    "video_id": "1HhdSrJEjQ0"
-  },
-  {
     "date": "2026-11-15",
     "slot": "morning",
     "title": "🧠 Tu mente REESCRIBE tu pasado",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu cerebro decide SIN que lo sepas",
     "video_id": "PUTO_YZS6AE"
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "morning",
+    "title": "🤯 No ves lo que CREES ver",
+    "video_id": "NaOZJngjgYo"
   }
 ]
