@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-15",
-    "slot": "afternoon",
-    "title": "What If Your Shadow Left You? 👤",
-    "video_id": "aJpb2EM8sWE"
-  },
-  {
-    "date": "2026-11-15",
     "slot": "evening",
     "title": "What If ALL Light Vanished Instantly? 🔦",
     "video_id": "Mwfu-y8PZIg"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Time Started SLOWING DOWN? ⏳",
     "video_id": "FTEzT2q71Zg"
+  },
+  {
+    "date": "2026-11-25",
+    "slot": "afternoon",
+    "title": "What If You Heard Your Own Death?",
+    "video_id": "no_GTy3N0oE"
   }
 ]
