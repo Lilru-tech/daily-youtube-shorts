@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-15",
-    "slot": "evening",
-    "title": "🤯 Tu mente te miente con esto",
-    "video_id": "waqH30NqesU"
-  },
-  {
     "date": "2026-11-16",
     "slot": "morning",
     "title": "🤯 Tu realidad no es real",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😨 Esa sombra te BUSCA",
     "video_id": "EfhWbkz51z0"
+  },
+  {
+    "date": "2026-11-26",
+    "slot": "morning",
+    "title": "🧠 No eres tan LIBRE como crees",
+    "video_id": "7dkT0IiVdJ0"
   }
 ]
