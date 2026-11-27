@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-17",
-    "slot": "afternoon",
-    "title": "🧠 El ruido en tu cabeza",
-    "video_id": "nMiJzVmtr20"
-  },
-  {
     "date": "2026-11-18",
     "slot": "evening",
     "title": "💀 No parpadees jamás",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "😱 Tu cerebro te MANIPULA",
     "video_id": "Fa9LvuQw6-c"
+  },
+  {
+    "date": "2026-11-28",
+    "slot": "evening",
+    "title": "😱 Tu mente te ESCONDE esto",
+    "video_id": "g4_511u1VJA"
   }
 ]
