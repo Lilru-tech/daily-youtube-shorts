@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-17",
-    "slot": "evening",
-    "title": "🤯 Esta es la CÁRCEL de tu mente",
-    "video_id": "z5k9QZB4Rdw"
-  },
-  {
-    "date": "2026-11-17",
     "slot": "morning",
     "title": "🧠 Tu mente te ROBA oportunidades",
     "video_id": "zmnh-ZKfKbg"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "🧠 Tu reflejo ESCONDE algo",
     "video_id": "MOzxL4WN8uc"
+  },
+  {
+    "date": "2026-11-27",
+    "slot": "morning",
+    "title": "🤯 Tu cerebro te HACE creer esto",
+    "video_id": "Z1HKFRPsTSs"
   }
 ]
