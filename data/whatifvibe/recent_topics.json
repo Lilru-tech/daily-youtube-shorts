@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-16",
-    "slot": "morning",
-    "title": "What If You Lived in a World Without Sleep? 😴",
-    "video_id": "ijbbP3ONVkQ"
-  },
-  {
-    "date": "2026-11-16",
     "slot": "afternoon",
     "title": "What If Your Reflection Isn't Yours? 🪞",
     "video_id": "c3GHWVqDKuE"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "What If Your Brain Edits Reality? 🤯",
     "video_id": "9M549ELYTSg"
+  },
+  {
+    "date": "2026-11-26",
+    "slot": "afternoon",
+    "title": "What If You Saw Your Own Shadow Move?",
+    "video_id": "YtbMkSF7a60"
   }
 ]
