@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-16",
-    "slot": "afternoon",
-    "title": "🤯 Tu memoria te ENGAÑA así",
-    "video_id": "5yIozt7AgO8"
-  },
-  {
     "date": "2026-11-17",
     "slot": "evening",
     "title": "🤯 Esta es la CÁRCEL de tu mente",
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "🧠 Tu mundo no existe",
     "video_id": "x7uKrt7gLFE"
+  },
+  {
+    "date": "2026-11-27",
+    "slot": "evening",
+    "title": "🧠 Tu reflejo ESCONDE algo",
+    "video_id": "MOzxL4WN8uc"
   }
 ]
