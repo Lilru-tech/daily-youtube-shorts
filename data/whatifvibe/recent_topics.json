@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-16",
-    "slot": "afternoon",
-    "title": "What If Your Reflection Isn't Yours? 🪞",
-    "video_id": "c3GHWVqDKuE"
-  },
-  {
-    "date": "2026-11-16",
     "slot": "evening",
     "title": "What If You Fell Into a Black Hole? 🕳️",
     "video_id": "uljOhIH_FzE"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Saw Your Own Shadow Move?",
     "video_id": "YtbMkSF7a60"
+  },
+  {
+    "date": "2026-11-26",
+    "slot": "evening",
+    "title": "What If Someone Replaced You? 😱",
+    "video_id": "2O45Bj60oVQ"
   }
 ]
