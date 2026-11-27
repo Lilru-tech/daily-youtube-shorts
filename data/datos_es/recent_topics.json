@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-17",
-    "slot": "morning",
-    "title": "🧠 Tu mente te ROBA oportunidades",
-    "video_id": "zmnh-ZKfKbg"
-  },
-  {
-    "date": "2026-11-17",
     "slot": "afternoon",
     "title": "🧠 El ruido en tu cabeza",
     "video_id": "nMiJzVmtr20"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu cerebro te HACE creer esto",
     "video_id": "Z1HKFRPsTSs"
+  },
+  {
+    "date": "2026-11-27",
+    "slot": "afternoon",
+    "title": "😱 Tu cerebro te MANIPULA",
+    "video_id": "Fa9LvuQw6-c"
   }
 ]
