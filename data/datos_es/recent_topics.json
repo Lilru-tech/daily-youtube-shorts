@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-18",
-    "slot": "evening",
-    "title": "💀 No parpadees jamás",
-    "video_id": "pln2v71DT-c"
-  },
-  {
-    "date": "2026-11-18",
     "slot": "morning",
     "title": "🧠 Tu memoria te MIENTE",
     "video_id": "L2C_PLnJ5zA"
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "😱 Tu mente te ESCONDE esto",
     "video_id": "g4_511u1VJA"
+  },
+  {
+    "date": "2026-11-28",
+    "slot": "morning",
+    "title": "🤯 Tu mente te SABOTEA así",
+    "video_id": "mtd3__VxwHI"
   }
 ]
