@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-17",
-    "slot": "evening",
-    "title": "What If Earth Lost Its Moon? 🤯",
-    "video_id": "NCdWrZEASws"
-  },
-  {
     "date": "2026-11-18",
     "slot": "morning",
     "title": "What If You Remembered a Life That Wasn't Yours? 🤯",
@@ -178,5 +172,11 @@
     "slot": "evening",
     "title": "What If Your Reflection BLINKED... Without You? 🤯",
     "video_id": "0Pgl6cJZKQY"
+  },
+  {
+    "date": "2026-11-28",
+    "slot": "morning",
+    "title": "What If Earth Suddenly Stopped Spinning? 🤯",
+    "video_id": "Ub7ZyZE5ZoU"
   }
 ]
