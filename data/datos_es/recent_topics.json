@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-18",
-    "slot": "morning",
-    "title": "🧠 Tu memoria te MIENTE",
-    "video_id": "L2C_PLnJ5zA"
-  },
-  {
-    "date": "2026-11-18",
     "slot": "afternoon",
     "title": "🤯 Tu cerebro MANIPULA el tiempo",
     "video_id": "00wDYAhbb6o"
@@ -178,5 +172,11 @@
     "slot": "morning",
     "title": "🤯 Tu mente te SABOTEA así",
     "video_id": "mtd3__VxwHI"
+  },
+  {
+    "date": "2026-11-28",
+    "slot": "afternoon",
+    "title": "🤯 No decides NADA libremente",
+    "video_id": "Lbz57LAhjhY"
   }
 ]
