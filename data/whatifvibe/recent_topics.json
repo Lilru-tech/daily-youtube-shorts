@@ -1,12 +1,6 @@
 [
   {
     "date": "2026-11-17",
-    "slot": "afternoon",
-    "title": "What If Every Sound Was a ROAR? 🔊",
-    "video_id": "qudEZLRJUAA"
-  },
-  {
-    "date": "2026-11-17",
     "slot": "evening",
     "title": "What If Earth Lost Its Moon? 🤯",
     "video_id": "NCdWrZEASws"
@@ -178,5 +172,11 @@
     "slot": "afternoon",
     "title": "What If You Drank Pure Mercury? 💀",
     "video_id": "fAhFA5y3CMU"
+  },
+  {
+    "date": "2026-11-27",
+    "slot": "evening",
+    "title": "What If Your Reflection BLINKED... Without You? 🤯",
+    "video_id": "0Pgl6cJZKQY"
   }
 ]
